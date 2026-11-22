@@ -15,14 +15,16 @@ const cache = (() => {
   }
 })();
 
-// which looks became real reels (from the run log); fall back to "ready" looks with links
+// looks that failed in the run log are left out; every other "ready" look with links is shown
+const failed = new Set();
 const rendered = new Set();
 const runsFile = path.join(paths.root, "data", "learning", "runs.jsonl");
 if (fs.existsSync(runsFile)) {
   for (const line of fs.readFileSync(runsFile, "utf8").split("\n")) {
     try {
       const r = JSON.parse(line);
-      if (r.rendered) rendered.add(r.id);
+      if (r.rendered) rendered.add(r.id), failed.delete(r.id);
+      else if (r.id && r.ok === false) failed.add(r.id);
     } catch {}
   }
 }
@@ -31,7 +33,7 @@ const looks = fs
   .readdirSync(paths.looks)
   .filter((f) => f.endsWith(".json"))
   .map((f) => JSON.parse(fs.readFileSync(path.join(paths.looks, f), "utf8")))
-  .filter((l) => l.items?.length && l.items.every((i) => i.url) && (rendered.has(l.id) || (!rendered.size && l.status === "ready")))
+  .filter((l) => l.items?.length && l.items.every((i) => i.url) && !failed.has(l.id) && (rendered.has(l.id) || l.status === "ready"))
   .map((l) => ({ ...l, mtime: fs.statSync(path.join(paths.looks, `${l.id}.json`)).mtimeMs }))
   .sort((a, b) => b.mtime - a.mtime);
 

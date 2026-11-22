@@ -40,6 +40,8 @@ function git(args) {
 
 export function syncPull() {
   if (process.env.SYNC === "0" || !fs.existsSync(path.join(paths.root, ".git"))) return;
+  // npm install on Windows rewrites package-lock.json, which blocks pulls: always take GitHub's copy
+  git(["checkout", "--", "package-lock.json"]);
   const r = git(["pull", "--rebase", "--autostash", "-q"]);
   console.log(r.ok ? "Synced latest updates from GitHub." : `(Couldn't pull updates: ${r.out.split("\n")[0]})`);
 }
@@ -51,6 +53,7 @@ export function syncPush(message) {
   git(["commit", "-q", "-m", message]);
   let r = git(["push", "-q"]);
   if (!r.ok) {
+    git(["checkout", "--", "package-lock.json"]);
     git(["pull", "--rebase", "--autostash", "-q"]);
     r = git(["push", "-q"]);
   }
