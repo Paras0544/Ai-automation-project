@@ -14,10 +14,11 @@ export type Look = {
   id: string; // "office-day1" — also the output file name
   hook: string; // first 2 seconds, max ~8 words
   subhook?: string; // small line under the hook, e.g. "kitne ka fit?"
-  fitImages: string[]; // AI-generated fit images (1–3), paths inside /public
+  fitImages?: string[]; // optional AI fit images; empty = outfit board of real product photos
   items: Item[]; // 3–5 real products
   cta: string; // "Comment FIT for links"
-  status?: "needs-products" | "ready";
+  status?: "needs-products" | "ready" | "needs-attention";
+  mode?: "board" | "ai-fits";
   occasion?: string;
   budget?: number;
   caption?: string; // goes into out/<id>.caption.txt

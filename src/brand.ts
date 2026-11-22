@@ -21,6 +21,7 @@ export const timing = {
   fps: 30,
   hook: 2.2,
   perFitImage: 2.0,
+  board: 3.0, // outfit board scene when there are no AI fit images
   perItem: 1.6,
   grid: 4.5,
 };

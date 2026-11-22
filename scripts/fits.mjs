@@ -67,6 +67,13 @@ if (!id) {
     const withModelRef = items.length < 4 && fs.existsSync(modelRef);
     if (withModelRef) refs.push(await toRef(modelRef));
 
+    if (!look.fitImages || look.fitImages.length === 0) {
+      // this look was planned as an outfit board; switch it to AI model shots
+      const dir = path.dirname(look.items[0].image);
+      look.fitImages = [`${dir}/fit-1.jpg`, `${dir}/fit-2.jpg`];
+      look.mode = "ai-fits";
+      fs.writeFileSync(file, JSON.stringify(look, null, 2) + "\n");
+    }
     console.log(`Generating with ${FITS_MODEL()} (${refs.length} reference image(s))…`);
     for (const [n, target] of look.fitImages.entries()) {
       const dest = path.join(paths.public, target);

@@ -26,7 +26,28 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
 3. Paste your Gemini key after `GEMINI_API_KEY=` and save. `.env` is git-ignored, so the key never goes to GitHub.
 4. Check which models your key can use: `npm run models`. If `gemini-3.5-flash` isn't listed, put one that is into `GEMINI_MODEL` in `.env`.
 
-## Weekly routine (one Saturday block)
+## Autopilot (one command)
+
+```
+npm run auto -- 7
+```
+
+For the next 7 ideas in `data/ideas.txt` it: plans each look with Gemini → finds real products with Google Search →
+picks the best checked, in-stock option per item → runs quality checks → renders the reel and caption → writes
+`out/report-<date>.md`.
+
+**Quality checks** (a look that fails is not rendered; the report says why):
+- at least 3 items with a real product photo (items with no product are dropped if 3 remain)
+- total within 30% of the budget
+- items more than 40% off their planned price are flagged
+
+**Default style: outfit board.** The reel shows the real product photos only, so it is always accurate and needs no
+AI images. To add AI model shots instead, set `FITS_MODE=ai` in `.env` and set up Cloudflare (below).
+
+**Feedback loop:** in the first weeks, watch each video, read the report, and write anything wrong in
+`data/feedback.md`. Those notes are used to fix prompts and checks.
+
+## Step by step (when you want control)
 
 | Step | Command | What happens |
 | --- | --- | --- |

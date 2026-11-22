@@ -6,17 +6,15 @@ import path from "node:path";
 import { paths } from "./lib/env.mjs";
 import { fetchProducts } from "./products.mjs";
 
-const [id, ...choices] = process.argv.slice(2);
-if (!id || choices.length === 0) {
-  console.log("Usage: npm run pick -- <look-id> 1:2 2:1 …   or   npm run pick -- <look-id> auto");
-  process.exitCode = 1;
-} else {
+// Chooses candidates for each item. choices: ["auto"] or ["1:2","2:1",...]. Returns the picks made.
+export async function pickProducts(id, choices) {
   const file = path.join(paths.looks, `${id}.json`);
   const look = JSON.parse(fs.readFileSync(file, "utf8"));
 
   const picks = new Map();
   if (choices[0] === "auto") {
     look.items.forEach((it, i) => {
+      if (it.url) return; // already chosen
       const best = (it.candidates || []).findIndex((c) => c.verified && c.inStock !== false);
       if (best >= 0) picks.set(i, best);
     });
@@ -41,9 +39,20 @@ if (!id || choices.length === 0) {
     }
     item.url = c.url;
     item.store = c.store || item.store;
+    item.targetPrice = item.targetPrice ?? item.price;
     console.log(`✓ item ${i + 1}: ${c.title}`);
   }
   fs.writeFileSync(file, JSON.stringify(look, null, 2) + "\n");
   console.log("");
   await fetchProducts(id);
+}
+
+if (process.argv[1]?.endsWith("pick.mjs")) {
+  const [id, ...choices] = process.argv.slice(2);
+  if (!id || choices.length === 0) {
+    console.log("Usage: npm run pick -- <look-id> 1:2 2:1 …   or   npm run pick -- <look-id> auto");
+    process.exitCode = 1;
+  } else {
+    await pickProducts(id, choices);
+  }
 }

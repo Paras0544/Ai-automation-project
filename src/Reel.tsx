@@ -94,6 +94,77 @@ const FitShot: React.FC<{ src: string }> = ({ src }) => {
   );
 };
 
+
+// Outfit board: the real product photos laid out together, like a flat-lay.
+// Used when a look has no AI fit images (the default), so the reel is 100% real products.
+type Spot = { left: number; top: number; w: number; h: number; rot: number };
+const BOARD_LAYOUTS: Record<number, Spot[]> = {
+  3: [
+    { left: 90, top: 330, w: 470, h: 600, rot: -4 },
+    { left: 520, top: 380, w: 470, h: 600, rot: 3 },
+    { left: 310, top: 960, w: 460, h: 560, rot: 1 },
+  ],
+  4: [
+    { left: 90, top: 330, w: 470, h: 600, rot: -4 },
+    { left: 520, top: 380, w: 470, h: 600, rot: 3 },
+    { left: 110, top: 960, w: 430, h: 520, rot: 2 },
+    { left: 540, top: 1010, w: 430, h: 520, rot: -3 },
+  ],
+  5: [
+    { left: 90, top: 330, w: 440, h: 560, rot: -4 },
+    { left: 550, top: 360, w: 440, h: 560, rot: 3 },
+    { left: 90, top: 1000, w: 400, h: 480, rot: 2 },
+    { left: 590, top: 1020, w: 400, h: 480, rot: -3 },
+    { left: 335, top: 690, w: 410, h: 500, rot: 1 },
+  ],
+};
+
+const OutfitBoard: React.FC<{ items: Item[] }> = ({ items }) => {
+  const frame = useCurrentFrame();
+  const { fps, durationInFrames } = useVideoConfig();
+  const zoom = interpolate(frame, [0, durationInFrames], [1.0, 1.05]);
+  const shown = items.slice(0, 5);
+  const spots = BOARD_LAYOUTS[Math.max(3, shown.length)] || BOARD_LAYOUTS[5];
+  const total = items.reduce((sum, i) => sum + i.price, 0);
+  return (
+    <AbsoluteFill style={{ background: colors.bg }}>
+      <div style={{ position: "absolute", top: 150, width: "100%", textAlign: "center", fontFamily: fonts.sans, fontSize: 34, letterSpacing: 6, color: colors.muted }}>
+        THE FIT
+      </div>
+      <AbsoluteFill style={{ transform: `scale(${zoom})` }}>
+        {shown.map((it, i) => {
+          const spot = spots[i];
+          const s = spring({ frame: frame - i * 5, fps, config: { damping: 200 } });
+          return (
+            <div
+              key={i}
+              style={{
+                position: "absolute",
+                left: spot.left,
+                top: spot.top,
+                width: spot.w,
+                height: spot.h,
+                background: colors.card,
+                borderRadius: 18,
+                padding: 18,
+                boxShadow: "0 18px 40px rgba(43,43,43,0.12)",
+                transform: `rotate(${spot.rot}deg) translateY(${interpolate(s, [0, 1], [60, 0])}px)`,
+                opacity: s,
+              }}
+            >
+              <Img src={staticFile(it.image)} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+            </div>
+          );
+        })}
+      </AbsoluteFill>
+      <div style={{ position: "absolute", bottom: 150, width: "100%", textAlign: "center", fontFamily: fonts.serif, fontSize: 56, color: colors.ink }}>
+        {items.length} pieces · {inr(total)}
+      </div>
+      <Wordmark />
+    </AbsoluteFill>
+  );
+};
+
 const ItemCard: React.FC<{ item: Item; index: number; total: number }> = ({ item, index, total }) => {
   const img = useEnter(0);
   const text = useEnter(6);
@@ -183,7 +254,9 @@ const Grid: React.FC<{ items: Item[]; cta: string }> = ({ items, cta }) => {
 
 export const reelDurationInFrames = (look: Look) => {
   const s = timing;
-  const seconds = s.hook + look.fitImages.length * s.perFitImage + look.items.length * s.perItem + s.grid;
+  const fits = look.fitImages?.length || 0;
+  const visual = fits > 0 ? fits * s.perFitImage : s.board;
+  const seconds = s.hook + visual + look.items.length * s.perItem + s.grid;
   return Math.round(seconds * s.fps);
 };
 
@@ -199,7 +272,16 @@ export const Reel: React.FC<Look> = (look) => {
   );
   t += timing.hook;
 
-  look.fitImages.forEach((src, i) => {
+  const fits = look.fitImages || [];
+  if (fits.length === 0) {
+    seq.push(
+      <Sequence key="board" from={f(t)} durationInFrames={f(timing.board)}>
+        <OutfitBoard items={look.items} />
+      </Sequence>,
+    );
+    t += timing.board;
+  }
+  fits.forEach((src, i) => {
     seq.push(
       <Sequence key={`fit${i}`} from={f(t)} durationInFrames={f(timing.perFitImage)}>
         <FitShot src={src} />
@@ -227,7 +309,7 @@ export const Reel: React.FC<Look> = (look) => {
     <AbsoluteFill style={{ background: colors.bg }}>
       {seq}
       {/* AI label stays on screen the whole reel */}
-      <AiLabel />
+      {fits.length > 0 ? <AiLabel /> : null}
     </AbsoluteFill>
   );
 };

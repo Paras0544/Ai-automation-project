@@ -31,7 +31,7 @@ function check(look, file) {
   const problems = [];
   for (const key of ["id", "hook", "cta"]) if (!look[key]) problems.push(`missing "${key}"`);
   if (!Array.isArray(look.items) || look.items.length < 1) problems.push("needs at least 1 item");
-  if (!Array.isArray(look.fitImages)) problems.push('"fitImages" must be a list');
+  if (look.fitImages && !Array.isArray(look.fitImages)) problems.push('"fitImages" must be a list');
   const images = [...(look.fitImages || []), ...(look.items || []).map((i) => i.image)];
   for (const img of images) {
     if (!img || !fs.existsSync(path.join(publicDir, img))) problems.push(`image not found in public/: ${img}`);
@@ -57,7 +57,7 @@ function writeCaption(look) {
     look.cta,
     "",
     "#affiliate · I may earn a small commission from these links.",
-    "Images created using AI. Products are real.",
+    ...((look.fitImages || []).length ? ["Images created using AI. Products are real."] : []),
     tags,
   ];
   const dest = path.join(outDir, `${look.id}.caption.txt`);

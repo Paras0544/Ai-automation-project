@@ -13,7 +13,8 @@
     "typecheck": "tsc",
     "find": "node scripts/find.mjs",
     "pick": "node scripts/pick.mjs",
-    "fits": "node scripts/fits.mjs"
+    "fits": "node scripts/fits.mjs",
+    "auto": "node scripts/auto.mjs"
   },
   "keywords": [],
   "author": "",

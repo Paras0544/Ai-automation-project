@@ -34,7 +34,8 @@ Answer with ONLY a JSON array, no other text:
 
 function mockCandidates(item) {
   const base = process.env.MOCK_SHOP || "http://127.0.0.1:8765";
-  return [1, 2, 3].map((n) => ({ title: `${item.name} option ${n}`, store: item.store, url: `${base}/item${n}.html`, price: item.price }));
+  const slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  return [1, 2, 3].map((n) => ({ title: `${item.name} option ${n}`, store: item.store, url: `${base}/${slug}-${n}.html`, price: item.price }));
 }
 
 async function verify(c) {
@@ -49,11 +50,7 @@ async function verify(c) {
   }
 }
 
-const id = process.argv[2];
-if (!id) {
-  console.log("Usage: npm run find -- <look-id>");
-  process.exitCode = 1;
-} else {
+export async function findProducts(id) {
   const file = path.join(paths.looks, `${id}.json`);
   const look = JSON.parse(fs.readFileSync(file, "utf8"));
 
@@ -70,7 +67,7 @@ if (!id) {
       }
     } catch (e) {
       console.log(`\n  ✗ ${e.message}`);
-      break;
+      throw e;
     }
     // keep only product links on allowed stores (mock mode allows the local test shop)
     const allowed = raw.filter((c) => c?.url && (process.env.MOCK_AI === "1" || storeOf(c.url))).slice(0, 3);
@@ -86,14 +83,24 @@ if (!id) {
         Math.abs((a.price || 1e9) - item.price) - Math.abs((b.price || 1e9) - item.price),
     );
     item.candidates = checked;
-    console.log(checked.length ? `${checked.length} found` : "none found, use the search link instead");
+    console.log(checked.length ? `${checked.length} found` : "none found");
     checked.forEach((c, n) => {
       const flag = c.verified ? (c.inStock === false ? "out of stock" : "checked") : `not checked: ${c.note}`;
       console.log(`   ${n + 1}. ₹${c.price ?? "?"}  ${c.title}  [${c.store}] (${flag})\n      ${c.url}`);
     });
     fs.writeFileSync(file, JSON.stringify(look, null, 2) + "\n"); // save as we go
-    await sleep(4000); // free-tier friendly
+    await sleep(process.env.MOCK_AI === "1" ? 0 : 4000); // free-tier friendly
   }
+  return look;
+}
 
-  console.log(`\nOpen the links you like, then pick, e.g.:\n  npm run pick -- ${id} ${look.items.map((_, i) => `${i + 1}:1`).join(" ")}\nor take the top option for every item:\n  npm run pick -- ${id} auto`);
+if (process.argv[1]?.endsWith("find.mjs")) {
+  const id = process.argv[2];
+  if (!id) {
+    console.log("Usage: npm run find -- <look-id>");
+    process.exitCode = 1;
+  } else {
+    const look = await findProducts(id);
+    console.log(`\nOpen the links you like, then pick, e.g.:\n  npm run pick -- ${id} ${look.items.map((_, i) => `${i + 1}:1`).join(" ")}\nor take the top option for every item:\n  npm run pick -- ${id} auto`);
+  }
 }

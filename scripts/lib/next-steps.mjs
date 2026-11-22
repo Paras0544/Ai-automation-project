@@ -10,7 +10,7 @@ export function missing(look) {
   look.items.forEach((it, i) => {
     if (!exists(it.image)) m.push({ kind: "product", i, it });
   });
-  look.fitImages.forEach((f) => {
+  (look.fitImages || []).forEach((f) => {
     if (!exists(f)) m.push({ kind: "fit", file: f });
   });
   return m;

@@ -91,7 +91,9 @@ export async function planLook(occasion, budget) {
     caption: ai.caption,
     hashtags: ai.hashtags.map((h) => h.replace(/^#/, "")),
     fitPrompt: ai.fitPrompt,
-    fitImages: [`${dir}/fit-1.jpg`, `${dir}/fit-2.jpg`],
+    // Default: outfit board of real product photos (no AI images). Set FITS_MODE=ai in .env to add AI model shots.
+    mode: process.env.FITS_MODE === "ai" ? "ai-fits" : "board",
+    fitImages: process.env.FITS_MODE === "ai" ? [`${dir}/fit-1.jpg`, `${dir}/fit-2.jpg`] : [],
     items: ai.items.map((it, i) => ({
       name: it.name,
       why: it.why,
