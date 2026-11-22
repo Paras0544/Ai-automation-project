@@ -4,7 +4,16 @@
   "templates": {
     "myntra.com": "",
     "flipkart.com": "",
-    "ajio.com": ""
+    "ajio.com": "",
+    "thebearhouse.com": "",
+    "bewakoof.com": "",
+    "tatacliq.com": ""
   },
-  "amazonTag": ""
+  "amazonTag": "",
+  "_shortLinks": {
+    "thebearhouse.com": "https://clnk.in/ErUh",
+    "bewakoof.com": "https://clnk.in/ErUq",
+    "tatacliq.com": "https://clnk.in/ErUB"
+  },
+  "_status": "Cuelinks: Bear House (11.25%), Bewakoof (11.55%), Tata CLiQ (4.25%) approved; Myntra/Flipkart/Ajio pending. Templates need the long (unshortened) link format."
 }

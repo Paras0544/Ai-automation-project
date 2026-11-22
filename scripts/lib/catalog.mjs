@@ -25,6 +25,9 @@ const storeOf = (url) => {
   if (h.endsWith("myntra.com")) return "Myntra";
   if (h.endsWith("amazon.in") || h.endsWith("amzn.in")) return "Amazon";
   if (h.endsWith("ajio.com")) return "Ajio";
+  if (h.endsWith("thebearhouse.com")) return "The Bear House";
+  if (h.endsWith("bewakoof.com")) return "Bewakoof";
+  if (h.endsWith("tatacliq.com")) return "Tata CLiQ";
   return h.replace(/^www\./, "") || "Store";
 };
 

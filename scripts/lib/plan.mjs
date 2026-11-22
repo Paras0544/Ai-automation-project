@@ -5,6 +5,7 @@ import { generateJson } from "./gemini.mjs";
 import { paths, slugify } from "./env.mjs";
 import { usableProducts, markUsed, MIN_CATALOG } from "./catalog.mjs";
 import { rulesForPrompt } from "./learning.mjs";
+import { isEarning, affiliateConfig } from "./affiliate.mjs";
 
 const S = (type, extra = {}) => ({ type, ...extra });
 
@@ -110,8 +111,9 @@ const catalogSchema = S("OBJECT", {
 });
 
 function catalogPrompt(occasion, budget, products, feedback) {
+  const cfg = affiliateConfig();
   const list = products
-    .map((p) => `${p.id} | ${p.category} | ${p.name} | ${p.colour || ""} | ₹${p.price} | ${(p.tags || []).join(" ")} | used ${p.timesUsed || 0}x`)
+    .map((p) => `${p.id} | ${p.category} | ${p.name} | ${p.colour || ""} | ₹${p.price} | ${(p.tags || []).join(" ")} | used ${p.timesUsed || 0}x${isEarning(p.url, cfg) ? " | ★" : ""}`)
     .join("\n");
   return `You are the stylist behind "Well Priced" (@wellpriced.fit), a classy, honest men's fashion page whose promise is: looks expensive, is well priced. It is for Indian guys aged 20-30.
 Build ONE outfit for: "${occasion}". Budget: about ₹${budget} (total must not exceed ₹${Math.round(budget * 1.25)}).
@@ -124,6 +126,7 @@ Rules:
 - Never two items from the same category, except accessories.
 - Colours must work together. Suit Indian weather and the occasion.
 - Prefer products used fewer times, so the page stays varied.
+- Products marked ★ earn the page a commission: when two options fit equally well, pick the ★ one. Never pick a worse-fitting product just because it has ★.
 - Never mention celebrities. Never claim anyone wore or tested anything.
 - Hook: confident, max 8 words. Subhook: Hinglish, lowercase. Caption: 1-2 lines, no hashtags.${rulesForPrompt()}${feedback ? `\n\nYour previous answer was rejected: ${feedback}. Fix it.` : ""}`;
 }
