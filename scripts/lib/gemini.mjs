@@ -22,15 +22,28 @@ let fallback; // a backup model, picked automatically if the main one stays over
 
 // Busy servers (503/500) or a per-minute limit: wait and retry, then try a backup model.
 // A daily quota ("quota"/"billing") is not retried.
+const exhausted = new Set(); // models whose free daily allowance is used up (this run)
+
 export async function generateJson(prompt, schema, opts = {}) {
   const delays = [5000, 15000, 30000, 60000];
   let lastErr;
   for (let i = 0; i <= delays.length; i++) {
-    const m = i >= 2 && fallback ? fallback : model();
+    let m = i >= 2 && fallback ? fallback : model();
+    if (exhausted.has(m)) m = await nextFreeModel().catch(() => m);
     try {
       return await callJson(m, prompt, schema, opts);
     } catch (e) {
       lastErr = e;
+      if (e.daily) {
+        exhausted.add(m);
+        const next = await nextFreeModel().catch(() => undefined);
+        if (next) {
+          console.log(`  (${m} used up its free daily limit; switching to ${next})`);
+          i--; // doesn't count as a retry
+          continue;
+        }
+        throw new Error(`All free Gemini models have hit today's limit. The rest of the ideas stay queued; run again tomorrow.\n${e.message}`);
+      }
       if (!e.retry || i === delays.length) break;
       if (i === 1 && !fallback) fallback = await pickFallback().catch(() => undefined);
       console.log(`  (Gemini busy: ${e.status}. Retrying in ${delays[i] / 1000}s${i >= 1 && fallback ? ` with ${fallback}` : ""}…)`);
@@ -38,6 +51,14 @@ export async function generateJson(prompt, schema, opts = {}) {
     }
   }
   throw lastErr;
+}
+
+// next text model with its own free daily allowance, best first
+async function nextFreeModel() {
+  const all = await listModels();
+  const usable = all.filter((n) => /flash/i.test(n) && !/image|tts|audio|live|embed|exp|transcribe|computer|robotics|omni|banana/i.test(n) && !exhausted.has(n));
+  const rank = (n) => (/lite/i.test(n) ? 1 : 0) + (/preview/i.test(n) ? 0.5 : 0);
+  return usable.sort((a, b) => rank(a) - rank(b) || b.localeCompare(a, undefined, { numeric: true }))[0];
 }
 
 async function pickFallback() {
@@ -61,7 +82,8 @@ async function callJson(m, prompt, schema, { temperature = 0.9 } = {}) {
     if (res.status === 404) throw new Error(`Model "${m}" not found. Run "npm run models" and set GEMINI_MODEL in .env.\n${msg}`);
     const err = new Error(res.status === 429 ? `Free-tier limit hit, wait a minute and retry.\n${msg}` : `Gemini error ${res.status}: ${msg}`);
     err.status = res.status;
-    err.retry = [500, 502, 503, 504].includes(res.status) || (res.status === 429 && !/per day|daily|billing/i.test(msg));
+    err.retry = [500, 502, 503, 504].includes(res.status) || (res.status === 429 && !/per ?day|daily|billing/i.test(msg));
+    err.daily = res.status === 429 && /per ?day|daily/i.test(msg);
     throw err;
   }
   const text = body?.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";

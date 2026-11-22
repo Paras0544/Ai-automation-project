@@ -59,10 +59,19 @@ export async function scrape(url) {
   const html = await res.text();
   const ld = /amazon\.in/.test(res.url) ? fromAmazon(html) : fromJsonLd(html);
   const price = ld.price || Math.round(Number(meta(html, "product:price:amount") || meta(html, "price") || 0)) || undefined;
+  // Shopify and others give "//cdn…" or "/files/…" image links: make them full URLs
+  let image = ld.image || meta(html, "og:image");
+  if (image) {
+    try {
+      image = new URL(image.replace(/&amp;/g, "&"), res.url).toString();
+    } catch {
+      image = undefined;
+    }
+  }
   return {
     finalUrl: res.url,
     price,
-    image: ld.image || meta(html, "og:image"),
+    image,
     name: (ld.name || meta(html, "og:title") || "").trim(),
     inStock: ld.inStock ?? true,
   };
