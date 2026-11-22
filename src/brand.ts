@@ -1,6 +1,7 @@
-// Everything that makes a reel look like "The Measured Man". Change it here, every video updates.
+// Everything that makes a reel look like "Well Priced". Change it here, every video updates.
 export const brand = {
-  name: "THE MEASURED MAN",
+  name: "WELL PRICED",
+  handle: "@wellpriced.fit",
   colors: {
     bg: "#F4EFE6", // off-white
     ink: "#2B2B2B", // charcoal

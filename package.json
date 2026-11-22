@@ -1,7 +1,7 @@
 {
-  "name": "measured-man-pipeline",
+  "name": "well-priced-pipeline",
   "version": "1.0.0",
-  "description": "Reel renderer for The Measured Man",
+  "description": "Reel renderer for Well Priced",
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "new": "node scripts/new-look.mjs",

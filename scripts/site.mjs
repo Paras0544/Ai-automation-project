@@ -61,7 +61,7 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
-<p class="note">#affiliate · Links on this page earn The Measured Man a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
+<p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
 
 fs.rmSync(outDir, { recursive: true, force: true });
@@ -74,7 +74,7 @@ const list = looks.length
   : `<p class="meta" style="text-align:center">First looks coming soon.</p>`;
 fs.writeFileSync(
   path.join(outDir, "index.html"),
-  page("The Measured Man — shop the looks", `<header><div class="brand">The Measured Man</div><p>Every look from the reels. Tap one to shop it.</p></header>${list}`),
+  page("Well Priced — shop the looks", `<header><div class="brand">Well Priced</div><p>@wellpriced.fit · Looks expensive. Isn't. Tap a look to shop it.</p></header>${list}`),
 );
 
 for (const l of looks) {
@@ -91,7 +91,7 @@ for (const l of looks) {
   fs.writeFileSync(
     path.join(dir, "index.html"),
     page(
-      `${l.hook} — The Measured Man`,
+      `${l.hook} — Well Priced`,
       `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${items}<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`,
       `${l.occasion}: ${l.items.map((i) => i.name).join(", ")}`,
     ),

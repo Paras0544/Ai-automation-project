@@ -1,4 +1,4 @@
-# The Measured Man — reel pipeline
+# Well Priced (@wellpriced.fit) — reel pipeline
 
 Plans outfit reels with Gemini, pulls real product details from the links you pick, and renders
 1080x1920 reels in the brand style with a ready-to-paste caption.

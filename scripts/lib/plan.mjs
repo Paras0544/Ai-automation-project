@@ -38,7 +38,7 @@ const schema = S("OBJECT", {
 });
 
 function prompt(occasion, budget) {
-  return `You are the stylist behind "The Measured Man", a classy, honest men's fashion page for Indian guys aged 20-30.
+  return `You are the stylist behind "Well Priced" (@wellpriced.fit), a classy, honest men's fashion page whose promise is: looks expensive, is well priced. It is for Indian guys aged 20-30.
 Plan ONE outfit for this occasion: "${occasion}". Total budget: about ₹${budget}.
 
 Rules:
@@ -113,7 +113,7 @@ function catalogPrompt(occasion, budget, products, feedback) {
   const list = products
     .map((p) => `${p.id} | ${p.category} | ${p.name} | ${p.colour || ""} | ₹${p.price} | ${(p.tags || []).join(" ")} | used ${p.timesUsed || 0}x`)
     .join("\n");
-  return `You are the stylist behind "The Measured Man", a classy, honest men's fashion page for Indian guys aged 20-30.
+  return `You are the stylist behind "Well Priced" (@wellpriced.fit), a classy, honest men's fashion page whose promise is: looks expensive, is well priced. It is for Indian guys aged 20-30.
 Build ONE outfit for: "${occasion}". Budget: about ₹${budget} (total must not exceed ₹${Math.round(budget * 1.25)}).
 
 Choose 3 to 5 products ONLY from this catalog (id | category | name | colour | price | suits | times used):
