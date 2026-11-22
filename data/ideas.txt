@@ -1,0 +1,31 @@
+# One idea per line: occasion | budget in rupees. "npm run batch -- 7" plans the next 7.
+First day at a Gurgaon office | 3500
+Delhi winter first date | 5000
+Cousin's mehendi, guest look | 4000
+Sangeet night without overdressing | 5000
+Interview at a startup | 4000
+Weekend brunch in Cyber Hub | 3500
+Airport look for a Goa trip | 4000
+Office Friday, then straight to drinks | 4500
+Meeting the girlfriend's parents | 5000
+College fest day | 3000
+Concert night | 3500
+Diwali party at a friend's place | 5000
+Old money look on a budget | 2000
+Old money look, mid budget | 5000
+Old money look, premium | 10000
+Clean streetwear | 3500
+Smart casual for office | 4000
+Winter layering in Delhi | 6000
+Wedding guest ethnic look | 5000
+Date night | 4500
+Gym to cafe athleisure | 3500
+5 basics every guy needs | 5000
+One white shirt, styled for weekend | 3000
+Shoes that go with everything | 4000
+Delhi December layering | 6000
+New Year's Eve party | 5000
+Monsoon-proof office look | 4000
+Sunday family lunch | 3000
+Road trip to the hills | 4500
+First salary celebration dinner | 5000

@@ -1,0 +1,32 @@
+{
+  "name": "measured-man-pipeline",
+  "version": "1.0.0",
+  "description": "Reel renderer for The Measured Man",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "new": "node scripts/new-look.mjs",
+    "batch": "node scripts/batch.mjs",
+    "products": "node scripts/products.mjs",
+    "status": "node scripts/status.mjs",
+    "models": "node scripts/status.mjs models",
+    "render": "node scripts/render-all.mjs",
+    "typecheck": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/bundler": "^4.0.545",
+    "@remotion/cli": "^4.0.545",
+    "@remotion/renderer": "^4.0.545",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "type": "module"
+}
