@@ -1,0 +1,58 @@
+{
+  "id": "weekend-brunch-in-cyber-hub",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Weekend brunch in Cyber Hub",
+  "budget": 3500,
+  "hook": "Cyber Hub Brunch Fit Under 3500",
+  "subhook": "effortless weekend look bro",
+  "cta": "Comment BRUNCH for links",
+  "caption": "Clean linen shirt paired with sharp chinos and loafers. The effortless Sunday vibe for Cyber Hub.",
+  "hashtags": [
+    "mensfashion",
+    "brunchoutfit",
+    "cyberhub",
+    "smartcasual",
+    "menswear"
+  ],
+  "fitPrompt": "A fit Indian male model in his early 20s with short side-swept hair and a neutral expression, wearing a beige cotton-linen relaxed shirt, slim stretch chinos, and brown suede loafers. Set outdoors at Cyber Hub Gurgaon surrounded by modern glass cafes in bright daylight, vertical 9:16 aspect ratio, natural light, editorial menswear photo.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "f086b965be",
+      "name": "Beige cotton-linen shirt (Mast & Harbour)",
+      "why": "Breezy linen fabric for weekend chill",
+      "store": "Myntra",
+      "price": 968,
+      "targetPrice": 968,
+      "image": "catalog/f086b965be.jpg",
+      "url": "https://www.myntra.com/shirts/mast26harbour/mast--harbour-beige-classic-slim-fit-casual-cotton-linen-shirt/22677784/buy",
+      "productTitle": "Mast & Harbour Beige Classic Slim Fit Casual Cotton Linen Shirt"
+    },
+    {
+      "catalogId": "83b926670a",
+      "name": "Slim stretch chinos (Belano)",
+      "why": "Tailored fit balances the relaxed top",
+      "store": "Amazon",
+      "price": 949,
+      "targetPrice": 949,
+      "image": "catalog/83b926670a.jpg",
+      "url": "https://www.amazon.in/BELANO-Slim-Cotton-Stretch-Chinos/dp/B0CN4SKGHJ",
+      "productTitle": "BELANO Men Slim Fit Navy Blue Cotton Stretch Chinos"
+    },
+    {
+      "catalogId": "394408ca40",
+      "name": "Brown suede loafers (Mast & Harbour)",
+      "why": "Adds instant old-money brunch aesthetic",
+      "store": "Myntra",
+      "price": 1269,
+      "targetPrice": 1269,
+      "image": "catalog/394408ca40.jpg",
+      "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
+      "productTitle": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 13.83
+}

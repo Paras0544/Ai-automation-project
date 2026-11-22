@@ -1,0 +1,80 @@
+{
+  "id": "airport-look-for-a-goa-trip",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Airport look for a Goa trip",
+  "budget": 4000,
+  "hook": "Airport Look For Your Goa Trip",
+  "subhook": "goa flight fit under 4.5k",
+  "cta": "Comment GOA for links",
+  "caption": "Effortless travel style that takes you straight from the flight to the beach club. Super comfortable, breezy, and easily under 5k.",
+  "hashtags": [
+    "goatrip",
+    "airportfit",
+    "mensfashion",
+    "travelstyle",
+    "menswear"
+  ],
+  "fitPrompt": "An Indian male model in his early 20s with short side-swept hair, fit physique, and neutral expression wearing a white tee under an open beige cotton overshirt, relaxed olive pleated trousers, brown suede loafers, and black sunglasses. Setting is a modern sunlit airport lounge with glass windows, vertical 9:16 framing, natural light, high-end editorial menswear style.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "8ddc4beb4d",
+      "name": "White cotton tee (Bewakoof)",
+      "why": "Breathable base for long travel hours",
+      "store": "Myntra",
+      "price": 565,
+      "targetPrice": 565,
+      "image": "catalog/8ddc4beb4d.jpg",
+      "url": "https://www.myntra.com/tshirts/bewakoof/bewakoof-men-white-solid-round-neck-pure-cotton-t-shirt/13819100/buy",
+      "productTitle": "Bewakoof Men White Solid Round Neck Pure Cotton T-shirt"
+    },
+    {
+      "catalogId": "cfbfb9ef9d",
+      "name": "Cotton overshirt (Vastrado)",
+      "why": "Light layer for chilly airport AC",
+      "store": "Myntra",
+      "price": 699,
+      "targetPrice": 699,
+      "image": "catalog/cfbfb9ef9d.jpg",
+      "url": "https://www.myntra.com/shackets/vastrado/vastrado-men-solid-super-soft-double-pocket-cotton-overshirt-shacket/36311897/buy",
+      "productTitle": "VASTRADO Men Solid Super Soft Double Pocket Cotton Overshirt Shacket"
+    },
+    {
+      "catalogId": "f68abc1989",
+      "name": "Relaxed pleated trousers (Highlander)",
+      "why": "Relaxed fit for ultimate seating comfort",
+      "store": "Myntra",
+      "price": 1220,
+      "targetPrice": 1220,
+      "image": "catalog/f68abc1989.jpg",
+      "url": "https://www.myntra.com/trousers/highlander/highlander-men-relaxed-fit-pleated-trousers/36387779/buy",
+      "productTitle": "HIGHLANDER Men Relaxed Fit Pleated Trousers"
+    },
+    {
+      "catalogId": "394408ca40",
+      "name": "Brown suede loafers (Mast & Harbour)",
+      "why": "Easy slip-on for security checks",
+      "store": "Myntra",
+      "price": 1269,
+      "targetPrice": 1269,
+      "image": "catalog/394408ca40.jpg",
+      "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
+      "productTitle": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers"
+    },
+    {
+      "catalogId": "78a4312357",
+      "name": "Black wayfarers (Voyage)",
+      "why": "Instant resort vibe upon landing",
+      "store": "Myntra",
+      "price": 753,
+      "targetPrice": 753,
+      "image": "catalog/78a4312357.jpg",
+      "url": "https://www.myntra.com/sunglasses/voyage/voyage-unisex-black-lens--black-wayfarer-sunglasses-with-uv-protected-lens/19037770/buy",
+      "productTitle": "Voyage Unisex Black Lens & Black Wayfarer Sunglasses with UV Protected Lens"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 17.03
+}

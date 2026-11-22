@@ -1,0 +1,58 @@
+{
+  "id": "diwali-party-at-a-friend-s-place",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Diwali party at a friend's place",
+  "budget": 5000,
+  "hook": "Diwali party ready in seconds.",
+  "subhook": "sabse alag dikho ge",
+  "cta": "Comment DIWALI for links",
+  "caption": "Minimal ethnic fit for the festive season without trying too hard.",
+  "hashtags": [
+    "diwalifashion",
+    "mensethnic",
+    "festivelook",
+    "indianmenswear",
+    "diwaliparty"
+  ],
+  "fitPrompt": "The brand's recurring Indian male model (early 20s, fit, short side-swept hair, neutral expression) wearing a navy short kurta, white slim chinos, and tan embroidered juttis, festive indoor setting with warm Diwali lighting and diyas, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "87306fc506",
+      "name": "Navy short kurta (HERE&NOW)",
+      "why": "Festive and comfortable navy short kurta",
+      "store": "Myntra",
+      "price": 715,
+      "targetPrice": 715,
+      "image": "catalog/87306fc506.jpg",
+      "url": "https://www.myntra.com/kurtas/here&now/herenow-men-solid-cotton-kurta/24454594/buy",
+      "productTitle": "HERE&NOW Men Solid Cotton Short Kurta"
+    },
+    {
+      "catalogId": "83b926670a",
+      "name": "Slim stretch chinos (Belano)",
+      "why": "Clean white slim stretch chinos",
+      "store": "Amazon",
+      "price": 949,
+      "targetPrice": 949,
+      "image": "catalog/83b926670a.jpg",
+      "url": "https://www.amazon.in/BELANO-Slim-Cotton-Stretch-Chinos/dp/B0CN4SKGHJ",
+      "productTitle": "BELANO Men Slim Fit Navy Blue Cotton Stretch Chinos"
+    },
+    {
+      "catalogId": "007fad0b68",
+      "name": "Tan embroidered juttis (Fausto)",
+      "why": "Classic tan embroidered juttis for festivals",
+      "store": "Myntra",
+      "price": 1175,
+      "targetPrice": 1175,
+      "image": "catalog/007fad0b68.jpg",
+      "url": "https://www.myntra.com/casual-shoes/fausto/fausto-men-tan-brown-solid-lightweight-ethnic-juttis/13638102/buy",
+      "productTitle": "FAUSTO Men Tan Wedding Ethnic Party Embroidery Design Slip On Juttis and Mojaris"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 13.83
+}

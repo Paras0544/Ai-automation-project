@@ -1,0 +1,69 @@
+{
+  "id": "delhi-winter-first-date-2",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Delhi winter first date",
+  "budget": 5000,
+  "hook": "Delhi Winter First Date Fit",
+  "subhook": "dilli ki sardi me impression set",
+  "cta": "Comment DATE for links",
+  "caption": "Elevated knitwear and tailored pleats for cold Delhi evenings. Warm, sharp, and effortlessly polished.",
+  "hashtags": [
+    "mensfashion",
+    "winteroutfit",
+    "firstdatefit",
+    "delhifashion",
+    "mensstyle"
+  ],
+  "fitPrompt": "Indian male model in early 20s, fit, short side-swept hair, neutral expression, wearing a polo-collar cable knit sweater, relaxed pleated trousers, brown chelsea boots, and a silver dial leather watch. Outdoors at an aesthetic outdoor cafe in Delhi during a winter evening, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "05b9251ba7",
+      "name": "Polo-collar cable knit (Wrogn)",
+      "why": "Cozy cable knit adds premium texture",
+      "store": "Myntra",
+      "price": 1399,
+      "targetPrice": 1399,
+      "image": "catalog/05b9251ba7.jpg",
+      "url": "https://www.myntra.com/sweaters/wrogn/wrogn-polo-collar-cable-knitted-pullover-sweater/29580336/buy",
+      "productTitle": "WROGN Polo Collar Cable Knitted Pullover Sweater"
+    },
+    {
+      "catalogId": "f68abc1989",
+      "name": "Relaxed pleated trousers (Highlander)",
+      "why": "Pleated trousers give a clean drape",
+      "store": "Myntra",
+      "price": 1220,
+      "targetPrice": 1220,
+      "image": "catalog/f68abc1989.jpg",
+      "url": "https://www.myntra.com/trousers/highlander/highlander-men-relaxed-fit-pleated-trousers/36387779/buy",
+      "productTitle": "HIGHLANDER Men Relaxed Fit Pleated Trousers"
+    },
+    {
+      "catalogId": "e5f3095af2",
+      "name": "Brown chelsea boots (Killer)",
+      "why": "Brown boots elevate the winter aesthetic",
+      "store": "Myntra",
+      "price": 1082,
+      "targetPrice": 1082,
+      "image": "catalog/e5f3095af2.jpg",
+      "url": "https://www.myntra.com/boots/killer/killer-men-chelsea-boots/31593456/buy",
+      "productTitle": "Buy Killer Men Chelsea Boots -  - Footwear for Men"
+    },
+    {
+      "catalogId": "28a8de1aec",
+      "name": "Silver dial leather watch (Timex)",
+      "why": "Classic watch adds subtle refined charm",
+      "store": "Myntra",
+      "price": 1717,
+      "targetPrice": 1717,
+      "image": "catalog/28a8de1aec.jpg",
+      "url": "https://www.myntra.com/watches/timex/timex-men-leather-straps-analogue-watch-twtg65smu25/30828601/buy",
+      "productTitle": "Buy Timex Men Leather Straps Analogue Watch TWTG65SMU25 -  - Accessories for Men"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

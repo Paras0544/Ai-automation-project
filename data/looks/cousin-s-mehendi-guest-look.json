@@ -1,0 +1,69 @@
+{
+  "id": "cousin-s-mehendi-guest-look",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Cousin's mehendi, guest look",
+  "budget": 4000,
+  "hook": "Cousin's Mehendi Outfit Under ₹3600",
+  "subhook": "kitne ka fit?",
+  "cta": "Comment MEHENDI for links",
+  "caption": "Perfect pastel ethnic look for your cousin's mehendi. Stylish, comfy, and completely budget-friendly.",
+  "hashtags": [
+    "mehendilook",
+    "mensethnicwear",
+    "weddingguestfit",
+    "desifashion",
+    "indianmenswear"
+  ],
+  "fitPrompt": "An Indian male model in his early 20s, fit build, short side-swept hair, neutral expression, wearing a salmon pink cotton kurta layered with a woven Nehru jacket, white cotton pyjama trousers, and tan embroidered juttis. Set in a tastefully decorated outdoor Indian mehendi venue with warm lighting, vertical 9:16, natural light, editorial menswear photo.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "d31f232a75",
+      "name": "Salmon pink cotton kurta (Devoiler)",
+      "why": "Festive color perfect for mehendi",
+      "store": "Myntra",
+      "price": 839,
+      "targetPrice": 839,
+      "image": "catalog/d31f232a75.jpg",
+      "url": "https://www.myntra.com/kurtas/devoiler/devoiler-men-salmon-pink-straight-cotton-kurta/17292964/buy",
+      "productTitle": "DEVOILER Men Salmon Pink Straight Cotton Kurta"
+    },
+    {
+      "catalogId": "12e925dfc2",
+      "name": "Woven Nehru jacket (Jompers)",
+      "why": "Adds polished festive structure",
+      "store": "Myntra",
+      "price": 805,
+      "targetPrice": 805,
+      "image": "catalog/12e925dfc2.jpg",
+      "url": "https://www.myntra.com/nehru-jackets/jompers/jompers-woven-design-nehru-jacket/26218222/buy",
+      "productTitle": "Jompers Woven Design Nehru Jacket"
+    },
+    {
+      "catalogId": "0d517d7dd9",
+      "name": "White cotton pyjama (Vastramay)",
+      "why": "Clean classic bottom for kurtas",
+      "store": "Myntra",
+      "price": 699,
+      "targetPrice": 699,
+      "image": "catalog/0d517d7dd9.jpg",
+      "url": "https://www.myntra.com/pyjamas/vastramay/vastramay-men-white-solid-cotton-pyjamas/19696686/buy",
+      "productTitle": "VASTRAMAY Men White Solid Cotton Pyjamas"
+    },
+    {
+      "catalogId": "007fad0b68",
+      "name": "Tan embroidered juttis (Fausto)",
+      "why": "Completes the traditional mehendi aesthetic",
+      "store": "Myntra",
+      "price": 1175,
+      "targetPrice": 1175,
+      "image": "catalog/007fad0b68.jpg",
+      "url": "https://www.myntra.com/casual-shoes/fausto/fausto-men-tan-brown-solid-lightweight-ethnic-juttis/13638102/buy",
+      "productTitle": "FAUSTO Men Tan Wedding Ethnic Party Embroidery Design Slip On Juttis and Mojaris"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

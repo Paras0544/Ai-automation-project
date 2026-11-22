@@ -1,0 +1,69 @@
+{
+  "id": "meeting-the-girlfriend-s-parents",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Meeting the girlfriend's parents",
+  "budget": 5000,
+  "hook": "Meeting Her Parents For The First Time",
+  "subhook": "unka trust jeetna hai",
+  "cta": "Comment PARENTS for links",
+  "caption": "First impressions matter. Keep it clean, polished, and effortlessly respectful without looking overdressed.",
+  "hashtags": [
+    "MensStyle",
+    "SmartCasual",
+    "FirstImpression",
+    "MeasuredMan",
+    "MensFashionIndia"
+  ],
+  "fitPrompt": "The brand's recurring Indian male model in his early 20s, fit, short side-swept hair, neutral respectful expression, wearing a crisp white soft oxford shirt tucked into classic beige chinos with a brown leather belt and brown suede loafers. Elegant Indian home living room setting with warm natural light, vertical 9:16, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "e426a5c8c6",
+      "name": "White soft oxford shirt (US Polo)",
+      "why": "Crisp white shirt signals pure respectability",
+      "store": "Myntra",
+      "price": 1607,
+      "targetPrice": 1607,
+      "image": "catalog/e426a5c8c6.jpg",
+      "url": "https://www.myntra.com/shirts/uspoloassn/us-polo-assn-men-white-casual-soft-oxford-shirt/20473808/buy",
+      "productTitle": "U.S. Polo Assn. Men White Casual Soft Oxford Shirt"
+    },
+    {
+      "catalogId": "4d5ccda92c",
+      "name": "Regular-fit chinos (Max)",
+      "why": "Classic chinos keep it sharp",
+      "store": "Amazon",
+      "price": 1388,
+      "targetPrice": 1388,
+      "image": "catalog/4d5ccda92c.jpg",
+      "url": "https://www.amazon.in/Max-Men-Regular-Fit-Chinos/dp/B0D7QDHWJQ",
+      "productTitle": "Max Men&#39;s Mid Rise Regular Fit Chinos"
+    },
+    {
+      "catalogId": "394408ca40",
+      "name": "Brown suede loafers (Mast & Harbour)",
+      "why": "Suede loafers add comfortable sophistication",
+      "store": "Myntra",
+      "price": 1269,
+      "targetPrice": 1269,
+      "image": "catalog/394408ca40.jpg",
+      "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
+      "productTitle": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers"
+    },
+    {
+      "catalogId": "7b686ab27b",
+      "name": "Brown leather belt (WildHorn)",
+      "why": "Matching leather belt pulls it together",
+      "store": "Myntra",
+      "price": 548,
+      "targetPrice": 548,
+      "image": "catalog/7b686ab27b.jpg",
+      "url": "https://www.myntra.com/belts/wildhorn/wildhorn-men-brown-leather-belt/16162158/buy",
+      "productTitle": "WildHorn Men Brown Leather Belt"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

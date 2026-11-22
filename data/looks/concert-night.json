@@ -1,0 +1,58 @@
+{
+  "id": "concert-night",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Concert night",
+  "budget": 3500,
+  "hook": "Dressing for the biggest concert tonight",
+  "subhook": "concert ready fit?",
+  "cta": "Comment CONCERT for links",
+  "caption": "Effortless style that holds up from the opening act to the headliner.",
+  "hashtags": [
+    "concertfit",
+    "mensstyle",
+    "streetwear",
+    "themeasuredman",
+    "giglook"
+  ],
+  "fitPrompt": "AI try-on: Indian male model early 20s, fit, short side-swept hair, neutral expression, wearing a black oversized tee, dark blue slim jeans, and an olive bomber jacket, standing near an outdoor concert venue at night with stage lights, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "05aafcb98f",
+      "name": "Black oversized tee (Mr Bowerbird)",
+      "why": "Oversized black tee gives effortless edge.",
+      "store": "Myntra",
+      "price": 531,
+      "targetPrice": 531,
+      "image": "catalog/05aafcb98f.jpg",
+      "url": "https://www.myntra.com/tshirts/mr-bowerbird/mr-bowerbird-men-black-pure-cotton-philosophy-crew-neck-oversized-t-shirt/13675240/buy",
+      "productTitle": "Mr Bowerbird Men Black  Cotton Philosophy Crew Neck Oversized  Cotton T-shirt"
+    },
+    {
+      "catalogId": "488a79da01",
+      "name": "Dark blue slim jeans (Duke)",
+      "why": "Dark denim keeps it rugged yet clean.",
+      "store": "Myntra",
+      "price": 1248,
+      "targetPrice": 1248,
+      "image": "catalog/488a79da01.jpg",
+      "url": "https://www.myntra.com/jeans/duke/duke-men-blue-slim-fit-light-fade-dark-shade-stretchable-jeans/20527654/buy",
+      "productTitle": "Duke Men Blue Slim Fit Light Fade Dark Shade Stretchable Jeans"
+    },
+    {
+      "catalogId": "999a88e6de",
+      "name": "Olive bomber (HERE&NOW)",
+      "why": "Olive bomber adds cool evening layering.",
+      "store": "Myntra",
+      "price": 1253,
+      "targetPrice": 1253,
+      "image": "catalog/999a88e6de.jpg",
+      "url": "https://www.myntra.com/jackets/here26now/herenow-men-olive-green-solid-bomber-jacket/12645812/buy",
+      "productTitle": "HERE&NOW Men Olive Green Solid Bomber Jacket"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 13.83
+}

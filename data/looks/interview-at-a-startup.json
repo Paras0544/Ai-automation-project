@@ -1,0 +1,69 @@
+{
+  "id": "interview-at-a-startup",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Interview at a startup",
+  "budget": 4000,
+  "hook": "Startup Interview Outfit Under ₹4000",
+  "subhook": "pehli baar mein select ho jaoge",
+  "cta": "Comment INTERVIEW for links",
+  "caption": "Clean smart-casual fit that strikes the perfect balance for startup interviews. Professional yet approachable without trying too hard.",
+  "hashtags": [
+    "StartupFit",
+    "SmartCasual",
+    "MenswearIndia",
+    "InterviewOutfit",
+    "MeasuredMan"
+  ],
+  "fitPrompt": "Indian male model in early 20s, fit build, short side-swept hair, neutral expression, wearing light blue striped oxford shirt, beige slim chinos, brown leather belt, and brown suede loafers. Standing in a modern glass-walled startup office foyer in Bengaluru, vertical 9:16, natural morning light, editorial menswear photograph.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "66453602e4",
+      "name": "Light blue striped oxford (Banana Club)",
+      "why": "Crisp pattern looks sharp yet relaxed",
+      "store": "Myntra",
+      "price": 1098,
+      "targetPrice": 1098,
+      "image": "catalog/66453602e4.jpg",
+      "url": "https://www.myntra.com/shirts/bananaclub/banana-club-men-light-blue-cotton-oxford-stripe-shirt/32597524/buy",
+      "productTitle": "Banana Club Men Light Blue Cotton Oxford Stripe Shirt"
+    },
+    {
+      "catalogId": "6ad46b2bbf",
+      "name": "Beige slim chinos (Beyoung)",
+      "why": "Versatile neutral shade for smart casuals",
+      "store": "Myntra",
+      "price": 937,
+      "targetPrice": 937,
+      "image": "catalog/6ad46b2bbf.jpg",
+      "url": "https://www.myntra.com/trousers/beyoung/beyoung-men-slim-fit-chinos-trousers/25700594/buy",
+      "productTitle": "Beyoung Men Beige Slim Fit Chinos Trousers"
+    },
+    {
+      "catalogId": "394408ca40",
+      "name": "Brown suede loafers (Mast & Harbour)",
+      "why": "Elevates outfit with comfortable elegance",
+      "store": "Myntra",
+      "price": 1269,
+      "targetPrice": 1269,
+      "image": "catalog/394408ca40.jpg",
+      "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
+      "productTitle": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers"
+    },
+    {
+      "catalogId": "7b686ab27b",
+      "name": "Brown leather belt (WildHorn)",
+      "why": "Matches footwear for clean complete look",
+      "store": "Myntra",
+      "price": 548,
+      "targetPrice": 548,
+      "image": "catalog/7b686ab27b.jpg",
+      "url": "https://www.myntra.com/belts/wildhorn/wildhorn-men-brown-leather-belt/16162158/buy",
+      "productTitle": "WildHorn Men Brown Leather Belt"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

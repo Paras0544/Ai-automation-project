@@ -1,0 +1,69 @@
+{
+  "id": "college-fest-day",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "College fest day",
+  "budget": 3000,
+  "hook": "College Fest Day Fit Under 3500",
+  "subhook": "kafi head turner mood hai?",
+  "cta": "Comment FEST for links",
+  "caption": "Layered denim fit for college fest vibes that stands out effortlessly. Comment FEST to get all outfit links in your DM.",
+  "hashtags": [
+    "mensfashion",
+    "collegefit",
+    "streetwearindia",
+    "budgetoutfit",
+    "mensstyle"
+  ],
+  "fitPrompt": "The brand's recurring Indian male model, early 20s, fit, short side-swept hair, neutral expression, wearing a plain white cotton tee under a blue washed denim jacket, black slim jeans, and brown chelsea boots. Standing in a vibrant Indian college campus courtyard during a fest, vertical 9:16, natural daylight, editorial menswear photo.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "94663c9773",
+      "name": "White cotton tee (Bratma)",
+      "why": "Crisp base layer for denim",
+      "store": "Myntra",
+      "price": 374,
+      "targetPrice": 374,
+      "image": "catalog/94663c9773.jpg",
+      "url": "https://www.myntra.com/tshirts/bratma/bratma-men-white-solid-round-neck-pure-cotton-t-shirt/12561268/buy",
+      "productTitle": "BRATMA Men White Solid Round Neck Pure Cotton T-shirt"
+    },
+    {
+      "catalogId": "517eec2ff3",
+      "name": "Blue washed denim jacket (Roadster)",
+      "why": "Adds instant rugged fest structure",
+      "store": "Myntra",
+      "price": 1149,
+      "targetPrice": 1149,
+      "image": "catalog/517eec2ff3.jpg",
+      "url": "https://www.myntra.com/jackets/roadster/roadster-men-blue-washed-denim-jacket/12288606/buy",
+      "productTitle": "Roadster Men Blue Washed Denim Jacket"
+    },
+    {
+      "catalogId": "c9a0d42445",
+      "name": "Black slim jeans (Urbano)",
+      "why": "Sleek black balances jacket volume",
+      "store": "Myntra",
+      "price": 756,
+      "targetPrice": 756,
+      "image": "catalog/c9a0d42445.jpg",
+      "url": "https://www.myntra.com/jeans/urbanofashion/urbano-fashion-men-black-slim-fit-mid-rise-clean-look-stretchable-jeans/13823708/buy",
+      "productTitle": "Urbano Fashion Men Black Slim Fit Mid-Rise Clean Look Stretchable Jeans"
+    },
+    {
+      "catalogId": "e5f3095af2",
+      "name": "Brown chelsea boots (Killer)",
+      "why": "Sharp footwear elevates casual look",
+      "store": "Myntra",
+      "price": 1082,
+      "targetPrice": 1082,
+      "image": "catalog/e5f3095af2.jpg",
+      "url": "https://www.myntra.com/boots/killer/killer-men-chelsea-boots/31593456/buy",
+      "productTitle": "Buy Killer Men Chelsea Boots -  - Footwear for Men"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

@@ -1,0 +1,69 @@
+{
+  "id": "office-friday-then-straight-to-drinks",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Office Friday, then straight to drinks",
+  "budget": 4500,
+  "hook": "Desk To Drinks Friday Fit",
+  "subhook": "kaam se club tak sorted fit",
+  "cta": "Comment FRIDAY for links",
+  "caption": "Go from boardroom meetings to evening cocktails effortlessly.\nClean, comfortable, and versatile for your Friday.",
+  "hashtags": [
+    "mensfashion",
+    "smartcasual",
+    "desktonight",
+    "fridayvibes",
+    "grwm"
+  ],
+  "fitPrompt": "The brand's recurring Indian male model (early 20s, fit, short side-swept hair, neutral expression) wearing an oxford stretch shirt, slim stretch chinos, brown suede loafers, and a silver dial leather watch, setting is a modern upscale rooftop lounge in Mumbai at twilight, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "42a3e6d876",
+      "name": "Oxford stretch shirt (Louis Philippe Sport)",
+      "why": "Sharp structure moves easily to evening",
+      "store": "Myntra",
+      "price": 1149,
+      "targetPrice": 1149,
+      "image": "catalog/42a3e6d876.jpg",
+      "url": "https://www.myntra.com/shirts/louisphilippesport/louis-philippe-men-slim-fit-oxford-natural-stretch-full-sleeve-casual-shirt/34382638/buy",
+      "productTitle": "Louis Philippe Men Slim Fit Oxford Natural Stretch Full Sleeve Casual Shirt"
+    },
+    {
+      "catalogId": "83b926670a",
+      "name": "Slim stretch chinos (Belano)",
+      "why": "All-day comfort with a sleek fit",
+      "store": "Amazon",
+      "price": 949,
+      "targetPrice": 949,
+      "image": "catalog/83b926670a.jpg",
+      "url": "https://www.amazon.in/BELANO-Slim-Cotton-Stretch-Chinos/dp/B0CN4SKGHJ",
+      "productTitle": "BELANO Men Slim Fit Navy Blue Cotton Stretch Chinos"
+    },
+    {
+      "catalogId": "394408ca40",
+      "name": "Brown suede loafers (Mast & Harbour)",
+      "why": "Luxe texture elevates smart-casual look",
+      "store": "Myntra",
+      "price": 1269,
+      "targetPrice": 1269,
+      "image": "catalog/394408ca40.jpg",
+      "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
+      "productTitle": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers"
+    },
+    {
+      "catalogId": "28a8de1aec",
+      "name": "Silver dial leather watch (Timex)",
+      "why": "Timeless leather piece adds subtle class",
+      "store": "Myntra",
+      "price": 1717,
+      "targetPrice": 1717,
+      "image": "catalog/28a8de1aec.jpg",
+      "url": "https://www.myntra.com/watches/timex/timex-men-leather-straps-analogue-watch-twtg65smu25/30828601/buy",
+      "productTitle": "Buy Timex Men Leather Straps Analogue Watch TWTG65SMU25 -  - Accessories for Men"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

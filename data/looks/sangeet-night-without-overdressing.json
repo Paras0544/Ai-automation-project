@@ -1,0 +1,69 @@
+{
+  "id": "sangeet-night-without-overdressing",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Sangeet night without overdressing",
+  "budget": 5000,
+  "hook": "Sangeet Night Outfit Without Overdressing",
+  "subhook": "sangeet pe sleek kaise dikhe?",
+  "cta": "Comment SANGEET for links",
+  "caption": "Keep it understated yet classy for your friend's sangeet. Elegant layers without heavy embroidery.",
+  "hashtags": [
+    "mensfashion",
+    "sangeetfit",
+    "indianmenswear",
+    "festivelook",
+    "measuredman"
+  ],
+  "fitPrompt": "An early 20s fit Indian male model with short side-swept hair and a neutral expression standing in a warm evening outdoor sangeet setting. He is wearing a dark navy short kurta under a tailored black sleeveless Nehru jacket, styled with fluid relaxed pleated trousers and dark textured mojaris. Vertical 9:16 aspect ratio, ambient festivity lighting, editorial menswear style.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "87306fc506",
+      "name": "Navy short kurta (HERE&NOW)",
+      "why": "Clean base without heavy embroidery",
+      "store": "Myntra",
+      "price": 715,
+      "targetPrice": 715,
+      "image": "catalog/87306fc506.jpg",
+      "url": "https://www.myntra.com/kurtas/here&now/herenow-men-solid-cotton-kurta/24454594/buy",
+      "productTitle": "HERE&NOW Men Solid Cotton Short Kurta"
+    },
+    {
+      "catalogId": "9402a6be4d",
+      "name": "Black Nehru jacket (Wintage)",
+      "why": "Adds sharp structure instantly",
+      "store": "Myntra",
+      "price": 1148,
+      "targetPrice": 1148,
+      "image": "catalog/9402a6be4d.jpg",
+      "url": "https://www.myntra.com/nehru-jackets/wintage/wintage-men-black-nehru-jacket/1992725/buy",
+      "productTitle": "Wintage Men Black Nehru Jacket"
+    },
+    {
+      "catalogId": "00f0583d64",
+      "name": "Relaxed pleated trousers (Tribe)",
+      "why": "Elevated silhouette and rich drape",
+      "store": "Myntra",
+      "price": 2249,
+      "targetPrice": 2249,
+      "image": "catalog/00f0583d64.jpg",
+      "url": "https://www.myntra.com/trousers/tribe/tribe-men-solid-relaxed-loose-fit-pleated-trousers/34094888/buy",
+      "productTitle": "TRIBE Men Solid Relaxed Loose Fit Pleated Trousers"
+    },
+    {
+      "catalogId": "80fc3ecb7f",
+      "name": "Textured mojaris (Fausto)",
+      "why": "Festive finish without being extra",
+      "store": "Myntra",
+      "price": 1435,
+      "targetPrice": 1435,
+      "image": "catalog/80fc3ecb7f.jpg",
+      "url": "https://www.myntra.com/casual-shoes/fausto/fausto-men-textured-ethnic-slip-on-juttis-and-mojaris-for-wedding/31239973/buy",
+      "productTitle": "FAUSTO Men Textured Ethnic Slip On Juttis and Mojaris for Wedding"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43
+}

@@ -2,12 +2,39 @@
   "id": "office-day1",
   "hook": "Gurgaon office, day 1.",
   "subhook": "kitne ka fit?",
-  "fitImages": ["sample/fit-1.jpg", "sample/fit-2.jpg"],
-  "items": [
-    { "name": "Light blue oxford shirt", "store": "Myntra", "price": 1299, "image": "sample/shirt.jpg", "why": "Crisp but not stiff" },
-    { "name": "Navy slim chinos", "store": "Myntra", "price": 1499, "image": "sample/chinos.jpg", "why": "Works with every shirt you own" },
-    { "name": "White leather sneakers", "store": "Amazon", "price": 1899, "image": "sample/sneakers.jpg", "why": "Office-safe, weekend-ready" },
-    { "name": "Brown leather belt", "store": "Amazon", "price": 499, "image": "sample/belt.jpg" }
+  "fitImages": [
+    "sample/fit-1.jpg",
+    "sample/fit-2.jpg"
   ],
-  "cta": "Comment FIT for links"
+  "items": [
+    {
+      "name": "Light blue oxford shirt",
+      "store": "Myntra",
+      "price": 1299,
+      "image": "sample/shirt.jpg",
+      "why": "Crisp but not stiff"
+    },
+    {
+      "name": "Navy slim chinos",
+      "store": "Myntra",
+      "price": 1499,
+      "image": "sample/chinos.jpg",
+      "why": "Works with every shirt you own"
+    },
+    {
+      "name": "White leather sneakers",
+      "store": "Amazon",
+      "price": 1899,
+      "image": "sample/sneakers.jpg",
+      "why": "Office-safe, weekend-ready"
+    },
+    {
+      "name": "Brown leather belt",
+      "store": "Amazon",
+      "price": 499,
+      "image": "sample/belt.jpg"
+    }
+  ],
+  "cta": "Comment FIT for links",
+  "coverSeconds": 16.43
 }
