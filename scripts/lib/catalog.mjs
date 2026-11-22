@@ -1,5 +1,5 @@
 // The product catalog: your curated list of real products that looks are built from.
-//   data/catalog.csv   — YOUR list (edit in Excel/Notepad): url, category, tags, notes, price
+//   data/catalog.csv   — YOUR list (edit in Excel/Notepad): url, category, tags, notes (= short name shown on the reel), price (fallback if the store blocks)
 //   data/catalog.json  — the machine's cache: real name, price, stock, photo, usage (don't edit)
 //   public/catalog/    — downloaded product photos
 import fs from "node:fs";
@@ -159,7 +159,8 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
         console.log(`  (couldn't auto-label: ${e.message.split("\n")[0]})`);
       }
     }
-    c.name = c.name || (c.title || "").slice(0, 40);
+    // your short name in the "notes" column wins (it shows on the reel)
+    c.name = row.notes || c.name || (c.title || "").slice(0, 40);
     c.category = row.category;
     c.tags = row.tags.split(/[\s;|]+/).filter(Boolean);
     c.notes = row.notes;
