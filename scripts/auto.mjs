@@ -27,7 +27,30 @@ if (ideas.length === 0) {
   const results = [];
   let used = 0;
 
-  for (const line of ideas.slice(0, n)) {
+  // 1) Finish looks that were planned before but not completed (e.g. a run stopped on an API error)
+  const unfinished = fs
+    .readdirSync(paths.looks)
+    .filter((f) => f.endsWith(".json"))
+    .map((f) => readLook(f.replace(/\.json$/, "")))
+    .filter((l) => l.status === "needs-products" && !fs.existsSync(path.join(paths.out, `${l.id}.mp4`)))
+    .slice(0, n);
+  let stopped = false;
+  for (const look of unfinished) {
+    console.log(`\n=== Resuming ${look.occasion} (₹${look.budget}) ===`);
+    try {
+      await findProducts(look.id);
+      await pickProducts(look.id, ["auto"]);
+      results.push(qualityCheck(look.id));
+    } catch (e) {
+      console.log(`✗ stopped: ${e.message}`);
+      results.push({ id: look.id, occasion: look.occasion, ok: false, flags: [`error: ${e.message.split("\n")[0]}`], look: readLook(look.id) });
+      stopped = true;
+      break;
+    }
+  }
+
+  // 2) Then new ideas, up to N looks in total
+  for (const line of stopped ? [] : ideas.slice(0, Math.max(0, n - unfinished.length))) {
     const [occasion, budgetRaw = "4000"] = line.split("|").map((s) => s.trim());
     const budget = Number(budgetRaw.replace(/[^\d]/g, "")) || 4000;
     console.log(`\n=== ${occasion} (₹${budget}) ===`);

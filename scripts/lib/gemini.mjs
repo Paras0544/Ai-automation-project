@@ -56,7 +56,13 @@ export async function searchJson(prompt) {
   const body = await res.json().catch(() => ({}));
   if (!res.ok) {
     const msg = body?.error?.message || res.statusText;
-    if (res.status === 429) throw new Error(`Search limit hit on your key, wait a minute and retry.\n${msg}`);
+    if (res.status === 429) {
+      throw new Error(
+        /quota|billing/i.test(msg)
+          ? "Google Search via Gemini is not included in the free tier. Turn on billing in AI Studio (5,000 searches/month stay free) and set a monthly spend cap, then run again. Unfinished looks resume automatically.\n" + msg
+          : `Search limit hit, wait a minute and retry.\n${msg}`,
+      );
+    }
     throw new Error(`Gemini search error ${res.status}: ${msg}`);
   }
   const cand = body?.candidates?.[0];
