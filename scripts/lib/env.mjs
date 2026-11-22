@@ -6,7 +6,15 @@ import { fileURLToPath } from "node:url";
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
 
 const envPath = path.join(root, ".env");
-if (fs.existsSync(envPath)) process.loadEnvFile(envPath);
+const envTxt = path.join(root, ".env.txt"); // Windows Notepad often saves ".env" as ".env.txt"
+if (fs.existsSync(envPath)) {
+  process.loadEnvFile(envPath);
+} else if (fs.existsSync(envTxt)) {
+  console.warn('Note: using ".env.txt". Rename it to ".env" (PowerShell: Rename-Item .env.txt .env).');
+  process.loadEnvFile(envTxt);
+}
+export const envFileFound = fs.existsSync(envPath) || fs.existsSync(envTxt);
+export const envFilePath = envPath;
 
 export const paths = {
   root,

@@ -1,6 +1,6 @@
 // Minimal Gemini client over REST (no SDK), asking for JSON that matches a schema.
 // Set GEMINI_API_KEY in .env. Optional: GEMINI_MODEL (default below), MOCK_AI=1 to skip the API.
-import "./env.mjs";
+import { envFileFound, envFilePath } from "./env.mjs";
 
 const BASE = "https://generativelanguage.googleapis.com/v1beta";
 export const model = () => process.env.GEMINI_MODEL || "gemini-3.5-flash";
@@ -9,7 +9,9 @@ function key() {
   const k = process.env.GEMINI_API_KEY;
   if (!k) {
     throw new Error(
-      "GEMINI_API_KEY is missing. Create a file called .env in the project folder with:\nGEMINI_API_KEY=your-key-here",
+      envFileFound
+        ? `Found the .env file but GEMINI_API_KEY is empty. Open it (notepad .env), put your key after GEMINI_API_KEY= and save.`
+        : `No .env file at ${envFilePath}\nCreate it in PowerShell:\n  Copy-Item .env.example .env\n  notepad .env\nthen put your key after GEMINI_API_KEY= and save.`,
     );
   }
   return k;

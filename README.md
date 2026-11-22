@@ -20,7 +20,7 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
    git clone https://github.com/Paras0544/Ai-automation-project.git
    cd Ai-automation-project
    npm install
-   copy .env.example .env
+   Copy-Item .env.example .env
    notepad .env
    ```
 3. Paste your Gemini key after `GEMINI_API_KEY=` and save. `.env` is git-ignored, so the key never goes to GitHub.
