@@ -2,7 +2,7 @@
 // Set GEMINI_API_KEY in .env. Optional: GEMINI_MODEL (default below), MOCK_AI=1 to skip the API.
 import { envFileFound, envFilePath } from "./env.mjs";
 
-const BASE = "https://generativelanguage.googleapis.com/v1beta";
+const BASE = process.env.GEMINI_BASE || "https://generativelanguage.googleapis.com/v1beta";
 export const model = () => process.env.GEMINI_MODEL || "gemini-3.5-flash";
 
 function key() {
@@ -17,8 +17,37 @@ function key() {
   return k;
 }
 
-export async function generateJson(prompt, schema, { temperature = 0.9 } = {}) {
-  const res = await fetch(`${BASE}/models/${model()}:generateContent`, {
+const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+let fallback; // a backup model, picked automatically if the main one stays overloaded
+
+// Busy servers (503/500) or a per-minute limit: wait and retry, then try a backup model.
+// A daily quota ("quota"/"billing") is not retried.
+export async function generateJson(prompt, schema, opts = {}) {
+  const delays = [5000, 15000, 30000, 60000];
+  let lastErr;
+  for (let i = 0; i <= delays.length; i++) {
+    const m = i >= 2 && fallback ? fallback : model();
+    try {
+      return await callJson(m, prompt, schema, opts);
+    } catch (e) {
+      lastErr = e;
+      if (!e.retry || i === delays.length) break;
+      if (i === 1 && !fallback) fallback = await pickFallback().catch(() => undefined);
+      console.log(`  (Gemini busy: ${e.status}. Retrying in ${delays[i] / 1000}s${i >= 1 && fallback ? ` with ${fallback}` : ""}…)`);
+      await wait(delays[i]);
+    }
+  }
+  throw lastErr;
+}
+
+async function pickFallback() {
+  const all = await listModels();
+  const ok = all.filter((n) => /flash/i.test(n) && !/image|tts|audio|live|embed|preview|exp/i.test(n) && n !== model());
+  return ok.find((n) => /lite/i.test(n)) || ok[0];
+}
+
+async function callJson(m, prompt, schema, { temperature = 0.9 } = {}) {
+  const res = await fetch(`${BASE}/models/${m}:generateContent`, {
     method: "POST",
     headers: { "Content-Type": "application/json", "x-goog-api-key": key() },
     body: JSON.stringify({
@@ -29,9 +58,11 @@ export async function generateJson(prompt, schema, { temperature = 0.9 } = {}) {
   const body = await res.json().catch(() => ({}));
   if (!res.ok) {
     const msg = body?.error?.message || res.statusText;
-    if (res.status === 404) throw new Error(`Model "${model()}" not found. Run "npm run models" and set GEMINI_MODEL in .env.\n${msg}`);
-    if (res.status === 429) throw new Error(`Free-tier limit hit, wait a minute and retry.\n${msg}`);
-    throw new Error(`Gemini error ${res.status}: ${msg}`);
+    if (res.status === 404) throw new Error(`Model "${m}" not found. Run "npm run models" and set GEMINI_MODEL in .env.\n${msg}`);
+    const err = new Error(res.status === 429 ? `Free-tier limit hit, wait a minute and retry.\n${msg}` : `Gemini error ${res.status}: ${msg}`);
+    err.status = res.status;
+    err.retry = [500, 502, 503, 504].includes(res.status) || (res.status === 429 && !/per day|daily|billing/i.test(msg));
+    throw err;
   }
   const text = body?.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
   try {

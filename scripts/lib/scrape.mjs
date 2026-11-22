@@ -33,6 +33,22 @@ function fromJsonLd(html) {
   return {};
 }
 
+// Amazon pages have no JSON-LD price, so read their HTML directly.
+function fromAmazon(html) {
+  if (/validateCaptcha|Enter the characters you see below/i.test(html)) throw new Error("Amazon showed a captcha (try again later)");
+  const whole = (html.match(/class="a-price-whole">([\d,]+)/) || [])[1];
+  const amount = (html.match(/"priceAmount"\s*:\s*([\d.]+)/) || [])[1];
+  const price = Math.round(Number((whole || "").replace(/,/g, "")) || Number(amount) || 0) || undefined;
+  let image = (html.match(/id="landingImage"[^>]*data-old-hires="([^"]+)"/) || html.match(/data-old-hires="([^"]+)"[^>]*id="landingImage"/) || [])[1];
+  if (!image) {
+    const dyn = (html.match(/data-a-dynamic-image="([^"]+)"/) || [])[1];
+    if (dyn) image = (dyn.replace(/&quot;/g, '"').match(/"(https:[^"]+)"/) || [])[1];
+  }
+  const name = ((html.match(/id="productTitle"[^>]*>([\s\S]*?)</) || [])[1] || "").trim();
+  const avail = ((html.match(/id="availability"[\s\S]{0,400}?<span[^>]*>([\s\S]*?)</) || [])[1] || "").trim();
+  return { price, image, name, inStock: !/unavailable|out of stock/i.test(avail) };
+}
+
 export async function scrape(url) {
   const res = await fetch(url, {
     headers: { "User-Agent": UA, "Accept-Language": "en-IN,en;q=0.9" },
@@ -41,7 +57,7 @@ export async function scrape(url) {
   });
   if (!res.ok) throw new Error(`page returned ${res.status}`);
   const html = await res.text();
-  const ld = fromJsonLd(html);
+  const ld = /amazon\.in/.test(res.url) ? fromAmazon(html) : fromJsonLd(html);
   const price = ld.price || Math.round(Number(meta(html, "product:price:amount") || meta(html, "price") || 0)) || undefined;
   return {
     finalUrl: res.url,
