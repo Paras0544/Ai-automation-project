@@ -14,7 +14,8 @@
     "find": "node scripts/find.mjs",
     "pick": "node scripts/pick.mjs",
     "fits": "node scripts/fits.mjs",
-    "auto": "node scripts/auto.mjs"
+    "auto": "node scripts/auto.mjs",
+    "catalog": "node scripts/catalog.mjs"
   },
   "keywords": [],
   "author": "",

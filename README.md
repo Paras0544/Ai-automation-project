@@ -26,15 +26,37 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
 3. Paste your Gemini key after `GEMINI_API_KEY=` and save. `.env` is git-ignored, so the key never goes to GitHub.
 4. Check which models your key can use: `npm run models`. If `gemini-3.5-flash` isn't listed, put one that is into `GEMINI_MODEL` in `.env`.
 
+## Product catalog (free mode — how looks get their products)
+
+Looks are built from YOUR catalog of real products, so everything stays free and every product
+is one you chose once. Aim for 60–100 products across categories; minimum 12.
+
+**Add products** (copy links from the Myntra / Amazon / Ajio app or site):
+```
+npm run catalog -- add https://www.myntra.com/... https://www.amazon.in/... 
+```
+Each page is read for the real name, price, stock and photo; Gemini (free) labels its category
+(top, bottom, outerwear, footwear, ethnic, accessory), colour and occasions. You can also paste links
+straight into `data/catalog.csv` (one per line, in the `url` column) and run `npm run catalog`.
+
+**Check it:** `npm run catalog -- list` shows products by category, how often each was used, and any that are
+out of stock or whose page couldn't be read.
+
+**If a store blocks the page:** type the price in the `price` column of `data/catalog.csv` and save the
+product photo as `public/catalog/<id>.jpg` (the list command shows which).
+
+Autopilot re-checks prices and stock before every run and skips sold-out products. Products used less
+often are preferred so the page stays varied. To remove a product, delete its line from `catalog.csv`.
+
 ## Autopilot (one command)
 
 ```
 npm run auto -- 7
 ```
 
-For the next 7 ideas in `data/ideas.txt` it: plans each look with Gemini → finds real products with Google Search →
-picks the best checked, in-stock option per item → runs quality checks → renders the reel and caption → writes
-`out/report-<date>.md`.
+For the next 7 ideas in `data/ideas.txt` it: refreshes catalog prices and stock → builds each look from the
+catalog with Gemini (free) → runs quality checks → renders the reel and caption → writes `out/report-<date>.md`.
+(With fewer than 12 usable catalog products it falls back to web search, which needs paid Gemini.)
 
 **Quality checks** (a look that fails is not rendered; the report says why):
 - at least 3 items with a real product photo (items with no product are dropped if 3 remain)

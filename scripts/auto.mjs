@@ -11,6 +11,7 @@ import { planLook } from "./lib/plan.mjs";
 import { findProducts } from "./find.mjs";
 import { pickProducts } from "./pick.mjs";
 import { missing } from "./lib/next-steps.mjs";
+import { refreshCatalog, usableProducts, MIN_CATALOG, readCsv } from "./lib/catalog.mjs";
 
 const n = Number(process.argv[2] || 7);
 const MIN_ITEMS = 3;
@@ -24,15 +25,25 @@ if (ideas.length === 0) {
   process.exitCode = 1;
 } else {
   const doneFile = path.join(path.dirname(paths.ideas), "ideas-done.txt");
+
+  // Keep catalog prices and stock current before building looks from it
+  if (readCsv().length) {
+    console.log("Checking catalog prices and stock…");
+    await refreshCatalog();
+    const n2 = usableProducts().length;
+    console.log(n2 >= MIN_CATALOG ? `Catalog: ${n2} usable products.` : `Catalog has only ${n2} usable products (need ${MIN_CATALOG}); falling back to web search, which needs paid Gemini.`);
+  }
   const results = [];
   let used = 0;
 
   // 1) Finish looks that were planned before but not completed (e.g. a run stopped on an API error)
-  const unfinished = fs
+  // (web-search looks need paid Gemini; skip resuming them while the catalog is in use)
+  const catalogActive = usableProducts().length >= MIN_CATALOG;
+  const unfinished = catalogActive ? [] : fs
     .readdirSync(paths.looks)
     .filter((f) => f.endsWith(".json"))
     .map((f) => readLook(f.replace(/\.json$/, "")))
-    .filter((l) => l.status === "needs-products" && !fs.existsSync(path.join(paths.out, `${l.id}.mp4`)))
+    .filter((l) => l.status === "needs-products" && l.source !== "catalog" && !fs.existsSync(path.join(paths.out, `${l.id}.mp4`)))
     .slice(0, n);
   let stopped = false;
   for (const look of unfinished) {
@@ -60,8 +71,10 @@ if (ideas.length === 0) {
       id = look.id;
       used++;
       fs.appendFileSync(doneFile, `${line}  ->  ${id}\n`);
-      await findProducts(id);
-      await pickProducts(id, ["auto"]);
+      if (look.source !== "catalog") {
+        await findProducts(id);
+        await pickProducts(id, ["auto"]);
+      }
       results.push(qualityCheck(id));
     } catch (e) {
       console.log(`✗ stopped: ${e.message}`);
