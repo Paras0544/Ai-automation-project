@@ -1,7 +1,7 @@
 # Feedback log
 
-While the autopilot is new, write anything wrong or off here after reviewing a report.
-Claude uses this to fix the prompts and quality checks.
+Add notes with: npm run feedback -- <look-id> [1-5] "what was off"
+Claude's weekly review turns these into rules (data/rules.md) and code fixes.
 
-| Date | Look id | What was wrong | Example (product, price, wording) |
+| Date | Look id | Score (1-5) | What was off |
 | --- | --- | --- | --- |

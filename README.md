@@ -127,3 +127,11 @@ Colours, fonts, timing, labels: `src/brand.ts`. Live preview: `npm run studio`.
 - AI fit images generated automatically (paid image API, once the format is proven)
 - Telegram approval bot
 - Auto-publish to Instagram and Pinterest
+
+## Self-learning loop
+
+1. **You** (2 min, optional): after watching reels, `npm run feedback -- <look-id> [1-5] "what was off"`.
+2. **Every autopilot run** logs each look and catalog health to `data/learning/runs.jsonl`, then pushes `data/` to GitHub automatically. `npm run auto` also pulls the latest fixes first, so no more `git pull`.
+3. **Claude's weekly review** (scheduled, Sundays): reads feedback + run logs, updates `data/rules.md` (the planner follows these rules), replaces sold-out catalog items, fixes recurring errors, tests, and pushes. You get a short summary.
+
+Set `SYNC=0` in `.env` to stop the automatic pull/push.

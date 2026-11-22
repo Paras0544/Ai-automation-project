@@ -11,7 +11,8 @@ import { planLook } from "./lib/plan.mjs";
 import { findProducts } from "./find.mjs";
 import { pickProducts } from "./pick.mjs";
 import { missing } from "./lib/next-steps.mjs";
-import { refreshCatalog, usableProducts, MIN_CATALOG, readCsv } from "./lib/catalog.mjs";
+import { refreshCatalog, usableProducts, MIN_CATALOG, readCsv, readCache } from "./lib/catalog.mjs";
+import { logRun, syncPush } from "./lib/learning.mjs";
 
 const n = Number(process.argv[2] || 7);
 const MIN_ITEMS = 3;
@@ -96,8 +97,34 @@ if (ideas.length === 0) {
     }
   }
 
+  // learning log: one line per look, plus catalog health, for the weekly review
+  for (const r of results) {
+    const look = r.look || (fs.existsSync(path.join(paths.looks, `${r.id}.json`)) ? readLook(r.id) : null);
+    logRun({
+      id: r.id,
+      occasion: r.occasion || look?.occasion,
+      budget: look?.budget,
+      ok: r.ok,
+      rendered: r.ok && fs.existsSync(path.join(paths.out, `${r.id}.mp4`)),
+      flags: r.flags,
+      hook: look?.hook,
+      total: look?.items?.reduce((s, i) => s + (i.price || 0), 0),
+      items: (look?.items || []).map((i) => ({ id: i.catalogId, name: i.name, price: i.price, store: i.store })),
+    });
+  }
+  const cache = Object.values(readCache());
+  logRun({
+    type: "catalog",
+    usable: usableProducts().length,
+    total: cache.length,
+    outOfStock: cache.filter((c) => c.inStock === false).map((c) => c.url),
+    blocked: cache.filter((c) => c.error).map((c) => ({ url: c.url, error: c.error })),
+  });
+
   const report = writeReport(results, remaining.length);
   console.log(`\n${passed.length}/${results.length} reels made. Review: ${report}`);
+  console.log('Tell me what you think: npm run feedback -- <look-id> [1-5] "what was off"');
+  syncPush(`autopilot run: ${passed.length}/${results.length} reels`);
 }
 
 function readLook(id) {
@@ -148,7 +175,7 @@ function writeReport(results, left) {
   const rows = [];
   rows.push(`# Autopilot report ${stamp}`, "");
   rows.push(`${results.filter((r) => r.ok).length} of ${results.length} reels made. ${left} ideas left in the queue.`, "");
-  rows.push("While the system is new, open each video and check: does every product match its photo and price? Note anything wrong in data/feedback.md.", "");
+  rows.push("While the system is new, open each video and check: does every product match its photo and price? Note anything off with: npm run feedback -- <look-id> [1-5] \"what was off\"", "");
   for (const r of results) {
     const look = r.look || readLook(r.id);
     const total = look.items.reduce((s, i) => s + (i.price || 0), 0);

@@ -4,6 +4,7 @@ import path from "node:path";
 import { generateJson } from "./gemini.mjs";
 import { paths, slugify } from "./env.mjs";
 import { usableProducts, markUsed, MIN_CATALOG } from "./catalog.mjs";
+import { rulesForPrompt } from "./learning.mjs";
 
 const S = (type, extra = {}) => ({ type, ...extra });
 
@@ -45,7 +46,7 @@ Rules:
 - Suit Indian weather, culture and the specific occasion. Clean, put-together, not flashy.
 - Never mention celebrities or real people. Never claim anyone wore or tested anything.
 - Hook: confident, specific, max 8 words. Subhook: Hinglish, lowercase.
-- Caption: 1-2 short lines; do not include hashtags or disclosures (added automatically).`;
+- Caption: 1-2 short lines; do not include hashtags or disclosures (added automatically).${rulesForPrompt()}`;
 }
 
 function mock(occasion, budget) {
@@ -124,7 +125,7 @@ Rules:
 - Colours must work together. Suit Indian weather and the occasion.
 - Prefer products used fewer times, so the page stays varied.
 - Never mention celebrities. Never claim anyone wore or tested anything.
-- Hook: confident, max 8 words. Subhook: Hinglish, lowercase. Caption: 1-2 lines, no hashtags.${feedback ? `\n\nYour previous answer was rejected: ${feedback}. Fix it.` : ""}`;
+- Hook: confident, max 8 words. Subhook: Hinglish, lowercase. Caption: 1-2 lines, no hashtags.${rulesForPrompt()}${feedback ? `\n\nYour previous answer was rejected: ${feedback}. Fix it.` : ""}`;
 }
 
 function mockCatalogPick(products, budget) {
