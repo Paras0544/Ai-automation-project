@@ -97,6 +97,19 @@ for (const l of looks) {
     ),
   );
 }
+fs.mkdirSync(path.join(outDir, "privacy"), { recursive: true });
+fs.writeFileSync(
+  path.join(outDir, "privacy", "index.html"),
+  page(
+    "Privacy — Well Priced",
+    `<a class="back" href="/">← All looks</a><h1>Privacy</h1><div class="sub" style="font-size:14px;line-height:1.6">
+<p>Well Priced (@wellpriced.fit) publishes outfit ideas with links to online stores. This site does not use accounts, forms, or tracking cookies of its own and does not collect personal information.</p><br>
+<p>Shop links go to partner stores through affiliate networks (such as Cuelinks), which may set their own cookies to credit a purchase; their privacy policies apply on those sites.</p><br>
+<p>Our automation connects only to our own social media accounts (Instagram, Facebook, Pinterest) to publish our posts and reply to comments on them. Access tokens are stored privately and never shared or sold. We do not collect or store data about other users beyond what is needed to send a reply someone asked for, such as a product link after a comment.</p><br>
+<p>Contact: via Instagram @wellpriced.fit. Last updated: November 2026.</p></div>`,
+    "Privacy policy for Well Priced",
+  ),
+);
 fs.writeFileSync(path.join(outDir, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n");
 const earning = looks.flatMap((l) => l.items).filter((i) => affiliateUrl(i.url, cfg) !== i.url).length;
 const allItems = looks.reduce((s, l) => s + l.items.length, 0);

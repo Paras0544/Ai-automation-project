@@ -2,7 +2,7 @@
 // Usage:  npm run render            (all looks)
 //         npm run render -- office-day1   (one look by id)
 import { bundle } from "@remotion/bundler";
-import { renderMedia, selectComposition } from "@remotion/renderer";
+import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -84,5 +84,14 @@ for (const file of files) {
     onProgress: ({ progress }) => process.stdout.write(`\r  ${Math.round(progress * 100)}%`),
   });
   console.log(`\n✓ ${outputLocation}`);
+  // cover image for Pinterest: the last frames show every piece and the total
+  const coverFrame = Math.max(0, composition.durationInFrames - 20);
+  try {
+    await renderStill({ composition, serveUrl, inputProps: look, output: path.join(outDir, `${look.id}.cover.jpg`), frame: coverFrame, imageFormat: "jpeg", browserExecutable });
+    look.coverSeconds = Number((coverFrame / composition.fps).toFixed(2));
+    fs.writeFileSync(path.join(looksDir, file), JSON.stringify(look, null, 2));
+  } catch (e) {
+    console.log(`  (cover image skipped: ${e.message.split("\n")[0]})`);
+  }
   writeCaption(look);
 }

@@ -17,7 +17,9 @@
     "auto": "node scripts/sync.mjs && node scripts/auto.mjs",
     "catalog": "node scripts/catalog.mjs",
     "feedback": "node scripts/feedback.mjs",
-    "site": "node scripts/site.mjs"
+    "site": "node scripts/site.mjs",
+    "pin": "node scripts/pin.mjs",
+    "pinterest:login": "node scripts/pinterest-login.mjs"
   },
   "keywords": [],
   "author": "",

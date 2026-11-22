@@ -13,6 +13,7 @@ import { pickProducts } from "./pick.mjs";
 import { missing } from "./lib/next-steps.mjs";
 import { refreshCatalog, usableProducts, MIN_CATALOG, readCsv, readCache } from "./lib/catalog.mjs";
 import { logRun, syncPush } from "./lib/learning.mjs";
+import { pinPending } from "./pin.mjs";
 
 const n = Number(process.argv[2] || 7);
 const MIN_ITEMS = 3;
@@ -120,6 +121,15 @@ if (ideas.length === 0) {
     outOfStock: cache.filter((c) => c.inStock === false).map((c) => c.url),
     blocked: cache.filter((c) => c.error).map((c) => ({ url: c.url, error: c.error })),
   });
+
+  // Pinterest (only once you've run "npm run pinterest:login")
+  let pinnedNow = [];
+  const perRun = Number(process.env.PINS_PER_RUN ?? 2);
+  if (process.env.PINTEREST_ACCESS_TOKEN && perRun > 0) {
+    console.log("\nPosting to Pinterest…");
+    pinnedNow = await pinPending(perRun);
+  }
+  if (pinnedNow.length) logRun({ type: "pinterest", pinned: pinnedNow });
 
   const report = writeReport(results, remaining.length);
   console.log(`\n${passed.length}/${results.length} reels made. Review: ${report}`);

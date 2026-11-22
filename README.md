@@ -144,3 +144,12 @@ Links become affiliate links automatically once `data/affiliate.json` is filled 
 Hosting (free, allows affiliate/commercial use): Cloudflare Pages → Create → Connect to Git → this repo.
 Build command `node scripts/site.mjs`, output directory `site`, environment variable `SKIP_DEPENDENCY_INSTALL=1`.
 Every autopilot run pushes new looks to GitHub, so the site updates by itself.
+
+## Pinterest auto-posting
+
+1. developers.pinterest.com → My apps → Connect app. Redirect URI: `http://localhost:8085/`. Privacy policy: `https://wellpriced.pages.dev/privacy/`.
+2. Put the App ID and secret in `.env` as `PINTEREST_APP_ID` / `PINTEREST_APP_SECRET`.
+3. `npm run pinterest:login` once (opens Pinterest's consent screen, saves the login).
+4. From then on `npm run auto` pins up to `PINS_PER_RUN` (default 2) new reels as video pins, each on a matching board, linking to its shop page. `npm run pin -- 3` posts manually.
+
+Trial access = pins visible only to you. For public pins, request Standard access with a screen recording of steps 3 and 4.
