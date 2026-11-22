@@ -41,6 +41,41 @@ export async function generateJson(prompt, schema, { temperature = 0.9 } = {}) {
   }
 }
 
+// Asks Gemini with Google Search turned on, so answers come from live web pages.
+// Returns parsed JSON from the answer plus the source URLs Google used.
+export async function searchJson(prompt) {
+  const res = await fetch(`${BASE}/models/${model()}:generateContent`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "x-goog-api-key": key() },
+    body: JSON.stringify({
+      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      tools: [{ google_search: {} }],
+      generationConfig: { temperature: 0.2 },
+    }),
+  });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    const msg = body?.error?.message || res.statusText;
+    if (res.status === 429) throw new Error(`Search limit hit on your key, wait a minute and retry.\n${msg}`);
+    throw new Error(`Gemini search error ${res.status}: ${msg}`);
+  }
+  const cand = body?.candidates?.[0];
+  const text = cand?.content?.parts?.map((p) => p.text || "").join("") || "";
+  const sources = (cand?.groundingMetadata?.groundingChunks || []).map((c) => c.web?.uri).filter(Boolean);
+  const jsonText = (text.match(/```(?:json)?\s*([\s\S]*?)```/) || [null, text])[1];
+  const start = jsonText.search(/[[{]/);
+  let data = null;
+  try {
+    data = JSON.parse(jsonText.slice(start));
+  } catch {
+    const arr = jsonText.slice(start).match(/\[[\s\S]*\]/);
+    try {
+      data = arr ? JSON.parse(arr[0]) : null;
+    } catch {}
+  }
+  return { data, sources, text };
+}
+
 export async function listModels() {
   const res = await fetch(`${BASE}/models?pageSize=200`, { headers: { "x-goog-api-key": key() } });
   const body = await res.json();

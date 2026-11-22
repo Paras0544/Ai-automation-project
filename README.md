@@ -31,13 +31,15 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
 | Step | Command | What happens |
 | --- | --- | --- |
 | 1. Plan 7 looks | `npm run batch -- 7` | Takes the next 7 lines of `data/ideas.txt`, Gemini writes each look file with hook, items, target prices, caption, hashtags, try-on prompt and store search links |
-| 2. Pick products | open the search links it prints | Choose a real product for each item, paste its link into `"url"` in `data/looks/<id>.json` |
-| 3. Fetch product details | `npm run products -- <id>` | Reads the real price, title and photo from each link and saves the photo. If a store blocks it, it tells you exactly where to save the photo yourself. |
+| 2. Find products | `npm run find -- <id>` | Gemini + Google Search finds up to 3 real product pages per item near the target price; each link is opened to check it exists, its real price and stock |
+| 3. Pick | `npm run pick -- <id> 1:2 2:1 3:1` or `npm run pick -- <id> auto` | Choose one option per item (item:option). This also fetches each product's real price and photo. If a store blocks it, it tells you where to save the photo yourself. |
 | 4. Make AI fits | your try-on tool | Use the real product photos + the `fitPrompt` from the look file. Save as `public/looks/<id>/fit-1.jpg` and `fit-2.jpg` |
 | 5. Check | `npm run status` | Lists every look and what it still needs |
 | 6. Render | `npm run render` | Renders every ready look into `out/` with its caption file |
 
 One-off look: `npm run new -- "first date in Delhi winter" 5000`
+
+Prefer to choose products yourself? Paste links into `"url"` in the look file and run `npm run products -- <id>`.
 
 ## Rules the pipeline enforces
 - Prices shown are the real prices read from the product page (planner prices are only targets)

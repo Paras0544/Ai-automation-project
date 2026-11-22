@@ -10,7 +10,9 @@
     "status": "node scripts/status.mjs",
     "models": "node scripts/status.mjs models",
     "render": "node scripts/render-all.mjs",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "find": "node scripts/find.mjs",
+    "pick": "node scripts/pick.mjs"
   },
   "keywords": [],
   "author": "",
