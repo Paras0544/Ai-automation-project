@@ -1,6 +1,6 @@
 {
   "_help": "Affiliate link settings (not secret: your IDs are visible in every affiliate link anyway). After Cuelinks approves you, make ONE Myntra link in their dashboard and send it to Claude; it fills in the template. {url} = the product link, {url_encoded} = the same, URL-encoded.",
-  "siteUrl": "",
+  "siteUrl": "https://wellpriced.pages.dev",
   "templates": {
     "myntra.com": "",
     "flipkart.com": "",
