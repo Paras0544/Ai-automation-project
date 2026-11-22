@@ -33,13 +33,28 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
 | 1. Plan 7 looks | `npm run batch -- 7` | Takes the next 7 lines of `data/ideas.txt`, Gemini writes each look file with hook, items, target prices, caption, hashtags, try-on prompt and store search links |
 | 2. Find products | `npm run find -- <id>` | Gemini + Google Search finds up to 3 real product pages per item near the target price; each link is opened to check it exists, its real price and stock |
 | 3. Pick | `npm run pick -- <id> 1:2 2:1 3:1` or `npm run pick -- <id> auto` | Choose one option per item (item:option). This also fetches each product's real price and photo. If a store blocks it, it tells you where to save the photo yourself. |
-| 4. Make AI fits | your try-on tool | Use the real product photos + the `fitPrompt` from the look file. Save as `public/looks/<id>/fit-1.jpg` and `fit-2.jpg` |
+| 4. Make AI fits | `npm run fits -- <id>` | Free on Cloudflare (setup below). Sends the real product photos as references and saves `fit-1.jpg` and `fit-2.jpg`. **Always compare them with the product photos before rendering**; redo with `--force`, or make them by hand in Google AI Studio using the `fitPrompt` |
 | 5. Check | `npm run status` | Lists every look and what it still needs |
 | 6. Render | `npm run render` | Renders every ready look into `out/` with its caption file |
 
 One-off look: `npm run new -- "first date in Delhi winter" 5000`
 
 Prefer to choose products yourself? Paste links into `"url"` in the look file and run `npm run products -- <id>`.
+
+## Free AI fit images (Cloudflare Workers AI)
+
+Uses FLUX.2 [klein] 4B (Apache-2.0 licence, so commercial use is fine). Free allocation: 10,000 neurons/day, no card.
+
+1. Create a free account at dash.cloudflare.com
+2. Go to **AI → Workers AI**, choose **Use REST API**, and create a **Workers AI API token**. Copy the token and your **Account ID** from the same page.
+3. Add to `.env`:
+   ```
+   CF_ACCOUNT_ID=your-account-id
+   CF_API_TOKEN=your-token
+   ```
+4. Optional: put a photo of your brand's AI model at `public/brand/model.jpg`. For looks with 3 or fewer items it is sent as a reference so the same face appears in every reel.
+
+Limits: 4 reference images max (a 5th item is described in text only). Each reference is resized to under 512x512 automatically.
 
 ## Rules the pipeline enforces
 - Prices shown are the real prices read from the product page (planner prices are only targets)

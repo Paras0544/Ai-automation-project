@@ -30,7 +30,8 @@ export function printNextSteps(look) {
   }
   const fits = m.filter((x) => x.kind === "fit");
   if (fits.length) {
-    console.log(`  2. Make the AI fit images in your try-on tool using the real product photos, and save them as:`);
+    console.log(`  2. AI fit images. Automatic (free, Cloudflare): npm run fits -- ${look.id}`);
+    console.log(`     Or by hand in Google AI Studio: upload the product photos in public/looks/${look.id}/ with the prompt below, and save as:`);
     for (const f of fits) console.log(`     public/${f.file}`);
     console.log(`     Prompt: ${look.fitPrompt}`);
   }
