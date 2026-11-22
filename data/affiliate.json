@@ -1,19 +1,15 @@
 {
-  "_help": "Affiliate link settings (not secret: your IDs are visible in every affiliate link anyway). After Cuelinks approves you, make ONE Myntra link in their dashboard and send it to Claude; it fills in the template. {url} = the product link, {url_encoded} = the same, URL-encoded.",
+  "_help": "Affiliate link settings (not secret). Approved stores have a template; pending ones stay empty until Cuelinks approves them, then copy _pendingTemplate into them. {url_encoded} = product link. A subid (the look id) is added automatically so Cuelinks reports show which reel earned.",
   "siteUrl": "https://wellpriced.pages.dev",
   "templates": {
     "myntra.com": "",
     "flipkart.com": "",
     "ajio.com": "",
-    "thebearhouse.com": "",
-    "bewakoof.com": "",
-    "tatacliq.com": ""
+    "thebearhouse.com": "https://linksredirect.com/?cid=337706&source=linkkit&url={url_encoded}",
+    "bewakoof.com": "https://linksredirect.com/?cid=337706&source=linkkit&url={url_encoded}",
+    "tatacliq.com": "https://linksredirect.com/?cid=337706&source=linkkit&url={url_encoded}"
   },
   "amazonTag": "",
-  "_shortLinks": {
-    "thebearhouse.com": "https://clnk.in/ErUh",
-    "bewakoof.com": "https://clnk.in/ErUq",
-    "tatacliq.com": "https://clnk.in/ErUB"
-  },
-  "_status": "Cuelinks: Bear House (11.25%), Bewakoof (11.55%), Tata CLiQ (4.25%) approved; Myntra/Flipkart/Ajio pending. Templates need the long (unshortened) link format."
+  "_status": "Cuelinks: Bear House (11.25%), Bewakoof (11.55%), Tata CLiQ (4.25%) approved; Myntra/Flipkart/Ajio pending. Templates need the long (unshortened) link format.",
+  "_pendingTemplate": "https://linksredirect.com/?cid=337706&source=linkkit&url={url_encoded}"
 }

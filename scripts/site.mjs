@@ -83,7 +83,7 @@ for (const l of looks) {
       const img = imgOf(i);
       return `<div class="item">${img ? `<img src="${esc(img)}" alt="${esc(i.name)}" loading="lazy" referrerpolicy="no-referrer">` : `<div class="ph"></div>`}
 <div class="info"><div class="name">${esc(i.name)}</div>${i.why ? `<div class="why">${esc(i.why)}</div>` : ""}
-<div class="row"><span>${inr(i.price)} · ${esc(i.store)}</span><a class="buy" href="${esc(affiliateUrl(i.url, cfg))}" rel="sponsored nofollow noopener" target="_blank">Shop</a></div></div></div>`;
+<div class="row"><span>${inr(i.price)} · ${esc(i.store)}</span><a class="buy" href="${esc(affiliateUrl(i.url, cfg, l.id))}" rel="sponsored nofollow noopener" target="_blank">Shop</a></div></div></div>`;
     })
     .join("\n");
   const dir = path.join(outDir, "l", l.id);
