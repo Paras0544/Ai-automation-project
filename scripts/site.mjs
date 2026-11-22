@@ -61,6 +61,7 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
+<p class="note"><a href="/">Home</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
 
@@ -71,10 +72,13 @@ const list = looks.length
   ? looks
       .map((l) => `<a class="card" href="/l/${l.id}/"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${l.items.length} pieces · <span class="accent">${inr(total(l))}</span></div></a>`)
       .join("\n")
-  : `<p class="meta" style="text-align:center">First looks coming soon.</p>`;
+  : `<p class="meta" style="text-align:center">New looks are added every week. Follow <a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a> on Instagram to see them first.</p>`;
 fs.writeFileSync(
   path.join(outDir, "index.html"),
-  page("Well Priced — shop the looks", `<header><div class="brand">Well Priced</div><p>@wellpriced.fit · Looks expensive. Isn't. Tap a look to shop it.</p></header>${list}`),
+  page("Well Priced — shop the looks", `<header><div class="brand">Well Priced</div><p>@wellpriced.fit · Looks expensive. Isn't.</p></header>
+<div class="card" style="font:15px/1.6 system-ui,sans-serif"><b style="font:18px Georgia,serif">Full outfits for Indian men, with real prices.</b><br>
+Every week we put together complete looks for real occasions (office days, first dates, weddings, winter in Delhi) using products you can actually buy today. Each look shows every piece, its current price and the total, so you know exactly what it costs before you shop.</div>
+<h2 style="font-weight:normal;font-size:20px;margin:22px 0 10px">Latest looks</h2>${list}`),
 );
 
 for (const l of looks) {
@@ -101,13 +105,29 @@ fs.mkdirSync(path.join(outDir, "privacy"), { recursive: true });
 fs.writeFileSync(
   path.join(outDir, "privacy", "index.html"),
   page(
-    "Privacy — Well Priced",
-    `<a class="back" href="/">← All looks</a><h1>Privacy</h1><div class="sub" style="font-size:14px;line-height:1.6">
+    "Privacy Policy — Well Priced",
+    `<a class="back" href="/">← All looks</a><h1>Privacy Policy</h1><div class="sub" style="font-size:14px;line-height:1.6">
 <p>Well Priced (@wellpriced.fit) publishes outfit ideas with links to online stores. This site does not use accounts, forms, or tracking cookies of its own and does not collect personal information.</p><br>
 <p>Shop links go to partner stores through affiliate networks (such as Cuelinks), which may set their own cookies to credit a purchase; their privacy policies apply on those sites.</p><br>
 <p>Our automation connects only to our own social media accounts (Instagram, Facebook, Pinterest) to publish our posts and reply to comments on them. Access tokens are stored privately and never shared or sold. We do not collect or store data about other users beyond what is needed to send a reply someone asked for, such as a product link after a comment.</p><br>
-<p>Contact: via Instagram @wellpriced.fit. Last updated: November 2026.</p></div>`,
-    "Privacy policy for Well Priced",
+<p><b>Pinterest, Instagram and Facebook data.</b> Our publishing tool uses the official Pinterest and Meta APIs only for our own business accounts: to create our own boards and posts, read our own posts and their performance, and reply to comments on our posts. We do not sell, rent or share this data, and we do not use it for advertising profiles.</p><br>
+<p><b>Data retention and deletion.</b> Access tokens are kept only on our own computer and can be revoked at any time from the account's settings. Comment-reply data is kept for at most 30 days. To ask about or delete any data related to you, message @wellpriced.fit on Instagram and we will respond within 30 days.</p><br>
+<p><b>Children.</b> This site is not directed at children under 13.</p><br>
+<p><b>Changes.</b> We will update this page if our practices change.</p><br>
+<p>Operator: Paras Miglani (Well Priced), Haryana, India. Contact: Instagram @wellpriced.fit. Last updated: 22 November 2026.</p></div>`,
+    "Privacy Policy for Well Priced (wellpriced.pages.dev)",
+  ),
+);
+fs.mkdirSync(path.join(outDir, "about"), { recursive: true });
+fs.writeFileSync(
+  path.join(outDir, "about", "index.html"),
+  page(
+    "About — Well Priced",
+    `<a class="back" href="/">← All looks</a><h1>About Well Priced</h1><div class="sub" style="font-size:15px;line-height:1.6">
+<p>Well Priced is an independent men's style page from India, run by Paras Miglani. The idea is simple: show complete outfits for real occasions that look expensive but aren't, with every piece and its real price.</p><br>
+<p>We publish looks as short videos on Instagram (<a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a>) and Pinterest, and every look has a page here listing each product with a link to buy it.</p><br>
+<p>Some links are affiliate links: if you buy through them, we may earn a small commission at no extra cost to you. It never changes which products we pick.</p></div>`,
+    "About Well Priced, men's outfits with real prices",
   ),
 );
 fs.writeFileSync(path.join(outDir, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n");
