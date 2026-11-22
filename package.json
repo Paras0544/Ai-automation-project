@@ -16,7 +16,8 @@
     "fits": "node scripts/fits.mjs",
     "auto": "node scripts/sync.mjs && node scripts/auto.mjs",
     "catalog": "node scripts/catalog.mjs",
-    "feedback": "node scripts/feedback.mjs"
+    "feedback": "node scripts/feedback.mjs",
+    "site": "node scripts/site.mjs"
   },
   "keywords": [],
   "author": "",

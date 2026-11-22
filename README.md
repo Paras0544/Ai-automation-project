@@ -135,3 +135,12 @@ Colours, fonts, timing, labels: `src/brand.ts`. Live preview: `npm run studio`.
 3. **Claude's weekly review** (scheduled, Sundays): reads feedback + run logs, updates `data/rules.md` (the planner follows these rules), replaces sold-out catalog items, fixes recurring errors, tests, and pushes. You get a short summary.
 
 Set `SYNC=0` in `.env` to stop the automatic pull/push.
+
+## Shop website (link in bio)
+
+`npm run site` builds `site/`: a home page listing every reel and one page per look, with prices and buy links.
+Links become affiliate links automatically once `data/affiliate.json` is filled in (after Cuelinks approval).
+
+Hosting (free, allows affiliate/commercial use): Cloudflare Pages → Create → Connect to Git → this repo.
+Build command `node scripts/site.mjs`, output directory `site`, environment variable `SKIP_DEPENDENCY_INSTALL=1`.
+Every autopilot run pushes new looks to GitHub, so the site updates by itself.

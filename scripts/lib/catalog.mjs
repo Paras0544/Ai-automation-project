@@ -133,6 +133,7 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
         const rel = `catalog/${id}.jpg`;
         await download(p.image, path.join(paths.public, rel));
         c.image = rel;
+        c.imageUrl = p.image; // the store's own photo URL, used by the shop website
       }
       c.error = undefined;
       console.log(`₹${c.price ?? "?"}${c.inStock ? "" : " OUT OF STOCK"}`);
