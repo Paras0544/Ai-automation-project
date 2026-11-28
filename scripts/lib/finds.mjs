@@ -78,7 +78,7 @@ const schema = S("OBJECT", {
 
 const FORMAT_BRIEF = {
   finds: (topic, cap) => `Make ONE "finds" reel: "${topic}". Every product must cost at most ${inr(cap)}. The reel shows each product with its price, then all of them together.`,
-  guess: (topic, cap) => `Make ONE "guess the price" reel: "${topic}". Each product appears with "guess the price?" before its real price is revealed. Pick products that LOOK more expensive than they are (clean, premium-looking). The hook should dare viewers to guess. Every product costs at most ${inr(cap)}.`,
+  guess: (topic, cap) => `Make ONE "guess the price" reel: "${topic}". Each product appears with "guess the price?" before its real price is revealed. Pick products that LOOK more expensive than they are (clean, premium-looking), with DIFFERENT prices so guessing is fun. The hook should dare viewers to guess. Every product costs at most ${inr(cap)}.`,
   pricedrop: (topic) => `Make ONE "price drop" reel: "${topic}". These products are cheaper today than the highest price we recorded in the last 30 days (shown as "was"). The hook should create urgency without exaggerating.`,
 };
 
@@ -91,7 +91,7 @@ ${list}
 
 Rules:
 - Pick the ones a stylish 22-year-old would actually want right now: trendy but wearable, clean colours, no loud slogans or cartoon prints.
-- Make the set varied (different colours/styles), and prefer products used fewer times.
+- Make the set varied: different colours AND visibly different styles (never 3 near-identical items), and prefer products used fewer times.
 - Labels: shorten the product name; keep EVERY colour in it and never invent colours, fabrics or features that aren't in the name.
 - Never mention celebrities. Never claim you wore or tested anything. Don't state prices in the hook other than "under ${inr(cap)}".${rulesForPrompt()}${problem ? `\n\nYour previous answer was rejected: ${problem}. Fix it.` : ""}`;
 }

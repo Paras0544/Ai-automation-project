@@ -68,7 +68,7 @@ function recentTypes(days) {
 }
 
 const fill = (tpl, type, cap) => {
-  const name = { "oversized-tee": "oversized tees", "overshirt-linen": "linen shirts", "co-ord": "co-ord sets", flannel: "flannel shirts", oxford: "oxford shirts" }[type] || `${type}s`;
+  const name = { "oversized-tee": "oversized tees", "overshirt-linen": "linen shirts", "co-ord": "co-ord sets", flannel: "flannel shirts", oxford: "oxford shirts" }[type] || (type.endsWith("s") ? type : `${type}s`);
   const T = name.charAt(0).toUpperCase() + name.slice(1);
   return tpl.replace("{Type}", T).replace("{type}", name).replace("{cap}", inr(cap));
 };
