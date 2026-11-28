@@ -56,7 +56,10 @@ if (!token) {
     if (ageH > 24 * 8 && m.final) continue; // done after a week
     const lookFile = path.join(paths.looks, `${lookId}.json`);
     const look = readJson(lookFile, {});
-    Object.assign(m, { format: look.kind || look.format, type: look.type, hook: look.hook, cap: look.budget, items: look.items?.length });
+    Object.assign(m, {
+      format: look.kind || look.format, type: look.type, hookText: look.hook, cap: look.budget, items: look.items?.length,
+      music: look.music ? look.music.replace(/^music\//, "") : "none", hook: look.hookStyle, hashtags: look.hashtagStyle, voiceover: look.voiceover || "off",
+    });
     const snap = { at: new Date().toISOString(), ageH: Math.round(ageH), ...(await insights(ig.id)) };
     m.snapshots.push(snap);
     if (m.snapshots.length > 12) m.snapshots.splice(1, m.snapshots.length - 12);

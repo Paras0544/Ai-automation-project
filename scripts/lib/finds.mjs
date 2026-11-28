@@ -8,6 +8,14 @@ import { paths, slugify } from "./env.mjs";
 import { readCache, markUsed, readHistory } from "./catalog.mjs";
 import { rulesForPrompt } from "./learning.mjs";
 import { ensureImage, shortName } from "./shopify.mjs";
+import { pickVariant } from "./strategy.mjs";
+
+const HOOK_STYLE = {
+  question: "Write the hook as a direct question to the viewer.",
+  "bold-claim": "Write the hook as a bold, confident claim (true, no exaggeration).",
+  pov: 'Write the hook as a "POV:" line the viewer relates to.',
+  number: "Start the hook with the number of picks or the price cap.",
+};
 
 export const MIN_FINDS = 4;
 const MAX_FINDS = 5;
@@ -82,9 +90,9 @@ const FORMAT_BRIEF = {
   pricedrop: (topic) => `Make ONE "price drop" reel: "${topic}". These products are cheaper today than the highest price we recorded in the last 30 days (shown as "was"). The hook should create urgency without exaggerating.`,
 };
 
-function prompt(topic, cap, list, problem, format = "finds") {
+function prompt(topic, cap, list, problem, format = "finds", hook = null) {
   return `You run "Well Priced" (@wellpriced.fit), an honest Indian menswear page for guys aged 18-28 on a budget. Promise: looks expensive, costs little.
-${FORMAT_BRIEF[format](topic, cap)}
+${FORMAT_BRIEF[format](topic, cap)}${hook && HOOK_STYLE[hook] ? `\nHook style: ${HOOK_STYLE[hook]}` : ""}
 
 Pick ${MIN_FINDS} to ${MAX_FINDS} products ONLY from this list (id | name | price | sizes in stock | times used before):
 ${list}
@@ -136,11 +144,14 @@ export async function planFinds(topic, types, cap, format = "finds") {
   const byId = new Map(cands.map((c) => [c.id, c]));
   const list = cands.map((c) => `${c.id} | ${c.title} | ${inr(c.price)}${c.wasPrice ? ` (was ${inr(c.wasPrice)}, -${c.dropPct}%)` : ""} | ${c.sizesInStock ?? "?"} sizes | used ${c.timesUsed || 0}x`).join("\n");
 
+  const hookStyle = pickVariant("hook");
+  const hashtagStyle = pickVariant("hashtags");
+  const voiceover = pickVariant("voiceover") || "off";
   let ai, problem = null;
   for (let attempt = 0; attempt < 3; attempt++) {
     ai = process.env.MOCK_AI === "1"
       ? { hook: `${topic}.`, subhook: "sab budget mein", caption: "Save karo, baad mein kaam aayega.", hashtags: ["mensfashion", "budgetfashion", "indianmen", "winterfashion", "outfitideas"], picks: cands.slice(0, format === "guess" ? 4 : 5).map((c) => ({ id: c.id, label: c.name, why: "Layer it over a tee" })) }
-      : await generateJson(prompt(topic, cap, list, problem, format), schema, { temperature: 0.7 });
+      : await generateJson(prompt(topic, cap, list, problem, format, hookStyle), schema, { temperature: 0.7 });
     problem = validate(ai, byId, cap, need);
     if (!problem) break;
     console.log(`  finds retry: ${problem}`);
@@ -178,7 +189,16 @@ export async function planFinds(topic, types, cap, format = "finds") {
     subhook: ai.subhook,
     cta: format === "guess" ? "How many did you guess right? 👇" : `Links in bio · ${stores.join(" & ")}`,
     caption: ai.caption,
-    hashtags: ai.hashtags.map((h) => h.replace(/^#/, "").replace(/\s+/g, "")),
+    hashtags: (() => {
+      const tags = ai.hashtags.map((h) => h.replace(/^#/, "").replace(/\s+/g, ""));
+      const broad = ["mensfashion", "menswear", "budgetfashion"];
+      if (hashtagStyle === "none") return [];
+      if (hashtagStyle === "niche-3") return tags.filter((t) => !broad.includes(t.toLowerCase())).slice(0, 3);
+      return tags.slice(0, 5);
+    })(),
+    hookStyle,
+    hashtagStyle,
+    voiceover,
     mode: "board",
     fitImages: [],
     pricesCheckedAt: new Date().toISOString(),

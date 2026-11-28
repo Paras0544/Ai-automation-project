@@ -424,6 +424,7 @@ const Music: React.FC<{ src: string }> = ({ src }) => {
   const { durationInFrames, fps } = useVideoConfig();
   return (
     <Audio
+      loop
       src={staticFile(src)}
       volume={(f) =>
         interpolate(f, [0, fps * 0.6, durationInFrames - fps * 1.2, durationInFrames], [0, 0.45, 0.45, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })

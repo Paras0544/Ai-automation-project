@@ -73,11 +73,13 @@ const serveUrl = await bundle({ entryPoint: path.join(root, "src", "index.ts"), 
 // Background music: drop royalty-free tracks (licensed for commercial social use) into public/music/.
 // Each reel gets one, picked from its id so re-renders keep the same track.
 const tracks = fs.existsSync(path.join(publicDir, "music")) ? fs.readdirSync(path.join(publicDir, "music")).filter((f) => /\.(mp3|m4a|wav)$/i.test(f)).sort() : [];
-const pickTrack = (id) => (tracks.length ? `music/${tracks[[...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % tracks.length]}` : undefined);
+// the learning loop picks the track (better-scoring tracks more often, new ones still tried)
+const { pickVariant } = await import("./lib/strategy.mjs");
+const pickTrack = () => (tracks.length ? `music/${pickVariant("music", tracks)}` : undefined);
 
 for (const file of files) {
   const look = JSON.parse(fs.readFileSync(path.join(looksDir, file), "utf8"));
-  if (!look.music && tracks.length) look.music = pickTrack(look.id);
+  if (!look.music && tracks.length && look.kind && look.kind !== "outfit") look.music = pickTrack();
   if (!check(look, file)) continue;
   const composition = await selectComposition({ serveUrl, id: "Reel", inputProps: look, browserExecutable });
   const outputLocation = path.join(outDir, `${look.id}.mp4`);

@@ -45,5 +45,24 @@
     "overshirt-linen": 0.4,
     "co-ord": 0.6
   },
-  "noRepeatDays": 3
+  "noRepeatDays": 3,
+  "experiments": {
+    "_help": "Each reel gets one variant per dimension, picked the same learning way (better-scoring variants get picked more, others still tried). Add or remove variants freely; weight 0 turns one off.",
+    "hook": {
+      "question": 1,
+      "bold-claim": 1,
+      "pov": 1,
+      "number": 1
+    },
+    "hashtags": {
+      "niche-3": 1,
+      "mixed-5": 1,
+      "none": 0.5
+    },
+    "voiceover": {
+      "off": 1,
+      "on": 0
+    },
+    "_voiceover_note": "'on' stays 0 until a free text-to-speech step is built and tested; the weekly review may build it (Gemini TTS) and then give it weight 0.5."
+  }
 }

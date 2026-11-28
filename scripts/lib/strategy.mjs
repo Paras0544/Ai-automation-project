@@ -40,10 +40,21 @@ export function updateArms() {
     };
     add(arms.formats, m.format);
     add(arms.types, m.type);
+    for (const dim of ["music", "hook", "hashtags", "voiceover"]) add((arms[dim] ||= {}), m[dim]);
   }
   fs.mkdirSync(path.dirname(file("learning/arms.json")), { recursive: true });
   fs.writeFileSync(file("learning/arms.json"), JSON.stringify(arms, null, 2) + "\n");
   return arms;
+}
+
+// Pick one variant for an experiment dimension (hook / hashtags / voiceover / music)
+export function pickVariant(dim, options = null) {
+  const st = readStrategy();
+  const arms = readArms();
+  const opts = options || Object.entries(st.experiments?.[dim] || {}).filter(([k, w]) => !k.startsWith("_") && w > 0).map(([k]) => k);
+  if (!opts.length) return null;
+  const w = (k) => (options ? 1 : st.experiments?.[dim]?.[k] ?? 1);
+  return opts.map((k) => ({ k, s: sample(arms[dim]?.[k]) * w(k) })).sort((a, b) => b.s - a.s)[0].k;
 }
 
 // approx. Thompson sample: mean pulled toward a prior, noise shrinks as evidence grows
