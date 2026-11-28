@@ -5,8 +5,7 @@
     "timesUsed": 0,
     "title": "VELIN-BK",
     "price": 2299,
-    "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TBH-VELIN-BK_1.webp?v=1785749458&width=1200",
+    "inStock": false,
     "store": "The Bear House",
     "name": "Black oxford shirt (The Bear House)",
     "category": "top",
@@ -16,7 +15,9 @@
       "smart-casual"
     ],
     "notes": "Black oxford shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:38.464Z"
+    "checkedAt": "2026-11-28T08:12:15.972Z",
+    "image": "catalog/2575305399.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/TBH-VELIN-BK_1.webp?v=1785749458&width=1200"
   },
   "42a3e6d876": {
     "id": "42a3e6d876",
@@ -35,7 +36,7 @@
       "old-money"
     ],
     "notes": "Oxford stretch shirt (Louis Philippe Sport)",
-    "checkedAt": "2026-11-22T13:07:15.401Z",
+    "checkedAt": "2026-11-28T08:10:48.894Z",
     "lastUsed": "2026-11-22T14:34:35.244Z"
   },
   "e426a5c8c6": {
@@ -56,7 +57,7 @@
       "basics"
     ],
     "notes": "White soft oxford shirt (US Polo)",
-    "checkedAt": "2026-11-22T13:07:17.230Z",
+    "checkedAt": "2026-11-28T08:10:50.125Z",
     "lastUsed": "2026-11-22T14:37:26.031Z"
   },
   "644fc14459": {
@@ -76,7 +77,7 @@
       "basics"
     ],
     "notes": "Cotton oxford shirt (Arrow Sport)",
-    "checkedAt": "2026-11-22T13:07:18.834Z"
+    "checkedAt": "2026-11-28T08:10:51.386Z"
   },
   "66453602e4": {
     "id": "66453602e4",
@@ -95,7 +96,7 @@
       "old-money"
     ],
     "notes": "Light blue striped oxford (Banana Club)",
-    "checkedAt": "2026-11-22T13:07:22.680Z",
+    "checkedAt": "2026-11-28T08:10:52.632Z",
     "lastUsed": "2026-11-22T14:08:00.677Z"
   },
   "253c796c98": {
@@ -115,7 +116,7 @@
       "old-money"
     ],
     "notes": "Navy cotton polo (Invictus)",
-    "checkedAt": "2026-11-22T13:07:33.020Z"
+    "checkedAt": "2026-11-28T08:10:53.862Z"
   },
   "f086b965be": {
     "id": "f086b965be",
@@ -135,7 +136,7 @@
       "travel"
     ],
     "notes": "Beige cotton-linen shirt (Mast & Harbour)",
-    "checkedAt": "2026-11-22T13:07:37.006Z",
+    "checkedAt": "2026-11-28T08:10:55.091Z",
     "lastUsed": "2026-11-22T14:08:24.278Z"
   },
   "05aafcb98f": {
@@ -154,7 +155,7 @@
       "streetwear"
     ],
     "notes": "Black oversized tee (Mr Bowerbird)",
-    "checkedAt": "2026-11-22T13:07:43.028Z",
+    "checkedAt": "2026-11-28T08:10:56.320Z",
     "lastUsed": "2026-11-22T15:07:06.985Z"
   },
   "d346cf5ad0": {
@@ -175,7 +176,7 @@
       "date"
     ],
     "notes": "Crew-neck knit pullover (Next)",
-    "checkedAt": "2026-11-22T13:07:45.306Z"
+    "checkedAt": "2026-11-28T08:10:57.577Z"
   },
   "05b9251ba7": {
     "id": "05b9251ba7",
@@ -194,7 +195,7 @@
       "date"
     ],
     "notes": "Polo-collar cable knit (Wrogn)",
-    "checkedAt": "2026-11-22T13:07:47.368Z",
+    "checkedAt": "2026-11-28T08:10:58.809Z",
     "lastUsed": "2026-11-22T13:11:22.925Z"
   },
   "7a3d456625": {
@@ -214,7 +215,7 @@
       "summer"
     ],
     "notes": "Striped cotton shirt (Mast & Harbour)",
-    "checkedAt": "2026-11-22T13:07:50.864Z"
+    "checkedAt": "2026-11-28T08:11:00.060Z"
   },
   "7632dfafe7": {
     "id": "7632dfafe7",
@@ -233,7 +234,7 @@
       "streetwear"
     ],
     "notes": "Striped casual shirt (Snitch)",
-    "checkedAt": "2026-11-22T13:07:52.343Z"
+    "checkedAt": "2026-11-28T08:11:01.305Z"
   },
   "da58cfdb7d": {
     "id": "da58cfdb7d",
@@ -251,7 +252,7 @@
       "smart-casual"
     ],
     "notes": "Striped casual shirt (Red Tape)",
-    "checkedAt": "2026-11-22T13:07:53.949Z"
+    "checkedAt": "2026-11-28T08:11:02.548Z"
   },
   "9544246277": {
     "id": "9544246277",
@@ -270,14 +271,14 @@
       "summer"
     ],
     "notes": "Striped casual shirt (Powerlook)",
-    "checkedAt": "2026-11-22T13:07:56.041Z"
+    "checkedAt": "2026-11-28T08:11:03.776Z"
   },
   "8ddc4beb4d": {
     "id": "8ddc4beb4d",
     "url": "https://www.myntra.com/tshirts/bewakoof/bewakoof-men-white-solid-round-neck-pure-cotton-t-shirt/13819100/buy",
     "timesUsed": 1,
     "title": "Bewakoof Men White Solid Round Neck Pure Cotton T-shirt",
-    "price": 565,
+    "price": 449,
     "inStock": true,
     "image": "catalog/8ddc4beb4d.jpg",
     "store": "Myntra",
@@ -289,7 +290,7 @@
       "travel"
     ],
     "notes": "White cotton tee (Bewakoof)",
-    "checkedAt": "2026-11-22T13:07:58.117Z",
+    "checkedAt": "2026-11-28T08:11:05.029Z",
     "lastUsed": "2026-11-22T14:08:40.051Z"
   },
   "94663c9773": {
@@ -297,7 +298,7 @@
     "url": "https://www.myntra.com/tshirts/bratma/bratma-men-white-solid-round-neck-pure-cotton-t-shirt/12561268/buy",
     "timesUsed": 1,
     "title": "BRATMA Men White Solid Round Neck Pure Cotton T-shirt",
-    "price": 374,
+    "price": 396,
     "inStock": true,
     "image": "catalog/94663c9773.jpg",
     "store": "Myntra",
@@ -309,7 +310,7 @@
       "gym"
     ],
     "notes": "White cotton tee (Bratma)",
-    "checkedAt": "2026-11-22T13:07:59.869Z",
+    "checkedAt": "2026-11-28T08:11:06.265Z",
     "lastUsed": "2026-11-22T14:37:45.175Z"
   },
   "83b926670a": {
@@ -326,18 +327,19 @@
       "casual"
     ],
     "notes": "Slim stretch chinos (Belano)",
-    "checkedAt": "2026-11-22T13:08:06.610Z",
+    "checkedAt": "2026-11-28T08:11:07.805Z",
     "title": "BELANO Men Slim Fit Navy Blue Cotton Stretch Chinos",
     "price": 949,
     "image": "catalog/83b926670a.jpg",
-    "lastUsed": "2026-11-22T15:09:34.340Z"
+    "lastUsed": "2026-11-22T15:09:34.340Z",
+    "error": "Amazon showed a captcha (try again later)"
   },
   "6ad46b2bbf": {
     "id": "6ad46b2bbf",
     "url": "https://www.myntra.com/trousers/beyoung/beyoung-men-slim-fit-chinos-trousers/25700594/buy",
     "timesUsed": 1,
     "title": "Beyoung Men Beige Slim Fit Chinos Trousers",
-    "price": 937,
+    "price": 932,
     "inStock": true,
     "image": "catalog/6ad46b2bbf.jpg",
     "store": "Myntra",
@@ -350,7 +352,7 @@
       "date"
     ],
     "notes": "Beige slim chinos (Beyoung)",
-    "checkedAt": "2026-11-22T13:08:10.205Z",
+    "checkedAt": "2026-11-28T08:11:09.050Z",
     "lastUsed": "2026-11-22T14:08:00.677Z"
   },
   "488a79da01": {
@@ -370,7 +372,7 @@
       "basics"
     ],
     "notes": "Dark blue slim jeans (Duke)",
-    "checkedAt": "2026-11-22T13:08:29.043Z",
+    "checkedAt": "2026-11-28T08:11:10.277Z",
     "lastUsed": "2026-11-22T15:07:06.986Z"
   },
   "c9a0d42445": {
@@ -378,7 +380,7 @@
     "url": "https://www.myntra.com/jeans/urbanofashion/urbano-fashion-men-black-slim-fit-mid-rise-clean-look-stretchable-jeans/13823708/buy",
     "timesUsed": 1,
     "title": "Urbano Fashion Men Black Slim Fit Mid-Rise Clean Look Stretchable Jeans",
-    "price": 756,
+    "price": 699,
     "inStock": true,
     "image": "catalog/c9a0d42445.jpg",
     "store": "Myntra",
@@ -391,7 +393,7 @@
       "basics"
     ],
     "notes": "Black slim jeans (Urbano)",
-    "checkedAt": "2026-11-22T13:08:31.680Z",
+    "checkedAt": "2026-11-28T08:11:11.505Z",
     "lastUsed": "2026-11-22T14:37:45.175Z"
   },
   "0693682b58": {
@@ -399,7 +401,7 @@
     "url": "https://www.myntra.com/trousers/dennison/dennison-men-solid-relaxed-loose-fit-pleated-trousers/31122483/buy",
     "timesUsed": 0,
     "title": "DENNISON Men Solid Relaxed Loose Fit Pleated Trousers",
-    "price": 2974,
+    "price": 1329,
     "inStock": true,
     "image": "catalog/0693682b58.jpg",
     "store": "Myntra",
@@ -411,14 +413,14 @@
       "smart-casual"
     ],
     "notes": "Relaxed pleated trousers (Dennison)",
-    "checkedAt": "2026-11-22T13:08:37.514Z"
+    "checkedAt": "2026-11-28T08:11:12.733Z"
   },
   "00f0583d64": {
     "id": "00f0583d64",
     "url": "https://www.myntra.com/trousers/tribe/tribe-men-solid-relaxed-loose-fit-pleated-trousers/34094888/buy",
     "timesUsed": 1,
     "title": "TRIBE Men Solid Relaxed Loose Fit Pleated Trousers",
-    "price": 2249,
+    "price": 539,
     "inStock": true,
     "image": "catalog/00f0583d64.jpg",
     "store": "Myntra",
@@ -429,7 +431,7 @@
       "streetwear"
     ],
     "notes": "Relaxed pleated trousers (Tribe)",
-    "checkedAt": "2026-11-22T13:08:39.567Z",
+    "checkedAt": "2026-11-28T08:11:13.993Z",
     "lastUsed": "2026-11-22T13:12:18.055Z"
   },
   "f68abc1989": {
@@ -437,7 +439,7 @@
     "url": "https://www.myntra.com/trousers/highlander/highlander-men-relaxed-fit-pleated-trousers/36387779/buy",
     "timesUsed": 2,
     "title": "HIGHLANDER Men Relaxed Fit Pleated Trousers",
-    "price": 1220,
+    "price": 824,
     "inStock": true,
     "image": "catalog/f68abc1989.jpg",
     "store": "Myntra",
@@ -448,7 +450,7 @@
       "casual"
     ],
     "notes": "Relaxed pleated trousers (Highlander)",
-    "checkedAt": "2026-11-22T13:08:42.636Z",
+    "checkedAt": "2026-11-28T08:11:15.233Z",
     "lastUsed": "2026-11-22T14:08:40.051Z"
   },
   "394408ca40": {
@@ -456,7 +458,7 @@
     "url": "https://www.myntra.com/casual-shoes/mast26harbour/mast--harbour-men-loafers/42902656/buy",
     "timesUsed": 5,
     "title": "Mast & Harbour Men Brown Suede Smart Casual Slip-On Loafers",
-    "price": 1269,
+    "price": 1995,
     "inStock": true,
     "image": "catalog/394408ca40.jpg",
     "store": "Myntra",
@@ -468,7 +470,7 @@
       "office"
     ],
     "notes": "Brown suede loafers (Mast & Harbour)",
-    "checkedAt": "2026-11-22T13:08:51.849Z",
+    "checkedAt": "2026-11-28T08:11:16.462Z",
     "lastUsed": "2026-11-22T14:37:26.031Z"
   },
   "e5f3095af2": {
@@ -487,7 +489,7 @@
       "date"
     ],
     "notes": "Brown chelsea boots (Killer)",
-    "checkedAt": "2026-11-22T13:09:01.429Z",
+    "checkedAt": "2026-11-28T08:11:17.697Z",
     "lastUsed": "2026-11-22T14:37:45.175Z"
   },
   "5548c44aa6": {
@@ -495,7 +497,7 @@
     "url": "https://www.myntra.com/boots/niconerini/nico-nerini-men-brown-leather-flatform-heel-chelsea-boots/33385296/buy",
     "timesUsed": 0,
     "title": "NICO NERINI Men Brown Leather Flatform Heel Chelsea Boots",
-    "price": 2205,
+    "price": 1667,
     "inStock": true,
     "image": "catalog/5548c44aa6.jpg",
     "store": "Myntra",
@@ -507,7 +509,7 @@
       "date"
     ],
     "notes": "Brown leather chelsea boots (Nico Nerini)",
-    "checkedAt": "2026-11-22T13:09:03.857Z"
+    "checkedAt": "2026-11-28T08:11:18.927Z"
   },
   "7f0a040673": {
     "id": "7f0a040673",
@@ -525,14 +527,14 @@
       "festive"
     ],
     "notes": "Black juttis (Fausto)",
-    "checkedAt": "2026-11-22T13:09:06.650Z"
+    "checkedAt": "2026-11-28T08:11:20.179Z"
   },
   "007fad0b68": {
     "id": "007fad0b68",
     "url": "https://www.myntra.com/casual-shoes/fausto/fausto-men-tan-brown-solid-lightweight-ethnic-juttis/13638102/buy",
     "timesUsed": 2,
     "title": "FAUSTO Men Tan Wedding Ethnic Party Embroidery Design Slip On Juttis and Mojaris",
-    "price": 1175,
+    "price": 1298,
     "inStock": true,
     "image": "catalog/007fad0b68.jpg",
     "store": "Myntra",
@@ -543,7 +545,7 @@
       "festive"
     ],
     "notes": "Tan embroidered juttis (Fausto)",
-    "checkedAt": "2026-11-22T13:09:08.900Z",
+    "checkedAt": "2026-11-28T08:11:21.406Z",
     "lastUsed": "2026-11-22T15:09:34.340Z"
   },
   "80fc3ecb7f": {
@@ -551,7 +553,7 @@
     "url": "https://www.myntra.com/casual-shoes/fausto/fausto-men-textured-ethnic-slip-on-juttis-and-mojaris-for-wedding/31239973/buy",
     "timesUsed": 1,
     "title": "FAUSTO Men Textured Ethnic Slip On Juttis and Mojaris for Wedding",
-    "price": 1435,
+    "price": 1399,
     "inStock": true,
     "image": "catalog/80fc3ecb7f.jpg",
     "store": "Myntra",
@@ -562,7 +564,7 @@
       "festive"
     ],
     "notes": "Textured mojaris (Fausto)",
-    "checkedAt": "2026-11-22T13:09:10.970Z",
+    "checkedAt": "2026-11-28T08:11:22.633Z",
     "lastUsed": "2026-11-22T13:12:18.055Z"
   },
   "bf7bdc2cf5": {
@@ -570,7 +572,7 @@
     "url": "https://www.myntra.com/jackets/roadster/roadster-men-olive-green-solid-bomber/7116644/buy",
     "timesUsed": 0,
     "title": "Roadster Men Olive Green Solid Bomber",
-    "price": 1101,
+    "price": 985,
     "inStock": true,
     "image": "catalog/bf7bdc2cf5.jpg",
     "store": "Myntra",
@@ -582,14 +584,14 @@
       "streetwear"
     ],
     "notes": "Olive bomber (Roadster)",
-    "checkedAt": "2026-11-22T13:09:12.888Z"
+    "checkedAt": "2026-11-28T08:11:23.887Z"
   },
   "999a88e6de": {
     "id": "999a88e6de",
     "url": "https://www.myntra.com/jackets/here26now/herenow-men-olive-green-solid-bomber-jacket/12645812/buy",
     "timesUsed": 1,
     "title": "HERE&NOW Men Olive Green Solid Bomber Jacket",
-    "price": 1253,
+    "price": 987,
     "inStock": true,
     "image": "catalog/999a88e6de.jpg",
     "store": "Myntra",
@@ -601,7 +603,7 @@
       "streetwear"
     ],
     "notes": "Olive bomber (HERE&NOW)",
-    "checkedAt": "2026-11-22T13:09:14.497Z",
+    "checkedAt": "2026-11-28T08:11:25.122Z",
     "lastUsed": "2026-11-22T15:07:06.986Z"
   },
   "517eec2ff3": {
@@ -621,7 +623,7 @@
       "streetwear"
     ],
     "notes": "Blue washed denim jacket (Roadster)",
-    "checkedAt": "2026-11-22T13:09:20.387Z",
+    "checkedAt": "2026-11-28T08:11:26.363Z",
     "lastUsed": "2026-11-22T14:37:45.175Z"
   },
   "0242770a1c": {
@@ -629,7 +631,7 @@
     "url": "https://www.myntra.com/jackets/locomotive/locomotive-men-blue-solid-denim-jacket/10948614/buy",
     "timesUsed": 0,
     "title": "LOCOMOTIVE Men Blue Solid Denim Jacket",
-    "price": 890,
+    "price": 499,
     "inStock": true,
     "image": "catalog/0242770a1c.jpg",
     "store": "Myntra",
@@ -640,7 +642,7 @@
       "winter"
     ],
     "notes": "Blue denim jacket (Locomotive)",
-    "checkedAt": "2026-11-22T13:09:21.954Z"
+    "checkedAt": "2026-11-28T08:11:27.600Z"
   },
   "4b9d32f091": {
     "id": "4b9d32f091",
@@ -659,14 +661,14 @@
       "smart-casual"
     ],
     "notes": "Brown zip shacket (Mast & Harbour)",
-    "checkedAt": "2026-11-22T13:09:26.621Z"
+    "checkedAt": "2026-11-28T08:11:28.828Z"
   },
   "cfbfb9ef9d": {
     "id": "cfbfb9ef9d",
     "url": "https://www.myntra.com/shackets/vastrado/vastrado-men-solid-super-soft-double-pocket-cotton-overshirt-shacket/36311897/buy",
     "timesUsed": 1,
     "title": "VASTRADO Men Solid Super Soft Double Pocket Cotton Overshirt Shacket",
-    "price": 699,
+    "price": 559,
     "inStock": true,
     "image": "catalog/cfbfb9ef9d.jpg",
     "store": "Myntra",
@@ -677,7 +679,7 @@
       "smart-casual"
     ],
     "notes": "Cotton overshirt (Vastrado)",
-    "checkedAt": "2026-11-22T13:09:29.524Z",
+    "checkedAt": "2026-11-28T08:11:30.055Z",
     "lastUsed": "2026-11-22T14:08:40.051Z"
   },
   "4c6bb9673a": {
@@ -685,7 +687,7 @@
     "url": "https://www.myntra.com/kurtas/mag/mag-men-white-cotton-straight-kurta/20854344/buy",
     "timesUsed": 0,
     "title": "MAG Men White Cotton Straight Kurta",
-    "price": 487,
+    "price": 559,
     "inStock": true,
     "image": "catalog/4c6bb9673a.jpg",
     "store": "Myntra",
@@ -696,14 +698,14 @@
       "summer"
     ],
     "notes": "White cotton kurta (MAG)",
-    "checkedAt": "2026-11-22T13:09:31.601Z"
+    "checkedAt": "2026-11-28T08:11:31.314Z"
   },
   "d31f232a75": {
     "id": "d31f232a75",
     "url": "https://www.myntra.com/kurtas/devoiler/devoiler-men-salmon-pink-straight-cotton-kurta/17292964/buy",
     "timesUsed": 1,
     "title": "DEVOILER Men Salmon Pink Straight Cotton Kurta",
-    "price": 839,
+    "price": 474,
     "inStock": true,
     "image": "catalog/d31f232a75.jpg",
     "store": "Myntra",
@@ -715,7 +717,7 @@
       "wedding"
     ],
     "notes": "Salmon pink cotton kurta (Devoiler)",
-    "checkedAt": "2026-11-22T13:09:33.741Z",
+    "checkedAt": "2026-11-28T08:11:32.559Z",
     "lastUsed": "2026-11-22T13:11:51.142Z"
   },
   "87306fc506": {
@@ -723,7 +725,7 @@
     "url": "https://www.myntra.com/kurtas/here&now/herenow-men-solid-cotton-kurta/24454594/buy",
     "timesUsed": 2,
     "title": "HERE&NOW Men Solid Cotton Short Kurta",
-    "price": 715,
+    "price": 799,
     "inStock": true,
     "image": "catalog/87306fc506.jpg",
     "store": "Myntra",
@@ -734,7 +736,7 @@
       "casual"
     ],
     "notes": "Navy short kurta (HERE&NOW)",
-    "checkedAt": "2026-11-22T13:09:35.784Z",
+    "checkedAt": "2026-11-28T08:11:33.789Z",
     "lastUsed": "2026-11-22T15:09:34.340Z"
   },
   "5902cac9a9": {
@@ -742,7 +744,7 @@
     "url": "https://www.myntra.com/kurta-sets/anouk/anouk-men-black-printed-regular-pure-cotton-kurta-with-pyjamas/14121958/buy",
     "timesUsed": 0,
     "title": "Anouk Men Black Printed Regular  Cotton Kurta with Pyjamas",
-    "price": 942,
+    "price": 1087,
     "inStock": true,
     "image": "catalog/5902cac9a9.jpg",
     "store": "Myntra",
@@ -752,14 +754,14 @@
       "festive"
     ],
     "notes": "Black printed kurta set (Anouk)",
-    "checkedAt": "2026-11-22T13:09:37.575Z"
+    "checkedAt": "2026-11-28T08:11:35.026Z"
   },
   "da2a232bc3": {
     "id": "da2a232bc3",
     "url": "https://www.myntra.com/kurta-sets/seedesigns/see-designs-men-embroidered-chikankari-kurta-with-pyjamas/32320418/buy",
     "timesUsed": 0,
     "title": "See Designs Men Embroidered Chikankari Kurta with Pyjamas",
-    "price": 1349,
+    "price": 1449,
     "inStock": true,
     "image": "catalog/da2a232bc3.jpg",
     "store": "Myntra",
@@ -770,14 +772,14 @@
       "wedding"
     ],
     "notes": "Chikankari kurta set (See Designs)",
-    "checkedAt": "2026-11-22T13:09:39.106Z"
+    "checkedAt": "2026-11-28T08:11:36.256Z"
   },
   "5030735811": {
     "id": "5030735811",
     "url": "https://www.myntra.com/kurta-sets/jompers/jompers-embroidered-regular-thread-work-pure-cotton-kurta-with-pyjamas/28923970/buy",
     "timesUsed": 0,
     "title": "Jompers Embroidered Regular Thread Work Pure Cotton Kurta with Pyjamas",
-    "price": 1154,
+    "price": 1120,
     "inStock": true,
     "image": "catalog/5030735811.jpg",
     "store": "Myntra",
@@ -788,14 +790,14 @@
       "wedding"
     ],
     "notes": "Embroidered kurta set (Jompers)",
-    "checkedAt": "2026-11-22T13:09:41.020Z"
+    "checkedAt": "2026-11-28T08:11:37.487Z"
   },
   "d2d29c50eb": {
     "id": "d2d29c50eb",
     "url": "https://www.myntra.com/kurta-sets/vastramay/vastramay-men-white-chikankari-pure-cotton-kurta-with-churidar/16592492/buy",
     "timesUsed": 0,
     "title": "VASTRAMAY Men White Chikankari Pure Cotton Kurta with Churidar",
-    "price": 2206,
+    "price": 2172,
     "inStock": true,
     "image": "catalog/d2d29c50eb.jpg",
     "store": "Myntra",
@@ -806,14 +808,14 @@
       "festive"
     ],
     "notes": "White chikankari kurta + churidar (Vastramay)",
-    "checkedAt": "2026-11-22T13:09:43.187Z"
+    "checkedAt": "2026-11-28T08:11:38.722Z"
   },
   "12e925dfc2": {
     "id": "12e925dfc2",
     "url": "https://www.myntra.com/nehru-jackets/jompers/jompers-woven-design-nehru-jacket/26218222/buy",
     "timesUsed": 1,
     "title": "Jompers Woven Design Nehru Jacket",
-    "price": 805,
+    "price": 803,
     "inStock": true,
     "image": "catalog/12e925dfc2.jpg",
     "store": "Myntra",
@@ -824,7 +826,7 @@
       "festive"
     ],
     "notes": "Woven Nehru jacket (Jompers)",
-    "checkedAt": "2026-11-22T13:09:45.044Z",
+    "checkedAt": "2026-11-28T08:11:39.949Z",
     "lastUsed": "2026-11-22T13:11:51.142Z"
   },
   "9402a6be4d": {
@@ -832,7 +834,7 @@
     "url": "https://www.myntra.com/nehru-jackets/wintage/wintage-men-black-nehru-jacket/1992725/buy",
     "timesUsed": 1,
     "title": "Wintage Men Black Nehru Jacket",
-    "price": 1148,
+    "price": 1149,
     "inStock": true,
     "image": "catalog/9402a6be4d.jpg",
     "store": "Myntra",
@@ -844,7 +846,7 @@
       "party"
     ],
     "notes": "Black Nehru jacket (Wintage)",
-    "checkedAt": "2026-11-22T13:09:49.010Z",
+    "checkedAt": "2026-11-28T08:11:41.244Z",
     "lastUsed": "2026-11-22T13:12:18.055Z"
   },
   "0d517d7dd9": {
@@ -852,7 +854,7 @@
     "url": "https://www.myntra.com/pyjamas/vastramay/vastramay-men-white-solid-cotton-pyjamas/19696686/buy",
     "timesUsed": 1,
     "title": "VASTRAMAY Men White Solid Cotton Pyjamas",
-    "price": 699,
+    "price": 649,
     "inStock": true,
     "image": "catalog/0d517d7dd9.jpg",
     "store": "Myntra",
@@ -863,7 +865,7 @@
       "wedding"
     ],
     "notes": "White cotton pyjama (Vastramay)",
-    "checkedAt": "2026-11-22T13:09:53.473Z",
+    "checkedAt": "2026-11-28T08:11:42.492Z",
     "lastUsed": "2026-11-22T13:11:51.142Z"
   },
   "c545ecb35b": {
@@ -871,7 +873,7 @@
     "url": "https://www.myntra.com/pyjamas/see-designs/see-designs-men-white-solid-pyjama-sdmdwpj100/8831533/buy",
     "timesUsed": 0,
     "title": "See Designs Men White Solid Pure Cotton Churidar",
-    "price": 519,
+    "price": 584,
     "inStock": true,
     "image": "catalog/c545ecb35b.jpg",
     "store": "Myntra",
@@ -882,14 +884,14 @@
       "wedding"
     ],
     "notes": "White churidar (See Designs)",
-    "checkedAt": "2026-11-22T13:09:56.058Z"
+    "checkedAt": "2026-11-28T08:11:43.719Z"
   },
   "7b686ab27b": {
     "id": "7b686ab27b",
     "url": "https://www.myntra.com/belts/wildhorn/wildhorn-men-brown-leather-belt/16162158/buy",
     "timesUsed": 2,
     "title": "WildHorn Men Brown Leather Belt",
-    "price": 548,
+    "price": 599,
     "inStock": true,
     "image": "catalog/7b686ab27b.jpg",
     "store": "Myntra",
@@ -902,7 +904,7 @@
       "basics"
     ],
     "notes": "Brown leather belt (WildHorn)",
-    "checkedAt": "2026-11-22T13:09:58.244Z",
+    "checkedAt": "2026-11-28T08:11:44.994Z",
     "lastUsed": "2026-11-22T14:37:26.031Z"
   },
   "c928d33abf": {
@@ -921,7 +923,7 @@
       "casual"
     ],
     "notes": "Brown leather belt (Captor)",
-    "checkedAt": "2026-11-22T13:10:02.901Z"
+    "checkedAt": "2026-11-28T08:11:46.222Z"
   },
   "28a8de1aec": {
     "id": "28a8de1aec",
@@ -940,7 +942,7 @@
       "date"
     ],
     "notes": "Silver dial leather watch (Timex)",
-    "checkedAt": "2026-11-22T13:10:04.989Z",
+    "checkedAt": "2026-11-28T08:11:47.452Z",
     "lastUsed": "2026-11-22T14:34:35.246Z"
   },
   "01cefdc17f": {
@@ -959,14 +961,14 @@
       "date"
     ],
     "notes": "Blue dial leather watch (Sonata)",
-    "checkedAt": "2026-11-22T13:10:08.890Z"
+    "checkedAt": "2026-11-28T08:11:48.679Z"
   },
   "78a4312357": {
     "id": "78a4312357",
     "url": "https://www.myntra.com/sunglasses/voyage/voyage-unisex-black-lens--black-wayfarer-sunglasses-with-uv-protected-lens/19037770/buy",
     "timesUsed": 1,
     "title": "Voyage Unisex Black Lens & Black Wayfarer Sunglasses with UV Protected Lens",
-    "price": 753,
+    "price": 630,
     "inStock": true,
     "image": "catalog/78a4312357.jpg",
     "store": "Myntra",
@@ -978,7 +980,7 @@
       "casual"
     ],
     "notes": "Black wayfarers (Voyage)",
-    "checkedAt": "2026-11-22T13:10:10.659Z",
+    "checkedAt": "2026-11-28T08:11:49.909Z",
     "lastUsed": "2026-11-22T14:08:40.051Z"
   },
   "8b430912eb": {
@@ -986,7 +988,7 @@
     "url": "https://www.myntra.com/sunglasses/voyage/voyage-unisex-black-lens--black-wayfarer-sunglasses-with-uv-protected-lens/17838018/buy",
     "timesUsed": 0,
     "title": "Voyage Unisex Black Lens & Black Wayfarer Sunglasses with UV Protected Lens",
-    "price": 742,
+    "price": 720,
     "inStock": true,
     "image": "catalog/8b430912eb.jpg",
     "store": "Myntra",
@@ -998,14 +1000,14 @@
       "streetwear"
     ],
     "notes": "Black wayfarers II (Voyage)",
-    "checkedAt": "2026-11-22T13:10:12.314Z"
+    "checkedAt": "2026-11-28T08:11:51.138Z"
   },
   "716dcbed4b": {
     "id": "716dcbed4b",
     "url": "https://www.myntra.com/sunglasses/idee/idee-men-grey-lens--black-wayfarer-sunglasses-with/42840458/buy",
     "timesUsed": 0,
     "title": "IDEE Men Grey Lens & Black Wayfarer Sunglasses with",
-    "price": 2437,
+    "price": 2625,
     "inStock": true,
     "image": "catalog/716dcbed4b.jpg",
     "store": "Myntra",
@@ -1017,14 +1019,14 @@
       "old-money"
     ],
     "notes": "Grey-lens wayfarers (IDEE)",
-    "checkedAt": "2026-11-22T13:10:14.712Z"
+    "checkedAt": "2026-11-28T08:11:52.366Z"
   },
   "8ffebedcdd": {
     "id": "8ffebedcdd",
     "url": "https://www.myntra.com/casual-shoes/roadster/the-roadster-lifestyle-co-men-white-comfort-insole-lightweight-sneakers/26243728/buy",
     "timesUsed": 0,
     "title": "The Roadster Lifestyle Co. Men White Comfort Insole Lightweight Sneakers",
-    "price": 624,
+    "price": 611,
     "inStock": true,
     "image": "catalog/8ffebedcdd.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/26243728/2023/12/5/7e5a7b10-ee78-4f49-9004-6bb91c2ca4ae1701768284039RoadsterMenCasualShoes1.jpg",
@@ -1038,15 +1040,15 @@
       "basics"
     ],
     "notes": "White lightweight sneakers (Roadster)",
-    "checkedAt": "2026-11-22T15:25:07.537Z"
+    "checkedAt": "2026-11-28T08:11:53.594Z"
   },
   "181be87ef5": {
     "id": "181be87ef5",
     "url": "https://www.myntra.com/casual-shoes/roadster/roadster-men-white-casual-sneakers/18112140/buy",
     "timesUsed": 0,
     "title": "Roadster Men White Casual Sneakers",
-    "price": 2995,
-    "inStock": false,
+    "price": 840,
+    "inStock": true,
     "image": "catalog/181be87ef5.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/18112140/2022/5/23/a888b20d-3d6f-4903-a63f-630eceb6d2be1653284425425RoadsterMenWhiteCasualSneakers1.jpg",
     "store": "Myntra",
@@ -1059,7 +1061,7 @@
       "basics"
     ],
     "notes": "White casual sneakers (Roadster)",
-    "checkedAt": "2026-11-22T15:25:09.150Z"
+    "checkedAt": "2026-11-28T08:11:54.828Z"
   },
   "54fb44b51b": {
     "id": "54fb44b51b",
@@ -1079,14 +1081,14 @@
       "date"
     ],
     "notes": "Slip-on loafers (Bata)",
-    "checkedAt": "2026-11-22T15:25:10.767Z"
+    "checkedAt": "2026-11-28T08:11:56.089Z"
   },
   "88a434864f": {
     "id": "88a434864f",
     "url": "https://www.myntra.com/formal-shoes/mactree/mactree-men-brown-solid-formal-derbys/19875938/buy",
     "timesUsed": 0,
     "title": "Mactree Men Brown Solid Formal Derbys",
-    "price": 1298,
+    "price": 687,
     "inStock": true,
     "image": "catalog/88a434864f.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/19875938/2022/9/10/634fce0c-b790-45cd-bc91-8ff9f732b9b01662824885542MactreeMenBrownSolidFormalDerbys1.jpg",
@@ -1098,7 +1100,7 @@
       "smart-casual"
     ],
     "notes": "Brown derbys (Mactree)",
-    "checkedAt": "2026-11-22T15:25:12.755Z"
+    "checkedAt": "2026-11-28T08:11:57.339Z"
   },
   "31f99cb59c": {
     "id": "31f99cb59c",
@@ -1106,7 +1108,7 @@
     "timesUsed": 0,
     "title": "Ajanta Men Brown Formal Derby Shoes",
     "price": 999,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/31f99cb59c.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/17962782/2022/4/21/e5fdc5bb-28b9-4bc5-8b6f-5ae5b84592351650529694428FormalShoes1.jpg",
     "store": "Myntra",
@@ -1117,14 +1119,14 @@
       "smart-casual"
     ],
     "notes": "Brown derbys (Ajanta)",
-    "checkedAt": "2026-11-22T15:25:15.145Z"
+    "checkedAt": "2026-11-28T08:11:58.594Z"
   },
   "b45f2e3f5b": {
     "id": "b45f2e3f5b",
     "url": "https://www.myntra.com/formal-shoes/redchief/red-chief-men-brown-leather-formal-derby-shoes/2243754/buy",
     "timesUsed": 0,
     "title": "Red Chief Men Brown Leather Formal Derby Shoes",
-    "price": 2515,
+    "price": 2220,
     "inStock": true,
     "image": "catalog/b45f2e3f5b.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2243754/2023/2/22/05f55b33-59e8-4c9c-b19c-906a569ef4401677042833454-Red-Chief-Men-Brown-Leather-Formal-Shoes-4711677042833272-6.jpg",
@@ -1137,7 +1139,7 @@
       "wedding"
     ],
     "notes": "Brown leather derbys (Red Chief)",
-    "checkedAt": "2026-11-22T15:25:17.064Z"
+    "checkedAt": "2026-11-28T08:11:59.871Z"
   },
   "bf10cdc688": {
     "id": "bf10cdc688",
@@ -1145,7 +1147,7 @@
     "timesUsed": 0,
     "title": "Franco Leone Men Brown Formal Derby Shoes",
     "price": 2795,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/bf10cdc688.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2344081/2017/12/15/11513340893041-m-5721513340892770-1.jpg",
     "store": "Myntra",
@@ -1156,14 +1158,14 @@
       "old-money"
     ],
     "notes": "Brown derbys (Franco Leone)",
-    "checkedAt": "2026-11-22T15:25:19.087Z"
+    "checkedAt": "2026-11-28T08:12:01.154Z"
   },
   "8e3867ef39": {
     "id": "8e3867ef39",
     "url": "https://www.myntra.com/trousers/woodland/woodland-men-navy-blue-chinos-trousers/18339766/buy",
     "timesUsed": 0,
     "title": "Woodland Men Navy Blue Chinos Trousers",
-    "price": 1797,
+    "price": 1198,
     "inStock": true,
     "image": "catalog/8e3867ef39.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/18339766/2022/5/19/23ade04d-212e-4279-8e38-d6fe81d8c3651652974306676WoodlandMenNavyBlueChinosTrousers1.jpg",
@@ -1176,7 +1178,7 @@
       "basics"
     ],
     "notes": "Navy chinos (Woodland)",
-    "checkedAt": "2026-11-22T15:25:20.819Z"
+    "checkedAt": "2026-11-28T08:12:02.397Z"
   },
   "cb17ced671": {
     "id": "cb17ced671",
@@ -1184,7 +1186,7 @@
     "timesUsed": 0,
     "title": "CODE by Lifestyle Men Navy Blue Slim Fit Chinos",
     "price": 1499,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/cb17ced671.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1526152/2016/10/19/11476877620785-CODE-by-Lifestyle-Men-Navy-Blue-Solid-Slim-Fit-Chinos-781476877620650-1.jpg",
     "store": "Myntra",
@@ -1195,7 +1197,7 @@
       "smart-casual"
     ],
     "notes": "Navy slim chinos (CODE)",
-    "checkedAt": "2026-11-22T15:25:22.723Z"
+    "checkedAt": "2026-11-28T08:12:03.649Z"
   },
   "5822299f64": {
     "id": "5822299f64",
@@ -1203,7 +1205,7 @@
     "timesUsed": 0,
     "title": "Lee Cooper Men Navy Blue Slim Fit Solid Chinos",
     "price": 2199,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/5822299f64.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/12232046/2020/11/30/3389bb43-c9ea-449e-98a0-b796505d235b1606730523439-Lee-Cooper-Men-Trousers-1711606730521858-1.jpg",
     "store": "Myntra",
@@ -1215,7 +1217,7 @@
       "old-money"
     ],
     "notes": "Navy slim chinos (Lee Cooper)",
-    "checkedAt": "2026-11-22T15:25:24.450Z"
+    "checkedAt": "2026-11-28T08:12:04.876Z"
   },
   "435824a224": {
     "id": "435824a224",
@@ -1223,7 +1225,7 @@
     "timesUsed": 0,
     "title": "Indian Terrain Men Navy Blue Solid Slim Fit Chinos",
     "price": 2399,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/435824a224.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/1514827/2016/10/24/11477307174541-Indian-Terrain-Men-Navy-Solid-Brooklyn-Slim-Fit-Chino-Trousers-3721477307174180-1.jpg",
     "store": "Myntra",
@@ -1234,7 +1236,7 @@
       "old-money"
     ],
     "notes": "Navy slim chinos (Indian Terrain)",
-    "checkedAt": "2026-11-22T15:25:26.180Z"
+    "checkedAt": "2026-11-28T08:12:06.101Z"
   },
   "a0aa174eb6": {
     "id": "a0aa174eb6",
@@ -1254,7 +1256,7 @@
       "summer"
     ],
     "notes": "Solid polo (Max)",
-    "checkedAt": "2026-11-22T15:25:27.890Z"
+    "checkedAt": "2026-11-28T08:12:07.328Z"
   },
   "ffbdff7ac9": {
     "id": "ffbdff7ac9",
@@ -1274,7 +1276,7 @@
       "date"
     ],
     "notes": "Black polo (Max)",
-    "checkedAt": "2026-11-22T15:25:29.868Z"
+    "checkedAt": "2026-11-28T08:12:08.578Z"
   },
   "1c2fcce53d": {
     "id": "1c2fcce53d",
@@ -1282,7 +1284,7 @@
     "timesUsed": 0,
     "title": "Allen Solly Men Solid Polo Collar T-shirt",
     "price": 1099,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/1c2fcce53d.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/29986690/2024/6/18/977d5961-41ba-457e-82c1-eefce6d6b04a1718699413271AllenSollyMenMandarinCollarPocketsT-shirt1.jpg",
     "store": "Myntra",
@@ -1294,7 +1296,7 @@
       "office"
     ],
     "notes": "Solid polo (Allen Solly)",
-    "checkedAt": "2026-11-22T15:25:31.600Z"
+    "checkedAt": "2026-11-28T08:12:09.823Z"
   },
   "2ff3241b10": {
     "id": "2ff3241b10",
@@ -1302,7 +1304,7 @@
     "timesUsed": 0,
     "title": "U.S. Polo Assn. Men Navy Blue Solid Polo Collar T-shirt",
     "price": 1999,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/2ff3241b10.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/9695695/2019/6/25/fe668853-6adf-436d-b769-1d6054e6650b1561450177957-US-Polo-Assn-Men-Navy-Blue-Solid-Polo-Collar-T-shirt-4741561-1.jpg",
     "store": "Myntra",
@@ -1313,7 +1315,7 @@
       "old-money"
     ],
     "notes": "Navy polo (US Polo)",
-    "checkedAt": "2026-11-22T15:25:33.152Z"
+    "checkedAt": "2026-11-28T08:12:11.056Z"
   },
   "0796952639": {
     "id": "0796952639",
@@ -1321,7 +1323,7 @@
     "timesUsed": 0,
     "title": "U.S. Polo Assn. Men White Solid Polo Collar T-shirt",
     "price": 1999,
-    "inStock": false,
+    "inStock": true,
     "image": "catalog/0796952639.jpg",
     "imageUrl": "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/2043353/2018/1/19/11516356783384-US-Polo-Assn-Men-White-Solid-Polo-Collar-T-shirt-2311516356783197-1.jpg",
     "store": "Myntra",
@@ -1333,7 +1335,7 @@
       "summer"
     ],
     "notes": "White polo (US Polo)",
-    "checkedAt": "2026-11-22T15:25:35.252Z"
+    "checkedAt": "2026-11-28T08:12:12.330Z"
   },
   "0096a92e59": {
     "id": "0096a92e59",
@@ -1342,7 +1344,7 @@
     "title": "VELIN-NY",
     "price": 2299,
     "inStock": false,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TBH-VELIN-NY_1.webp?v=1785232685&width=1200",
+    "error": "page returned 404",
     "store": "The Bear House",
     "name": "Navy oxford shirt (The Bear House)",
     "category": "top",
@@ -1353,7 +1355,7 @@
       "date"
     ],
     "notes": "Navy oxford shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:36.928Z"
+    "checkedAt": "2026-11-28T08:12:13.847Z"
   },
   "e246191c5e": {
     "id": "e246191c5e",
@@ -1362,7 +1364,6 @@
     "title": "ASTRON-BG",
     "price": 2299,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TBH-ASTRON-BG_1.webp?v=1780315134&width=1200",
     "store": "The Bear House",
     "name": "Beige oxford shirt (The Bear House)",
     "category": "top",
@@ -1372,7 +1373,9 @@
       "old-money"
     ],
     "notes": "Beige oxford shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:39.987Z"
+    "checkedAt": "2026-11-28T08:12:17.488Z",
+    "image": "catalog/e246191c5e.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/TBH-ASTRON-BG_1.webp?v=1780315134&width=1200"
   },
   "22b1c3c165": {
     "id": "22b1c3c165",
@@ -1380,8 +1383,7 @@
     "timesUsed": 0,
     "title": "ASTRALE-NY",
     "price": 2299,
-    "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TBH-ASTRALE-NY1.webp?v=1785222389&width=1200",
+    "inStock": false,
     "store": "The Bear House",
     "name": "Navy pinstripe oxford (The Bear House)",
     "category": "top",
@@ -1391,16 +1393,17 @@
       "smart-casual"
     ],
     "notes": "Navy pinstripe oxford (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:41.610Z"
+    "checkedAt": "2026-11-28T08:12:19.435Z",
+    "image": "catalog/22b1c3c165.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/TBH-ASTRALE-NY1.webp?v=1785222389&width=1200"
   },
   "e6374de3e5": {
     "id": "e6374de3e5",
     "url": "https://thebearhouse.com/products/lyse-wh",
     "timesUsed": 0,
     "title": "LYSE-WH",
-    "price": 1559,
+    "price": 999,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/ONL-LYSE-WH_1.webp?v=1792412335&width=1200",
     "store": "The Bear House",
     "name": "White cotton-linen shirt (The Bear House)",
     "category": "top",
@@ -1411,16 +1414,17 @@
       "wedding"
     ],
     "notes": "White cotton-linen shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:43.307Z"
+    "checkedAt": "2026-11-28T08:12:21.292Z",
+    "image": "catalog/e6374de3e5.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/ONL-LYSE-WH_1.webp?v=1792412335&width=1200"
   },
   "e1977e907c": {
     "id": "e1977e907c",
     "url": "https://thebearhouse.com/products/perid",
     "timesUsed": 0,
     "title": "PERID",
-    "price": 1497,
-    "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/MANDO_PERID2.jpg?v=1757402565&width=1200",
+    "price": 999,
+    "inStock": false,
     "store": "The Bear House",
     "name": "Green cotton-linen shirt (The Bear House)",
     "category": "top",
@@ -1430,16 +1434,17 @@
       "travel"
     ],
     "notes": "Green cotton-linen shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:45.020Z"
+    "checkedAt": "2026-11-28T08:12:23.204Z",
+    "image": "catalog/e1977e907c.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/MANDO_PERID2.jpg?v=1757402565&width=1200"
   },
   "355f8dfe9e": {
     "id": "355f8dfe9e",
     "url": "https://thebearhouse.com/products/rian",
     "timesUsed": 0,
     "title": "Rian",
-    "price": 1091,
+    "price": 999,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TBH-RIAN-MC_1.jpg?v=1753864941&width=1200",
     "store": "The Bear House",
     "name": "Striped cotton-linen shirt (The Bear House)",
     "category": "top",
@@ -1449,16 +1454,17 @@
       "travel"
     ],
     "notes": "Striped cotton-linen shirt (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:46.683Z"
+    "checkedAt": "2026-11-28T08:12:24.710Z",
+    "image": "catalog/355f8dfe9e.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/TBH-RIAN-MC_1.jpg?v=1753864941&width=1200"
   },
   "ebbfdcaab2": {
     "id": "ebbfdcaab2",
     "url": "https://thebearhouse.com/products/akaro-cr",
     "timesUsed": 0,
     "title": "AKARO-CR",
-    "price": 1359,
+    "price": 999,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/POL-AKARO-CR1.webp?v=1785157063&width=1200",
     "store": "The Bear House",
     "name": "Cream polo (The Bear House)",
     "category": "top",
@@ -1468,16 +1474,17 @@
       "summer"
     ],
     "notes": "Cream polo (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:48.328Z"
+    "checkedAt": "2026-11-28T08:12:26.893Z",
+    "image": "catalog/ebbfdcaab2.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/POL-AKARO-CR1.webp?v=1785157063&width=1200"
   },
   "7b3b89454a": {
     "id": "7b3b89454a",
     "url": "https://thebearhouse.com/products/none-rt",
     "timesUsed": 0,
     "title": "NONE-RT",
-    "price": 1424,
+    "price": 999,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/POL-NONE-RT1.webp?v=1785156358&width=1200",
     "store": "The Bear House",
     "name": "Rust knit polo (The Bear House)",
     "category": "top",
@@ -1487,41 +1494,9 @@
       "old-money"
     ],
     "notes": "Rust knit polo (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:50.173Z"
-  },
-  "2462e62702": {
-    "id": "2462e62702",
-    "url": "https://thebearhouse.com/products/kinjo",
-    "timesUsed": 0,
-    "error": "page returned 404",
-    "price": 1899,
-    "store": "The Bear House",
-    "name": "Maroon knit polo (The Bear House)",
-    "category": "top",
-    "tags": [
-      "date",
-      "smart-casual",
-      "old-money"
-    ],
-    "notes": "Maroon knit polo (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:51.543Z"
-  },
-  "2051ea30d7": {
-    "id": "2051ea30d7",
-    "url": "https://thebearhouse.com/products/varlem-br",
-    "timesUsed": 0,
-    "error": "page returned 404",
-    "price": 2299,
-    "store": "The Bear House",
-    "name": "Brown half-zip knit polo (The Bear House)",
-    "category": "top",
-    "tags": [
-      "winter",
-      "old-money",
-      "date"
-    ],
-    "notes": "Brown half-zip knit polo (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:52.978Z"
+    "checkedAt": "2026-11-28T08:12:29.017Z",
+    "image": "catalog/7b3b89454a.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/POL-NONE-RT1.webp?v=1785156358&width=1200"
   },
   "38af67e7bb": {
     "id": "38af67e7bb",
@@ -1530,7 +1505,6 @@
     "title": "SETI-OL",
     "price": 2799,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/SWT-SETI-OL_1.webp?v=1795260414&width=1200",
     "store": "The Bear House",
     "name": "Olive half-zip knit sweater (The Bear House)",
     "category": "top",
@@ -1540,7 +1514,9 @@
       "old-money"
     ],
     "notes": "Olive half-zip knit sweater (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:54.724Z"
+    "checkedAt": "2026-11-28T08:12:31.024Z",
+    "image": "catalog/38af67e7bb.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/SWT-SETI-OL_1.webp?v=1795260414&width=1200"
   },
   "664017e4bc": {
     "id": "664017e4bc",
@@ -1549,7 +1525,7 @@
     "title": "JERVIO-BK",
     "price": 1689,
     "inStock": false,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TRO-JERVIO-BK_1.jpg?v=1771938943&width=1200",
+    "error": "page returned 404",
     "store": "The Bear House",
     "name": "Black relaxed trousers (The Bear House)",
     "category": "bottom",
@@ -1559,7 +1535,7 @@
       "party"
     ],
     "notes": "Black relaxed trousers (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:56.515Z"
+    "checkedAt": "2026-11-28T08:12:32.414Z"
   },
   "b6a0f18cde": {
     "id": "b6a0f18cde",
@@ -1568,7 +1544,6 @@
     "title": "MORAJ-OW",
     "price": 2799,
     "inStock": true,
-    "error": "Failed to parse URL from //thebearhouse.com/cdn/shop/files/TRO-MORAJ-OW_1.webp?v=1793168280&width=1200",
     "store": "The Bear House",
     "name": "Off-white pleated trousers (The Bear House)",
     "category": "bottom",
@@ -1579,6 +1554,8 @@
       "wedding"
     ],
     "notes": "Off-white pleated trousers (The Bear House)",
-    "checkedAt": "2026-11-22T15:25:58.359Z"
+    "checkedAt": "2026-11-28T08:12:33.931Z",
+    "image": "catalog/b6a0f18cde.jpg",
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/TRO-MORAJ-OW_1.webp?v=1793168280&width=1200"
   }
 }
