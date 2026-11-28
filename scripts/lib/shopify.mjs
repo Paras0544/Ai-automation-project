@@ -20,7 +20,7 @@ export const readSources = () => (fs.existsSync(sourcesFile()) ? JSON.parse(fs.r
 export function shortName(s) {
   let t = String(s || "")
     .replace(/\b(men'?s|for men|mens|regular|slim|relaxed|oversized|boxy|straight|tapered|comfort)\s+fit\b/gi, "")
-    .replace(/\b(men'?s|mens|for men|casual|premium|pure)\b/gi, "")
+    .replace(/\b(men'?s|mens|men|for men|casual|premium|pure)\b/gi, "")
     .replace(/\bwith\b.*$/i, "")
     .replace(/\s{2,}/g, " ")
     .trim();

@@ -12,6 +12,25 @@ idea ──► npm run batch ──► look file (hook, items, caption, try-on p
                          npm run render ──► out/<id>.mp4 + out/<id>.caption.txt
 ```
 
+## How it works now (Nov 2026): product reels + learning loop
+
+Full-outfit looks are retired (nobody buys a ₹10k outfit). Reels now show **one kind of product at a budget price**, in rotating formats:
+
+- **finds**: "Hoodies under ₹1,999": 4-5 picks, each with its price.
+- **guess**: "Guess the price": each product appears, then the real price is revealed (watch time + comments).
+- **pricedrop**: products cheaper today than the highest price *we* recorded in the last 30 days (data/price-history.json).
+
+Daily cloud run (.github/workflows/daily.yml):
+1. **Live store feeds** (`scripts/lib/shopify.mjs`, `data/sources.json`): products, prices and stock straight from paying stores' own Shopify feeds. Only stores whose affiliate links earn go there.
+2. **Pick what to make** (`scripts/lib/strategy.mjs`, `data/strategy.json`): Thompson-style sampling over formats × product types, weighted by how past reels scored, seasonal boosts, and an explore rate so new ideas keep getting tried. Lines you put in `data/ideas.txt` (`topic | type | cap | format`) go first.
+3. **Plan** (`scripts/lib/finds.mjs`): Gemini picks the products and writes the hook; labels can't add colours/fabrics that aren't in the product name; every price comes from the feed.
+4. **Render** (Remotion, `src/Reel.tsx` FindsReel). Optional background music from `public/music/`.
+5. **Post** (`scripts/ig-post.mjs`): right before posting, every product is re-checked live; if any price changed or it sold out, the reel is retired instead of posted.
+6. **Learn** (`scripts/metrics.mjs`): Instagram insights per reel → score (watch time, shares/reach, saves/reach, likes/reach) → `data/learning/arms.json`, which step 2 uses tomorrow.
+7. Weekly review (scheduled Claude task, Sundays): reads the numbers, tunes `strategy.json` and `rules.md`, researches and adds at most one new format a week, adds paying stores.
+
+Preview without posting: GitHub → Actions → "Preview reels" (frames land on the `preview` branch).
+
 ## Setup on Windows (one time)
 
 1. Install **Node.js LTS** (nodejs.org) and **Git** (git-scm.com)

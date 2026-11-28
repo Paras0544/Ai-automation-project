@@ -37,6 +37,7 @@ jobs:
           mkdir -p preview
           cp out/*.mp4 out/*.cover.jpg out/*.caption.txt out/report-*.md preview/ 2>/dev/null || true
           git status --porcelain data/looks | awk '{print $2}' | xargs -r -I{} cp {} preview/
+          node --input-type=module -e 'import { liveProduct } from "./scripts/lib/shopify.mjs"; import fs from "node:fs"; const f=fs.readdirSync("preview").find(x=>x.endsWith(".json")&&x!=="feed-counts.json"); if(f){const l=JSON.parse(fs.readFileSync("preview/"+f)); const it=l.items[0]; console.log("live check", it.url, JSON.stringify(await liveProduct(it.url)), "reel price", it.price)}' | tee preview/live-check.txt || true
           node -e 'const c=require("./data/catalog.json");const v=Object.values(c).filter(x=>x.source==="shopify");const by={};for(const x of v){if(x.inStock===false)continue;by[x.type]=(by[x.type]||0)+1}console.log(JSON.stringify(by))' > preview/feed-counts.json
       - name: Contact sheets (frames) to the "preview" branch for review
         run: |

@@ -14,12 +14,27 @@ const MAX_FINDS = 5;
 const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
 const COLOURS = /\b(black|white|off-white|cream|beige|navy|blue|light blue|sky|green|olive|sage|brown|tan|grey|gray|charcoal|maroon|red|pink|purple|lilac|yellow|mustard|orange|rust|teal|khaki|camel|ecru)\b/gi;
 
+// same design in another colour = same style (Bear House: jude-cr, jude-bk…); one per style keeps reels varied
+const styleKey = (c) => (c.title || "").toLowerCase().replace(COLOURS, "").replace(/\b(men|mens|&|and)\b/g, "").replace(/[^a-z]+/g, " ").trim();
+
+function onePerStyle(list) {
+  const seen = new Set();
+  return list.filter((c) => {
+    const k = styleKey(c);
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+}
+
 export function findsCandidates(types, cap) {
   const want = new Set(String(types).split(/[,\s]+/).filter(Boolean));
   const any = want.has("any") || want.size === 0;
-  return Object.values(readCache())
-    .filter((c) => c.source === "shopify" && c.inStock !== false && (any || want.has(c.type)) && c.price && c.price <= cap && c.imageUrl)
-    .sort((a, b) => (a.timesUsed || 0) - (b.timesUsed || 0) || a.price - b.price);
+  return onePerStyle(
+    Object.values(readCache())
+      .filter((c) => c.source === "shopify" && c.inStock !== false && (any || want.has(c.type)) && c.price && c.price <= cap && c.imageUrl)
+      .sort((a, b) => (a.timesUsed || 0) - (b.timesUsed || 0) || a.price - b.price),
+  );
 }
 
 // Real price drops from OUR OWN daily price history: today's price vs the highest price we saw in the last 30 days.
@@ -35,7 +50,7 @@ export function priceDrops(minPct = 10, days = 30) {
     const pct = Math.round(((top[1] - c.price) / top[1]) * 100);
     if (pct >= minPct && top[1] > c.price) out.push({ ...c, wasPrice: top[1], wasDate: top[0], dropPct: pct, trackedSince: pts[0][0] });
   }
-  return out.sort((a, b) => b.dropPct - a.dropPct);
+  return onePerStyle(out.sort((a, b) => b.dropPct - a.dropPct));
 }
 
 const S = (type, extra = {}) => ({ type, ...extra });
@@ -77,7 +92,7 @@ ${list}
 Rules:
 - Pick the ones a stylish 22-year-old would actually want right now: trendy but wearable, clean colours, no loud slogans or cartoon prints.
 - Make the set varied (different colours/styles), and prefer products used fewer times.
-- Labels: shorten the product name; never invent colours, fabrics or features that aren't in the name.
+- Labels: shorten the product name; keep EVERY colour in it and never invent colours, fabrics or features that aren't in the name.
 - Never mention celebrities. Never claim you wore or tested anything. Don't state prices in the hook other than "under ${inr(cap)}".${rulesForPrompt()}${problem ? `\n\nYour previous answer was rejected: ${problem}. Fix it.` : ""}`;
 }
 
@@ -95,10 +110,11 @@ function validate(ai, byId, cap, need = MIN_FINDS) {
   return null;
 }
 
-// keep the AI's label only if it doesn't add a colour the product name doesn't have
+// keep the AI's label only if its colours exactly match the product name's (none added, none dropped)
 function safeLabel(label, title) {
   const has = new Set((title.match(COLOURS) || []).map((x) => x.toLowerCase()));
-  const adds = (label.match(COLOURS) || []).some((x) => !has.has(x.toLowerCase()));
+  const got = new Set((label.match(COLOURS) || []).map((x) => x.toLowerCase()));
+  const adds = [...got].some((x) => !has.has(x)) || [...has].some((x) => !got.has(x));
   const tooLong = label.split(/\s+/).length > 6;
   return !label || adds || tooLong ? shortName(title) : label.charAt(0).toUpperCase() + label.slice(1);
 }
