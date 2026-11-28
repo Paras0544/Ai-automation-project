@@ -41,6 +41,18 @@ const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "
 const inr = (n) => "₹" + Number(n || 0).toLocaleString("en-IN");
 const total = (l) => l.items.reduce((s, i) => s + (i.price || 0), 0);
 const isProduct = (l) => l.kind && l.kind !== "outfit";
+// "More like this on Amazon": a tagged Amazon search link, no Amazon prices shown (Amazon only allows prices from its own API)
+const AMAZON_Q = { "oversized-tee": "oversized t-shirt", "overshirt-linen": "linen shirt", "co-ord": "co-ord set", flannel: "flannel shirt", oxford: "oxford shirt" };
+function amazonMore(l) {
+  const tag = cfg.amazonTag;
+  if (!tag || !l.type || l.type === "any") return "";
+  const q = `men ${AMAZON_Q[l.type] || l.type}`;
+  const u = new URL("https://www.amazon.in/s");
+  u.searchParams.set("k", q);
+  if (l.budget && l.kind !== "pricedrop") u.searchParams.set("rh", `p_36:-${l.budget * 100}`);
+  u.searchParams.set("tag", tag);
+  return `<p style="margin-top:14px"><a class="buy" rel="sponsored nofollow" target="_blank" href="${esc(u.toString())}">More ${esc(q.replace(/^men /, ""))}s on Amazon${l.budget && l.kind !== "pricedrop" ? ` under ${inr(l.budget)}` : ""} →</a></p>`;
+}
 // "each under ₹1,499" for product reels, "₹4,200 total" for old outfit looks
 const priceTag = (l) => (isProduct(l) ? (l.kind === "pricedrop" ? "price drops" : `each under ${inr(l.budget)}`) : inr(total(l)));
 const imgOf = (i) => (i.catalogId && cache[i.catalogId]?.imageUrl) || (/^https?:/.test(i.image || "") ? i.image : "");
@@ -103,7 +115,7 @@ for (const l of looks) {
     path.join(dir, "index.html"),
     page(
       `${l.hook} — Well Priced`,
-      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${l.videoUrl ? `<video src="${esc(l.videoUrl)}" ${l.coverUrl ? `poster="${esc(l.coverUrl)}"` : ""} controls playsinline preload="none" style="width:100%;border-radius:14px;margin-bottom:14px;background:#ebe3d6"></video>` : ""}${items}${isProduct(l) ? `<p class="meta" style="margin-top:10px">Prices checked ${esc(new Date(l.pricesCheckedAt || l.publishedAt || Date.now()).toISOString().slice(0, 10))}; they can change.</p>` : `<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`}`,
+      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${l.videoUrl ? `<video src="${esc(l.videoUrl)}" ${l.coverUrl ? `poster="${esc(l.coverUrl)}"` : ""} controls playsinline preload="none" style="width:100%;border-radius:14px;margin-bottom:14px;background:#ebe3d6"></video>` : ""}${items}${isProduct(l) ? `<p class="meta" style="margin-top:10px">Prices checked ${esc(new Date(l.pricesCheckedAt || l.publishedAt || Date.now()).toISOString().slice(0, 10))}; they can change.</p>${amazonMore(l)}` : `<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`}`,
       `${l.occasion}: ${l.items.map((i) => i.name).join(", ")}`,
     ),
   );
