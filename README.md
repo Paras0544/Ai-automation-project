@@ -153,3 +153,13 @@ Every autopilot run pushes new looks to GitHub, so the site updates by itself.
 4. From then on `npm run auto` pins up to `PINS_PER_RUN` (default 2) new reels as video pins, each on a matching board, linking to its shop page. `npm run pin -- 3` posts manually.
 
 Trial access = pins visible only to you. For public pins, request Standard access with a screen recording of steps 3 and 4.
+
+## Cloud mode (no laptop)
+
+`.github/workflows/daily.yml` runs every day at ~09:17 IST on GitHub's free runners:
+plans and renders new reels, renders any look that has no video yet, uploads videos to the **reels** GitHub Release,
+saves results and the site rebuilds. Setup once: repo → Settings → Secrets and variables → Actions →
+New secret `GEMINI_API_KEY`. Optional variable `REELS_PER_DAY` (default 3).
+
+- Posting from your phone: https://wellpriced.pages.dev/post/ (download, copy caption, mark posted).
+- Buying guides: `data/guides/*.json` (written weekly by Claude) → /guides/ on the site.

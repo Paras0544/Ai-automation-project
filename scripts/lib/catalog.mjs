@@ -145,6 +145,9 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
       c.error = e.message;
       if (row.price) c.price = Number(row.price);
       const manual = `catalog/${id}.jpg`;
+      if (!fs.existsSync(path.join(paths.public, manual)) && c.imageUrl) {
+        await download(c.imageUrl, path.join(paths.public, manual)).catch(() => {});
+      }
       if (fs.existsSync(path.join(paths.public, manual))) c.image = manual;
       console.log(`couldn't read the page (${e.message}). Add a price in catalog.csv and save the photo as public/${manual}`);
     }

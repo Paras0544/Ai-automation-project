@@ -63,7 +63,7 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
-<p class="note"><a href="/">Home</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
+<p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
 
@@ -98,11 +98,90 @@ for (const l of looks) {
     path.join(dir, "index.html"),
     page(
       `${l.hook} — Well Priced`,
-      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${items}<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`,
+      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${l.videoUrl ? `<video src="${esc(l.videoUrl)}" ${l.coverUrl ? `poster="${esc(l.coverUrl)}"` : ""} controls playsinline preload="none" style="width:100%;border-radius:14px;margin-bottom:14px;background:#ebe3d6"></video>` : ""}${items}<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`,
       `${l.occasion}: ${l.items.map((i) => i.name).join(", ")}`,
     ),
   );
 }
+// ---- posting queue (for posting from your phone until auto-posting is approved) ----
+{
+  const queue = looks.filter((l) => l.videoUrl);
+  const rows = queue
+    .map(
+      (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${inr(total(l))}</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+<a class="buy" href="${esc(l.videoUrl)}" download>Download video</a>
+<button class="buy" onclick="copyCap(this)">Copy caption</button>
+<button class="buy" style="background:#B5603A" onclick="done(this)">Mark posted</button></div>
+<textarea readonly style="position:absolute;left:-9999px">${esc(l.postCaption || `${l.hook}\n\nShop every piece: link in bio.\n#affiliate`)}</textarea></div>`,
+    )
+    .join("\n");
+  fs.mkdirSync(path.join(outDir, "post"), { recursive: true });
+  fs.writeFileSync(
+    path.join(outDir, "post", "index.html"),
+    page(
+      "Posting queue — Well Priced",
+      `<a class="back" href="/">← Home</a><h1>Posting queue</h1><p class="sub">Download → post on Instagram with a trending sound → paste caption → Mark posted. Oldest first.</p>
+${rows || '<p class="meta">Nothing to post yet.</p>'}
+<script>
+const KEY="wp-posted";const get=()=>{try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]}};
+function hide(){const p=get();document.querySelectorAll("[data-id]").forEach(c=>{if(p.includes(c.dataset.id))c.style.display="none"})}
+function done(b){const id=b.closest("[data-id]").dataset.id;const p=get();p.push(id);try{localStorage.setItem(KEY,JSON.stringify(p))}catch{}hide()}
+async function copyCap(b){const t=b.closest("[data-id]").querySelector("textarea").value;try{await navigator.clipboard.writeText(t)}catch{const a=b.closest("[data-id]").querySelector("textarea");a.select();document.execCommand("copy")}b.textContent="Copied ✓"}
+hide();
+</script>`,
+      "Posting queue",
+    ).replace('<meta name="robots" content="index,follow">', '<meta name="robots" content="noindex">'),
+  );
+}
+
+// ---- buying guides (written weekly by Claude into data/guides/*.json) ----
+const guidesDir = path.join(paths.root, "data", "guides");
+const guides = fs.existsSync(guidesDir)
+  ? fs.readdirSync(guidesDir).filter((f) => f.endsWith(".json")).map((f) => JSON.parse(fs.readFileSync(path.join(guidesDir, f), "utf8"))).sort((a, b) => String(b.updated).localeCompare(String(a.updated)))
+  : [];
+for (const g of guides) {
+  const body = (g.sections || [])
+    .map(
+      (sec) => `<h2 style="font-weight:normal;font-size:21px;margin:24px 0 8px">${esc(sec.heading)}</h2>${sec.text ? `<p class="sub" style="font-size:15px;line-height:1.6;color:#2B2B2B">${esc(sec.text)}</p>` : ""}
+${(sec.items || [])
+  .map(
+    (i) => `<div class="item">${i.image ? `<img src="${esc(i.image)}" alt="${esc(i.name)}" loading="lazy" referrerpolicy="no-referrer">` : ""}<div class="info"><div class="name">${esc(i.name)}</div>${i.why ? `<div class="why">${esc(i.why)}</div>` : ""}
+<div class="row"><span>${i.price ? inr(i.price) + " · " : ""}${esc(i.store || "")}</span><a class="buy" href="${esc(affiliateUrl(i.url, cfg, "guide-" + g.slug))}" rel="sponsored nofollow noopener" target="_blank">Shop</a></div></div></div>`,
+  )
+  .join("\n")}`,
+    )
+    .join("\n");
+  const dir = path.join(outDir, "guides", g.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(
+    path.join(dir, "index.html"),
+    page(
+      `${g.title} — Well Priced`,
+      `<a class="back" href="/guides/">← All guides</a><h1>${esc(g.title)}</h1><p class="sub">Updated ${esc(g.updated || "")}. Prices checked when written; the store's price is final.</p><p style="font:15px/1.6 system-ui,sans-serif;margin-bottom:8px">${esc(g.intro || "")}</p>${body}`,
+      g.description || g.intro || g.title,
+    ),
+  );
+}
+fs.mkdirSync(path.join(outDir, "guides"), { recursive: true });
+fs.writeFileSync(
+  path.join(outDir, "guides", "index.html"),
+  page(
+    "Buying guides — Well Priced",
+    `<a class="back" href="/">← Home</a><h1>Buying guides</h1><p class="sub">Honest picks for Indian men, with real prices.</p>${
+      guides.map((g) => `<a class="card" href="/guides/${g.slug}/"><h2>${esc(g.title)}</h2><div class="meta">${esc(g.description || "")}</div></a>`).join("\n") || '<p class="meta">First guides coming this week.</p>'
+    }`,
+    "Buying guides for Indian men's fashion, with real prices",
+  ),
+);
+// sitemap so Google finds every page
+{
+  const base = (cfg.siteUrl || "https://wellpriced.pages.dev").replace(/\/$/, "");
+  const urls = ["/", "/guides/", "/about/", ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
+  fs.writeFileSync(path.join(outDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${base}${u}</loc></url>`).join("")}</urlset>\n`);
+  fs.writeFileSync(path.join(outDir, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /post/\nSitemap: ${base}/sitemap.xml\n`);
+}
+
 fs.mkdirSync(path.join(outDir, "privacy"), { recursive: true });
 fs.writeFileSync(
   path.join(outDir, "privacy", "index.html"),

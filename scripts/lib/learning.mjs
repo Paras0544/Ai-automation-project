@@ -48,7 +48,7 @@ export function syncPull() {
 
 export function syncPush(message) {
   if (process.env.SYNC === "0" || !fs.existsSync(path.join(paths.root, ".git"))) return;
-  git(["add", "data"]);
+  git(["add", "data", "public/catalog"]);
   if (git(["diff", "--cached", "--quiet"]).ok) return; // nothing new
   git(["commit", "-q", "-m", message]);
   let r = git(["push", "-q"]);

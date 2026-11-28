@@ -1,0 +1,49 @@
+# Runs the whole Well Priced pipeline in GitHub's cloud: no laptop needed.
+# Daily at ~09:17 IST, or by hand: GitHub → Actions → "Daily reels" → Run workflow.
+name: Daily reels
+on:
+  schedule:
+    - cron: "47 3 * * *"
+  workflow_dispatch:
+    inputs:
+      reels:
+        description: "How many new reels"
+        default: "3"
+permissions:
+  contents: write
+concurrency:
+  group: daily-reels
+  cancel-in-progress: false
+jobs:
+  reels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      SYNC: "0"
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Check the Gemini key is set
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions"; exit 1; fi
+      - name: Plan and render new reels
+        run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '3' }}"
+        continue-on-error: true
+      - name: Publish reels (render any missing, upload, link on the site)
+        run: node scripts/cloud-publish.mjs
+      - name: Save results
+        run: |
+          git config user.name "well-priced-bot"
+          git config user.email "well-priced-bot@users.noreply.github.com"
+          git add data public/catalog
+          git diff --cached --quiet && exit 0
+          git commit -m "daily run $(date -u +%F)"
+          git pull --rebase --autostash
+          git push
