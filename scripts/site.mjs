@@ -73,8 +73,10 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
-const list = looks.length
-  ? looks
+// once product reels exist, the home page shows only those (old full-outfit looks stay reachable by link)
+const shown = looks.some(isProduct) ? looks.filter(isProduct) : looks;
+const list = shown.length
+  ? shown
       .map((l) => `<a class="card" href="/l/${l.id}/"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${l.items.length} ${isProduct(l) ? "picks" : "pieces"} · <span class="accent">${priceTag(l)}</span></div></a>`)
       .join("\n")
   : `<p class="meta" style="text-align:center">New looks are added every week. Follow <a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a> on Instagram to see them first.</p>`;
