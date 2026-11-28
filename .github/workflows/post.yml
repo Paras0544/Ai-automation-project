@@ -8,6 +8,10 @@ on:
     - cron: "47 13 * * *"
     - cron: "47 8 * * *"
   workflow_dispatch:
+    inputs:
+      instagram:
+        description: "Also post a reel to Instagram? (no = only catch up Telegram)"
+        default: "yes"
 permissions:
   contents: write
 concurrency:
@@ -35,7 +39,7 @@ jobs:
       - if: steps.gate.outputs.go == '1'
         run: npm ci
       - name: Post to Instagram
-        if: steps.gate.outputs.go == '1'
+        if: steps.gate.outputs.go == '1' && github.event.inputs.instagram != 'no'
         run: node scripts/ig-post.mjs
         continue-on-error: true
         env:

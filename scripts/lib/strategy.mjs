@@ -93,8 +93,10 @@ export function nextIdeas(count = 1) {
   for (let k = 0; k < count; k++) {
     const options = [];
     for (const format of FORMATS) {
-      const fw = st.formats?.[format]?.weight ?? 0;
-      if (fw <= 0) continue;
+      const fw0 = st.formats?.[format]?.weight ?? 0;
+      if (fw0 <= 0) continue;
+      // same format twice in one batch only if nothing else is possible
+      const fw = ideas.some((i) => i.format === format) ? fw0 * 0.15 : fw0;
       const fScore = sample(arms.formats[format]);
       if (format === "pricedrop") {
         const n = candidatesFor("pricedrop", "any", 99999).length;

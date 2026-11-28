@@ -15,11 +15,17 @@ const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").
 const inr = (n) => "₹" + Number(n).toLocaleString("en-IN");
 
 async function tg(method, body) {
-  const res = await fetch(`${process.env.TELEGRAM_API || "https://api.telegram.org"}/bot${token}/${method}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
+  const url = `${process.env.TELEGRAM_API || "https://api.telegram.org"}/bot${token}/${method}`;
+  let res;
+  if (body.photoFile) {
+    // upload the image itself (Telegram can't fetch GitHub release links, which redirect)
+    const form = new FormData();
+    for (const [k, v] of Object.entries(body)) if (k !== "photoFile") form.append(k, String(v));
+    form.append("photo", new Blob([body.photoFile], { type: "image/jpeg" }), "cover.jpg");
+    res = await fetch(url, { method: "POST", body: form });
+  } else {
+    res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  }
   const data = await res.json().catch(() => ({}));
   if (!data.ok) throw new Error(data.description || `HTTP ${res.status}`);
   return data.result;
@@ -62,8 +68,15 @@ if (!token || !chat) {
       `<i>#affiliate: we may earn a small commission</i>`,
     ].join("\n").slice(0, 1024);
     try {
-      const msg = look.coverUrl
-        ? await tg("sendPhoto", { chat_id: chat, photo: look.coverUrl, caption, parse_mode: "HTML" })
+      let photoFile = null;
+      const local = path.join(paths.out, `${id}.cover.jpg`);
+      if (fs.existsSync(local)) photoFile = fs.readFileSync(local);
+      else if (look.coverUrl) {
+        const r = await fetch(look.coverUrl); // follows GitHub's redirect
+        if (r.ok) photoFile = Buffer.from(await r.arrayBuffer());
+      }
+      const msg = photoFile
+        ? await tg("sendPhoto", { chat_id: chat, photoFile, caption, parse_mode: "HTML" })
         : await tg("sendMessage", { chat_id: chat, text: caption, parse_mode: "HTML", disable_web_page_preview: true });
       posted[id].telegram = { id: msg.message_id, at: new Date().toISOString() };
       console.log(`✓ Telegram: posted ${id}`);

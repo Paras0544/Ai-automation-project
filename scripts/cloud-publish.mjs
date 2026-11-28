@@ -17,7 +17,7 @@ const looks = fs
   .readdirSync(paths.looks)
   .filter((f) => f.endsWith(".json"))
   .map((f) => ({ file: path.join(paths.looks, f), look: JSON.parse(fs.readFileSync(path.join(paths.looks, f), "utf8")) }))
-  .filter(({ look }) => look.status === "ready" && look.items?.length && look.items.every((i) => i.url) && !look.videoUrl);
+  .filter(({ look }) => look.status === "ready" && look.kind && look.kind !== "outfit" && look.items?.length && look.items.every((i) => i.url) && !look.videoUrl);
 
 let rendered = 0;
 for (const { file, look } of looks) {
