@@ -115,5 +115,16 @@ export async function refreshToken() {
 
 if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname)) {
   if (process.argv[2] === "refresh") await refreshToken();
+  else if (process.argv[2] === "check") {
+    // read-only: confirms the token works and which account it posts to
+    if (!token) { console.log("✗ no IG_ACCESS_TOKEN"); process.exit(1); }
+    try {
+      const user = await resolveUser();
+      const me = await ig("GET", `${API}/${user}`, { fields: "id,username" });
+      const lim = await ig("GET", `${API}/${user}/content_publishing_limit`, { fields: "quota_usage,config" }).catch((e) => ({ err: e.message }));
+      console.log(`✓ token works (${igLogin ? "Instagram login" : "Facebook/system-user"} token) → @${me.username} (${me.id})`);
+      console.log("publishing limit:", JSON.stringify(lim));
+    } catch (e) { console.log(`✗ ${e.message}`); process.exit(1); }
+  }
   else await postNext();
 }
