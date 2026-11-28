@@ -1,0 +1,23 @@
+# Asks Instagram whether this app may send private replies, using a fake comment id (nothing is sent).
+name: DM permission check
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          T: ${{ secrets.IG_ACCESS_TOKEN }}
+          U: ${{ secrets.IG_USER_ID || '17841461989685675' }}
+        run: |
+          node -e '
+          const t=process.env.T.trim(), u=process.env.U, api="https://graph.facebook.com/v23.0";
+          (async()=>{
+            const dbg=await (await fetch(`${api}/debug_token?input_token=${t}&access_token=${t}`)).json();
+            console.log("scopes:", JSON.stringify(dbg.data?.scopes||dbg.error?.message));
+            const r=await fetch(`${api}/${u}/messages?access_token=${t}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({recipient:{comment_id:"17900000000000000"},message:{text:"test"}})});
+            const j=await r.json(); console.log("private reply probe:", r.status, JSON.stringify(j.error||j));
+            const c=await (await fetch(`${api}/${u}/media?fields=id&limit=1&access_token=${t}`)).json();
+            console.log("media read:", JSON.stringify(c.error?c.error.message:(c.data||[]).length+" items"));
+          })()'
