@@ -160,6 +160,7 @@ Trial access = pins visible only to you. For public pins, request Standard acces
 plans and renders new reels, renders any look that has no video yet, uploads videos to the **reels** GitHub Release,
 saves results and the site rebuilds. Setup once: repo → Settings → Secrets and variables → Actions →
 New secret `GEMINI_API_KEY`. Optional variable `REELS_PER_DAY` (default 3).
+Without `GEMINI_API_KEY`, the workflow warns and skips generating new reels but still publishes existing ready reels.
 
 - Posting from your phone: https://wellpriced.pages.dev/post/ (download, copy caption, mark posted).
 - Buying guides: `data/guides/*.json` (written weekly by Claude) → /guides/ on the site.
