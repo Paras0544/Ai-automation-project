@@ -1,0 +1,84 @@
+{
+  "id": "old-money-look-mid-budget",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Old money look, mid budget",
+  "budget": 5000,
+  "hook": "Old Money Outfit Under ₹6000",
+  "subhook": "kitne ka fit?",
+  "cta": "Shop every piece · link in bio",
+  "caption": "Achieve that quiet luxury aesthetic without blowing your savings. High-end textures paired with clean pleated tailoring.",
+  "hashtags": [
+    "oldmoney",
+    "mensfashion",
+    "quietluxury",
+    "budgetfit",
+    "mensstyle"
+  ],
+  "fitPrompt": "An Indian male model in his early 20s with a fit build, short side-swept hair, and a calm expression. He is wearing a rust knit polo tucked into beige relaxed pleated trousers, paired with dark brown leather slip-on loafers, a brown leather belt, and a silver dial leather watch. Set in a heritage courtyard in New Delhi, vertical 9:16 framing, soft natural light, editorial menswear aesthetic.",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "7b3b89454a",
+      "name": "Rust knit polo (The Bear House)",
+      "why": "Rich knit texture gives luxury vibe",
+      "store": "The Bear House",
+      "price": 999,
+      "targetPrice": 999,
+      "image": "catalog/7b3b89454a.jpg",
+      "url": "https://thebearhouse.com/products/none-rt",
+      "productTitle": "NONE-RT"
+    },
+    {
+      "catalogId": "0693682b58",
+      "name": "Relaxed pleated trousers (Dennison)",
+      "why": "Pleats drape clean and look tailored",
+      "store": "Myntra",
+      "price": 1329,
+      "targetPrice": 1329,
+      "image": "catalog/0693682b58.jpg",
+      "url": "https://www.myntra.com/trousers/dennison/dennison-men-solid-relaxed-loose-fit-pleated-trousers/31122483/buy",
+      "productTitle": "DENNISON Men Solid Relaxed Loose Fit Pleated Trousers"
+    },
+    {
+      "catalogId": "54fb44b51b",
+      "name": "Slip-on loafers (Bata)",
+      "why": "Sleek loafers anchor quiet luxury",
+      "store": "Myntra",
+      "price": 1259,
+      "targetPrice": 1259,
+      "image": "catalog/54fb44b51b.jpg",
+      "url": "https://www.myntra.com/casual-shoes/bata/bata-men-round-toe-slip-on-loafers/36236759/buy",
+      "productTitle": "Bata Men Round Toe Slip-On Loafers"
+    },
+    {
+      "catalogId": "7b686ab27b",
+      "name": "Brown leather belt (WildHorn)",
+      "why": "Matches footwear for a cohesive fit",
+      "store": "Myntra",
+      "price": 599,
+      "targetPrice": 599,
+      "image": "catalog/7b686ab27b.jpg",
+      "url": "https://www.myntra.com/belts/wildhorn/wildhorn-men-brown-leather-belt/16162158/buy",
+      "productTitle": "WildHorn Men Brown Leather Belt"
+    },
+    {
+      "catalogId": "28a8de1aec",
+      "name": "Silver dial leather watch (Timex)",
+      "why": "Classic silver dial adds subtle refinement",
+      "store": "Myntra",
+      "price": 1717,
+      "targetPrice": 1717,
+      "image": "catalog/28a8de1aec.jpg",
+      "url": "https://www.myntra.com/watches/timex/timex-men-leather-straps-analogue-watch-twtg65smu25/30828601/buy",
+      "productTitle": "Buy Timex Men Leather Straps Analogue Watch TWTG65SMU25 -  - Accessories for Men"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 17.03,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/old-money-look-mid-budget.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/old-money-look-mid-budget.cover.jpg",
+  "postCaption": "Achieve that quiet luxury aesthetic without blowing your savings. High-end textures paired with clean pleated tailoring.\n\n• Rust knit polo (The Bear House) – ₹999 (The Bear House)\n• Relaxed pleated trousers (Dennison) – ₹1,329 (Myntra)\n• Slip-on loafers (Bata) – ₹1,259 (Myntra)\n• Brown leather belt (WildHorn) – ₹599 (Myntra)\n• Silver dial leather watch (Timex) – ₹1,717 (Myntra)\nTotal: ₹5,903\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#oldmoney #mensfashion #quietluxury #budgetfit #mensstyle",
+  "publishedAt": "2026-11-28T09:29:36.490Z"
+}

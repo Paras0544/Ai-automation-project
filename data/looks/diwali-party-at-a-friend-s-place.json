@@ -6,7 +6,7 @@
   "budget": 5000,
   "hook": "Diwali party ready in seconds.",
   "subhook": "sabse alag dikho ge",
-  "cta": "Shop every piece \u00b7 link in bio",
+  "cta": "Shop every piece · link in bio",
   "caption": "Minimal ethnic fit for the festive season without trying too hard.",
   "hashtags": [
     "diwalifashion",
@@ -54,5 +54,9 @@
     }
   ],
   "flags": [],
-  "coverSeconds": 13.83
+  "coverSeconds": 13.83,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/diwali-party-at-a-friend-s-place.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/diwali-party-at-a-friend-s-place.cover.jpg",
+  "postCaption": "Minimal ethnic fit for the festive season without trying too hard.\n\n• Navy short kurta (HERE&NOW) – ₹715 (Myntra)\n• Slim stretch chinos (Belano) – ₹949 (Amazon)\n• Tan embroidered juttis (Fausto) – ₹1,175 (Myntra)\nTotal: ₹2,839\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#diwalifashion #mensethnic #festivelook #indianmenswear #diwaliparty",
+  "publishedAt": "2026-11-28T09:29:34.959Z"
 }

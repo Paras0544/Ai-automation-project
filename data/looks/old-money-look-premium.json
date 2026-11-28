@@ -1,0 +1,73 @@
+{
+  "id": "old-money-look-premium",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Old money look, premium",
+  "budget": 10000,
+  "hook": "Old Money Aesthetic Under 10k",
+  "subhook": "kitne ka fit?",
+  "cta": "Shop every piece · link in bio",
+  "caption": "Warm monochrome tones and crisp pleats give that effortless quiet luxury vibe.\nComment LUXURY to get the direct links straight to your DM.",
+  "hashtags": [
+    "oldmoney",
+    "mensfashion",
+    "quietluxury",
+    "styleguide",
+    "mensoutfit"
+  ],
+  "fitPrompt": "The brand's recurring Indian male model (early 20s, fit, short side-swept hair, neutral expression) wearing a beige oxford shirt, off-white pleated trousers, brown leather derbys, and grey-lens wayfarers, standing in a sunlit vintage courtyard with heritage architecture, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "e246191c5e",
+      "name": "Beige oxford shirt (The Bear House)",
+      "why": "Tailored beige tone exudes effortless luxury",
+      "store": "The Bear House",
+      "price": 2299,
+      "targetPrice": 2299,
+      "image": "catalog/e246191c5e.jpg",
+      "url": "https://thebearhouse.com/products/astron-bg",
+      "productTitle": "ASTRON-BG"
+    },
+    {
+      "catalogId": "b6a0f18cde",
+      "name": "Off-white pleated trousers (The Bear House)",
+      "why": "Pleated cut creates rich classic silhouette",
+      "store": "The Bear House",
+      "price": 2799,
+      "targetPrice": 2799,
+      "image": "catalog/b6a0f18cde.jpg",
+      "url": "https://thebearhouse.com/products/moraj-ow",
+      "productTitle": "MORAJ-OW"
+    },
+    {
+      "catalogId": "b45f2e3f5b",
+      "name": "Brown leather derbys (Red Chief)",
+      "why": "Polished leather finish anchors the look",
+      "store": "Myntra",
+      "price": 2220,
+      "targetPrice": 2220,
+      "image": "catalog/b45f2e3f5b.jpg",
+      "url": "https://www.myntra.com/formal-shoes/redchief/red-chief-men-brown-leather-formal-derby-shoes/2243754/buy",
+      "productTitle": "Red Chief Men Brown Leather Formal Derby Shoes"
+    },
+    {
+      "catalogId": "716dcbed4b",
+      "name": "Grey-lens wayfarers (IDEE)",
+      "why": "Grey lenses add quiet vintage elegance",
+      "store": "Myntra",
+      "price": 2625,
+      "targetPrice": 2625,
+      "image": "catalog/716dcbed4b.jpg",
+      "url": "https://www.myntra.com/sunglasses/idee/idee-men-grey-lens--black-wayfarer-sunglasses-with/42840458/buy",
+      "productTitle": "IDEE Men Grey Lens & Black Wayfarer Sunglasses with"
+    }
+  ],
+  "flags": [],
+  "coverSeconds": 15.43,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/old-money-look-premium.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/old-money-look-premium.cover.jpg",
+  "postCaption": "Warm monochrome tones and crisp pleats give that effortless quiet luxury vibe.\nComment LUXURY to get the direct links straight to your DM.\n\n• Beige oxford shirt (The Bear House) – ₹2,299 (The Bear House)\n• Off-white pleated trousers (The Bear House) – ₹2,799 (The Bear House)\n• Brown leather derbys (Red Chief) – ₹2,220 (Myntra)\n• Grey-lens wayfarers (IDEE) – ₹2,625 (Myntra)\nTotal: ₹9,943\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#oldmoney #mensfashion #quietluxury #styleguide #mensoutfit",
+  "publishedAt": "2026-11-28T09:29:37.924Z"
+}

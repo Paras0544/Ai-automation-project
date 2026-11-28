@@ -6,7 +6,7 @@
   "budget": 4000,
   "hook": "Airport Look For Your Goa Trip",
   "subhook": "goa flight fit under 4.5k",
-  "cta": "Shop every piece \u00b7 link in bio",
+  "cta": "Shop every piece · link in bio",
   "caption": "Effortless travel style that takes you straight from the flight to the beach club. Super comfortable, breezy, and easily under 5k.",
   "hashtags": [
     "goatrip",
@@ -76,5 +76,9 @@
     }
   ],
   "flags": [],
-  "coverSeconds": 17.03
+  "coverSeconds": 17.03,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/airport-look-for-a-goa-trip.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/airport-look-for-a-goa-trip.cover.jpg",
+  "postCaption": "Effortless travel style that takes you straight from the flight to the beach club. Super comfortable, breezy, and easily under 5k.\n\n• White cotton tee (Bewakoof) – ₹565 (Myntra)\n• Cotton overshirt (Vastrado) – ₹699 (Myntra)\n• Relaxed pleated trousers (Highlander) – ₹1,220 (Myntra)\n• Brown suede loafers (Mast & Harbour) – ₹1,269 (Myntra)\n• Black wayfarers (Voyage) – ₹753 (Myntra)\nTotal: ₹4,506\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#goatrip #airportfit #mensfashion #travelstyle #menswear",
+  "publishedAt": "2026-11-28T09:27:49.819Z"
 }

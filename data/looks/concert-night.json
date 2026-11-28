@@ -6,7 +6,7 @@
   "budget": 3500,
   "hook": "Dressing for the biggest concert tonight",
   "subhook": "concert ready fit?",
-  "cta": "Shop every piece \u00b7 link in bio",
+  "cta": "Shop every piece · link in bio",
   "caption": "Effortless style that holds up from the opening act to the headliner.",
   "hashtags": [
     "concertfit",
@@ -54,5 +54,9 @@
     }
   ],
   "flags": [],
-  "coverSeconds": 13.83
+  "coverSeconds": 13.83,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/concert-night.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/concert-night.cover.jpg",
+  "postCaption": "Effortless style that holds up from the opening act to the headliner.\n\n• Black oversized tee (Mr Bowerbird) – ₹531 (Myntra)\n• Dark blue slim jeans (Duke) – ₹1,248 (Myntra)\n• Olive bomber (HERE&NOW) – ₹1,253 (Myntra)\nTotal: ₹3,032\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#concertfit #mensstyle #streetwear #themeasuredman #giglook",
+  "publishedAt": "2026-11-28T09:28:31.331Z"
 }
