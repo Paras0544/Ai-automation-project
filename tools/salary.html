@@ -1,0 +1,33 @@
+<!--meta {"slug":"in-hand-salary-calculator","title":"In-hand salary calculator India (FY 2026-27, new tax regime)","description":"Turn your CTC into monthly take-home: new regime tax, ₹75,000 standard deduction, 87A rebate, PF, gratuity and professional tax."} -->
+<h1>In-hand salary calculator</h1>
+<p class="sub">CTC → monthly take-home under the new tax regime (FY 2026-27). Free, nothing is stored.</p>
+<div class="card" style="font:15px/1.5 system-ui,sans-serif">
+<label>Annual CTC (₹)<br><input id="ctc" type="number" inputmode="numeric" value="800000" class="in"></label>
+<label>Basic salary, % of CTC<br><input id="basic" type="number" value="40" class="in"></label>
+<label>PF<br><select id="pf" class="in"><option value="cap">12% capped at ₹1,800/month (most companies)</option><option value="full">12% of full basic</option><option value="none">No PF</option></select></label>
+<label><input id="grat" type="checkbox" checked> Gratuity is part of my CTC (4.81% of basic)</label><br>
+<label>Professional tax / month (₹)<br><input id="pt" type="number" value="200" class="in"><small style="display:block;margin:-8px 0 12px">Haryana/Delhi: 0 · Karnataka/Maharashtra: 200</small></label>
+<label>Other monthly deductions (₹, e.g. insurance)<br><input id="oth" type="number" value="0" class="in"></label>
+</div>
+<div class="card" id="out" style="font:15px/1.7 system-ui,sans-serif"></div>
+<p class="note">Estimate only, not tax advice. Uses new-regime slabs 0–4L nil, 5%, 10%, 15%, 20%, 25%, 30% above 24L; ₹75,000 standard deduction; 87A rebate up to ₹60,000 when taxable income ≤ ₹12L (with marginal relief); 4% cess. Surcharge above ₹50L is approximate. Your payslip may differ (allowances, variable pay, employer NPS).</p>
+<style>.in{width:100%;padding:10px;margin:4px 0 12px;border:1px solid #d9cfbf;border-radius:10px;font:16px system-ui,sans-serif;background:#fff}.big{font:30px Georgia,serif}</style>
+<script>
+const $=id=>document.getElementById(id);const inr=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+function slabTax(t){const s=[[400000,0],[800000,.05],[1200000,.10],[1600000,.15],[2000000,.20],[2400000,.25],[Infinity,.30]];let tax=0,prev=0;for(const[cap,r]of s){if(t>prev)tax+=(Math.min(t,cap)-prev)*r;prev=cap}return tax}
+function calc(){const ctc=+$("ctc").value||0,basic=ctc*(+$("basic").value||0)/100;
+const pfMode=$("pf").value;const pfM=pfMode==="none"?0:pfMode==="cap"?Math.min(1800,basic/12*.12):basic/12*.12;
+const employerPF=pfM*12,grat=$("grat").checked?basic*.0481:0;const gross=ctc-employerPF-grat;
+const taxable=Math.max(0,gross-75000);let tax=slabTax(taxable);
+if(taxable<=1200000)tax=0;else tax=Math.min(tax,taxable-1200000);
+let sur=0;if(taxable>5000000)sur=tax*(taxable>20000000?.25:taxable>10000000?.15:.10);
+const total=(tax+sur)*1.04;const pt=(+$("pt").value||0)*12,oth=(+$("oth").value||0)*12;
+const inhand=gross-total-pfM*12-pt-oth;
+$("out").innerHTML=`<div>Monthly in-hand</div><div class="big">${inr(inhand/12)}</div>
+<div class="meta">Yearly gross ${inr(gross)} · taxable ${inr(taxable)}</div><br>
+Income tax + cess: <b>${inr(total/12)}</b>/month (${inr(total)}/year)<br>
+Your PF: <b>${inr(pfM)}</b>/month (+ same from employer, saved for you)<br>
+Professional tax: ${inr(pt/12)}/month${grat?`<br>Gratuity in CTC (paid after 5 years): ${inr(grat)}/year`:""}<br><br>
+<b>Try this split:</b> invest ${inr(inhand/12*.2)} · emergency fund ${inr(inhand/12*.1)} · wants ${inr(inhand/12*.15)}.`}
+document.querySelectorAll("input,select").forEach(e=>e.addEventListener("input",calc));calc();
+</script>

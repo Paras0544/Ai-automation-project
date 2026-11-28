@@ -63,7 +63,7 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
-<p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
+<p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/tools/">Tools</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
 
@@ -111,8 +111,10 @@ for (const l of looks) {
       (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${inr(total(l))}</div>
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
 <a class="buy" href="${esc(l.videoUrl)}" download>Download video</a>
-<button class="buy" onclick="copyCap(this)">Copy caption</button>
+<button class="buy" onclick="copyCap(this)">Copy Instagram caption</button>
+<button class="buy" onclick="copyYt(this)">Copy YouTube title</button>
 <button class="buy" style="background:#B5603A" onclick="done(this)">Mark posted</button></div>
+<input class="yt" readonly style="position:absolute;left:-9999px" value="${esc((l.hook + " | Full look " + inr(total(l)) + " #shorts").slice(0, 100))}">
 <textarea readonly style="position:absolute;left:-9999px">${esc(l.postCaption || `${l.hook}\n\nShop every piece: link in bio.\n#affiliate`)}</textarea></div>`,
     )
     .join("\n");
@@ -121,13 +123,14 @@ for (const l of looks) {
     path.join(outDir, "post", "index.html"),
     page(
       "Posting queue — Well Priced",
-      `<a class="back" href="/">← Home</a><h1>Posting queue</h1><p class="sub">Download → post on Instagram with a trending sound → paste caption → Mark posted. Oldest first.</p>
+      `<a class="back" href="/">← Home</a><h1>Posting queue</h1><p class="sub">Download → post on Instagram (add a trending sound, paste caption) and YouTube Shorts (paste title, caption as description) → Mark posted. Oldest first.</p>
 ${rows || '<p class="meta">Nothing to post yet.</p>'}
 <script>
 const KEY="wp-posted";const get=()=>{try{return JSON.parse(localStorage.getItem(KEY)||"[]")}catch{return[]}};
 function hide(){const p=get();document.querySelectorAll("[data-id]").forEach(c=>{if(p.includes(c.dataset.id))c.style.display="none"})}
 function done(b){const id=b.closest("[data-id]").dataset.id;const p=get();p.push(id);try{localStorage.setItem(KEY,JSON.stringify(p))}catch{}hide()}
 async function copyCap(b){const t=b.closest("[data-id]").querySelector("textarea").value;try{await navigator.clipboard.writeText(t)}catch{const a=b.closest("[data-id]").querySelector("textarea");a.select();document.execCommand("copy")}b.textContent="Copied ✓"}
+async function copyYt(b){const t=b.closest("[data-id]").querySelector(".yt").value;try{await navigator.clipboard.writeText(t)}catch{}b.textContent="Copied ✓"}
 hide();
 </script>`,
       "Posting queue",
@@ -174,10 +177,30 @@ fs.writeFileSync(
     "Buying guides for Indian men's fashion, with real prices",
   ),
 );
+// ---- free tools (tools/*.html bodies, wrapped in the site layout) ----
+const toolsSrc = path.join(paths.root, "tools");
+const tools = fs.existsSync(toolsSrc)
+  ? fs.readdirSync(toolsSrc).filter((f) => f.endsWith(".html")).map((f) => {
+      const html = fs.readFileSync(path.join(toolsSrc, f), "utf8");
+      const meta = JSON.parse((html.match(/<!--meta (\{.*?\}) -->/) || [, "{}"])[1]);
+      return { ...meta, html: html.replace(/<!--meta .*? -->\n?/, "") };
+    })
+  : [];
+for (const t of tools) {
+  const dir = path.join(outDir, "tools", t.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), page(`${t.title} — Well Priced`, `<a class="back" href="/tools/">← All tools</a>${t.html}`, t.description));
+}
+fs.mkdirSync(path.join(outDir, "tools"), { recursive: true });
+fs.writeFileSync(
+  path.join(outDir, "tools", "index.html"),
+  page("Free money tools — Well Priced", `<a class="back" href="/">← Home</a><h1>Free tools</h1><p class="sub">Simple calculators for your first salary.</p>${tools.map((t) => `<a class="card" href="/tools/${t.slug}/"><h2>${esc(t.title)}</h2><div class="meta">${esc(t.description)}</div></a>`).join("\n")}`, "Free salary and SIP calculators for India"),
+);
+
 // sitemap so Google finds every page
 {
   const base = (cfg.siteUrl || "https://wellpriced.pages.dev").replace(/\/$/, "");
-  const urls = ["/", "/guides/", "/about/", ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
+  const urls = ["/", "/guides/", "/tools/", "/about/", ...tools.map((t) => `/tools/${t.slug}/`), ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${base}${u}</loc></url>`).join("")}</urlset>\n`);
   fs.writeFileSync(path.join(outDir, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /post/\nSitemap: ${base}/sitemap.xml\n`);
 }

@@ -1,0 +1,21 @@
+<!--meta {"slug":"sip-calculator","title":"SIP calculator with yearly step-up (India)","description":"See what a monthly SIP grows to, with an optional yearly step-up. Simple, free, nothing stored."} -->
+<h1>SIP calculator</h1>
+<p class="sub">What a monthly SIP could grow to, with an optional yearly increase.</p>
+<div class="card" style="font:15px/1.5 system-ui,sans-serif">
+<label>Monthly SIP (₹)<br><input id="amt" type="number" inputmode="numeric" value="10000" class="in"></label>
+<label>Expected return per year (%)<br><input id="ret" type="number" value="12" class="in"></label>
+<label>Years<br><input id="yrs" type="number" value="10" class="in"></label>
+<label>Increase SIP every year by (%)<br><input id="step" type="number" value="10" class="in"></label>
+</div>
+<div class="card" id="out" style="font:15px/1.7 system-ui,sans-serif"></div>
+<p class="note">Illustration only, not investment advice. Real returns vary and can be negative; equity funds are subject to market risk. Assumes monthly compounding and investing at the start of each month.</p>
+<style>.in{width:100%;padding:10px;margin:4px 0 12px;border:1px solid #d9cfbf;border-radius:10px;font:16px system-ui,sans-serif;background:#fff}.big{font:30px Georgia,serif}</style>
+<script>
+const $=id=>document.getElementById(id);const inr=n=>"₹"+Math.round(n).toLocaleString("en-IN");
+function calc(){let p=+$("amt").value||0;const r=(+$("ret").value||0)/1200,yrs=+$("yrs").value||0,step=(+$("step").value||0)/100;
+let fv=0,inv=0;const rows=[];for(let y=1;y<=yrs;y++){for(let m=0;m<12;m++){fv=(fv+p)*(1+r);inv+=p}rows.push([y,inv,fv]);p*=1+step}
+$("out").innerHTML=`<div>Value after ${yrs} years</div><div class="big">${inr(fv)}</div>
+<div class="meta">You invest ${inr(inv)} · estimated gains ${inr(fv-inv)}</div><br>
+${rows.filter(r=>r[0]%Math.max(1,Math.round(yrs/5))===0||r[0]===yrs).map(r=>`Year ${r[0]}: invested ${inr(r[1])} → ${inr(r[2])}`).join("<br>")}`}
+document.querySelectorAll("input").forEach(e=>e.addEventListener("input",calc));calc();
+</script>
