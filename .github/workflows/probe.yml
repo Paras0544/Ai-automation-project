@@ -1,0 +1,16 @@
+# Checks whether a store's pages can be read from GitHub's servers (for adding new product sources).
+name: Probe store
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        required: true
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          code=$(curl -s -o page.html -w "%{http_code}" -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36" -H "Accept-Language: en-IN,en;q=0.9" "${{ github.event.inputs.url }}")
+          echo "HTTP $code, $(wc -c < page.html) bytes"
+          grep -o -i "captcha\|robot check\|a-price-whole[^<]*<[^<]*" page.html | head -5 || true
+          grep -o 'data-asin="B0[A-Z0-9]\{8\}"' page.html | sort -u | wc -l
