@@ -4,9 +4,9 @@
   "status": "ready",
   "occasion": "Interview at a startup",
   "budget": 4000,
-  "hook": "Startup Interview Outfit Under \u20b94000",
+  "hook": "Startup Interview Outfit Under ₹4000",
   "subhook": "pehli baar mein select ho jaoge",
-  "cta": "Shop every piece \u00b7 link in bio",
+  "cta": "Shop every piece · link in bio",
   "caption": "Clean smart-casual fit that strikes the perfect balance for startup interviews. Professional yet approachable without trying too hard.",
   "hashtags": [
     "StartupFit",
@@ -65,5 +65,9 @@
     }
   ],
   "flags": [],
-  "coverSeconds": 15.43
+  "coverSeconds": 15.43,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/interview-at-a-startup.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/interview-at-a-startup.cover.jpg",
+  "postCaption": "Clean smart-casual fit that strikes the perfect balance for startup interviews. Professional yet approachable without trying too hard.\n\n• Light blue striped oxford (Banana Club) – ₹1,098 (Myntra)\n• Beige slim chinos (Beyoung) – ₹937 (Myntra)\n• Brown suede loafers (Mast & Harbour) – ₹1,269 (Myntra)\n• Brown leather belt (WildHorn) – ₹548 (Myntra)\nTotal: ₹3,852\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#StartupFit #SmartCasual #MenswearIndia #InterviewOutfit #MeasuredMan",
+  "publishedAt": "2026-11-28T13:34:04.417Z"
 }

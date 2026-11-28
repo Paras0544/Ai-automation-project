@@ -13,3 +13,5 @@ Diwali party at a friend's place | 5000  ->  diwali-party-at-a-friend-s-place
 Old money look on a budget | 2000  ->  old-money-look-on-a-budget
 Old money look, mid budget | 5000  ->  old-money-look-mid-budget
 Old money look, premium | 10000  ->  old-money-look-premium
+Guess the price: polos | polo | 1299 | guess  ->  guess-the-price-polos
+Guess the price: hoodies | hoodie | 1999 | guess  ->  guess-the-price-hoodies

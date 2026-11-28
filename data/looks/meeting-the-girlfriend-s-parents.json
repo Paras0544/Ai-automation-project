@@ -6,7 +6,7 @@
   "budget": 5000,
   "hook": "Meeting Her Parents For The First Time",
   "subhook": "unka trust jeetna hai",
-  "cta": "Shop every piece \u00b7 link in bio",
+  "cta": "Shop every piece · link in bio",
   "caption": "First impressions matter. Keep it clean, polished, and effortlessly respectful without looking overdressed.",
   "hashtags": [
     "MensStyle",
@@ -65,5 +65,9 @@
     }
   ],
   "flags": [],
-  "coverSeconds": 15.43
+  "coverSeconds": 15.43,
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/meeting-the-girlfriend-s-parents.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/meeting-the-girlfriend-s-parents.cover.jpg",
+  "postCaption": "First impressions matter. Keep it clean, polished, and effortlessly respectful without looking overdressed.\n\n• White soft oxford shirt (US Polo) – ₹1,607 (Myntra)\n• Regular-fit chinos (Max) – ₹1,388 (Amazon)\n• Brown suede loafers (Mast & Harbour) – ₹1,269 (Myntra)\n• Brown leather belt (WildHorn) – ₹548 (Myntra)\nTotal: ₹4,812\n\nShop every piece · link in bio\n\n#affiliate · I may earn a small commission from these links.\n#MensStyle #SmartCasual #FirstImpression #MeasuredMan #MensFashionIndia",
+  "publishedAt": "2026-11-28T13:34:28.940Z"
 }

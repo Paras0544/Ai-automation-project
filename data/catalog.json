@@ -1566,5 +1566,4022 @@
     "image": "catalog/b6a0f18cde.jpg",
     "imageUrl": "https://thebearhouse.com/cdn/shop/files/TRO-MORAJ-OW_1.webp?v=1793168280&width=1200",
     "lastUsed": "2026-11-28T09:26:28.451Z"
+  },
+  "thebearhouse-jude-rd": {
+    "id": "thebearhouse-jude-rd",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/jude-rd",
+    "store": "The Bear House",
+    "title": "Red Relax Fit Mock Neck Jacket with Zipper Closure – Classic Solid Design",
+    "name": "Red mock neck jacket",
+    "type": "jacket",
+    "category": "outerwear",
+    "tags": [
+      "jacket"
+    ],
+    "price": 1474,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/JAC-JUDE-RD_1.jpg?v=1769695391",
+    "checkedAt": "2026-11-28T13:29:42.768Z"
+  },
+  "thebearhouse-jude-wh": {
+    "id": "thebearhouse-jude-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/jude-wh",
+    "store": "The Bear House",
+    "title": "White Relax Fit Mock Neck Jacket with Zipper Closure – Classic Solid Design",
+    "name": "White mock neck jacket",
+    "type": "jacket",
+    "category": "outerwear",
+    "tags": [
+      "jacket"
+    ],
+    "price": 1749,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/JAC-JUDE-WH_1_47dd4309-cf88-49e7-8e81-2c41c27906c4.jpg?v=1766993846",
+    "checkedAt": "2026-11-28T13:29:42.769Z"
+  },
+  "thebearhouse-jude-gy": {
+    "id": "thebearhouse-jude-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/jude-gy",
+    "store": "The Bear House",
+    "title": "Grey Relax Fit Mock Neck Jacket with Zipper Closure – Classic Solid Design",
+    "name": "Grey mock neck jacket",
+    "type": "jacket",
+    "category": "outerwear",
+    "tags": [
+      "jacket"
+    ],
+    "price": 2499,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/JAC-JUDE-GY_1.jpg?v=1766994135",
+    "checkedAt": "2026-11-28T13:29:42.775Z"
+  },
+  "thebearhouse-jude-cr": {
+    "id": "thebearhouse-jude-cr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/jude-cr",
+    "store": "The Bear House",
+    "title": "Cream Relax Fit Mock Neck Jacket with Zipper Closure – Classic Solid Design",
+    "name": "Cream mock neck jacket",
+    "type": "jacket",
+    "category": "outerwear",
+    "tags": [
+      "jacket"
+    ],
+    "price": 2499,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/JAC-JUDE-CR_1.jpg?v=1767778619",
+    "checkedAt": "2026-11-28T13:29:42.776Z"
+  },
+  "thebearhouse-jude-bk": {
+    "id": "thebearhouse-jude-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/jude-bk",
+    "store": "The Bear House",
+    "title": "Black Relax Fit Mock Neck Jacket with Zipper Closure – Classic Solid Design",
+    "name": "Black mock neck jacket",
+    "type": "jacket",
+    "category": "outerwear",
+    "tags": [
+      "jacket"
+    ],
+    "price": 2499,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/JAC-JUDE-BK_1.jpg?v=1769750782",
+    "checkedAt": "2026-11-28T13:29:42.776Z"
+  },
+  "thebearhouse-dark": {
+    "id": "thebearhouse-dark",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/dark",
+    "store": "The Bear House",
+    "title": "Men Black Solid Relaxed Fit Hoodie",
+    "name": "Black solid hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 1949,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-DARK-BK_6.jpg?v=1757343340",
+    "checkedAt": "2026-11-28T13:29:43.741Z"
+  },
+  "thebearhouse-shell": {
+    "id": "thebearhouse-shell",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/shell",
+    "store": "The Bear House",
+    "title": "Men Grey Printed Relaxed Fit Hoodie",
+    "name": "Grey printed hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 1349,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-SHELL-GY_1.jpg?v=1753866066",
+    "checkedAt": "2026-11-28T13:29:43.792Z",
+    "lastUsed": "2026-11-28T13:31:08.010Z"
+  },
+  "thebearhouse-emote": {
+    "id": "thebearhouse-emote",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/emote",
+    "store": "The Bear House",
+    "title": "Men Purple Solid Relaxed Fit Hoodie",
+    "name": "Purple solid hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 1259,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-EMOTE-PL_1.jpg?v=1757343331",
+    "checkedAt": "2026-11-28T13:29:43.860Z",
+    "lastUsed": "2026-11-28T13:31:08.010Z"
+  },
+  "thebearhouse-tarboke": {
+    "id": "thebearhouse-tarboke",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tarboke",
+    "store": "The Bear House",
+    "title": "Beige Solid Relax Fit Pullover Hoodie with Kangaroo Pocket",
+    "name": "Beige fit pullover hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-TARBOKE-BG_1.jpg?v=1759910583",
+    "checkedAt": "2026-11-28T13:29:43.861Z",
+    "lastUsed": "2026-11-28T13:31:08.010Z"
+  },
+  "thebearhouse-odense": {
+    "id": "thebearhouse-odense",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/odense",
+    "store": "The Bear House",
+    "title": "Grey Solid Relax Fit Hoodie",
+    "name": "Grey solid relax fit hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 1099,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-ODENSE-GY_1.jpg?v=1757340178",
+    "checkedAt": "2026-11-28T13:29:43.861Z",
+    "lastUsed": "2026-11-28T13:31:08.010Z"
+  },
+  "thebearhouse-dark-bk": {
+    "id": "thebearhouse-dark-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/dark-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Batman Forever Graphic Hoodie with Kangaroo Pocket",
+    "name": "Black forever graphic hoodie",
+    "type": "hoodie",
+    "category": "outerwear",
+    "tags": [
+      "hoodie"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/6_2b13f9e5-244a-4e3d-b272-b648e08606c6.webp?v=1792651836",
+    "checkedAt": "2026-11-28T13:29:43.862Z"
+  },
+  "thebearhouse-briz": {
+    "id": "thebearhouse-briz",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/briz",
+    "store": "The Bear House",
+    "title": "Olive Solid Relax Fit High Neck Sweatshirt",
+    "name": "Olive high neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1351,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/1_4a576f0a-db7f-4ffe-bcd3-a2c9c8776ea7.jpg?v=1757341110",
+    "checkedAt": "2026-11-28T13:29:44.887Z"
+  },
+  "thebearhouse-timon": {
+    "id": "thebearhouse-timon",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/timon",
+    "store": "The Bear House",
+    "title": "Ardor Edition Men Yellow Slim Fit Printed Pure Cotton Sweatshirt",
+    "name": "Printed cotton sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 906,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-TIMON-YL_4.jpg?v=1753868642",
+    "checkedAt": "2026-11-28T13:29:44.888Z"
+  },
+  "thebearhouse-pharoh-wh": {
+    "id": "thebearhouse-pharoh-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/pharoh-wh",
+    "store": "The Bear House",
+    "title": "White Relaxed Fit High-Neck Knitted Sweatshirt with Classic Stripe Design",
+    "name": "White high-neck knitted sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1279,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-PHAROH-WH_1.jpg?v=1765275519",
+    "checkedAt": "2026-11-28T13:29:44.888Z"
+  },
+  "thebearhouse-blend": {
+    "id": "thebearhouse-blend",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/blend",
+    "store": "The Bear House",
+    "title": "Men White Printed Relaxed Fit Hoodie",
+    "name": "White printed hoodie",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1259,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-BLEND-WH_1.jpg?v=1753866051",
+    "checkedAt": "2026-11-28T13:29:44.888Z"
+  },
+  "thebearhouse-blend-wh": {
+    "id": "thebearhouse-blend-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/blend-wh",
+    "store": "The Bear House",
+    "title": "Off-White Drop-Shoulder Hoodie with Abstract Green Back Graphic",
+    "name": "Off-white drop-shoulder hoodie",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1259,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-BLEND-WH_1_4cfe66b6-298c-499d-b834-4b55b5e848f2.jpg?v=1794315404",
+    "checkedAt": "2026-11-28T13:29:44.889Z"
+  },
+  "thebearhouse-pharoh": {
+    "id": "thebearhouse-pharoh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/pharoh",
+    "store": "The Bear House",
+    "title": "Black Relaxed Fit High-Neck Knitted Sweatshirt with Classic Stripe Design",
+    "name": "Black high-neck knitted sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-PHAROH-BK_1.jpg?v=1765273993",
+    "checkedAt": "2026-11-28T13:29:44.889Z"
+  },
+  "thebearhouse-philis-dkbr": {
+    "id": "thebearhouse-philis-dkbr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/philis-dkbr",
+    "store": "The Bear House",
+    "title": "Dark Brown Relaxed Fit Graphic Crew-Neck Sweatshirt",
+    "name": "Dark brown graphic crew-neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2499,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-PHILIS-DKBR_1.webp?v=1790075570",
+    "checkedAt": "2026-11-28T13:29:44.889Z"
+  },
+  "thebearhouse-philis-ow": {
+    "id": "thebearhouse-philis-ow",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/philis-ow",
+    "store": "The Bear House",
+    "title": "Off-White Relaxed Fit Graphic Crew-Neck Sweatshirt",
+    "name": "Off-white graphic crew-neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2499,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SWE-PHILIS-OW_1.webp?v=1790075078",
+    "checkedAt": "2026-11-28T13:29:44.889Z"
+  },
+  "thebearhouse-lucius-bk": {
+    "id": "thebearhouse-lucius-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lucius-bk",
+    "store": "The Bear House",
+    "title": "Black Relaxed Fit Sweatshirt with Batman Distressed Emblem Graphic",
+    "name": "Black sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/1_948dd46b-d3e6-41f0-b19c-d157842a82ac.webp?v=1792667603",
+    "checkedAt": "2026-11-28T13:29:44.890Z"
+  },
+  "thebearhouse-gordon-bk": {
+    "id": "thebearhouse-gordon-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/gordon-bk",
+    "store": "The Bear House",
+    "title": "Black Relaxed Fit Crew Neck Sweatshirt with Batman Chest Print",
+    "name": "Black crew neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/6_1a3632aa-515a-4af6-b800-7db3061917f4.webp?v=1792656367",
+    "checkedAt": "2026-11-28T13:29:44.890Z"
+  },
+  "thebearhouse-killercroc-gy": {
+    "id": "thebearhouse-killercroc-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/killercroc-gy",
+    "store": "The Bear House",
+    "title": "Grey Relaxed Fit Crew Neck Sweatshirt with Vintage Batmobile Print",
+    "name": "Grey crew neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/7_9d4c83cd-e63f-4938-8b0d-b7b033943a57.webp?v=1792667854",
+    "checkedAt": "2026-11-28T13:29:44.891Z"
+  },
+  "thebearhouse-bane-bk": {
+    "id": "thebearhouse-bane-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bane-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Crew Neck Sweatshirt with Batman Dark Knight Graphic Print",
+    "name": "Black oversized crew neck sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/7.webp?v=1792666943",
+    "checkedAt": "2026-11-28T13:29:44.891Z"
+  },
+  "thebearhouse-bricc": {
+    "id": "thebearhouse-bricc",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bricc",
+    "store": "The Bear House",
+    "title": "Ardor Edition Men Red Slim Fit Printed Pure Cotton Sweatshirt",
+    "name": "Printed cotton sweatshirt",
+    "type": "sweatshirt",
+    "category": "outerwear",
+    "tags": [
+      "sweatshirt"
+    ],
+    "price": 1010,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-BRICC-RD_1.jpg?v=1753868640",
+    "checkedAt": "2026-11-28T13:29:44.891Z"
+  },
+  "thebearhouse-cheka": {
+    "id": "thebearhouse-cheka",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/cheka",
+    "store": "The Bear House",
+    "title": "Men's Multi-colour Checkered Relaxed Fit Shacket",
+    "name": "Multi-colour checkered shacket",
+    "type": "shacket",
+    "category": "outerwear",
+    "tags": [
+      "shacket"
+    ],
+    "price": 1154,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-CHEKA-MC_1.jpg?v=1753864595",
+    "checkedAt": "2026-11-28T13:29:46.721Z"
+  },
+  "thebearhouse-chaze": {
+    "id": "thebearhouse-chaze",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/chaze",
+    "store": "The Bear House",
+    "title": "Multi-Color Checked Regular Fit Overshirt",
+    "name": "Multi-color checked overshirt",
+    "type": "shacket",
+    "category": "outerwear",
+    "tags": [
+      "shacket"
+    ],
+    "price": 1285,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-CHAZE-MC_1.jpg?v=1753862980",
+    "checkedAt": "2026-11-28T13:29:46.722Z"
+  },
+  "thebearhouse-lario": {
+    "id": "thebearhouse-lario",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lario",
+    "store": "The Bear House",
+    "title": "Green Texture Pattern Relaxed Fit Overshirt",
+    "name": "Green texture pattern overshirt",
+    "type": "shacket",
+    "category": "outerwear",
+    "tags": [
+      "shacket"
+    ],
+    "price": 1154,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-LARIO-GR_1.jpg?v=1757338718",
+    "checkedAt": "2026-11-28T13:29:46.722Z"
+  },
+  "thebearhouse-tally": {
+    "id": "thebearhouse-tally",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tally",
+    "store": "The Bear House",
+    "title": "Men Slim Flannel Button-Down Casual Shirt",
+    "name": "Slim flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 899,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-TALLY-BK1.jpg?v=1753869624",
+    "checkedAt": "2026-11-28T13:29:47.824Z"
+  },
+  "thebearhouse-kamet": {
+    "id": "thebearhouse-kamet",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/kamet",
+    "store": "The Bear House",
+    "title": "Men Grey Checked Slim Fit Cotton Casual Shirt",
+    "name": "Grey checked cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 899,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-KAMET-GY_4_b80d10de-2577-444a-90f6-2e1bd07f210b.jpg?v=1753869039",
+    "checkedAt": "2026-11-28T13:29:47.853Z"
+  },
+  "thebearhouse-uber": {
+    "id": "thebearhouse-uber",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/uber",
+    "store": "The Bear House",
+    "title": "Men Slim Flannel Button-Down Casual Shirt",
+    "name": "Slim flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-UBER-MR_1_65a6edd8-78c6-436a-9543-89181551d036.jpg?v=1753869630",
+    "checkedAt": "2026-11-28T13:29:47.863Z"
+  },
+  "thebearhouse-tonic": {
+    "id": "thebearhouse-tonic",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tonic",
+    "store": "The Bear House",
+    "title": "Men Rust & Navy Checks Slim Fit Shirt",
+    "name": "Rust & navy checks shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-TONIC-RT1.jpg?v=1753869270",
+    "checkedAt": "2026-11-28T13:29:47.883Z"
+  },
+  "thebearhouse-viana": {
+    "id": "thebearhouse-viana",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/viana",
+    "store": "The Bear House",
+    "title": "Men Slim Flannel Button-Down Casual Shirt",
+    "name": "Slim flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-VIANA-BR4_129_11zon.jpg?v=1753869165",
+    "checkedAt": "2026-11-28T13:29:47.884Z"
+  },
+  "thebearhouse-amber": {
+    "id": "thebearhouse-amber",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/amber",
+    "store": "The Bear House",
+    "title": "Men Slim Cream & Grey Checked Shirt",
+    "name": "Grey checked shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-AMBER-CR_1.jpg?v=1753869244",
+    "checkedAt": "2026-11-28T13:29:47.885Z"
+  },
+  "thebearhouse-leno": {
+    "id": "thebearhouse-leno",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/leno",
+    "store": "The Bear House",
+    "title": "Men's Multi Checked Slim Fit Shirt",
+    "name": "Multi checked shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-LENO-MC1_143_11zon.jpg?v=1753869202",
+    "checkedAt": "2026-11-28T13:29:47.925Z"
+  },
+  "thebearhouse-stephen": {
+    "id": "thebearhouse-stephen",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/stephen",
+    "store": "The Bear House",
+    "title": "Men Slim Flannel Button-Down Casual Shirt",
+    "name": "Slim flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-STEPHEN-BK1_87_11zon.jpg?v=1753869184",
+    "checkedAt": "2026-11-28T13:29:47.974Z"
+  },
+  "thebearhouse-pratos": {
+    "id": "thebearhouse-pratos",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/pratos",
+    "store": "The Bear House",
+    "title": "Men Pink & Navy Blue Slim Fit Tartan Checked Cotton Casual Shirt",
+    "name": "Pink & navy checked cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-PRATOS-PK_1.webp?v=1753868844",
+    "checkedAt": "2026-11-28T13:29:47.975Z"
+  },
+  "thebearhouse-salva": {
+    "id": "thebearhouse-salva",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/salva",
+    "store": "The Bear House",
+    "title": "MEN SLIM CHECKS BUTTON-DOWN CASUAL SHIRT",
+    "name": "Slim checks button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-SALVA-BL1_64_11zon.jpg?v=1753869222",
+    "checkedAt": "2026-11-28T13:29:47.992Z"
+  },
+  "thebearhouse-juul": {
+    "id": "thebearhouse-juul",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/juul",
+    "store": "The Bear House",
+    "title": "Men Teal Blue Pure Cotton Checked Slim Fit Flannel Shirt",
+    "name": "Teal blue checked flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-JUUL-TL_4.jpg?v=1753868891",
+    "checkedAt": "2026-11-28T13:29:48.022Z"
+  },
+  "thebearhouse-tennis": {
+    "id": "thebearhouse-tennis",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tennis",
+    "store": "The Bear House",
+    "title": "Men Teal Green Cotton Checked Slim Flannel Shirt",
+    "name": "Teal green slim flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-TENNIS-TL_1.jpg?v=1753868908",
+    "checkedAt": "2026-11-28T13:29:48.025Z"
+  },
+  "thebearhouse-ted": {
+    "id": "thebearhouse-ted",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ted",
+    "store": "The Bear House",
+    "title": "MEN SLIM FLANNEL BUTTON-DOWN CASUAL SHIRT",
+    "name": "Slim flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/2_e2ba0222-0567-44d7-b8a7-fed9ec7d8bf8.jpg?v=1753869181",
+    "checkedAt": "2026-11-28T13:29:48.026Z"
+  },
+  "thebearhouse-basta": {
+    "id": "thebearhouse-basta",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/basta",
+    "store": "The Bear House",
+    "title": "Men Teal Blue Slim Fit Checked Flannel Cotton Casual Shirt",
+    "name": "Teal blue flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-BASTA-BL_4.jpg?v=1753868691",
+    "checkedAt": "2026-11-28T13:29:48.026Z"
+  },
+  "thebearhouse-gordon": {
+    "id": "thebearhouse-gordon",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/gordon",
+    "store": "The Bear House",
+    "title": "Men Slim Button-down Flannel Shirt",
+    "name": "Slim button-down flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/GORDON.jpg?v=1753869098",
+    "checkedAt": "2026-11-28T13:29:48.027Z"
+  },
+  "thebearhouse-krabi": {
+    "id": "thebearhouse-krabi",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/krabi",
+    "store": "The Bear House",
+    "title": "Men Orange & Navy Blue Buffalo Checked Slim Fit Pure Cotton Casual Shirt",
+    "name": "Orange & navy checked cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-KRABI-OR_1.jpg?v=1753868346",
+    "checkedAt": "2026-11-28T13:29:48.027Z"
+  },
+  "thebearhouse-xaman": {
+    "id": "thebearhouse-xaman",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/xaman",
+    "store": "The Bear House",
+    "title": "Men Navy Blue Pure Cotton Slim Fit Windowpane Checked Casual Shirt",
+    "name": "Navy blue windowpane checked shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/XAMAN.jpg?v=1753868432",
+    "checkedAt": "2026-11-28T13:29:48.027Z"
+  },
+  "thebearhouse-bezos-cred": {
+    "id": "thebearhouse-bezos-cred",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bezos-cred",
+    "store": "The Bear House",
+    "title": "Men Maroon Slim Fit Solid Casual Shirt",
+    "name": "Maroon solid shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/BEZOS.jpg?v=1753869304",
+    "checkedAt": "2026-11-28T13:29:48.061Z"
+  },
+  "thebearhouse-bezos": {
+    "id": "thebearhouse-bezos",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bezos",
+    "store": "The Bear House",
+    "title": "Men Maroon Slim Fit Solid Casual Shirt",
+    "name": "Maroon solid shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/BEZOS.jpg?v=1753869304",
+    "checkedAt": "2026-11-28T13:29:48.061Z"
+  },
+  "thebearhouse-weir": {
+    "id": "thebearhouse-weir",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/weir",
+    "store": "The Bear House",
+    "title": "Men Teal Checked Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Teal checked flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-WEIR-TL_6.jpg?v=1753866674",
+    "checkedAt": "2026-11-28T13:29:48.061Z"
+  },
+  "thebearhouse-aime": {
+    "id": "thebearhouse-aime",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/aime",
+    "store": "The Bear House",
+    "title": "Men Green Checked Flannel Cotton Casual Shirt",
+    "name": "Green checked flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-AIME-GR_4_b7107bd7-11f4-4a73-b738-589e8d5f1615.jpg?v=1753868805",
+    "checkedAt": "2026-11-28T13:29:48.062Z"
+  },
+  "thebearhouse-creme": {
+    "id": "thebearhouse-creme",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/creme",
+    "store": "The Bear House",
+    "title": "Men Cream Solid Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Cream solid flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SFD-CREME-CR_1.jpg?v=1753865321",
+    "checkedAt": "2026-11-28T13:29:48.062Z"
+  },
+  "thebearhouse-moira": {
+    "id": "thebearhouse-moira",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/moira",
+    "store": "The Bear House",
+    "title": "Men Checked Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Checked flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-MOIRA-MT4_26_11zon.jpg?v=1753869168",
+    "checkedAt": "2026-11-28T13:29:48.063Z"
+  },
+  "thebearhouse-misia": {
+    "id": "thebearhouse-misia",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/misia",
+    "store": "The Bear House",
+    "title": "Men Blue & White Slim Fit Checked Flannel Cotton Casual Shirt",
+    "name": "Blue & white flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/MISIA.jpg?v=1753868397",
+    "checkedAt": "2026-11-28T13:29:48.063Z"
+  },
+  "thebearhouse-isro": {
+    "id": "thebearhouse-isro",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/isro",
+    "store": "The Bear House",
+    "title": "Men Slim Button-down Flannel Shirt",
+    "name": "Slim button-down flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-ISRO-OL_2495-4_a51b3285-314c-42c6-9f24-af334ea1b1d0.jpg?v=1753869113",
+    "checkedAt": "2026-11-28T13:29:48.063Z"
+  },
+  "thebearhouse-dipper": {
+    "id": "thebearhouse-dipper",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/dipper",
+    "store": "The Bear House",
+    "title": "Men Maroon Slim Fit Tartan Checked Pure Cotton Casual Shirt",
+    "name": "Maroon tartan checked cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-DIPPER-BL_4.png?v=1753868885",
+    "checkedAt": "2026-11-28T13:29:48.064Z"
+  },
+  "thebearhouse-tai": {
+    "id": "thebearhouse-tai",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tai",
+    "store": "The Bear House",
+    "title": "Men Multi Checked Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Multi checked flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-TAI-MC_5.jpg?v=1753867062",
+    "checkedAt": "2026-11-28T13:29:48.064Z"
+  },
+  "thebearhouse-shood": {
+    "id": "thebearhouse-shood",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/shood",
+    "store": "The Bear House",
+    "title": "Men Green Checked Slim Flannel Casual Shirt",
+    "name": "Green checked slim flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-SHOOD-GR_1.jpg?v=1753868905",
+    "checkedAt": "2026-11-28T13:29:48.064Z"
+  },
+  "thebearhouse-wacker": {
+    "id": "thebearhouse-wacker",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/wacker",
+    "store": "The Bear House",
+    "title": "Men Slim Button-down Flannel Shirt",
+    "name": "Slim button-down flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-WACKER-MC_2495-1_72a7a1a8-cffc-4ca0-8d9a-4dc9a687cfe8.jpg?v=1753869114",
+    "checkedAt": "2026-11-28T13:29:48.065Z"
+  },
+  "thebearhouse-isprava": {
+    "id": "thebearhouse-isprava",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/isprava",
+    "store": "The Bear House",
+    "title": "Men Maroon Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Maroon flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-ISPRAVA-MR1_109_11zon.jpg?v=1753869162",
+    "checkedAt": "2026-11-28T13:29:48.065Z"
+  },
+  "thebearhouse-britney": {
+    "id": "thebearhouse-britney",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/britney",
+    "store": "The Bear House",
+    "title": "Men Slim Button-down Flannel Shirt",
+    "name": "Slim button-down flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/4_4d49a42c-b872-42b9-bb14-5a05b09d8b2b.jpg?v=1753869092",
+    "checkedAt": "2026-11-28T13:29:48.066Z"
+  },
+  "thebearhouse-nara": {
+    "id": "thebearhouse-nara",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/nara",
+    "store": "The Bear House",
+    "title": "Men Teal Slim Fit Flannel Button-Down Casual Shirt",
+    "name": "Teal flannel button-down shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-NARA-TL_1.jpg?v=1753869602",
+    "checkedAt": "2026-11-28T13:29:48.066Z"
+  },
+  "thebearhouse-sayang": {
+    "id": "thebearhouse-sayang",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sayang",
+    "store": "The Bear House",
+    "title": "Men Brown and Green Tartan Checked Slim Fit Flannel Cotton Casual Shirt",
+    "name": "Brown and green flannel cotton shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/4_85ea9611-277a-4740-bec1-793c29c6aad2.jpg?v=1753868446",
+    "checkedAt": "2026-11-28T13:29:48.066Z"
+  },
+  "thebearhouse-bud": {
+    "id": "thebearhouse-bud",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bud",
+    "store": "The Bear House",
+    "title": "Men Blue & Red Checks Slim Fit Shirt",
+    "name": "Blue & red checks shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/1_025e37d6-9c6a-43e1-9084-8b04f805eb4e.jpg?v=1753869274",
+    "checkedAt": "2026-11-28T13:29:48.067Z"
+  },
+  "thebearhouse-ninfa": {
+    "id": "thebearhouse-ninfa",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ninfa",
+    "store": "The Bear House",
+    "title": "Men Pink & Beige Slim Fit Checked Cotton Flannel Shirt",
+    "name": "Pink & beige cotton flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-NINFA-PK_4.jpg?v=1753868790",
+    "checkedAt": "2026-11-28T13:29:48.067Z"
+  },
+  "thebearhouse-tbh-coruma-mc": {
+    "id": "thebearhouse-tbh-coruma-mc",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tbh-coruma-mc",
+    "store": "The Bear House",
+    "title": "Multicolor Flannel Check Slim Fit Casual Shirt",
+    "name": "Multicolor flannel check shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-CORUMA-MC_1.jpg?v=1766475161",
+    "checkedAt": "2026-11-28T13:29:48.067Z"
+  },
+  "thebearhouse-izod": {
+    "id": "thebearhouse-izod",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/izod",
+    "store": "The Bear House",
+    "title": "MEN'S GREY FLANNEL CASUAL SHIRT",
+    "name": "Grey flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/4.webp?v=1753869189",
+    "checkedAt": "2026-11-28T13:29:48.068Z"
+  },
+  "thebearhouse-toscano": {
+    "id": "thebearhouse-toscano",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/toscano",
+    "store": "The Bear House",
+    "title": "Men Blue Checks Slim Fit Shirt",
+    "name": "Blue checks shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-TOSCANO-BL1.jpg?v=1753869265",
+    "checkedAt": "2026-11-28T13:29:48.068Z"
+  },
+  "thebearhouse-sanik-ny-copy": {
+    "id": "thebearhouse-sanik-ny-copy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sanik-ny-copy",
+    "store": "The Bear House",
+    "title": "Red Slim Fit Checked Flannel Casual Shirt",
+    "name": "Red checked flannel shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/ONL-WOLTA-RD_1.webp?v=1793865911",
+    "checkedAt": "2026-11-28T13:29:48.068Z"
+  },
+  "thebearhouse-lera-gr": {
+    "id": "thebearhouse-lera-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lera-gr",
+    "store": "The Bear House",
+    "title": "Green Flannel Check Slim Fit Casual Shirt",
+    "name": "Green flannel check shirt",
+    "type": "flannel",
+    "category": "top",
+    "tags": [
+      "flannel"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/ONL-LERA-GR_1.jpg?v=1775122453",
+    "checkedAt": "2026-11-28T13:29:48.069Z"
+  },
+  "thebearhouse-glory": {
+    "id": "thebearhouse-glory",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/glory",
+    "store": "The Bear House",
+    "title": "Men Cream Striped Cotton-Linen Shirt",
+    "name": "Cream striped cotton-linen shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/GLORY4_36_11zon.jpg?v=1753869362",
+    "checkedAt": "2026-11-28T13:29:48.987Z"
+  },
+  "thebearhouse-idet": {
+    "id": "thebearhouse-idet",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/idet",
+    "store": "The Bear House",
+    "title": "Men Multicoloured Striped Slim Fit Cotton Linen Casual Shirt",
+    "name": "Multicoloured striped cotton linen shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/1_c5435066-316d-4956-81c1-61068a550c60.jpg?v=1753868382",
+    "checkedAt": "2026-11-28T13:29:48.988Z"
+  },
+  "thebearhouse-rian": {
+    "id": "thebearhouse-rian",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/rian",
+    "store": "The Bear House",
+    "title": "Men Multi Striped Slim Fit Cotton Linen Casual Shirt",
+    "name": "Multi striped cotton linen shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-RIAN-MC_1.jpg?v=1753864941",
+    "checkedAt": "2026-11-28T13:29:48.988Z"
+  },
+  "thebearhouse-acro": {
+    "id": "thebearhouse-acro",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/acro",
+    "store": "The Bear House",
+    "title": "Men Multi Vertical Striped Fit Cotton Linen Casual Shirt",
+    "name": "Cotton linen shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ACRO-MC_1.jpg?v=1753865282",
+    "checkedAt": "2026-11-28T13:29:48.989Z"
+  },
+  "thebearhouse-lyse-wh": {
+    "id": "thebearhouse-lyse-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lyse-wh",
+    "store": "The Bear House",
+    "title": "White Solid Woven Slim Fit Cotton Linen Casual Shirt",
+    "name": "White cotton linen shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/ONL-LYSE-WH_1.webp?v=1792412335",
+    "checkedAt": "2026-11-28T13:29:48.989Z"
+  },
+  "thebearhouse-sorma": {
+    "id": "thebearhouse-sorma",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sorma",
+    "store": "The Bear House",
+    "title": "Olive Cotton Linen Slim Fit Solid Casual Shirt",
+    "name": "Olive cotton linen solid shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SORMA2.jpg?v=1757402724",
+    "checkedAt": "2026-11-28T13:29:48.989Z"
+  },
+  "thebearhouse-perid": {
+    "id": "thebearhouse-perid",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/perid",
+    "store": "The Bear House",
+    "title": "Green Cotton Linen Slim Fit Solid Casual Shirt",
+    "name": "Green cotton linen solid shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/MANDO_PERID2.jpg?v=1757402565",
+    "checkedAt": "2026-11-28T13:29:48.989Z"
+  },
+  "thebearhouse-remai-gr": {
+    "id": "thebearhouse-remai-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/remai-gr",
+    "store": "The Bear House",
+    "title": "Green Woven Micro Check Slim Fit Casual Shirt",
+    "name": "Green woven micro check shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-REMAI-GR_1.jpg?v=1773214550",
+    "checkedAt": "2026-11-28T13:29:48.990Z"
+  },
+  "thebearhouse-andrei": {
+    "id": "thebearhouse-andrei",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/andrei",
+    "store": "The Bear House",
+    "title": "Light Yellow Vertical Textured Stripe Relaxed Fit Half Sleeve Casual Shirt",
+    "name": "Light yellow half sleeve shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ANDREI-CR_1.jpg?v=1757335859",
+    "checkedAt": "2026-11-28T13:29:48.990Z"
+  },
+  "thebearhouse-armose-pk": {
+    "id": "thebearhouse-armose-pk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/armose-pk",
+    "store": "The Bear House",
+    "title": "Pink Slim Fit Solid Casual Woven Shirt",
+    "name": "Pink solid woven shirt",
+    "type": "overshirt-linen",
+    "category": "top",
+    "tags": [
+      "overshirt-linen"
+    ],
+    "price": 2499,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ARMOSE-PK_1.webp?v=1795595690",
+    "checkedAt": "2026-11-28T13:29:48.990Z"
+  },
+  "thebearhouse-unam": {
+    "id": "thebearhouse-unam",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/unam",
+    "store": "The Bear House",
+    "title": "Men Beige Solid Slim Fit Cotton Shirt",
+    "name": "Beige solid cotton shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/4_266a9ec4-8169-4f26-9b82-267845b6f11e.jpg?v=1753868828",
+    "checkedAt": "2026-11-28T13:29:49.945Z"
+  },
+  "thebearhouse-beek": {
+    "id": "thebearhouse-beek",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/beek",
+    "store": "The Bear House",
+    "title": "Men White Solid Slim Fit Pure Cotton Casual Shirt",
+    "name": "White solid cotton shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-BEEK-WH_1.jpg?v=1753867895",
+    "checkedAt": "2026-11-28T13:29:49.946Z"
+  },
+  "thebearhouse-shomi": {
+    "id": "thebearhouse-shomi",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/shomi",
+    "store": "The Bear House",
+    "title": "Men Striped Button-Down Casual Shirt",
+    "name": "Striped button-down shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-SHOMI-WH_1.jpg?v=1753869049",
+    "checkedAt": "2026-11-28T13:29:49.946Z"
+  },
+  "thebearhouse-solomun": {
+    "id": "thebearhouse-solomun",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/solomun",
+    "store": "The Bear House",
+    "title": "Men Green Striped Slim Fit Pure Cotton Casual Shirt",
+    "name": "Green striped cotton shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/TBH-SOLOMUN-GR_1.jpg?v=1753868353",
+    "checkedAt": "2026-11-28T13:29:49.946Z"
+  },
+  "thebearhouse-fria": {
+    "id": "thebearhouse-fria",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/fria",
+    "store": "The Bear House",
+    "title": "Men Grey Pure Cotton Slim Fit Striped Casual Shirt",
+    "name": "Grey cotton striped shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/4_9dccc5f5-0a0f-4b9b-8928-48c0dfef1f17.jpg?v=1753868476",
+    "checkedAt": "2026-11-28T13:29:49.947Z"
+  },
+  "thebearhouse-buffet": {
+    "id": "thebearhouse-buffet",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/buffet",
+    "store": "The Bear House",
+    "title": "Men Green Solid Slim Fit Shirt",
+    "name": "Green solid shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 1047,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/products/3_130acdc2-a8f1-46df-a391-47e41f3ae03e.jpg?v=1753869284",
+    "checkedAt": "2026-11-28T13:29:49.947Z"
+  },
+  "thebearhouse-astron-pk": {
+    "id": "thebearhouse-astron-pk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-pk",
+    "store": "The Bear House",
+    "title": "Light Pink Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light pink solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-PK_1.webp?v=1780061601",
+    "checkedAt": "2026-11-28T13:29:49.947Z"
+  },
+  "thebearhouse-astron-gr": {
+    "id": "thebearhouse-astron-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-gr",
+    "store": "The Bear House",
+    "title": "Light Green Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light green solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-GR_1.webp?v=1780315302",
+    "checkedAt": "2026-11-28T13:29:49.947Z"
+  },
+  "thebearhouse-astron-yl": {
+    "id": "thebearhouse-astron-yl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-yl",
+    "store": "The Bear House",
+    "title": "Light Yellow Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light yellow solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-YL_1.webp?v=1780061835",
+    "checkedAt": "2026-11-28T13:29:49.948Z"
+  },
+  "thebearhouse-astron-ny": {
+    "id": "thebearhouse-astron-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-ny",
+    "store": "The Bear House",
+    "title": "Navy Solid Oxford Regular Fit Casual Shirt",
+    "name": "Navy solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-NY_1.webp?v=1786518392",
+    "checkedAt": "2026-11-28T13:29:49.948Z"
+  },
+  "thebearhouse-astron-ltbl": {
+    "id": "thebearhouse-astron-ltbl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-ltbl",
+    "store": "The Bear House",
+    "title": "Light Blue Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light blue solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-LTBL_1.webp?v=1782288357",
+    "checkedAt": "2026-11-28T13:29:49.948Z"
+  },
+  "thebearhouse-astron-pl": {
+    "id": "thebearhouse-astron-pl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-pl",
+    "store": "The Bear House",
+    "title": "Light Purple Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light purple solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-PL_1.webp?v=1780315427",
+    "checkedAt": "2026-11-28T13:29:49.949Z"
+  },
+  "thebearhouse-astron-bg": {
+    "id": "thebearhouse-astron-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-bg",
+    "store": "The Bear House",
+    "title": "Beige Solid Oxford Regular Fit Casual Shirt",
+    "name": "Beige solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-BG_1.webp?v=1780315134",
+    "checkedAt": "2026-11-28T13:29:49.949Z"
+  },
+  "thebearhouse-astron-bk": {
+    "id": "thebearhouse-astron-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-bk",
+    "store": "The Bear House",
+    "title": "Black Solid Oxford Regular Fit Casual Shirt",
+    "name": "Black solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-BK_1.webp?v=1786695957",
+    "checkedAt": "2026-11-28T13:29:49.949Z"
+  },
+  "thebearhouse-astron-or": {
+    "id": "thebearhouse-astron-or",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astron-or",
+    "store": "The Bear House",
+    "title": "Light Orange Solid Oxford Regular Fit Casual Shirt",
+    "name": "Light orange solid oxford shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRON-OR_1.webp?v=1780061313",
+    "checkedAt": "2026-11-28T13:29:49.950Z"
+  },
+  "thebearhouse-astrat-bg": {
+    "id": "thebearhouse-astrat-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/astrat-bg",
+    "store": "The Bear House",
+    "title": "Beige Oxford Micro Check Regular Fit Casual Shirt",
+    "name": "Beige oxford micro check shirt",
+    "type": "oxford",
+    "category": "top",
+    "tags": [
+      "oxford"
+    ],
+    "price": 2299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-ASTRAT-BG1.webp?v=1790318966",
+    "checkedAt": "2026-11-28T13:29:49.950Z"
+  },
+  "thebearhouse-rail-ow": {
+    "id": "thebearhouse-rail-ow",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/rail-ow",
+    "store": "The Bear House",
+    "title": "Off White Textured Regular Fit Polo with Contrast Tipping Detail",
+    "name": "Off white textured polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-RAIL-OW_1.webp?v=1783072214",
+    "checkedAt": "2026-11-28T13:29:50.885Z",
+    "lastUsed": "2026-11-28T13:30:33.430Z"
+  },
+  "thebearhouse-southe": {
+    "id": "thebearhouse-southe",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/southe",
+    "store": "The Bear House",
+    "title": "Men Green Knitted Regular Fit Polo Collar T-shirt",
+    "name": "Green knitted polo collar t-shirt",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/1_5685e4d9-4009-447a-ac6e-312b38f6fe72.jpg?v=1753864339",
+    "checkedAt": "2026-11-28T13:29:50.885Z",
+    "lastUsed": "2026-11-28T13:30:33.430Z"
+  },
+  "thebearhouse-mifroa-bl": {
+    "id": "thebearhouse-mifroa-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/mifroa-bl",
+    "store": "The Bear House",
+    "title": "Dark Blue Solid Regular Fit Polo with Printed Trim Detailing",
+    "name": "Dark blue solid polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-MIFROA-BL_2.jpg?v=1783410709",
+    "checkedAt": "2026-11-28T13:29:50.905Z"
+  },
+  "thebearhouse-lormat-bk": {
+    "id": "thebearhouse-lormat-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lormat-bk",
+    "store": "The Bear House",
+    "title": "Black Solid Regular Fit Polo with Printed Trim Detailing",
+    "name": "Black solid polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-LORMAT-BK_1.jpg?v=1780660163",
+    "checkedAt": "2026-11-28T13:29:50.905Z"
+  },
+  "thebearhouse-suroy": {
+    "id": "thebearhouse-suroy",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/suroy",
+    "store": "The Bear House",
+    "title": "White Textured Knit Polo with Buttoned Placket & High-Low Hem",
+    "name": "White textured knit polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-SUROY-WH_1.jpg?v=1762932820",
+    "checkedAt": "2026-11-28T13:29:50.916Z",
+    "lastUsed": "2026-11-28T13:30:33.430Z"
+  },
+  "thebearhouse-quant-wh": {
+    "id": "thebearhouse-quant-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/quant-wh",
+    "store": "The Bear House",
+    "title": "White Textured Striped Knit Slim Fit Polo with Subtle Semi-Transparent Detail",
+    "name": "White textured striped knit polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-QUANT-WH_6.jpg?v=1776688205",
+    "checkedAt": "2026-11-28T13:29:50.917Z"
+  },
+  "thebearhouse-kugro-ol": {
+    "id": "thebearhouse-kugro-ol",
+    "timesUsed": 1,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/kugro-ol",
+    "store": "The Bear House",
+    "title": "Half Sleeves Textured Olive Zip Polo",
+    "name": "Olive zip polo",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/2_b57eabcb-dfb2-4ed4-a015-8cf733a75853.jpg?v=1776679623",
+    "checkedAt": "2026-11-28T13:29:50.917Z",
+    "lastUsed": "2026-11-28T13:30:33.430Z"
+  },
+  "thebearhouse-khafre-bg": {
+    "id": "thebearhouse-khafre-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/khafre-bg",
+    "store": "The Bear House",
+    "title": "Beige Regular Fit Knitted Polo T-Shirt with Half-Zip Placket",
+    "name": "Beige knitted polo t-shirt",
+    "type": "polo",
+    "category": "top",
+    "tags": [
+      "polo"
+    ],
+    "price": 2299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/POL-KHAFRE-BG_1.webp?v=1795601177",
+    "checkedAt": "2026-11-28T13:29:50.918Z"
+  },
+  "thebearhouse-asiat-tl": {
+    "id": "thebearhouse-asiat-tl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/asiat-tl",
+    "store": "The Bear House",
+    "title": "Teal Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Teal neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-ASIAT-TL_1.jpg?v=1772520242",
+    "checkedAt": "2026-11-28T13:29:51.853Z"
+  },
+  "thebearhouse-tarakan-pc": {
+    "id": "thebearhouse-tarakan-pc",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tarakan-pc",
+    "store": "The Bear House",
+    "title": "Peach Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-TARAKAN-PC__1.jpg?v=1775137296",
+    "checkedAt": "2026-11-28T13:29:51.897Z"
+  },
+  "thebearhouse-qortog-bl": {
+    "id": "thebearhouse-qortog-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/qortog-bl",
+    "store": "The Bear House",
+    "title": "Blue Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Blue neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-QORTOG-BL_1.jpg?v=1770717540",
+    "checkedAt": "2026-11-28T13:29:51.927Z"
+  },
+  "thebearhouse-sargaso-gr": {
+    "id": "thebearhouse-sargaso-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sargaso-gr",
+    "store": "The Bear House",
+    "title": "Green Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Green neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SARGASO-GR_1.jpg?v=1771315354",
+    "checkedAt": "2026-11-28T13:29:51.936Z"
+  },
+  "thebearhouse-thrum-mr": {
+    "id": "thebearhouse-thrum-mr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/thrum-mr",
+    "store": "The Bear House",
+    "title": "Maroon Oversized Crew Neck Typography Logo Print Casual T-Shirt",
+    "name": "Maroon logo print t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-THRUM-MR__1.jpg?v=1775135740",
+    "checkedAt": "2026-11-28T13:29:51.938Z"
+  },
+  "thebearhouse-spire-bk": {
+    "id": "thebearhouse-spire-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/spire-bk",
+    "store": "The Bear House",
+    "title": "Grey Oversized Acid Wash T-Shirt with “Bear Amore” Chenille Patch",
+    "name": "Grey oversized acid wash t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SPIRE-BK-M_1.jpg?v=1768288109",
+    "checkedAt": "2026-11-28T13:29:51.938Z"
+  },
+  "thebearhouse-natron-mr": {
+    "id": "thebearhouse-natron-mr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/natron-mr",
+    "store": "The Bear House",
+    "title": "Maroon Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Maroon neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-NATRON-MR_1.jpg?v=1769604788",
+    "checkedAt": "2026-11-28T13:29:51.940Z"
+  },
+  "thebearhouse-wilhe-rd": {
+    "id": "thebearhouse-wilhe-rd",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/wilhe-rd",
+    "store": "The Bear House",
+    "title": "Red Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Red neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-WILHE-RD_1.jpg?v=1767952240",
+    "checkedAt": "2026-11-28T13:29:52.047Z"
+  },
+  "thebearhouse-markos-gr": {
+    "id": "thebearhouse-markos-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/markos-gr",
+    "store": "The Bear House",
+    "title": "Dark Green Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Dark green neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-MARKOS-GR_1.jpg?v=1767951789",
+    "checkedAt": "2026-11-28T13:29:52.157Z"
+  },
+  "thebearhouse-sisimiut-gy": {
+    "id": "thebearhouse-sisimiut-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sisimiut-gy",
+    "store": "The Bear House",
+    "title": "Dark Grey Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Dark grey neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SISIMIUT-GY_1.jpg?v=1774087530",
+    "checkedAt": "2026-11-28T13:29:52.166Z"
+  },
+  "thebearhouse-celtic-pl": {
+    "id": "thebearhouse-celtic-pl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/celtic-pl",
+    "store": "The Bear House",
+    "title": "Purple Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Purple neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-CELTIC-PL_1.jpg?v=1768634263",
+    "checkedAt": "2026-11-28T13:29:52.176Z"
+  },
+  "thebearhouse-ojos-br": {
+    "id": "thebearhouse-ojos-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ojos-br",
+    "store": "The Bear House",
+    "title": "Brown Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Brown neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-OJOS-BR_1.jpg?v=1767860452",
+    "checkedAt": "2026-11-28T13:29:52.177Z"
+  },
+  "thebearhouse-sibuyan-bg": {
+    "id": "thebearhouse-sibuyan-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sibuyan-bg",
+    "store": "The Bear House",
+    "title": "Beige Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Beige neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SIBUYAN-BG_1.jpg?v=1767952847",
+    "checkedAt": "2026-11-28T13:29:52.177Z"
+  },
+  "thebearhouse-nuuk-ol": {
+    "id": "thebearhouse-nuuk-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/nuuk-ol",
+    "store": "The Bear House",
+    "title": "Olive Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Olive neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-NUUK-OL_1.jpg?v=1767860236",
+    "checkedAt": "2026-11-28T13:29:52.178Z"
+  },
+  "thebearhouse-spill": {
+    "id": "thebearhouse-spill",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/spill",
+    "store": "The Bear House",
+    "title": "Cream Oversize Floral Graphic Print Crew Neck T-shirt",
+    "name": "Cream crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SPILL-CR_1.jpg?v=1757338753",
+    "checkedAt": "2026-11-28T13:29:52.178Z"
+  },
+  "thebearhouse-smudge": {
+    "id": "thebearhouse-smudge",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/smudge",
+    "store": "The Bear House",
+    "title": "Peach Oversize Graphic Print Crew Neck T-shirt",
+    "name": "Crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SMUDGE-PC_1.jpg?v=1757338839",
+    "checkedAt": "2026-11-28T13:29:52.196Z"
+  },
+  "thebearhouse-clad-1": {
+    "id": "thebearhouse-clad-1",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/clad-1",
+    "store": "The Bear House",
+    "title": "Light Blue Oversized Crew Neck T-Shirt with “Simple Moments” Text and Floral Back Print",
+    "name": "Light blue crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-CLAD-GR_1.jpg?v=1761652598",
+    "checkedAt": "2026-11-28T13:29:52.197Z"
+  },
+  "thebearhouse-sakah-wh": {
+    "id": "thebearhouse-sakah-wh",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sakah-wh",
+    "store": "The Bear House",
+    "title": "White Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "White neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SAKAH-WH_1.jpg?v=1767952027",
+    "checkedAt": "2026-11-28T13:29:52.197Z"
+  },
+  "thebearhouse-thrum-bk": {
+    "id": "thebearhouse-thrum-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/thrum-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Crew Neck Typography Logo Print Casual T-Shirt",
+    "name": "Black logo print t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-THRUM-BK__1.jpg?v=1776334951",
+    "checkedAt": "2026-11-28T13:29:52.198Z"
+  },
+  "thebearhouse-quand-bg": {
+    "id": "thebearhouse-quand-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/quand-bg",
+    "store": "The Bear House",
+    "title": "Beige Oversized Crew Neck T-Shirt with Trendy Flap Pocket Detail",
+    "name": "Beige oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-QUAND-BG_1.jpg?v=1762252839",
+    "checkedAt": "2026-11-28T13:29:52.198Z"
+  },
+  "thebearhouse-palix-bk": {
+    "id": "thebearhouse-palix-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/palix-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Crew Neck T-Shirt with Tonal Embroidered",
+    "name": "Black oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-PALIX-BK_1.jpg?v=1781762806",
+    "checkedAt": "2026-11-28T13:29:52.206Z"
+  },
+  "thebearhouse-giza-1": {
+    "id": "thebearhouse-giza-1",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/giza-1",
+    "store": "The Bear House",
+    "title": "Grey Oversized Crew Neck T-Shirt with Abstract Leaf Graphic Print",
+    "name": "Grey oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-GIZA-GY_1_1aeba042-38da-408c-8873-404c193b99a6.jpg?v=1760077984",
+    "checkedAt": "2026-11-28T13:29:52.215Z"
+  },
+  "thebearhouse-sing": {
+    "id": "thebearhouse-sing",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sing",
+    "store": "The Bear House",
+    "title": "Lavender Oversized T-Shirt with “Serene Horizons” Front and Artistic Back Print",
+    "name": "Lavender oversized t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-SING-PL_1.jpg?v=1761636133",
+    "checkedAt": "2026-11-28T13:29:52.216Z"
+  },
+  "thebearhouse-bril-cr": {
+    "id": "thebearhouse-bril-cr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bril-cr",
+    "store": "The Bear House",
+    "title": "Cream Relax Fit Crew Neck T-Shirt with Embroidered Floral & “Le Soleil” Detail",
+    "name": "Cream crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-BRIL-CR_1.jpg?v=1769685718",
+    "checkedAt": "2026-11-28T13:29:52.217Z"
+  },
+  "thebearhouse-stero": {
+    "id": "thebearhouse-stero",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/stero",
+    "store": "The Bear House",
+    "title": "Beige Oversized Crew Neck T-Shirt with “Untamed” Text and Tonal Leaf Graphic on Back",
+    "name": "Beige oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-STERO-CR_1.jpg?v=1762246776",
+    "checkedAt": "2026-11-28T13:29:52.226Z"
+  },
+  "thebearhouse-coast": {
+    "id": "thebearhouse-coast",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/coast",
+    "store": "The Bear House",
+    "title": "Navy Oversized Crew Neck T-Shirt with “El Pueblo” Chest Print & Arched Graphic Back",
+    "name": "Navy oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-COAST-BL_1.jpg?v=1759139598",
+    "checkedAt": "2026-11-28T13:29:52.226Z"
+  },
+  "thebearhouse-want": {
+    "id": "thebearhouse-want",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/want",
+    "store": "The Bear House",
+    "title": "Light Grey Oversized Crew Neck T-Shirt with Eye Graphic and Typography Print on Back",
+    "name": "Light grey crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-WANT-GY_1.jpg?v=1761650415",
+    "checkedAt": "2026-11-28T13:29:52.227Z"
+  },
+  "thebearhouse-wave": {
+    "id": "thebearhouse-wave",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/wave",
+    "store": "The Bear House",
+    "title": "Beige Oversized Crew Neck T-Shirt with Hôtel Du Bear Keychain Graphic Print",
+    "name": "Beige oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-WAVE-BG_1.jpg?v=1761630956",
+    "checkedAt": "2026-11-28T13:29:52.228Z"
+  },
+  "thebearhouse-ryol": {
+    "id": "thebearhouse-ryol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ryol",
+    "store": "The Bear House",
+    "title": "Grey Oversized Crew Neck T-Shirt with Gradient Tonal Leopard Print",
+    "name": "Grey oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-RYOL-GY_1_29be6e09-3775-4c1f-80de-a2e7a540a8f9.jpg?v=1758891037",
+    "checkedAt": "2026-11-28T13:29:52.236Z"
+  },
+  "thebearhouse-lorin": {
+    "id": "thebearhouse-lorin",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lorin",
+    "store": "The Bear House",
+    "title": "Olive Oversized Crew Neck T-Shirt with “BEAR” Text and Leopard Graphic Print",
+    "name": "Olive oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DSC05002.jpg?v=1762334294",
+    "checkedAt": "2026-11-28T13:29:52.236Z"
+  },
+  "thebearhouse-taxus-bk": {
+    "id": "thebearhouse-taxus-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/taxus-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Crew Neck Bear Typography Print T-shirt",
+    "name": "Black typography print t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-TAXUS-BK_2.jpg?v=1784198835",
+    "checkedAt": "2026-11-28T13:29:52.237Z"
+  },
+  "thebearhouse-biche-bk": {
+    "id": "thebearhouse-biche-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/biche-bk",
+    "store": "The Bear House",
+    "title": "Black Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Black neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-BICHE-BK_1.webp?v=1779961329",
+    "checkedAt": "2026-11-28T13:29:52.246Z"
+  },
+  "thebearhouse-mali-bl": {
+    "id": "thebearhouse-mali-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/mali-bl",
+    "store": "The Bear House",
+    "title": "Navy Oversized Crew Neck Sporty Casual T-Shirt",
+    "name": "Navy neck sporty t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-MALI-BL_1.jpg?v=1770719579",
+    "checkedAt": "2026-11-28T13:29:52.246Z"
+  },
+  "thebearhouse-lerom": {
+    "id": "thebearhouse-lerom",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/lerom",
+    "store": "The Bear House",
+    "title": "Grey Oversized Crew Neck T-Shirt with “Untamed” Text and Tonal Leaf Graphic on Back",
+    "name": "Grey oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-LEROM-GY_1.jpg?v=1762252633",
+    "checkedAt": "2026-11-28T13:29:52.247Z"
+  },
+  "thebearhouse-molo": {
+    "id": "thebearhouse-molo",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/molo",
+    "store": "The Bear House",
+    "title": "Olive Crew Neck Oversized T-Shirt with All-Over Tropical Print",
+    "name": "Olive crew neck oversized t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-MOLO-OL_1.jpg?v=1761651391",
+    "checkedAt": "2026-11-28T13:29:52.247Z"
+  },
+  "thebearhouse-toyam": {
+    "id": "thebearhouse-toyam",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/toyam",
+    "store": "The Bear House",
+    "title": "Black Oversized T-Shirt with Floral Embroidery and Quote Print on Sleeve",
+    "name": "Black oversized t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-TOYAM-BK_1.jpg?v=1761649107",
+    "checkedAt": "2026-11-28T13:29:52.248Z"
+  },
+  "thebearhouse-orka": {
+    "id": "thebearhouse-orka",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/orka",
+    "store": "The Bear House",
+    "title": "White Crew Neck Oversized T-Shirt with “Unseen Magic” Graphic Print on Back",
+    "name": "White crew neck oversized t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-ORKA-CR_1.jpg?v=1761632782",
+    "checkedAt": "2026-11-28T13:29:52.297Z"
+  },
+  "thebearhouse-almo": {
+    "id": "thebearhouse-almo",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/almo",
+    "store": "The Bear House",
+    "title": "Cream Crew Neck Oversized T-Shirt with All-Over Tropical Print",
+    "name": "Cream crew neck oversized t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-ALMO-CR_1.jpg?v=1761286756",
+    "checkedAt": "2026-11-28T13:29:52.298Z"
+  },
+  "thebearhouse-cayo-1": {
+    "id": "thebearhouse-cayo-1",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/cayo-1",
+    "store": "The Bear House",
+    "title": "Cream Oversized Crew Neck T-Shirt with Abstract Face Front & Motivational Back Print",
+    "name": "Cream oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TSH-CAYO-CR_1.jpg?v=1759138967",
+    "checkedAt": "2026-11-28T13:29:52.305Z"
+  },
+  "thebearhouse-spoy": {
+    "id": "thebearhouse-spoy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/spoy",
+    "store": "The Bear House",
+    "title": "Brown Oversized Crew Neck T-Shirt with Gradient Tonal Leopard Print",
+    "name": "Brown oversized crew neck t-shirt",
+    "type": "oversized-tee",
+    "category": "top",
+    "tags": [
+      "oversized-tee"
+    ],
+    "price": 999,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SPOY_2.jpg?v=1762334131",
+    "checkedAt": "2026-11-28T13:29:52.327Z"
+  },
+  "thebearhouse-carbonne-bk": {
+    "id": "thebearhouse-carbonne-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/carbonne-bk",
+    "store": "The Bear House",
+    "title": "Black Solid Loose Fit Utility Cargo",
+    "name": "Black fit utility cargo",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-CARBONNE-BK-32_1.webp?v=1788939250",
+    "checkedAt": "2026-11-28T13:29:53.243Z"
+  },
+  "thebearhouse-carbonne-br": {
+    "id": "thebearhouse-carbonne-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/carbonne-br",
+    "store": "The Bear House",
+    "title": "Brown Solid Loose Fit Utility Cargo",
+    "name": "Brown fit utility cargo",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-CARBONNE-BR-32_1.webp?v=1788938917",
+    "checkedAt": "2026-11-28T13:29:53.246Z"
+  },
+  "thebearhouse-carbonne-bg": {
+    "id": "thebearhouse-carbonne-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/carbonne-bg",
+    "store": "The Bear House",
+    "title": "Beige Solid Loose Fit Utility Cargo",
+    "name": "Beige fit utility cargo",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-CARBONNE-BG-32_1.webp?v=1788938053",
+    "checkedAt": "2026-11-28T13:29:53.247Z"
+  },
+  "thebearhouse-carbonne-ol": {
+    "id": "thebearhouse-carbonne-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/carbonne-ol",
+    "store": "The Bear House",
+    "title": "Olive Solid Loose Fit Utility Cargo",
+    "name": "Olive fit utility cargo",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-CARBONNE-OL-32_1.webp?v=1788939085",
+    "checkedAt": "2026-11-28T13:29:53.247Z"
+  },
+  "thebearhouse-scove-ol": {
+    "id": "thebearhouse-scove-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/scove-ol",
+    "store": "The Bear House",
+    "title": "Olive Solid Straight Fit Cargo Trousers with Flap Pockets",
+    "name": "Olive solid cargo trousers",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-SCOVE-OL_1.jpg?v=1776664985",
+    "checkedAt": "2026-11-28T13:29:53.248Z"
+  },
+  "thebearhouse-car-sara": {
+    "id": "thebearhouse-car-sara",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/car-sara",
+    "store": "The Bear House",
+    "title": "Grey Textured Waffle Weave Straight Fit Cargo Pants with Flap Pockets",
+    "name": "Grey weave cargo pants",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-SARA-GY_1.jpg?v=1757335119",
+    "checkedAt": "2026-11-28T13:29:53.266Z"
+  },
+  "thebearhouse-harlow-dkbr": {
+    "id": "thebearhouse-harlow-dkbr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/harlow-dkbr",
+    "store": "The Bear House",
+    "title": "Dark Brown Solid Relax Fit Utility Cargo with Panel Stitch Detailing",
+    "name": "Dark brown fit utility cargo",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-HARLOW-DKBR_2.jpg?v=1784113895",
+    "checkedAt": "2026-11-28T13:29:53.266Z"
+  },
+  "thebearhouse-canbe-gy": {
+    "id": "thebearhouse-canbe-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/canbe-gy",
+    "store": "The Bear House",
+    "title": "Light Brown Solid Straight Fit Cargo Trousers with Flap Pockets",
+    "name": "Light brown solid cargo trousers",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-CANBE-GY_1.jpg?v=1776665184",
+    "checkedAt": "2026-11-28T13:29:53.276Z"
+  },
+  "thebearhouse-dinbe": {
+    "id": "thebearhouse-dinbe",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/dinbe",
+    "store": "The Bear House",
+    "title": "Black Solid Straight Fit Cargo Trousers with Flap Pockets",
+    "name": "Black solid cargo trousers",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-DINBE-BK_1.jpg?v=1763027284",
+    "checkedAt": "2026-11-28T13:29:53.277Z"
+  },
+  "thebearhouse-athen": {
+    "id": "thebearhouse-athen",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/athen",
+    "store": "The Bear House",
+    "title": "Beige Solid Straight Fit Cargo Trousers with Flap Pockets",
+    "name": "Beige solid cargo trousers",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-ATHEN-BG_1.jpg?v=1763027126",
+    "checkedAt": "2026-11-28T13:29:53.286Z"
+  },
+  "thebearhouse-zagry-bl": {
+    "id": "thebearhouse-zagry-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/zagry-bl",
+    "store": "The Bear House",
+    "title": "Navy Solid Straight Fit Cargo Trousers with Flap Pockets",
+    "name": "Navy solid cargo trousers",
+    "type": "cargo",
+    "category": "bottom",
+    "tags": [
+      "cargo"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/CAR-ZAGRY-BL__1.jpg?v=1775135897",
+    "checkedAt": "2026-11-28T13:29:53.286Z"
+  },
+  "thebearhouse-suede-db": {
+    "id": "thebearhouse-suede-db",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/suede-db",
+    "store": "The Bear House",
+    "title": "Mid Blue Mid-Rise Relaxed Fit Jeans with Light Fade",
+    "name": "Mid blue mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-SUEDE-DB-SIS-32_1.webp?v=1786095776",
+    "checkedAt": "2026-11-28T13:29:54.226Z"
+  },
+  "thebearhouse-elyra-lb": {
+    "id": "thebearhouse-elyra-lb",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/elyra-lb",
+    "store": "The Bear House",
+    "title": "Light Blue Acid-Wash Mid-Rise Relaxed Fit Jeans",
+    "name": "Light blue acid-wash mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-ELYRA-LB1.webp?v=1785304433",
+    "checkedAt": "2026-11-28T13:29:54.226Z"
+  },
+  "thebearhouse-kelra-mb": {
+    "id": "thebearhouse-kelra-mb",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/kelra-mb",
+    "store": "The Bear House",
+    "title": "Mid Blue Mid Fade Washed Mid-Rise Relaxed Fit Jeans",
+    "name": "Washed mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-KELRA-MB_2.jpg?v=1784113364",
+    "checkedAt": "2026-11-28T13:29:54.227Z"
+  },
+  "thebearhouse-hareo-mb": {
+    "id": "thebearhouse-hareo-mb",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/hareo-mb",
+    "store": "The Bear House",
+    "title": "Mid Blue Washed Mid-Rise Relaxed Fit Jeans with Light Fade",
+    "name": "Mid blue washed mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-HAREO-MB_2.jpg?v=1784113068",
+    "checkedAt": "2026-11-28T13:29:54.227Z"
+  },
+  "thebearhouse-sleet-mb": {
+    "id": "thebearhouse-sleet-mb",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sleet-mb",
+    "store": "The Bear House",
+    "title": "Mid Blue Washed Mid-Rise Relaxed Fit Jeans",
+    "name": "Mid blue washed mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-SLEET-MB_2.jpg?v=1784111325",
+    "checkedAt": "2026-11-28T13:29:54.227Z"
+  },
+  "thebearhouse-wavel-mb": {
+    "id": "thebearhouse-wavel-mb",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/wavel-mb",
+    "store": "The Bear House",
+    "title": "Mid Blue Mid-Rise Relaxed Fit Jeans",
+    "name": "Mid blue mid-rise jeans",
+    "type": "jeans",
+    "category": "bottom",
+    "tags": [
+      "jeans"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/DNM-WAVEL-MB_2.jpg?v=1780905993",
+    "checkedAt": "2026-11-28T13:29:54.228Z"
+  },
+  "thebearhouse-talon-bl": {
+    "id": "thebearhouse-talon-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/talon-bl",
+    "store": "The Bear House",
+    "title": "Blue Solid Elevated Regular Fit Casual Trousers",
+    "name": "Blue solid elevated trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-TALON-BL_1.webp?v=1787728986",
+    "checkedAt": "2026-11-28T13:29:55.452Z"
+  },
+  "thebearhouse-looper-ol": {
+    "id": "thebearhouse-looper-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/looper-ol",
+    "store": "The Bear House",
+    "title": "Olive Solid Loose Fit Casual Trouser",
+    "name": "Olive solid loose fit trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LOOPER-OL-32_1.webp?v=1785152480",
+    "checkedAt": "2026-11-28T13:29:55.453Z"
+  },
+  "thebearhouse-looper-mt": {
+    "id": "thebearhouse-looper-mt",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/looper-mt",
+    "store": "The Bear House",
+    "title": "Mustard Solid Loose Fit Casual Trouser",
+    "name": "Mustard solid loose fit trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LOOPER-MT-32_1.webp?v=1785309119",
+    "checkedAt": "2026-11-28T13:29:55.454Z"
+  },
+  "thebearhouse-talon-ol": {
+    "id": "thebearhouse-talon-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/talon-ol",
+    "store": "The Bear House",
+    "title": "Olive Solid Elevated Regular Fit Casual Trousers",
+    "name": "Olive solid elevated trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-TALON-OL_1.webp?v=1787729350",
+    "checkedAt": "2026-11-28T13:29:55.454Z"
+  },
+  "thebearhouse-looper-bg": {
+    "id": "thebearhouse-looper-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/looper-bg",
+    "store": "The Bear House",
+    "title": "Beige Solid Loose Fit Casual Trouser",
+    "name": "Beige solid loose fit trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LOOPER-BG-32_1.webp?v=1785151576",
+    "checkedAt": "2026-11-28T13:29:55.455Z"
+  },
+  "thebearhouse-looper-br": {
+    "id": "thebearhouse-looper-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/looper-br",
+    "store": "The Bear House",
+    "title": "Brown Solid Loose Fit Casual Trouser",
+    "name": "Brown solid loose fit trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LOOPER-BR-32_1.webp?v=1785152142",
+    "checkedAt": "2026-11-28T13:29:55.456Z"
+  },
+  "thebearhouse-looper-ny": {
+    "id": "thebearhouse-looper-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/looper-ny",
+    "store": "The Bear House",
+    "title": "Navy Solid Loose Fit Casual Trouser",
+    "name": "Navy solid loose fit trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LOOPER-NY-32_1.webp?v=1785152309",
+    "checkedAt": "2026-11-28T13:29:55.456Z"
+  },
+  "thebearhouse-brinj-ny": {
+    "id": "thebearhouse-brinj-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/brinj-ny",
+    "store": "The Bear House",
+    "title": "Navy Textured Stripe Regular Fit Casual Trousers",
+    "name": "Navy textured stripe trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-BRINJ-NY_1.webp?v=1789026701",
+    "checkedAt": "2026-11-28T13:29:55.457Z"
+  },
+  "thebearhouse-brinj-cr": {
+    "id": "thebearhouse-brinj-cr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/brinj-cr",
+    "store": "The Bear House",
+    "title": "Cream Textured Stripe Regular Fit Casual Trousers",
+    "name": "Cream textured stripe trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-BRINJ-CR_1.webp?v=1789026408",
+    "checkedAt": "2026-11-28T13:29:55.457Z"
+  },
+  "thebearhouse-ledge-ny": {
+    "id": "thebearhouse-ledge-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ledge-ny",
+    "store": "The Bear House",
+    "title": "Navy Solid Flat Front Straight Fit Casual Trousers",
+    "name": "Navy solid flat front trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LEDGE-NY_1.webp?v=1788876114",
+    "checkedAt": "2026-11-28T13:29:55.506Z"
+  },
+  "thebearhouse-poise-ny": {
+    "id": "thebearhouse-poise-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/poise-ny",
+    "store": "The Bear House",
+    "title": "Elevated Navy Solid Regular Fit Casual Trousers with Classic Denim Look",
+    "name": "Elevated navy solid trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-POISE-NY_1.webp?v=1780041897",
+    "checkedAt": "2026-11-28T13:29:55.506Z"
+  },
+  "thebearhouse-zimb-ny": {
+    "id": "thebearhouse-zimb-ny",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/zimb-ny",
+    "store": "The Bear House",
+    "title": "Navy Regular Fit Pleated Casual Trousers with Adjustable Waist Tabs",
+    "name": "Navy pleated trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-ZIMB-NY_1.webp?v=1786432580",
+    "checkedAt": "2026-11-28T13:29:55.507Z"
+  },
+  "thebearhouse-poise-bk": {
+    "id": "thebearhouse-poise-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/poise-bk",
+    "store": "The Bear House",
+    "title": "Elevated Black Solid Regular Fit Casual Trousers with Classic Denim Look",
+    "name": "Elevated black solid trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-POISE-BK_1.webp?v=1780663095",
+    "checkedAt": "2026-11-28T13:29:55.507Z"
+  },
+  "thebearhouse-chili-bk": {
+    "id": "thebearhouse-chili-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/chili-bk",
+    "store": "The Bear House",
+    "title": "Black Textured Relax Fit Casual Trousers with Concealed Drawstring",
+    "name": "Black textured relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-CHILI-BK1.webp?v=1785153423",
+    "checkedAt": "2026-11-28T13:29:55.508Z"
+  },
+  "thebearhouse-nival-gy": {
+    "id": "thebearhouse-nival-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/nival-gy",
+    "store": "The Bear House",
+    "title": "Grey Solid Regular Fit Casual Trousers with Concealed Drawstring",
+    "name": "Grey solid trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-NIVAL-GY_1.webp?v=1780308115",
+    "checkedAt": "2026-11-28T13:29:55.508Z"
+  },
+  "thebearhouse-bees-br": {
+    "id": "thebearhouse-bees-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bees-br",
+    "store": "The Bear House",
+    "title": "Brown Solid Relax Fit Casual Trousers with Utility Pocket",
+    "name": "Brown solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-BEES-BR_1.webp?v=1785150836",
+    "checkedAt": "2026-11-28T13:29:55.508Z"
+  },
+  "thebearhouse-chili-bg": {
+    "id": "thebearhouse-chili-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/chili-bg",
+    "store": "The Bear House",
+    "title": "Beige Textured Relax Fit Casual Trousers with Concealed Drawstring",
+    "name": "Beige textured relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-CHILI-BG1.webp?v=1785153137",
+    "checkedAt": "2026-11-28T13:29:55.509Z"
+  },
+  "thebearhouse-capsi-bg": {
+    "id": "thebearhouse-capsi-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/capsi-bg",
+    "store": "The Bear House",
+    "title": "Beige Solid Slim Fit Casual Trousers",
+    "name": "Beige solid trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-CAPSI-BG_1.webp?v=1780912230",
+    "checkedAt": "2026-11-28T13:29:55.509Z"
+  },
+  "thebearhouse-ludek-bl": {
+    "id": "thebearhouse-ludek-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ludek-bl",
+    "store": "The Bear House",
+    "title": "Navy Solid Pleated Regular Fit Formal Trousers",
+    "name": "Navy solid pleated formal trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LUDEK-BL_1.webp?v=1786431092",
+    "checkedAt": "2026-11-28T13:29:55.509Z"
+  },
+  "thebearhouse-ledge-gy": {
+    "id": "thebearhouse-ledge-gy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ledge-gy",
+    "store": "The Bear House",
+    "title": "Grey Solid Flat Front Straight Fit Casual Trousers",
+    "name": "Grey solid flat front trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-LEDGE-GY_1.webp?v=1788875501",
+    "checkedAt": "2026-11-28T13:29:55.510Z"
+  },
+  "thebearhouse-aurel-bl": {
+    "id": "thebearhouse-aurel-bl",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/aurel-bl",
+    "store": "The Bear House",
+    "title": "Dark Blue Regular Fit Pleated Casual Trousers",
+    "name": "Dark blue pleated trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-AUREL-BL_1.webp?v=1786528557",
+    "checkedAt": "2026-11-28T13:29:55.510Z"
+  },
+  "thebearhouse-ensly-bk": {
+    "id": "thebearhouse-ensly-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/ensly-bk",
+    "store": "The Bear House",
+    "title": "Black Striped Regular Fit Casual Trousers with Front Pleat",
+    "name": "Black striped trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-ENSLY-BK_1.webp?v=1786431353",
+    "checkedAt": "2026-11-28T13:29:55.510Z"
+  },
+  "thebearhouse-doraha-ol": {
+    "id": "thebearhouse-doraha-ol",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/doraha-ol",
+    "store": "The Bear House",
+    "title": "Elevated Straight Fit Olive Viscose Trousers",
+    "name": "Elevated olive viscose trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-DORAHA-OL_2.jpg?v=1780657955",
+    "checkedAt": "2026-11-28T13:29:55.511Z"
+  },
+  "thebearhouse-bilthe": {
+    "id": "thebearhouse-bilthe",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bilthe",
+    "store": "The Bear House",
+    "title": "Men Black Solid Slim Fit Formal Trouser",
+    "name": "Black solid formal trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-BILTHE-BK_1.jpg?v=1753865855",
+    "checkedAt": "2026-11-28T13:29:55.511Z"
+  },
+  "thebearhouse-arsino-br": {
+    "id": "thebearhouse-arsino-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/arsino-br",
+    "store": "The Bear House",
+    "title": "Brown Textured Regular Fit Casual Trousers with Front Pleats",
+    "name": "Brown textured trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-ARSINO-BR_1.webp?v=1787727873",
+    "checkedAt": "2026-11-28T13:29:55.511Z"
+  },
+  "thebearhouse-oren-bk": {
+    "id": "thebearhouse-oren-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/oren-bk",
+    "store": "The Bear House",
+    "title": "Black Woven Design Regular Fit Formal Trousers with Front Pleat",
+    "name": "Black woven design formal trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 7,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-OREN-BK_1.webp?v=1780662847",
+    "checkedAt": "2026-11-28T13:29:55.512Z"
+  },
+  "thebearhouse-susak": {
+    "id": "thebearhouse-susak",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/susak",
+    "store": "The Bear House",
+    "title": "Men Green Vertical Striped Tapered Slim Fit Chinos",
+    "name": "Green vertical striped tapered chinos",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-SUSAK-GR_1.jpg?v=1753865382",
+    "checkedAt": "2026-11-28T13:29:55.512Z"
+  },
+  "thebearhouse-zyren-br": {
+    "id": "thebearhouse-zyren-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/zyren-br",
+    "store": "The Bear House",
+    "title": "Brown Solid Relax Fit Casual Trousers with Concealed Drawstring",
+    "name": "Brown solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-ZYREN-BR1.webp?v=1785150284",
+    "checkedAt": "2026-11-28T13:29:55.513Z"
+  },
+  "thebearhouse-rehan-bk": {
+    "id": "thebearhouse-rehan-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/rehan-bk",
+    "store": "The Bear House",
+    "title": "Black & White Woven Check Regular Fit Pleated Formal Trousers",
+    "name": "Black & white pleated formal trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-REHAN-BK_1.webp?v=1780664140",
+    "checkedAt": "2026-11-28T13:29:55.513Z"
+  },
+  "thebearhouse-hamod-bk": {
+    "id": "thebearhouse-hamod-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/hamod-bk",
+    "store": "The Bear House",
+    "title": "Black Straight Fit Solid Smart Casual Trousers with Front Pleats",
+    "name": "Black solid smart trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-HAMOD-BK_1.jpg?v=1771308107",
+    "checkedAt": "2026-11-28T13:29:55.513Z"
+  },
+  "thebearhouse-tahit": {
+    "id": "thebearhouse-tahit",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tahit",
+    "store": "The Bear House",
+    "title": "Peach Solid Relax Fit Casual Trousers with Hidden Drawstring",
+    "name": "Peach solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-TAHIT-PC_1.jpg?v=1764066100",
+    "checkedAt": "2026-11-28T13:29:55.514Z"
+  },
+  "thebearhouse-espen": {
+    "id": "thebearhouse-espen",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/espen",
+    "store": "The Bear House",
+    "title": "Navy Blue Slim Fit Formal Trouser with Elastic Waistband",
+    "name": "Navy blue formal trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-ESPEN-BL_1.jpg?v=1757335528",
+    "checkedAt": "2026-11-28T13:29:55.514Z"
+  },
+  "thebearhouse-silba": {
+    "id": "thebearhouse-silba",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/silba",
+    "store": "The Bear House",
+    "title": "Men Black Vertical Striped Tapered Slim Fit Chinos",
+    "name": "Black vertical striped tapered chinos",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-SILBA-BK_1.jpg?v=1753865376",
+    "checkedAt": "2026-11-28T13:29:55.519Z"
+  },
+  "thebearhouse-unije": {
+    "id": "thebearhouse-unije",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/unije",
+    "store": "The Bear House",
+    "title": "Men Maroon Vertical Striped Tapered Slim Fit Chinos",
+    "name": "Maroon vertical striped tapered chinos",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-UNIJE-MR_1.jpg?v=1753865379",
+    "checkedAt": "2026-11-28T13:29:55.519Z"
+  },
+  "thebearhouse-confeti": {
+    "id": "thebearhouse-confeti",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/confeti",
+    "store": "The Bear House",
+    "title": "Men Grey Solid Slim Fit Formal Trouser",
+    "name": "Grey solid formal trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-CONFETI-GY_1.jpg?v=1753865865",
+    "checkedAt": "2026-11-28T13:29:55.520Z"
+  },
+  "thebearhouse-caribov": {
+    "id": "thebearhouse-caribov",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/caribov",
+    "store": "The Bear House",
+    "title": "Men Grey Solid Slim Fit Polyester Blend Formal Trouser",
+    "name": "Grey blend formal trouser",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TBH-CARIBOV-GY_1.jpg?v=1753866669",
+    "checkedAt": "2026-11-28T13:29:55.521Z"
+  },
+  "thebearhouse-bees-bg": {
+    "id": "thebearhouse-bees-bg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bees-bg",
+    "store": "The Bear House",
+    "title": "Beige Solid Relax Fit Casual Trousers with Utility Pocket",
+    "name": "Beige solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-BEES-BG-32_1.webp?v=1785308586",
+    "checkedAt": "2026-11-28T13:29:55.521Z"
+  },
+  "thebearhouse-bees-gr": {
+    "id": "thebearhouse-bees-gr",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/bees-gr",
+    "store": "The Bear House",
+    "title": "Green Solid Relax Fit Casual Trousers with Utility Pocket",
+    "name": "Green solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-BEES-GR_1.webp?v=1785151301",
+    "checkedAt": "2026-11-28T13:29:55.523Z"
+  },
+  "thebearhouse-auryn-bk": {
+    "id": "thebearhouse-auryn-bk",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/auryn-bk",
+    "store": "The Bear House",
+    "title": "Black Solid Pleated Regular Fit Semi Casual Trousers",
+    "name": "Black solid pleated semi trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-AURYN-BK_1.webp?v=1786430481",
+    "checkedAt": "2026-11-28T13:29:55.523Z"
+  },
+  "thebearhouse-niokai-br": {
+    "id": "thebearhouse-niokai-br",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/niokai-br",
+    "store": "The Bear House",
+    "title": "Brown Solid Relax Fit Casual Trousers with Partially Elasticated Back Waistband",
+    "name": "Brown solid relax fit trousers",
+    "type": "trouser",
+    "category": "bottom",
+    "tags": [
+      "trouser"
+    ],
+    "price": 1299,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/TRO-NIOKAI-BR_1.jpg?v=1771939123",
+    "checkedAt": "2026-11-28T13:29:55.523Z"
+  },
+  "thebearhouse-heime": {
+    "id": "thebearhouse-heime",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/heime",
+    "store": "The Bear House",
+    "title": "Black Suede Lace-Up Sneakers with Contrast White Leather Detail",
+    "name": "Black suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-HEIME-BK-BLACK_7.jpg?v=1762341604",
+    "checkedAt": "2026-11-28T13:29:56.509Z"
+  },
+  "thebearhouse-spire": {
+    "id": "thebearhouse-spire",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/spire",
+    "store": "The Bear House",
+    "title": "Grey and White Suede Lace-Up Sneakers with Contrast Green Heel Detail",
+    "name": "Grey and white suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-SPIRE-GY-GREY_7.jpg?v=1762341721",
+    "checkedAt": "2026-11-28T13:29:56.510Z"
+  },
+  "thebearhouse-vinson": {
+    "id": "thebearhouse-vinson",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/vinson",
+    "store": "The Bear House",
+    "title": "Blue Suede Lace-Up Sneakers with Contrast Brown Leather Detail",
+    "name": "Blue suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-VINSON-BL-BLUE_7.jpg?v=1762341965",
+    "checkedAt": "2026-11-28T13:29:56.510Z"
+  },
+  "thebearhouse-crags": {
+    "id": "thebearhouse-crags",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/crags",
+    "store": "The Bear House",
+    "title": "Black Leather & Suede Lace-Up Sneakers with TPR Sole",
+    "name": "Black suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2474,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-CRAGS-BK_7.jpg?v=1765864351",
+    "checkedAt": "2026-11-28T13:29:56.511Z"
+  },
+  "thebearhouse-sprone": {
+    "id": "thebearhouse-sprone",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/sprone",
+    "store": "The Bear House",
+    "title": "Brown & White Suede Lace-Up Sneakers with Contrast Maroon Leather Detail",
+    "name": "Brown & white suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-SPRONE-MR_7.jpg?v=1765869282",
+    "checkedAt": "2026-11-28T13:29:56.628Z"
+  },
+  "thebearhouse-moreg": {
+    "id": "thebearhouse-moreg",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/moreg",
+    "store": "The Bear House",
+    "title": "White Leather & Suede Lace-Up Sneakers with TPR Sole",
+    "name": "White suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2474,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-MOREG-BG_8.jpg?v=1765866824",
+    "checkedAt": "2026-11-28T13:29:56.629Z"
+  },
+  "thebearhouse-zephy": {
+    "id": "thebearhouse-zephy",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/zephy",
+    "store": "The Bear House",
+    "title": "Black Suede Lace-Up Sneakers with Contrast White Leather Detail",
+    "name": "Black suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-ZEPHY-BLACK_7.jpg?v=1762342014",
+    "checkedAt": "2026-11-28T13:29:56.634Z"
+  },
+  "thebearhouse-tholow": {
+    "id": "thebearhouse-tholow",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/tholow",
+    "store": "The Bear House",
+    "title": "White & Red Leather & Suede Lace-Up Sneakers with TPR Sole",
+    "name": "White & red suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2474,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-THOLOW-CR_7.jpg?v=1765870137",
+    "checkedAt": "2026-11-28T13:29:56.634Z"
+  },
+  "thebearhouse-skarn": {
+    "id": "thebearhouse-skarn",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/skarn",
+    "store": "The Bear House",
+    "title": "Grey & White Suede Lace-Up Sneakers with Contrast Blue Leather Detail",
+    "name": "Grey & white suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-SKARN-BG_7.jpg?v=1765867371",
+    "checkedAt": "2026-11-28T13:29:56.635Z"
+  },
+  "thebearhouse-frost": {
+    "id": "thebearhouse-frost",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/frost",
+    "store": "The Bear House",
+    "title": "White Leather & Suede Lace-Up Sneakers with TPR Sole",
+    "name": "White suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2474,
+    "sizesInStock": 6,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-FROST-WH_8.jpg?v=1765865766",
+    "checkedAt": "2026-11-28T13:29:56.635Z"
+  },
+  "thebearhouse-eisfeld": {
+    "id": "thebearhouse-eisfeld",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/eisfeld",
+    "store": "The Bear House",
+    "title": "Grey Suede Lace-Up Sneakers with Contrast Black Leather Detail",
+    "name": "Grey suede lace-up sneakers",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2279,
+    "sizesInStock": 5,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-EISFELD-KH_7.jpg?v=1765865285",
+    "checkedAt": "2026-11-28T13:29:56.635Z"
+  },
+  "thebearhouse-kyofu": {
+    "id": "thebearhouse-kyofu",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/kyofu",
+    "store": "The Bear House",
+    "title": "Men's Blue Modern Minimalistic Sneaker with Suede Panels",
+    "name": "Blue modern minimalistic sneaker",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 2099,
+    "sizesInStock": 4,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-KYOFU-BL_6_177ca239-4944-4767-9ccc-102e159399c7.jpg?v=1757343171",
+    "checkedAt": "2026-11-28T13:29:56.636Z"
+  },
+  "thebearhouse-rare": {
+    "id": "thebearhouse-rare",
+    "timesUsed": 0,
+    "source": "shopify",
+    "url": "https://thebearhouse.com/products/rare",
+    "store": "The Bear House",
+    "title": "Men's Stylish Blue Sneakers for Casual Occasions",
+    "name": "Stylish blue sneakers for occasions",
+    "type": "sneaker",
+    "category": "footwear",
+    "tags": [
+      "sneaker"
+    ],
+    "price": 1949,
+    "sizesInStock": 3,
+    "inStock": true,
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0517/2939/9964/files/SHO-RARE-BL_6.jpg?v=1757343192",
+    "checkedAt": "2026-11-28T13:29:56.636Z"
   }
 }

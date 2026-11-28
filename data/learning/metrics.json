@@ -1,0 +1,25 @@
+{
+  "guess-the-price-polos": {
+    "mediaId": "18143962642725440",
+    "postedAt": "2026-11-28T13:36:49.811Z",
+    "snapshots": [
+      {
+        "at": "2026-11-28T13:36:51.543Z",
+        "ageH": 0,
+        "likes": 0,
+        "comments": 0,
+        "_limited": true,
+        "_error": "(#10) Application does not have permission for this action"
+      }
+    ],
+    "format": "guess",
+    "type": "polo",
+    "hookText": "POV: trying to guess if this polo is under ₹1,299",
+    "cap": 1299,
+    "items": 4,
+    "music": "audio_411cd6c8ff.mp3",
+    "hook": "pov",
+    "hashtags": "niche-3",
+    "voiceover": "off"
+  }
+}

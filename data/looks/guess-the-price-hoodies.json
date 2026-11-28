@@ -1,0 +1,91 @@
+{
+  "id": "guess-the-price-hoodies",
+  "kind": "guess",
+  "format": "guess",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Guess the price: hoodies",
+  "type": "hoodie",
+  "budget": 1999,
+  "hook": "Guess the price of these under ₹1,999 hoodies",
+  "subhook": "sahi guess karo",
+  "cta": "How many did you guess right? 👇",
+  "caption": "clean fits that look way more expensive than they are",
+  "hashtags": [
+    "hoodie",
+    "menswear",
+    "streetwear",
+    "budget",
+    "fashion"
+  ],
+  "hookStyle": "number",
+  "hashtagStyle": "mixed-5",
+  "voiceover": "off",
+  "mode": "board",
+  "fitImages": [],
+  "pricesCheckedAt": "2026-11-28T13:31:08.009Z",
+  "createdAt": "2026-11-28T13:31:08.009Z",
+  "items": [
+    {
+      "catalogId": "thebearhouse-odense",
+      "name": "Grey Solid Relax Fit Hoodie",
+      "why": "layer with a trench coat",
+      "store": "The Bear House",
+      "price": 1099,
+      "image": "catalog/thebearhouse-odense.jpg",
+      "url": "https://thebearhouse.com/products/odense",
+      "productTitle": "Grey Solid Relax Fit Hoodie",
+      "type": "hoodie"
+    },
+    {
+      "catalogId": "thebearhouse-emote",
+      "name": "Men Purple Solid Relaxed Fit Hoodie",
+      "why": "pair with dark wash denim",
+      "store": "The Bear House",
+      "price": 1259,
+      "image": "catalog/thebearhouse-emote.jpg",
+      "url": "https://thebearhouse.com/products/emote",
+      "productTitle": "Men Purple Solid Relaxed Fit Hoodie",
+      "type": "hoodie"
+    },
+    {
+      "catalogId": "thebearhouse-tarboke",
+      "name": "Beige Solid Relax Fit Pullover Hoodie",
+      "why": "style with casual trousers",
+      "store": "The Bear House",
+      "price": 1299,
+      "image": "catalog/thebearhouse-tarboke.jpg",
+      "url": "https://thebearhouse.com/products/tarboke",
+      "productTitle": "Beige Solid Relax Fit Pullover Hoodie with Kangaroo Pocket",
+      "type": "hoodie"
+    },
+    {
+      "catalogId": "thebearhouse-shell",
+      "name": "Men Grey Printed Relaxed Fit Hoodie",
+      "why": "wear with relaxed joggers",
+      "store": "The Bear House",
+      "price": 1349,
+      "image": "catalog/thebearhouse-shell.jpg",
+      "url": "https://thebearhouse.com/products/shell",
+      "productTitle": "Men Grey Printed Relaxed Fit Hoodie",
+      "type": "hoodie"
+    }
+  ],
+  "flags": [],
+  "music": "music/audio_2dd00a3bbb.mp3",
+  "coverSeconds": 16.73,
+  "qc": {
+    "pass": true,
+    "score": 9,
+    "issues": [],
+    "improvements": [
+      "Ensure the final reveal grid has text that is easily legible on smaller mobile screens.",
+      "Consider adding a subtle progress bar or number counter to improve viewer retention across slides."
+    ],
+    "at": "2026-11-28T13:33:35.877Z"
+  },
+  "videoUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/guess-the-price-hoodies.mp4",
+  "coverUrl": "https://github.com/Paras0544/Ai-automation-project/releases/download/reels/guess-the-price-hoodies.cover.jpg",
+  "postCaption": "clean fits that look way more expensive than they are\n\n1. Grey Solid Relax Fit Hoodie – ₹1,099 (The Bear House)\n2. Men Purple Solid Relaxed Fit Hoodie – ₹1,259 (The Bear House)\n3. Beige Solid Relax Fit Pullover Hoodie – ₹1,299 (The Bear House)\n4. Men Grey Printed Relaxed Fit Hoodie – ₹1,349 (The Bear House)\nPrices checked 28 Nov; they can change.\n\nHow many did you guess right? 👇\n\n#affiliate · I may earn a small commission from these links.\n#hoodie #menswear #streetwear #budget #fashion",
+  "publishedAt": "2026-11-28T13:33:38.172Z"
+}
