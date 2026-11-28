@@ -284,6 +284,20 @@ fs.writeFileSync(
   const base = (cfg.siteUrl || "https://wellpriced.pages.dev").replace(/\/$/, "");
   const urls = ["/", "/guides/", "/tools/", "/prices/", "/about/", ...priceItems.map((p) => `/prices/${p.slug}/`), ...tools.map((t) => `/tools/${t.slug}/`), ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${base}${u}</loc></url>`).join("")}</urlset>\n`);
+  // RSS feed: Pinterest auto-publishes each new product reel as a pin (Settings → Bulk create Pins → Auto-publish)
+  const xesc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const feedLooks = looks
+    .filter((l) => isProduct(l) && l.coverUrl && !l.retired && l.qc?.pass !== false)
+    .sort((a, b) => String(b.publishedAt || "").localeCompare(String(a.publishedAt || "")))
+    .slice(0, 30);
+  const rssItems = feedLooks.map((l) => {
+    const desc = `${l.hook}. ${l.items.map((i) => `${i.name} ₹${i.price}`).join(" · ")}. Prices checked ${String(l.pricesCheckedAt || "").slice(0, 10)}. #affiliate`;
+    return `<item><title>${xesc(l.occasion || l.hook)}</title><link>${base}/l/${l.id}/</link><guid isPermaLink="true">${base}/l/${l.id}/</guid><pubDate>${new Date(l.publishedAt || l.createdAt || Date.now()).toUTCString()}</pubDate><description>${xesc(desc)}</description><enclosure url="${xesc(l.coverUrl)}" type="image/jpeg" length="0"/><media:content url="${xesc(l.coverUrl)}" medium="image" type="image/jpeg"/></item>`;
+  });
+  fs.writeFileSync(
+    path.join(outDir, "feed.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title>Well Priced: budget menswear finds</title><link>${base}/</link><description>Trendy menswear under a price cap, with real, checked prices.</description><language>en-in</language>${rssItems.join("")}</channel></rss>\n`,
+  );
   fs.writeFileSync(path.join(outDir, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /post/\nSitemap: ${base}/sitemap.xml\n`);
 }
 
