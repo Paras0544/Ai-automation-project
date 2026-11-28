@@ -61,7 +61,7 @@ h1{font-size:26px;font-weight:normal;margin:14px 0 4px}.sub{font:15px system-ui,
 
 const page = (title, body, desc = "Real outfits for Indian men, with real prices.") => `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
+<title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="google-site-verification" content="EoDFCu0W-gHgRXJYsT1iUOzaAC0_rTg1bAypEUpJi_8" /><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
 <p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/tools/">Tools</a> · <a href="/prices/">Price tracker</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
@@ -292,6 +292,7 @@ fs.writeFileSync(
     "About Well Priced, men's outfits with real prices",
   ),
 );
+fs.writeFileSync(path.join(outDir, "google6b60ae15a0959df0.html"), "google-site-verification: google6b60ae15a0959df0.html");
 fs.writeFileSync(path.join(outDir, "_headers"), "/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n");
 const earning = looks.flatMap((l) => l.items).filter((i) => affiliateUrl(i.url, cfg) !== i.url).length;
 const allItems = looks.reduce((s, l) => s + l.items.length, 0);
