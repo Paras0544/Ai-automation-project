@@ -105,10 +105,17 @@ for (const l of looks) {
 }
 // ---- posting queue (for posting from your phone until auto-posting is approved) ----
 {
+  const postedLog = (() => {
+    try {
+      return JSON.parse(fs.readFileSync(path.join(paths.root, "data", "learning", "posted.json"), "utf8"));
+    } catch {
+      return {};
+    }
+  })();
   const queue = looks.filter((l) => l.videoUrl);
   const rows = queue
     .map(
-      (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${inr(total(l))}</div>
+      (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${inr(total(l))}${postedLog[l.id]?.instagram ? ' · <span class="accent">✓ auto-posted to Instagram</span>' : ""}</div>
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
 <a class="buy" href="${esc(l.videoUrl)}" download>Download video</a>
 <button class="buy" onclick="copyCap(this)">Copy Instagram caption</button>

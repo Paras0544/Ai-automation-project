@@ -23,6 +23,7 @@ jobs:
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
       SYNC: "0"
       GH_TOKEN: ${{ github.token }}
+      HAS_PAT: ${{ secrets.GH_SECRETS_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -41,6 +42,24 @@ jobs:
         continue-on-error: true
       - name: Publish reels (render any missing, upload, link on the site)
         run: node scripts/cloud-publish.mjs
+      - name: Post to Instagram (if IG_ACCESS_TOKEN is set)
+        run: node scripts/ig-post.mjs
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_POSTS_PER_RUN: ${{ vars.IG_POSTS_PER_RUN || '1' }}
+      - name: Keep the Instagram login alive
+        if: ${{ env.HAS_PAT == 'true' }}
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_SECRETS_TOKEN }}
+        run: |
+          node scripts/ig-post.mjs refresh
+          if [ -s "${RUNNER_TEMP:-/tmp}/ig_token" ] || [ -s /tmp/ig_token ]; then
+            f=$( [ -s /tmp/ig_token ] && echo /tmp/ig_token || echo "$RUNNER_TEMP/ig_token" )
+            gh secret set IG_ACCESS_TOKEN -R "$GITHUB_REPOSITORY" < "$f" && rm -f "$f" && echo "Saved refreshed token."
+          fi
       - name: Save results
         run: |
           git config user.name "well-priced-bot"

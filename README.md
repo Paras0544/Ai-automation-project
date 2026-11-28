@@ -167,3 +167,8 @@ New secret `GEMINI_API_KEY`. Optional variable `REELS_PER_DAY` (default 3).
 ## Price tracker
 The cloud checks every catalog price daily (`CATALOG_STALE_DAYS=1`) and appends to `data/price-history.json`.
 The site publishes `/prices/` (biggest drops) and one history page per product, with earning links.
+
+## Instagram auto-posting (no Facebook Page needed)
+Daily workflow posts 1 reel (`IG_POSTS_PER_RUN`) via the Instagram API with Instagram Login.
+Secrets: `IG_ACCESS_TOKEN` (Meta app → Instagram → API setup with Instagram login → Generate token) and optional
+`GH_SECRETS_TOKEN` (fine-grained GitHub token with "Secrets: read and write" on this repo) so the 60-day token renews itself.
