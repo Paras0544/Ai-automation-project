@@ -51,7 +51,7 @@ function amazonMore(l) {
   u.searchParams.set("k", q);
   if (l.budget && l.kind !== "pricedrop") u.searchParams.set("rh", `p_36:-${l.budget * 100}`);
   u.searchParams.set("tag", tag);
-  return `<p style="margin-top:14px"><a class="buy" rel="sponsored nofollow" target="_blank" href="${esc(u.toString())}">More ${esc(q.replace(/^men /, ""))}s on Amazon${l.budget && l.kind !== "pricedrop" ? ` under ${inr(l.budget)}` : ""} →</a></p>`;
+  return `<p style="margin-top:14px"><a class="buy" rel="sponsored nofollow" target="_blank" href="${esc(u.toString())}">More ${esc(q.replace(/^men /, "").replace(/([^s])$/, "$1s"))} on Amazon${l.budget && l.kind !== "pricedrop" ? ` under ${inr(l.budget)}` : ""} →</a></p>`;
 }
 // "each under ₹1,499" for product reels, "₹4,200 total" for old outfit looks
 const priceTag = (l) => (isProduct(l) ? (l.kind === "pricedrop" ? "price drops" : `each under ${inr(l.budget)}`) : inr(total(l)));
