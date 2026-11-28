@@ -11,7 +11,7 @@ on:
         description: "Optional idea lines separated by ;; (topic | type | cap | format)"
         default: ""
 permissions:
-  contents: read
+  contents: write
 jobs:
   preview:
     runs-on: ubuntu-latest
@@ -38,6 +38,19 @@ jobs:
           cp out/*.mp4 out/*.cover.jpg out/*.caption.txt out/report-*.md preview/ 2>/dev/null || true
           git status --porcelain data/looks | awk '{print $2}' | xargs -r -I{} cp {} preview/
           node -e 'const c=require("./data/catalog.json");const v=Object.values(c).filter(x=>x.source==="shopify");const by={};for(const x of v){if(x.inStock===false)continue;by[x.type]=(by[x.type]||0)+1}console.log(JSON.stringify(by))' > preview/feed-counts.json
+      - name: Contact sheets (frames) to the "preview" branch for review
+        run: |
+          sudo apt-get install -y -qq ffmpeg >/dev/null 2>&1 || true
+          for v in preview/*.mp4; do
+            [ -e "$v" ] || continue
+            b=$(basename "$v" .mp4)
+            ffmpeg -loglevel error -y -i "$v" -vf "fps=1/1.6,scale=270:-1,tile=6x2" -frames:v 1 "preview/$b.sheet.jpg" || true
+          done
+          rm -f preview/*.mp4
+          cd preview && git init -q && git checkout -q -b preview
+          git config user.name "well-priced-bot" && git config user.email "well-priced-bot@users.noreply.github.com"
+          git add -A && git commit -qm "preview $(date -u +%F-%H%M)"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" preview
       - uses: actions/upload-artifact@v4
         with:
           name: preview

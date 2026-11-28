@@ -3,23 +3,32 @@
   "reelsPerDay": 1,
   "explore": 0.3,
   "formats": {
-    "finds": { "weight": 1.0, "topic": "{Type} under {cap}" },
-    "guess": { "weight": 0.8, "topic": "Guess the price: {type}" },
-    "pricedrop": { "weight": 1.2, "topic": "Price drops this week" }
+    "finds": {
+      "weight": 1.0,
+      "topic": "{Type} under {cap}"
+    },
+    "guess": {
+      "weight": 0.8,
+      "topic": "Guess the price: {type}"
+    },
+    "pricedrop": {
+      "weight": 1.2,
+      "topic": "Price drops this week"
+    }
   },
   "caps": {
-    "jacket": 1999,
-    "hoodie": 1499,
-    "sweatshirt": 1299,
-    "sweater": 1499,
-    "shacket": 1799,
+    "jacket": 2499,
+    "hoodie": 1999,
+    "sweatshirt": 1499,
+    "sweater": 2499,
+    "shacket": 2499,
     "flannel": 1299,
     "overshirt-linen": 1299,
     "oxford": 1299,
     "polo": 1299,
     "oversized-tee": 799,
     "cargo": 1499,
-    "jeans": 1499,
+    "jeans": 1799,
     "trouser": 1299,
     "sneaker": 2499,
     "loafer": 2499,

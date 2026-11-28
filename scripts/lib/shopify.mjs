@@ -74,10 +74,15 @@ export async function importShopify({ log = console.log } = {}) {
     for (const [type, handle] of Object.entries(src.collections || {})) {
       let list = [];
       try {
-        list = (await getJson(`https://${src.domain}/collections/${handle}/products.json?limit=250`)).products || [];
+        // up to 4 pages (1,000 products): budget items are often further down the store's own sort order
+        for (let page = 1; page <= (src.pages || 4); page++) {
+          const got = (await getJson(`https://${src.domain}/collections/${handle}/products.json?limit=250&page=${page}`)).products || [];
+          list.push(...got);
+          if (got.length < 250) break;
+          await sleep(500);
+        }
       } catch (e) {
-        log(`  ${src.store}/${handle}: couldn't read (${e.message})`);
-        continue;
+        if (!list.length) { log(`  ${src.store}/${handle}: couldn't read (${e.message})`); continue; }
       }
       let kept = 0;
       for (const p of list) {

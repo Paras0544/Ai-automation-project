@@ -5,7 +5,7 @@
       "store": "The Bear House",
       "domain": "thebearhouse.com",
       "maxPrice": 2499,
-      "perCollection": 30,
+      "perCollection": 40,
       "minSizes": 3,
       "collections": {
         "jacket": "jacket",

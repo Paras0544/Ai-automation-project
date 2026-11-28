@@ -103,6 +103,12 @@ const ideas = [...manual];
       }
       results.push(qualityCheck(id));
     } catch (e) {
+      // not enough matching products right now: skip this idea, try the next one
+      if (finds && /^only \d+ /.test(e.message)) {
+        console.log(`- skipped: ${e.message}`);
+        used++;
+        continue;
+      }
       console.log(`✗ stopped: ${e.message}`);
       if (id) results.push({ id, occasion, ok: false, flags: [`error: ${e.message.split("\n")[0]}`], look: readLook(id) });
       break; // API limits or errors: stop so the remaining ideas stay in the queue
