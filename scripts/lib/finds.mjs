@@ -8,7 +8,7 @@ import { paths, slugify } from "./env.mjs";
 import { readCache, markUsed, readHistory } from "./catalog.mjs";
 import { rulesForPrompt } from "./learning.mjs";
 import { ensureImage, shortName } from "./shopify.mjs";
-import { pickVariant } from "./strategy.mjs";
+import { pickVariant, readStrategy } from "./strategy.mjs";
 
 const HOOK_STYLE = {
   question: "Write the hook as a direct question to the viewer.",
@@ -187,7 +187,12 @@ export async function planFinds(topic, types, cap, format = "finds") {
     budget: cap, // per-item cap
     hook: ai.hook,
     subhook: ai.subhook,
-    cta: format === "guess" ? "How many did you guess right? 👇" : `Links in bio · ${stores.join(" & ")}`,
+    ...(() => {
+      const dm = readStrategy().dm || {};
+      const kw = (dm.keyword || "LINK").toUpperCase();
+      if (dm.enabled) return { dmKeyword: kw, cta: format === "guess" ? `Guessed right? Comment ${kw} for every link` : `Comment ${kw} for every link` };
+      return { cta: format === "guess" ? "How many did you guess right? 👇" : `Links in bio · ${stores.join(" & ")}` };
+    })(),
     caption: ai.caption,
     hashtags: (() => {
       const tags = ai.hashtags.map((h) => h.replace(/^#/, "").replace(/\s+/g, ""));

@@ -33,6 +33,8 @@ Other channels from the same reels:
 - **Pinterest**: `https://wellpriced.pages.dev/feed.xml` (RSS of QC-passed product reels). Connected once in Pinterest → Settings → Bulk create Pins → Auto-publish; Pinterest turns each new item into a pin within ~24h.
 - **Telegram** (`scripts/telegram.mjs`): every reel posted to Instagram also goes to the channel (cover + items + prices + affiliate links, subid `tg-<id>` so Cuelinks shows Telegram earnings separately). Re-checks prices first. Needs secrets TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID.
 
+Comment-to-DM (`scripts/dm.mjs`, hourly `.github/workflows/dm.yml`): anyone who comments LINK on a reel (last 7 days) gets a DM with every product link (subid `dm-<id>`) and a short public reply. Counts per reel in `data/learning/dm.json`. Reels only say "Comment LINK" once `dm.enabled` is true in `data/strategy.json` (switched on after a real test comment from a non-admin account succeeds).
+
 Posting ramp (`.github/workflows/post.yml`): 1 reel/day until 4 Dec 2026, 2/day from 5 Dec (adds 19:17 IST), 3/day from 12 Dec (adds 14:17 IST). If Instagram flags or restricts the account, set `"rampPaused": true` in `data/strategy.json` to hold at 1/day.
 
 Preview without posting: GitHub → Actions → "Preview reels" (frames land on the `preview` branch).
