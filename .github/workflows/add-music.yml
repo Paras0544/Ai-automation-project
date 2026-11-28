@@ -1,0 +1,33 @@
+# Adds background tracks to public/music from direct MP3 links (e.g. Pixabay Music, licensed for commercial use).
+name: Add music
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "MP3 links separated by spaces"
+        required: true
+permissions:
+  contents: write
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download
+        run: |
+          mkdir -p public/music
+          n=0
+          for u in ${{ github.event.inputs.urls }}; do
+            f="public/music/$(basename "$u")"
+            curl -fsSL -A "Mozilla/5.0" -e "https://pixabay.com/" "$u" -o "$f" || { echo "failed: $u"; rm -f "$f"; continue; }
+            if file "$f" | grep -qiE "audio|MPEG|ID3"; then n=$((n+1)); echo "ok $(du -h "$f" | cut -f1) $f"; else echo "not audio: $u"; rm -f "$f"; fi
+          done
+          echo "added $n"
+      - name: Save
+        run: |
+          git config user.name "well-priced-bot"
+          git config user.email "well-priced-bot@users.noreply.github.com"
+          git add public/music
+          git diff --cached --quiet && exit 0
+          git commit -m "music: add tracks"
+          git pull --rebase && git push
