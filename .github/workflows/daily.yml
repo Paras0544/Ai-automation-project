@@ -30,10 +30,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Check the Gemini key is set
-        run: |
-          if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions"; exit 1; fi
+      - name: Warn when the Gemini key is missing
+        if: env.GEMINI_API_KEY == ''
+        run: echo "::warning::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions to generate new reels"
       - name: Plan and render new reels
+        if: env.GEMINI_API_KEY != ''
         run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '3' }}"
         continue-on-error: true
       - name: Publish reels (render any missing, upload, link on the site)
