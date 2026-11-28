@@ -67,12 +67,13 @@ async function pickFallback() {
   return ok.find((n) => /lite/i.test(n)) || ok[0];
 }
 
-async function callJson(m, prompt, schema, { temperature = 0.9 } = {}) {
+async function callJson(m, prompt, schema, { temperature = 0.9, images = [] } = {}) {
   const res = await fetch(`${BASE}/models/${m}:generateContent`, {
     method: "POST",
     headers: { "Content-Type": "application/json", "x-goog-api-key": key() },
     body: JSON.stringify({
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
+      // images: [{ mimeType: "image/jpeg", data: <base64> }] for visual checks
+      contents: [{ role: "user", parts: [...images.map((im) => ({ inlineData: im })), { text: prompt }] }],
       generationConfig: { temperature, responseMimeType: "application/json", responseSchema: schema },
     }),
   });

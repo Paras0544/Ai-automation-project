@@ -103,5 +103,25 @@ for (const file of files) {
   } catch (e) {
     console.log(`  (cover image skipped: ${e.message.split("\n")[0]})`);
   }
+  // visual quality check: hook, first product, end grid; failed reels are never posted
+  if (look.kind && look.kind !== "outfit") {
+    try {
+      const { qcReel } = await import("./lib/qc.mjs");
+      const f = (sec) => Math.round(sec * composition.fps);
+      const frames = [
+        [f(1.2), path.join(outDir, `${look.id}.qc-hook.jpg`)],
+        [f(2.2 + (look.kind === "guess" ? 2.6 : 1.5)), path.join(outDir, `${look.id}.qc-card.jpg`)],
+      ];
+      for (const [frame, output] of frames) await renderStill({ composition, serveUrl, inputProps: look, output, frame, imageFormat: "jpeg", jpegQuality: 70, browserExecutable });
+      const qc = await qcReel(look, [...frames.map(([, o]) => o), path.join(outDir, `${look.id}.cover.jpg`)]);
+      look.qc = { ...qc, at: new Date().toISOString() };
+      fs.writeFileSync(path.join(looksDir, file), JSON.stringify(look, null, 2));
+      fs.mkdirSync(path.join(root, "data", "learning"), { recursive: true });
+      fs.appendFileSync(path.join(root, "data", "learning", "qc.jsonl"), JSON.stringify({ id: look.id, kind: look.kind, type: look.type, ...look.qc }) + "\n");
+      console.log(`  QC ${qc.pass ? "passed" : "FAILED"}${qc.score ? ` (${qc.score}/10)` : ""}${qc.issues?.length ? ": " + qc.issues.join("; ") : ""}`);
+    } catch (e) {
+      console.log(`  (QC skipped: ${e.message.split("\n")[0]})`);
+    }
+  }
   writeCaption(look);
 }
