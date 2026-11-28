@@ -15,7 +15,7 @@ export const TAGS = [
   "travel", "gym", "old-money", "streetwear", "smart-casual", "basics",
 ];
 export const MIN_CATALOG = 12; // below this, looks can't be varied enough
-const STALE_DAYS = 3; // re-check price/stock if older than this
+const STALE_DAYS = Number(process.env.CATALOG_STALE_DAYS || 3); // re-check price/stock if older than this
 
 const csvPath = () => path.join(paths.root, "data", "catalog.csv");
 const jsonPath = () => path.join(paths.root, "data", "catalog.json");
@@ -179,6 +179,7 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
     c.tags = row.tags.split(/[\s;|]+/).filter(Boolean);
     c.notes = row.notes;
     c.checkedAt = new Date().toISOString();
+    recordPrice(id, c);
     cache[id] = c;
     writeCache(cache);
     await sleep(1200);
@@ -201,4 +202,25 @@ export function markUsed(ids) {
   const cache = readCache();
   for (const id of ids) if (cache[id]) { cache[id].timesUsed = (cache[id].timesUsed || 0) + 1; cache[id].lastUsed = new Date().toISOString(); }
   writeCache(cache);
+}
+
+// ---- price history: one point per product per day (data/price-history.json) ----
+const historyFile = path.join(paths.root, "data", "price-history.json");
+export function readHistory() {
+  try {
+    return JSON.parse(fs.readFileSync(historyFile, "utf8"));
+  } catch {
+    return {};
+  }
+}
+function recordPrice(id, c) {
+  if (!c.price) return;
+  const h = readHistory();
+  const day = new Date().toISOString().slice(0, 10);
+  const pts = (h[id] ||= []);
+  const point = [day, c.price, c.inStock === false ? 0 : 1];
+  if (pts.length && pts[pts.length - 1][0] === day) pts[pts.length - 1] = point;
+  else pts.push(point);
+  if (pts.length > 400) pts.splice(0, pts.length - 400);
+  fs.writeFileSync(historyFile, JSON.stringify(h));
 }

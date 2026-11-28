@@ -63,7 +63,7 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
-<p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/tools/">Tools</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
+<p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/tools/">Tools</a> · <a href="/prices/">Price tracker</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
 
@@ -177,6 +177,64 @@ fs.writeFileSync(
     "Buying guides for Indian men's fashion, with real prices",
   ),
 );
+// ---- price history pages (real daily prices = unique data Google rewards) ----
+const history = (() => {
+  try {
+    return JSON.parse(fs.readFileSync(path.join(paths.root, "data", "price-history.json"), "utf8"));
+  } catch {
+    return {};
+  }
+})();
+const priceItems = Object.values(cache)
+  .filter((c) => c.name && c.price && history[c.id]?.length)
+  .map((c) => {
+    const pts = history[c.id];
+    const prices = pts.map((p) => p[1]);
+    const low = Math.min(...prices), high = Math.max(...prices);
+    const recent = pts.filter((p) => Date.now() - Date.parse(p[0]) < 31 * 864e5).map((p) => p[1]);
+    const ref = Math.max(...(recent.length ? recent : prices));
+    const slug = `${String(c.name).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60)}-${c.id.slice(0, 4)}`;
+    return { ...c, pts, low, high, drop: ref ? (ref - c.price) / ref : 0, slug };
+  });
+const spark = (pts) => {
+  if (pts.length < 2) return "";
+  const w = 320, h = 90, ps = pts.map((p) => p[1]), lo = Math.min(...ps), hi = Math.max(...ps), span = hi - lo || 1;
+  const xy = pts.map((p, i) => `${(i / (pts.length - 1)) * w},${h - 8 - ((p[1] - lo) / span) * (h - 16)}`).join(" ");
+  return `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:auto;margin:6px 0 12px" role="img" aria-label="Price history chart"><polyline fill="none" stroke="#B5603A" stroke-width="2.5" points="${xy}"/></svg>`;
+};
+for (const p of priceItems) {
+  const atLow = p.price <= p.low * 1.03;
+  const verdict = p.inStock === false ? "Out of stock right now." : p.pts.length < 5 ? "We started tracking this recently; check back for a fuller history." : atLow ? "Good time to buy: it's at or near its lowest price we've seen." : `It has been ${inr(p.low)} before. Wait if you're not in a hurry.`;
+  const dir = path.join(outDir, "prices", p.slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(
+    path.join(dir, "index.html"),
+    page(
+      `${p.name} price history — Well Priced`,
+      `<a class="back" href="/prices/">← Price tracker</a><h1>${esc(p.name)}: price history</h1><p class="sub">${esc(p.store || "")} · tracked daily since ${esc(p.pts[0][0])}</p>
+<div class="item">${p.imageUrl ? `<img src="${esc(p.imageUrl)}" alt="${esc(p.name)}" referrerpolicy="no-referrer">` : ""}<div class="info"><div class="name">Now ${inr(p.price)}</div><div class="why">Lowest ${inr(p.low)} · highest ${inr(p.high)}</div>
+<div class="row"><span>${esc(verdict)}</span></div><div class="row"><span></span><a class="buy" href="${esc(affiliateUrl(p.url, cfg, "price-" + p.id))}" rel="sponsored nofollow noopener" target="_blank">Check price</a></div></div></div>
+${spark(p.pts)}<p class="meta">Prices are checked once a day and can change any time; the store's price at checkout is final.</p>`,
+      `${p.name} price history: now ${inr(p.price)}, lowest ${inr(p.low)}. Tracked daily.`,
+    ),
+  );
+}
+{
+  const drops = priceItems.filter((p) => p.drop >= 0.05 && p.inStock !== false).sort((a, b) => b.drop - a.drop).slice(0, 20);
+  const list = (arr) => arr.map((p) => `<a class="card" href="/prices/${p.slug}/"><h2>${esc(p.name)}</h2><div class="meta">${inr(p.price)}${p.drop >= 0.05 ? ` · <span class="accent">${Math.round(p.drop * 100)}% below its 30-day high</span>` : ` · lowest ${inr(p.low)}`}</div></a>`).join("\n");
+  fs.mkdirSync(path.join(outDir, "prices"), { recursive: true });
+  fs.writeFileSync(
+    path.join(outDir, "prices", "index.html"),
+    page(
+      "Men's fashion price tracker — Well Priced",
+      `<a class="back" href="/">← Home</a><h1>Price tracker</h1><p class="sub">Daily prices for ${priceItems.length} men's fashion products. Buy at the low, not the hype.</p>
+<h2 style="font-weight:normal;font-size:20px;margin:18px 0 10px">Biggest drops right now</h2>${list(drops) || '<p class="meta">No big drops today. We check every day.</p>'}
+<h2 style="font-weight:normal;font-size:20px;margin:22px 0 10px">All tracked products</h2>${list([...priceItems].sort((a, b) => a.name.localeCompare(b.name)))}`,
+      "Daily price history for men's fashion on Myntra, The Bear House and more",
+    ),
+  );
+}
+
 // ---- free tools (tools/*.html bodies, wrapped in the site layout) ----
 const toolsSrc = path.join(paths.root, "tools");
 const tools = fs.existsSync(toolsSrc)
@@ -200,7 +258,7 @@ fs.writeFileSync(
 // sitemap so Google finds every page
 {
   const base = (cfg.siteUrl || "https://wellpriced.pages.dev").replace(/\/$/, "");
-  const urls = ["/", "/guides/", "/tools/", "/about/", ...tools.map((t) => `/tools/${t.slug}/`), ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
+  const urls = ["/", "/guides/", "/tools/", "/prices/", "/about/", ...priceItems.map((p) => `/prices/${p.slug}/`), ...tools.map((t) => `/tools/${t.slug}/`), ...looks.map((l) => `/l/${l.id}/`), ...guides.map((g) => `/guides/${g.slug}/`)];
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map((u) => `<url><loc>${base}${u}</loc></url>`).join("")}</urlset>\n`);
   fs.writeFileSync(path.join(outDir, "robots.txt"), `User-agent: *\nAllow: /\nDisallow: /post/\nSitemap: ${base}/sitemap.xml\n`);
 }

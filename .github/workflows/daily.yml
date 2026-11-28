@@ -37,6 +37,7 @@ jobs:
         run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '3' }}"
         env:
           CATALOG_ONLY: "1"
+          CATALOG_STALE_DAYS: "1"
         continue-on-error: true
       - name: Publish reels (render any missing, upload, link on the site)
         run: node scripts/cloud-publish.mjs

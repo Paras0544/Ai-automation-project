@@ -163,3 +163,7 @@ New secret `GEMINI_API_KEY`. Optional variable `REELS_PER_DAY` (default 3).
 
 - Posting from your phone: https://wellpriced.pages.dev/post/ (download, copy caption, mark posted).
 - Buying guides: `data/guides/*.json` (written weekly by Claude) → /guides/ on the site.
+
+## Price tracker
+The cloud checks every catalog price daily (`CATALOG_STALE_DAYS=1`) and appends to `data/price-history.json`.
+The site publishes `/prices/` (biggest drops) and one history page per product, with earning links.
