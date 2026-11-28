@@ -29,6 +29,8 @@ Daily cloud run (.github/workflows/daily.yml):
 6. **Learn** (`scripts/metrics.mjs`): Instagram insights per reel → score (watch time, shares/reach, saves/reach, likes/reach) → `data/learning/arms.json`, which step 2 uses tomorrow.
 7. Weekly review (scheduled Claude task, Sundays): reads the numbers, tunes `strategy.json` and `rules.md`, researches and adds at most one new format a week, adds paying stores.
 
+Posting ramp (`.github/workflows/post.yml`): 1 reel/day until 4 Dec 2026, 2/day from 5 Dec (adds 19:17 IST), 3/day from 12 Dec (adds 14:17 IST). If Instagram flags or restricts the account, set `"rampPaused": true` in `data/strategy.json` to hold at 1/day.
+
 Preview without posting: GitHub → Actions → "Preview reels" (frames land on the `preview` branch).
 
 ## Setup on Windows (one time)
