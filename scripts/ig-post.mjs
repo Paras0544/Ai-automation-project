@@ -58,7 +58,8 @@ export async function postNext() {
     .readdirSync(paths.looks)
     .filter((f) => f.endsWith(".json"))
     .map((f) => JSON.parse(fs.readFileSync(path.join(paths.looks, f), "utf8")))
-    .filter((l) => l.videoUrl && !posted[l.id]?.instagram)
+    // only the single-category "finds" reels go to Instagram; old full-outfit looks stay on the site only
+    .filter((l) => l.videoUrl && l.kind === "finds" && !l.retired && !posted[l.id]?.instagram)
     .sort((a, b) => String(a.publishedAt || "").localeCompare(String(b.publishedAt || "")))
     .slice(0, perRun);
   if (!queue.length) return console.log("Instagram: nothing new to post.");
