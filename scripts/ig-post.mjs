@@ -6,9 +6,33 @@ import path from "node:path";
 import os from "node:os";
 import { paths } from "./lib/env.mjs";
 
-const API = process.env.IG_API_BASE || "https://graph.instagram.com/v23.0";
+const token = (process.env.IG_ACCESS_TOKEN || "").trim();
+// Instagram-login tokens start with "IG" and use graph.instagram.com + /me.
+// Facebook / system-user tokens (Unified login) use graph.facebook.com + the IG account id.
+const igLogin = /^IG/.test(token);
+const API = process.env.IG_API_BASE || (igLogin ? "https://graph.instagram.com/v23.0" : "https://graph.facebook.com/v23.0");
 const RUPLOAD = process.env.IG_RUPLOAD_BASE || "https://rupload.facebook.com/ig-api-upload/v23.0";
-const token = process.env.IG_ACCESS_TOKEN;
+let igUser = process.env.IG_USER_ID || (igLogin ? "me" : "");
+
+// find the Instagram account id for a Facebook-style token
+async function resolveUser() {
+  if (igUser) return igUser;
+  const tries = [
+    async () => (await ig("GET", `${API}/me/accounts`, { fields: "instagram_business_account" })).data?.find((p) => p.instagram_business_account)?.instagram_business_account.id,
+    async () => {
+      const biz = (await ig("GET", `${API}/me/businesses`, {})).data || [];
+      for (const b of biz) {
+        const a = (await ig("GET", `${API}/${b.id}/owned_instagram_accounts`, { fields: "id,username" })).data?.[0]
+          || (await ig("GET", `${API}/${b.id}/instagram_business_accounts`, { fields: "id,username" })).data?.[0];
+        if (a) return a.id;
+      }
+    },
+  ];
+  for (const t of tries) {
+    try { const id = await t(); if (id) return (igUser = id); } catch {}
+  }
+  throw new Error("couldn't find the Instagram account id: set IG_USER_ID secret");
+}
 const perRun = Number(process.env.IG_POSTS_PER_RUN ?? 1);
 const postedFile = path.join(paths.root, "data", "learning", "posted.json");
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -38,6 +62,8 @@ export async function postNext() {
     .sort((a, b) => String(a.publishedAt || "").localeCompare(String(b.publishedAt || "")))
     .slice(0, perRun);
   if (!queue.length) return console.log("Instagram: nothing new to post.");
+  let user;
+  try { user = await resolveUser(); } catch (e) { console.log(`✗ Instagram: ${e.message}`); process.exitCode = 1; return; }
 
   for (const look of queue) {
     try {
@@ -47,7 +73,7 @@ export async function postNext() {
       const bytes = Buffer.from(await res.arrayBuffer());
       const caption = (look.postCaption || `${look.hook}\n\nShop every piece: link in bio.\n#affiliate`).slice(0, 2200);
       // 2) create a resumable reel container, upload bytes to Meta
-      const c = await ig("POST", `${API}/me/media`, { media_type: "REELS", upload_type: "resumable", caption, share_to_feed: "true" });
+      const c = await ig("POST", `${API}/${user}/media`, { media_type: "REELS", upload_type: "resumable", caption, share_to_feed: "true" });
       const up = await fetch(`${RUPLOAD}/${c.id}`, {
         method: "POST",
         headers: { Authorization: `OAuth ${token}`, offset: "0", file_size: String(bytes.length) },
@@ -62,7 +88,7 @@ export async function postNext() {
         if (status === "ERROR" || status === "EXPIRED") throw new Error(`Instagram couldn't process the video (${status})`);
       }
       if (status !== "FINISHED") throw new Error("Instagram processing timed out");
-      const pub = await ig("POST", `${API}/me/media_publish`, { creation_id: c.id });
+      const pub = await ig("POST", `${API}/${user}/media_publish`, { creation_id: c.id });
       posted[look.id] = { ...(posted[look.id] || {}), instagram: { id: pub.id, at: new Date().toISOString() } };
       fs.mkdirSync(path.dirname(postedFile), { recursive: true });
       fs.writeFileSync(postedFile, JSON.stringify(posted, null, 2));
@@ -77,7 +103,7 @@ export async function postNext() {
 
 // keep the 60-day token alive; prints the new token only to a file for the workflow to store as a secret
 export async function refreshToken() {
-  if (!token) return;
+  if (!token || !igLogin) return; // Facebook/system-user tokens don't use this refresh
   try {
     const d = await ig("GET", `${API.replace(/\/v[\d.]+$/, "")}/refresh_access_token`, { grant_type: "ig_refresh_token" });
     if (d.access_token) fs.writeFileSync(path.join(os.tmpdir(), "ig_token"), d.access_token);
