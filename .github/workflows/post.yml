@@ -1,0 +1,54 @@
+# Extra Instagram posting slots, ramped up slowly so a new account doesn't look spammy.
+#   19:17 IST slot: from 2026-12-05  (2 reels/day total)
+#   14:17 IST slot: from 2026-12-12  (3 reels/day total)
+# Pause the ramp any time: set "rampPaused": true in data/strategy.json (the weekly review does this if Instagram flags the account).
+name: Extra posts
+on:
+  schedule:
+    - cron: "47 13 * * *"
+    - cron: "47 8 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: daily-reels
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Is this slot open yet?
+        id: gate
+        run: |
+          today=$(date -u +%F)
+          start="2026-12-05"
+          [ "${{ github.event.schedule }}" = "47 8 * * *" ] && start="2026-12-12"
+          paused=$(node -e 'try{console.log(require("./data/strategy.json").rampPaused?"1":"0")}catch{console.log("0")}')
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$today" \> "$start" ] || [ "$today" = "$start" ]; } && [ "$paused" = "0" ]; then echo "go=1" >> $GITHUB_OUTPUT; else echo "slot opens $start (paused=$paused)"; echo "go=0" >> $GITHUB_OUTPUT; fi
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.go == '1'
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.gate.outputs.go == '1'
+        run: npm ci
+      - name: Post to Instagram
+        if: steps.gate.outputs.go == '1'
+        run: node scripts/ig-post.mjs
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID || '17841461989685675' }}
+          IG_POSTS_PER_RUN: "1"
+      - name: Save
+        if: steps.gate.outputs.go == '1'
+        run: |
+          git config user.name "well-priced-bot"
+          git config user.email "well-priced-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "extra post $(date -u +%F-%H%M)"
+          git pull --rebase --autostash -X theirs || (git rebase --abort; git pull --no-rebase -X ours --no-edit)
+          git push

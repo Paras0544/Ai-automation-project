@@ -64,5 +64,7 @@
       "on": 0
     },
     "_voiceover_note": "'on' stays 0 until a free text-to-speech step is built and tested; the weekly review may build it (Gemini TTS) and then give it weight 0.5."
-  }
+  },
+  "rampPaused": false,
+  "_ramp": "Posting ramp: 1/day until 4 Dec, 2/day from 5 Dec (19:17 IST slot), 3/day from 12 Dec (14:17 IST slot). Set rampPaused true to hold at 1/day."
 }

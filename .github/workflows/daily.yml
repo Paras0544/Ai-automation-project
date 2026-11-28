@@ -35,7 +35,11 @@ jobs:
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions"; exit 1; fi
       - name: Plan and render new reels
-        run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '2' }}"
+        run: |
+          # make as many reels as get posted: 2/day, 3/day once the 14:17 slot opens (2026-12-12)
+          n="${{ github.event.inputs.reels || vars.REELS_PER_DAY }}"
+          if [ -z "$n" ]; then n=2; [ "$(date -u +%F)" \> "2026-12-11" ] && n=3; fi
+          node scripts/auto.mjs "$n"
         env:
           CATALOG_ONLY: "1"
           CATALOG_STALE_DAYS: "1"
