@@ -1,6 +1,7 @@
 import React from "react";
 import {
   AbsoluteFill,
+  Audio,
   Img,
   Sequence,
   interpolate,
@@ -410,7 +411,25 @@ const FindsReel: React.FC<Look> = (look) => {
       <FindsGrid items={look.items} cta={look.cta} cap={cap} kind={look.kind} />
     </Sequence>,
   );
-  return <AbsoluteFill style={{ background: colors.bg }}>{seq}</AbsoluteFill>;
+  return (
+    <AbsoluteFill style={{ background: colors.bg }}>
+      {seq}
+      {look.music ? <Music src={look.music} /> : null}
+    </AbsoluteFill>
+  );
+};
+
+// quiet background track with a short fade in/out
+const Music: React.FC<{ src: string }> = ({ src }) => {
+  const { durationInFrames, fps } = useVideoConfig();
+  return (
+    <Audio
+      src={staticFile(src)}
+      volume={(f) =>
+        interpolate(f, [0, fps * 0.6, durationInFrames - fps * 1.2, durationInFrames], [0, 0.45, 0.45, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })
+      }
+    />
+  );
 };
 
 // ---------- the reel ----------

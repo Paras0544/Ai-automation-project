@@ -21,6 +21,7 @@ export type Look = {
   fitImages?: string[]; // optional AI fit images; empty = outfit board of real product photos
   items: Item[]; // 3–5 real products
   cta: string; // "Comment FIT for links"
+  music?: string; // path inside /public, e.g. "music/track1.mp3" (added at render time)
   status?: "needs-products" | "ready" | "needs-attention";
   mode?: "board" | "ai-fits";
   occasion?: string;
