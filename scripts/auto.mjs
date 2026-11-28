@@ -90,7 +90,7 @@ const ideas = [...manual];
     const finds = parts.length >= 3;
     const [occasion, budgetRaw = "4000"] = finds ? [parts[0], parts[2]] : parts;
     const budget = Number(budgetRaw.replace(/[^\d]/g, "")) || 4000;
-    console.log(`\n=== ${occasion} (${finds ? "each under " : ""}₹${budget}) ===`);
+    console.log(`\n=== ${occasion} (${finds ? (parts[3] === "steal" ? "total under " : "each under ") : ""}₹${budget}) ===`);
     let id;
     try {
       const look = finds ? await planFinds(occasion, parts[1], budget, parts[3] || "finds") : await planLook(occasion, budget);

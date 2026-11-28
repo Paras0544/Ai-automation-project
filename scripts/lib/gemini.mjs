@@ -33,6 +33,11 @@ export async function generateJson(prompt, schema, opts = {}) {
     try {
       return await callJson(m, prompt, schema, opts);
     } catch (e) {
+      // network hiccup ("fetch failed", reset): retry like a busy server
+      if (!e.status && /fetch failed|ECONNRESET|ETIMEDOUT|socket|network/i.test(e.message + (e.cause?.message || ""))) {
+        e.retry = true;
+        e.status = "network";
+      }
       lastErr = e;
       if (e.daily) {
         exhausted.add(m);

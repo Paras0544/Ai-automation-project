@@ -87,7 +87,7 @@ const schema = S("OBJECT", {
 const FORMAT_BRIEF = {
   finds: (topic, cap) => `Make ONE "finds" reel: "${topic}". Every product must cost at most ${inr(cap)}. The reel shows each product with its price, then all of them together.`,
   guess: (topic, cap) => `Make ONE "guess the price" reel: "${topic}". Each product appears with "guess the price?" before its real price is revealed. Pick products that LOOK more expensive than they are (clean, premium-looking), with DIFFERENT prices so guessing is fun. The hook should dare viewers to guess. Every product costs at most ${inr(cap)}.`,
-  steal: (topic, cap) => `Make ONE "steal the look" reel: "${topic}". Build ONE complete outfit in that aesthetic from 3 or 4 pieces, exactly one per category (top, bottom, footwear, and optionally a layer/outerwear). The pieces must go together (colours, vibe). Total of all pieces must be at most ${inr(cap)}. The hook should make the look feel aspirational and the price feel like a steal.`,
+  steal: (topic, cap) => `Make ONE "steal the look" reel: "${topic}". Build ONE complete outfit in that aesthetic from 3 or 4 pieces, exactly one per category (top, bottom, footwear, and optionally a layer/outerwear). The pieces must go together (colours, vibe). Total of all pieces must be at most ${inr(cap)}: add up the prices before answering (the list is sorted cheapest first). The hook should make the look feel aspirational and the price feel like a steal.`,
   pricedrop: (topic) => `Make ONE "price drop" reel: "${topic}". These products are cheaper today than the highest price we recorded in the last 30 days (shown as "was"). The hook should create urgency without exaggerating.`,
 };
 
@@ -143,7 +143,7 @@ export function candidatesFor(format, types, cap) {
   if (format === "pricedrop") return priceDrops().filter((c) => c.price <= cap).slice(0, 25);
   if (format === "steal") {
     // a few options per category; each piece must leave room for the others
-    const all = findsCandidates("any", Math.min(cap * 0.5, 2499));
+    const all = findsCandidates("any", Math.min(Math.round(cap / 2.6), 2499)).sort((a, b) => a.price - b.price || (a.timesUsed || 0) - (b.timesUsed || 0));
     const by = {};
     for (const c of all) (by[c.category] ||= []).length < 8 && by[c.category].push(c);
     return ["top", "bottom", "footwear", "outerwear"].flatMap((k) => by[k] || []);
@@ -171,6 +171,16 @@ export async function planFinds(topic, types, cap, format = "finds") {
     problem = validate(ai, byId, cap, need, format);
     if (!problem) break;
     console.log(`  finds retry: ${problem}`);
+  }
+  if (problem && format === "steal") {
+    // fall back to the cheapest valid look (one per category) so the series doesn't skip a day
+    const pick = ["top", "bottom", "footwear"].map((k) => cands.filter((c) => c.category === k).sort((a, b) => a.price - b.price)[0]);
+    if (pick.every(Boolean) && pick.reduce((t, c) => t + c.price, 0) <= cap) {
+      ai = { ...(ai || {}), picks: pick.map((c) => ({ id: c.id, label: c.name, why: "" })) };
+      ai.hook ||= topic; ai.subhook ||= ""; ai.caption ||= topic; ai.hashtags ||= ["mensfashion", "budgetfashion", "stealthelook"];
+      problem = null;
+      console.log("  steal: used the cheapest valid combination");
+    }
   }
   if (problem) throw new Error(`couldn't plan "${topic}": ${problem}`);
 
