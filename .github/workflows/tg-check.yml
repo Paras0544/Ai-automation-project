@@ -1,0 +1,23 @@
+name: Telegram check
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bot token works and bot can post in the channel (sends nothing)
+        env:
+          T: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          C: ${{ secrets.TELEGRAM_CHAT_ID || '@wellpricedfit' }}
+        run: |
+          node -e '
+          const t=process.env.T, c=process.env.C;
+          const call=async(m,p={})=>{const r=await fetch(`https://api.telegram.org/bot${t}/${m}?`+new URLSearchParams(p));return r.json()};
+          (async()=>{
+            const me=await call("getMe"); if(!me.ok){console.log("✗ token:",me.description);process.exit(1)}
+            console.log("✓ bot @"+me.result.username);
+            const chat=await call("getChat",{chat_id:c}); console.log(chat.ok?"✓ channel "+chat.result.title:"✗ channel: "+chat.description);
+            const mem=await call("getChatMember",{chat_id:c,user_id:me.result.id});
+            console.log(mem.ok?`✓ bot is ${mem.result.status}, can post: ${mem.result.can_post_messages}`:"✗ membership: "+mem.description);
+          })()'
