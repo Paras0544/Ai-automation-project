@@ -418,7 +418,7 @@
   "00f0583d64": {
     "id": "00f0583d64",
     "url": "https://www.myntra.com/trousers/tribe/tribe-men-solid-relaxed-loose-fit-pleated-trousers/34094888/buy",
-    "timesUsed": 1,
+    "timesUsed": 2,
     "title": "TRIBE Men Solid Relaxed Loose Fit Pleated Trousers",
     "price": 539,
     "inStock": true,
@@ -432,7 +432,7 @@
     ],
     "notes": "Relaxed pleated trousers (Tribe)",
     "checkedAt": "2026-11-28T08:11:13.993Z",
-    "lastUsed": "2026-11-22T13:12:18.055Z"
+    "lastUsed": "2026-11-28T09:23:40.997Z"
   },
   "f68abc1989": {
     "id": "f68abc1989",
@@ -1086,7 +1086,7 @@
   "88a434864f": {
     "id": "88a434864f",
     "url": "https://www.myntra.com/formal-shoes/mactree/mactree-men-brown-solid-formal-derbys/19875938/buy",
-    "timesUsed": 0,
+    "timesUsed": 1,
     "title": "Mactree Men Brown Solid Formal Derbys",
     "price": 687,
     "inStock": true,
@@ -1100,7 +1100,8 @@
       "smart-casual"
     ],
     "notes": "Brown derbys (Mactree)",
-    "checkedAt": "2026-11-28T08:11:57.339Z"
+    "checkedAt": "2026-11-28T08:11:57.339Z",
+    "lastUsed": "2026-11-28T09:23:40.997Z"
   },
   "31f99cb59c": {
     "id": "31f99cb59c",
@@ -1355,7 +1356,7 @@
       "date"
     ],
     "notes": "Navy oxford shirt (The Bear House)",
-    "checkedAt": "2026-11-28T08:12:13.847Z"
+    "checkedAt": "2026-11-28T09:21:32.476Z"
   },
   "e246191c5e": {
     "id": "e246191c5e",
@@ -1461,7 +1462,7 @@
   "ebbfdcaab2": {
     "id": "ebbfdcaab2",
     "url": "https://thebearhouse.com/products/akaro-cr",
-    "timesUsed": 0,
+    "timesUsed": 1,
     "title": "AKARO-CR",
     "price": 999,
     "inStock": true,
@@ -1476,7 +1477,8 @@
     "notes": "Cream polo (The Bear House)",
     "checkedAt": "2026-11-28T08:12:26.893Z",
     "image": "catalog/ebbfdcaab2.jpg",
-    "imageUrl": "https://thebearhouse.com/cdn/shop/files/POL-AKARO-CR1.webp?v=1785157063&width=1200"
+    "imageUrl": "https://thebearhouse.com/cdn/shop/files/POL-AKARO-CR1.webp?v=1785157063&width=1200",
+    "lastUsed": "2026-11-28T09:23:40.997Z"
   },
   "7b3b89454a": {
     "id": "7b3b89454a",
@@ -1525,7 +1527,7 @@
     "title": "JERVIO-BK",
     "price": 1689,
     "inStock": false,
-    "error": "page returned 404",
+    "error": "page returned 429",
     "store": "The Bear House",
     "name": "Black relaxed trousers (The Bear House)",
     "category": "bottom",
@@ -1535,7 +1537,7 @@
       "party"
     ],
     "notes": "Black relaxed trousers (The Bear House)",
-    "checkedAt": "2026-11-28T08:12:32.414Z"
+    "checkedAt": "2026-11-28T09:21:40.845Z"
   },
   "b6a0f18cde": {
     "id": "b6a0f18cde",

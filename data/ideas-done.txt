@@ -10,3 +10,4 @@ Meeting the girlfriend's parents | 5000  ->  meeting-the-girlfriend-s-parents
 College fest day | 3000  ->  college-fest-day
 Concert night | 3500  ->  concert-night
 Diwali party at a friend's place | 5000  ->  diwali-party-at-a-friend-s-place
+Old money look on a budget | 2000  ->  old-money-look-on-a-budget

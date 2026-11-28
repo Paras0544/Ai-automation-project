@@ -1,0 +1,57 @@
+{
+  "id": "old-money-look-on-a-budget",
+  "source": "catalog",
+  "status": "ready",
+  "occasion": "Old money look on a budget",
+  "budget": 2000,
+  "hook": "Old Money Fit Under ₹2300",
+  "subhook": "mehenga dikhega kam budget mein",
+  "cta": "Shop every piece · link in bio",
+  "caption": "Clean cream polo with draped pleated trousers and brown derbys. Classic rich aesthetic without breaking the bank.",
+  "hashtags": [
+    "oldmoneyfashion",
+    "mensfashionindia",
+    "budgetoutfit",
+    "classymenswear",
+    "smartcasualmen"
+  ],
+  "fitPrompt": "An Indian male model in his early 20s with a fit build, short side-swept hair, and a neutral expression, wearing a cream polo shirt tucked into relaxed pleated trousers with brown derbys. Posed in a sunlit modern cafe courtyard, vertical 9:16, natural light, editorial menswear photo",
+  "mode": "board",
+  "fitImages": [],
+  "items": [
+    {
+      "catalogId": "ebbfdcaab2",
+      "name": "Cream polo (The Bear House)",
+      "why": "Knit texture gives instant rich feel",
+      "store": "The Bear House",
+      "price": 999,
+      "targetPrice": 999,
+      "image": "catalog/ebbfdcaab2.jpg",
+      "url": "https://thebearhouse.com/products/akaro-cr",
+      "productTitle": "AKARO-CR"
+    },
+    {
+      "catalogId": "00f0583d64",
+      "name": "Relaxed pleated trousers (Tribe)",
+      "why": "Pleats add clean sophisticated drape",
+      "store": "Myntra",
+      "price": 539,
+      "targetPrice": 539,
+      "image": "catalog/00f0583d64.jpg",
+      "url": "https://www.myntra.com/trousers/tribe/tribe-men-solid-relaxed-loose-fit-pleated-trousers/34094888/buy",
+      "productTitle": "TRIBE Men Solid Relaxed Loose Fit Pleated Trousers"
+    },
+    {
+      "catalogId": "88a434864f",
+      "name": "Brown derbys (Mactree)",
+      "why": "Classic leather shoes anchor the look",
+      "store": "Myntra",
+      "price": 687,
+      "targetPrice": 687,
+      "image": "catalog/88a434864f.jpg",
+      "url": "https://www.myntra.com/formal-shoes/mactree/mactree-men-brown-solid-formal-derbys/19875938/buy",
+      "productTitle": "Mactree Men Brown Solid Formal Derbys"
+    }
+  ],
+  "flags": []
+}
