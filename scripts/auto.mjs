@@ -197,7 +197,7 @@ function qualityCheck(id) {
   const product = look.kind && look.kind !== "outfit";
   if (product) {
     // every single item must be under the cap shown on screen
-    const over = look.items.filter((i) => i.price > look.budget);
+    const over = look.kind === "steal" ? (total > look.budget ? look.items : []) : look.items.filter((i) => i.price > look.budget);
     overBudget = over.length > 0;
     if (overBudget) flags.push(`over ₹${look.budget}: ${over.map((i) => `${i.name} ₹${i.price}`).join(", ")}`);
   } else {

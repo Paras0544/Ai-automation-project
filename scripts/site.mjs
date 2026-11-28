@@ -72,12 +72,29 @@ h1{font-size:26px;font-weight:normal;margin:14px 0 4px}.sub{font:15px system-ui,
 .item .row{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font:14px system-ui,sans-serif}
 .buy{background:#2B2B2B;color:#F4EFE6;text-decoration:none;padding:8px 14px;border-radius:999px;font:600 13px system-ui,sans-serif}
 .total{display:flex;justify-content:space-between;font-size:20px;border-top:1px solid #d9cfbf;padding-top:14px;margin-top:6px}
-.note{font:12px/1.5 system-ui,sans-serif;color:#8a8076;margin-top:24px;text-align:center}`;
+.note{font:12px/1.5 system-ui,sans-serif;color:#8a8076;margin-top:24px;text-align:center}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;background:#141414;color:#fff;padding:10px 16px;margin:-28px -18px 18px;font:600 14px system-ui,sans-serif}
+.top .tg{background:#2AABEE;color:#fff;text-decoration:none;padding:7px 12px;border-radius:999px;font:700 13px system-ui,sans-serif}
+.hero{position:relative;border-radius:18px;overflow:hidden;background:#141414;margin-bottom:18px}.hero video,.hero img{display:block;width:100%;max-height:78vh;object-fit:cover}
+.hero .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 16px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));color:#fff}
+.hero .cap b{display:block;font:800 22px/1.2 system-ui,sans-serif}.hero .cap a{display:inline-block;margin-top:10px;background:#B5603A;color:#fff;text-decoration:none;padding:9px 16px;border-radius:999px;font:700 14px system-ui,sans-serif}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:22px}
+.tile{position:relative;border-radius:14px;overflow:hidden;background:#ebe3d6;text-decoration:none;color:#fff;aspect-ratio:3/4}
+.tile img{width:100%;height:100%;object-fit:cover;object-position:center 20%;display:block}
+.tile .p{position:absolute;left:8px;bottom:40px;background:#B5603A;font:800 18px system-ui,sans-serif;padding:3px 10px;border-radius:8px}
+.tile .m{position:absolute;left:8px;bottom:68px;font:600 12px system-ui,sans-serif;background:rgba(255,255,255,.92);color:#2B2B2B;padding:2px 8px;border-radius:999px}
+.tile .n{position:absolute;left:0;right:0;bottom:0;padding:22px 8px 8px;font:600 12px/1.25 system-ui,sans-serif;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.tile .low{position:absolute;top:8px;left:8px;background:#C0392B;font:700 11px system-ui,sans-serif;padding:3px 8px;border-radius:999px}
+.sec{font:800 20px system-ui,sans-serif;margin:8px 0 12px}
+.tgbox{display:block;text-align:center;background:#2AABEE;color:#fff;text-decoration:none;border-radius:16px;padding:16px;margin:6px 0 22px;font:700 16px/1.4 system-ui,sans-serif}
+.lookcard{display:flex;gap:12px;align-items:center;background:#fffdf9;border:1px solid #e4dccf;border-radius:14px;padding:10px;margin-bottom:10px;text-decoration:none}
+.lookcard img{width:76px;height:100px;object-fit:cover;border-radius:10px;flex:none;background:#ebe3d6}`;
 
 const page = (title, body, desc = "Real outfits for Indian men, with real prices.") => `<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${esc(title)}</title><meta name="p:domain_verify" content="2c59aa332c6afb144bc63d5fdeb52ffc"/><meta name="google-site-verification" content="EoDFCu0W-gHgRXJYsT1iUOzaAC0_rTg1bAypEUpJi_8" /><meta name="description" content="${esc(desc)}"><meta name="robots" content="index,follow">
 <style>${css}</style></head><body><main>${body}
+${body.includes('class="tgbox"') ? "" : `<a class="tgbox" style="margin-top:24px" href="${cfg.telegram || "https://t.me/wellpricedfit"}">🔔 Daily price drops on Telegram · @wellpricedfit</a>`}
 <p class="note"><a href="/">Home</a> · <a href="/guides/">Guides</a> · <a href="/tools/">Tools</a> · <a href="/prices/">Price tracker</a> · <a href="/about/">About</a> · <a href="/privacy/">Privacy Policy</a></p>
 <p class="note">#affiliate · Links on this page earn Well Priced a small commission, at no extra cost to you. Prices change; the store's price at checkout is final.</p>
 </main></body></html>`;
@@ -85,23 +102,63 @@ const page = (title, body, desc = "Real outfits for Indian men, with real prices
 fs.rmSync(outDir, { recursive: true, force: true });
 fs.mkdirSync(outDir, { recursive: true });
 
-// once product reels exist, the home page shows only those (old full-outfit looks stay reachable by link)
-const shown = looks.some(isProduct) ? looks.filter(isProduct) : looks;
-const list = shown.length
-  ? shown
-      .map((l) => `<a class="card" href="/l/${l.id}/"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${l.items.length} ${isProduct(l) ? "picks" : "pieces"} · <span class="accent">${priceTag(l)}</span></div></a>`)
-      .join("\n")
-  : `<p class="meta" style="text-align:center">New looks are added every week. Follow <a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a> on Instagram to see them first.</p>`;
+// Home page: visual first. Latest reel playing, then every current pick as a big photo tile that goes
+// straight to the store (one tap), then the series. Telegram join is pinned at the top.
+const tgUrl = cfg.telegram || "https://t.me/wellpricedfit";
+const productLooks = looks
+  .filter((l) => isProduct(l) && !l.retired && l.qc?.pass !== false)
+  .sort((a, b) => String(b.publishedAt || b.createdAt || "").localeCompare(String(a.publishedAt || a.createdAt || "")));
+const shown = productLooks.length ? productLooks : looks;
+const heroLook = productLooks.find((l) => l.videoUrl);
+const hero = heroLook
+  ? `<div class="hero"><video src="${esc(heroLook.videoUrl)}" ${heroLook.coverUrl ? `poster="${esc(heroLook.coverUrl)}"` : ""} autoplay muted loop playsinline preload="metadata"></video>
+<div class="cap"><b>${esc(heroLook.hook)}</b><a href="/l/${heroLook.id}/">Shop this reel →</a></div></div>`
+  : "";
+const seen = new Set();
+const tiles = productLooks
+  .flatMap((l) => l.items.map((i) => ({ l, i })))
+  .filter(({ i }) => !seen.has(i.url) && seen.add(i.url))
+  .slice(0, 24)
+  .map(({ l, i }) => {
+    const img = imgOf(i);
+    if (!img) return "";
+    const mrp = i.mrp && i.mrp > i.price ? `<span class="m"><s>${inr(i.mrp)}</s> ${Math.round(((i.mrp - i.price) / i.mrp) * 100)}% off</span>` : "";
+    const low = i.sizesInStock != null && i.sizesInStock <= 3 ? `<span class="low">Only ${i.sizesInStock} sizes left</span>` : "";
+    return `<a class="tile" href="${esc(affiliateUrl(i.url, cfg, `site-${l.id}`))}" rel="sponsored nofollow noopener" target="_blank"><img src="${esc(img)}" alt="${esc(i.name)}" loading="lazy" referrerpolicy="no-referrer">${low}${mrp}<span class="p">${inr(i.price)}</span><span class="n">${esc(i.name)} · ${esc(i.store)}</span></a>`;
+  })
+  .join("");
+const seriesName = { finds: "Finds", guess: "Guess the price", pricedrop: "Price drops", steal: "Steal the look" };
+const looksList = shown
+  .slice(0, 30)
+  .map((l) => {
+    const img = l.coverUrl || imgOf(l.items[0] || {});
+    return `<a class="lookcard" href="/l/${l.id}/">${img ? `<img src="${esc(img)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : ""}<div><div class="meta">${esc(seriesName[l.kind] || "Look")}</div><div style="font-size:17px">${esc(l.hook)}</div><div class="meta">${l.items.length} picks · <span class="accent">${priceTag(l)}</span></div></div></a>`;
+  })
+  .join("\n");
 fs.writeFileSync(
   path.join(outDir, "index.html"),
-  page("Well Priced — shop the looks", `<header><div class="brand">Well Priced</div><p>@wellpriced.fit · Looks expensive. Isn't.</p></header>
-<div class="card" style="font:15px/1.6 system-ui,sans-serif"><b style="font:18px Georgia,serif">Full outfits for Indian men, with real prices.</b><br>
-Every week we put together complete looks for real occasions (office days, first dates, weddings, winter in Delhi) using products you can actually buy today. Each look shows every piece, its current price and the total, so you know exactly what it costs before you shop.</div>
-<h2 style="font-weight:normal;font-size:20px;margin:22px 0 10px">Latest looks</h2>${list}`),
+  page(
+    "Well Priced: trendy menswear that looks expensive, isn't",
+    `<div class="top"><span style="letter-spacing:.15em">WELL PRICED</span><a class="tg" href="${esc(tgUrl)}">🔔 Join Telegram</a></div>
+${hero}
+${tiles ? `<div class="sec">Today's picks · tap to shop</div><div class="grid">${tiles}</div>` : ""}
+<a class="tgbox" href="${esc(tgUrl)}">🔔 Get price drops before anyone else<br><span style="font-weight:400;font-size:14px">Join the free Telegram channel · @wellpricedfit</span></a>
+<div class="sec">All reels</div>${looksList || `<p class="meta">New picks every day. Follow <a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a>.</p>`}`,
+    "Trendy budget menswear for Indian guys: jackets, hoodies, shirts and sneakers under a price cap, with real prices checked daily.",
+  ),
 );
 
 for (const l of looks) {
-  const items = l.items
+  const tileGrid = `<div class="grid">${l.items
+    .map((i) => {
+      const img = imgOf(i);
+      if (!img) return "";
+      const mrp = i.mrp && i.mrp > i.price ? `<span class="m"><s>${inr(i.mrp)}</s> ${Math.round(((i.mrp - i.price) / i.mrp) * 100)}% off</span>` : "";
+      const low = i.sizesInStock != null && i.sizesInStock <= 3 ? `<span class="low">Only ${i.sizesInStock} sizes left</span>` : "";
+      return `<a class="tile" href="${esc(affiliateUrl(i.url, cfg, l.id))}" rel="sponsored nofollow noopener" target="_blank"><img src="${esc(img)}" alt="${esc(i.name)}" loading="lazy" referrerpolicy="no-referrer">${low}${mrp}<span class="p">${inr(i.price)}</span><span class="n">${esc(i.name)} · Tap to shop</span></a>`;
+    })
+    .join("")}</div>`;
+  const items = (isProduct(l) ? tileGrid : "") + l.items
     .map((i) => {
       const img = imgOf(i);
       return `<div class="item">${img ? `<img src="${esc(img)}" alt="${esc(i.name)}" loading="lazy" referrerpolicy="no-referrer">` : `<div class="ph"></div>`}

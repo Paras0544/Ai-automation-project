@@ -1,4 +1,5 @@
 import React from "react";
+import { ProductReel, productDurationInFrames } from "./ProductReel";
 import {
   AbsoluteFill,
   Audio,
@@ -437,8 +438,7 @@ const Music: React.FC<{ src: string }> = ({ src }) => {
 
 export const reelDurationInFrames = (look: Look) => {
   const s = timing;
-  if (look.kind && look.kind !== "outfit")
-    return Math.round((s.hook + look.items.length * (look.kind === "guess" ? s.perGuess : s.perFind) + s.findsGrid) * s.fps);
+  if (look.kind && look.kind !== "outfit") return productDurationInFrames(look);
   const fits = look.fitImages?.length || 0;
   const visual = fits > 0 ? fits * s.perFitImage : s.board;
   const seconds = s.hook + visual + look.items.length * s.perItem + s.grid;
@@ -446,7 +446,7 @@ export const reelDurationInFrames = (look: Look) => {
 };
 
 export const Reel: React.FC<Look> = (look) => {
-  if (look.kind && look.kind !== "outfit") return <FindsReel {...look} />;
+  if (look.kind && look.kind !== "outfit") return <ProductReel {...look} />;
   const f = (sec: number) => Math.round(sec * timing.fps);
   let t = 0;
   const seq: React.ReactNode[] = [];

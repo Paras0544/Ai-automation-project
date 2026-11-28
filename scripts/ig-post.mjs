@@ -101,7 +101,14 @@ export async function postNext() {
       const bytes = Buffer.from(await res.arrayBuffer());
       const caption = (look.postCaption || `${look.hook}\n\nShop every piece: link in bio.\n#affiliate`).slice(0, 2200);
       // 2) create a resumable reel container, upload bytes to Meta
-      const c = await ig("POST", `${API}/${user}/media`, { media_type: "REELS", upload_type: "resumable", caption, share_to_feed: "true" });
+      const c = await ig("POST", `${API}/${user}/media`, {
+        media_type: "REELS",
+        upload_type: "resumable",
+        caption,
+        share_to_feed: "true",
+        // thumbnail: the frame chosen at render time (all products + prices), not Instagram's random first frame
+        ...(look.thumbSeconds ?? look.coverSeconds ? { thumb_offset: String(Math.round((look.thumbSeconds ?? look.coverSeconds) * 1000)) } : {}),
+      });
       const up = await fetch(`${RUPLOAD}/${c.id}`, {
         method: "POST",
         headers: { Authorization: `OAuth ${token}`, offset: "0", file_size: String(bytes.length) },

@@ -36,7 +36,7 @@ export const wantsLink = (text, kw = "LINK") => new RegExp(`(^|\\W)(${kw}|links?
 
 export function dmText(look, cfg = affiliateConfig()) {
   const lines = look.items.map((it, n) => `${n + 1}. ${it.name}: ${inr(it.price)}\n${affiliateUrl(it.url, cfg, `dm-${look.id}`)}`);
-  return [`Here are the links from "${look.hook}" 👇`, "", ...lines, "", "Prices were checked when the reel went live; the store's price is final.", "(Affiliate links: we may earn a small commission at no cost to you.)"].join("\n").slice(0, 1000);
+  return [`Here are the links from "${look.hook}" 👇`, "", ...lines, "", "Prices were checked when the reel went live; the store's price is final.", "", "🔔 Daily drops before anyone else: t.me/wellpricedfit", "(Affiliate links: we may earn a small commission at no cost to you.)"].join("\n").slice(0, 1000);
 }
 
 if (!token || !IG_USER) {

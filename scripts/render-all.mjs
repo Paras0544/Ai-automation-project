@@ -54,9 +54,10 @@ function writeCaption(look) {
     look.caption || look.hook,
     "",
     ...look.items.map((i, n) => `${finds ? `${n + 1}.` : "•"} ${i.name} – ₹${i.price.toLocaleString("en-IN")}${i.wasPrice ? ` (was ₹${i.wasPrice.toLocaleString("en-IN")} on ${i.wasDate})` : ""} (${i.store})`),
-    finds ? `Prices checked ${checked}; they can change.` : `Total: ₹${total.toLocaleString("en-IN")}`,
+    look.kind === "steal" ? `Full look: ₹${total.toLocaleString("en-IN")} · prices checked ${checked}` : finds ? `Prices checked ${checked}; they can change.` : `Total: ₹${total.toLocaleString("en-IN")}`,
     "",
     look.cta,
+    "🔔 Daily price drops & new finds on Telegram: t.me/wellpricedfit (link in bio)",
     "",
     "#affiliate · I may earn a small commission from these links.",
     ...((look.fitImages || []).length ? ["Images created using AI. Products are real."] : []),
@@ -109,8 +110,8 @@ for (const file of files) {
       const { qcReel } = await import("./lib/qc.mjs");
       const f = (sec) => Math.round(sec * composition.fps);
       const frames = [
-        [f(1.2), path.join(outDir, `${look.id}.qc-hook.jpg`)],
-        [f(2.2 + (look.kind === "guess" ? 2.6 : 1.5)), path.join(outDir, `${look.id}.qc-card.jpg`)],
+        [f(1.0), path.join(outDir, `${look.id}.qc-hook.jpg`)],
+        [f(1.7 + (look.kind === "guess" ? 2.2 : 1.4)), path.join(outDir, `${look.id}.qc-card.jpg`)],
       ];
       for (const [frame, output] of frames) await renderStill({ composition, serveUrl, inputProps: look, output, frame, imageFormat: "jpeg", jpegQuality: 70, browserExecutable });
       const qc = await qcReel(look, [...frames.map(([, o]) => o), path.join(outDir, `${look.id}.cover.jpg`)]);

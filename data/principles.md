@@ -18,6 +18,14 @@ Every reel, change and review is checked against this list. It comes from Paras'
 - Only promote stores whose links pay (data/affiliate.json). Prefer the higher commission when products are equal.
 - Keep Amazon Associates alive: 3 sales within 180 days of 28 Nov 2026.
 
+## Desire and visuals (Paras, 28 Nov 2026)
+- Clean and classy isn't enough: every reel and page must make people think "that looks good, I want it". Lead with the product photo, big and full-screen, from the very first frame; never open on a text-only screen.
+- Show why it's a deal: big price sticker, the store's own MRP struck through with the % off, real "only N sizes left" when stock is low (only from live data).
+- Every reel gets a deliberate thumbnail (the grid frame with all products and prices), never Instagram's random frame.
+- The website must be visual too: the latest reel playing, photo tiles with prices that go straight to the store in one tap; no text-only lists.
+- Keep named series people can follow: Guess the price, Steal the look, Finds, Price drops. Add series that fit; drop ones that the numbers say don't work.
+- Every channel funnels into the others: captions, the reel end card, the website, DMs and Telegram all point at each other (Telegram join is on every page).
+
 ## Reach and engagement
 - What Instagram ranks: watch time, sends (shares) per reach, likes per reach, originality. Optimise for those, not vanity.
 - Rotate formats (finds / guess the price / price drops, more as they prove out) and test hooks, hashtags, music, voiceover; let the numbers decide.

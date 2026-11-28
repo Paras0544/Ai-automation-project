@@ -47,7 +47,9 @@ export function summarize(p, minSizes = 3) {
   const vars = p.variants || [];
   const avail = vars.filter((v) => v.available);
   const prices = (avail.length ? avail : vars).map((v) => Number(v.price)).filter(Boolean);
+  const cmp = (avail.length ? avail : vars).map((v) => Number(v.compare_at_price || v.compareAt || 0)).filter(Boolean);
   return {
+    mrp: cmp.length ? Math.round(Math.max(...cmp)) : null,
     price: prices.length ? Math.round(Math.min(...prices)) : null,
     sizesInStock: avail.length,
     inStock: avail.length >= Math.min(minSizes, vars.length || 1),
@@ -61,7 +63,7 @@ export async function liveProduct(url) {
   const u = new URL(url);
   const data = await getJson(`${u.origin}${u.pathname.replace(/\/$/, "")}.js`);
   // .js format uses cents and `available`
-  const vars = (data.variants || []).map((v) => ({ price: v.price / 100, available: v.available }));
+  const vars = (data.variants || []).map((v) => ({ price: v.price / 100, compare_at_price: v.compare_at_price ? v.compare_at_price / 100 : 0, available: v.available }));
   return summarize({ ...data, variants: vars, images: (data.images || []).map((s) => ({ src: s.startsWith("//") ? "https:" + s : s })) });
 }
 
@@ -104,6 +106,7 @@ export async function importShopify({ log = console.log } = {}) {
           category: MACRO[type] || "top",
           tags: [type],
           price: s.price,
+          mrp: s.mrp && s.mrp > s.price ? s.mrp : null,
           sizesInStock: s.sizesInStock,
           inStock: true,
           imageUrl: s.image.startsWith("//") ? "https:" + s.image : s.image,

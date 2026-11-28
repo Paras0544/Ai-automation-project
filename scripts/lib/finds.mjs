@@ -87,6 +87,7 @@ const schema = S("OBJECT", {
 const FORMAT_BRIEF = {
   finds: (topic, cap) => `Make ONE "finds" reel: "${topic}". Every product must cost at most ${inr(cap)}. The reel shows each product with its price, then all of them together.`,
   guess: (topic, cap) => `Make ONE "guess the price" reel: "${topic}". Each product appears with "guess the price?" before its real price is revealed. Pick products that LOOK more expensive than they are (clean, premium-looking), with DIFFERENT prices so guessing is fun. The hook should dare viewers to guess. Every product costs at most ${inr(cap)}.`,
+  steal: (topic, cap) => `Make ONE "steal the look" reel: "${topic}". Build ONE complete outfit in that aesthetic from 3 or 4 pieces, exactly one per category (top, bottom, footwear, and optionally a layer/outerwear). The pieces must go together (colours, vibe). Total of all pieces must be at most ${inr(cap)}. The hook should make the look feel aspirational and the price feel like a steal.`,
   pricedrop: (topic) => `Make ONE "price drop" reel: "${topic}". These products are cheaper today than the highest price we recorded in the last 30 days (shown as "was"). The hook should create urgency without exaggerating.`,
 };
 
@@ -104,16 +105,24 @@ Rules:
 - Never mention celebrities. Never claim you wore or tested anything. Don't state prices in the hook other than "under ${inr(cap)}".${rulesForPrompt()}${problem ? `\n\nYour previous answer was rejected: ${problem}. Fix it.` : ""}`;
 }
 
-function validate(ai, byId, cap, need = MIN_FINDS) {
+function validate(ai, byId, cap, need = MIN_FINDS, format = "finds") {
   const picks = ai?.picks || [];
   if (picks.length < need) return `pick at least ${need} products`;
+  if (format === "steal") {
+    const cats = picks.map((p) => byId.get(p.id)?.category);
+    if (new Set(cats).size !== cats.length) return "use exactly one piece per category";
+    if (!cats.includes("top") || !cats.includes("bottom") || !cats.includes("footwear")) return "the look needs a top, a bottom and footwear";
+    const total = picks.reduce((s, p) => s + (byId.get(p.id)?.price || 0), 0);
+    if (total > cap) return `the pieces add up to ${inr(total)}, over ${inr(cap)}`;
+    return null;
+  }
   const seen = new Set();
   for (const p of picks) {
     const c = byId.get(p.id);
     if (!c) return `"${p.id}" is not an id from the list`;
     if (seen.has(p.id)) return `"${p.id}" picked twice`;
     seen.add(p.id);
-    if (c.price > cap) return `${p.id} costs ${inr(c.price)}, over ${inr(cap)}`;
+    if (format !== "steal" && c.price > cap) return `${p.id} costs ${inr(c.price)}, over ${inr(cap)}`;
   }
   return null;
 }
@@ -127,11 +136,18 @@ function safeLabel(label, title) {
   return !label || adds || tooLong ? shortName(title) : label.charAt(0).toUpperCase() + label.slice(1);
 }
 
-export const FORMATS = ["finds", "guess", "pricedrop"];
-export const minFor = (format) => (format === "guess" || format === "pricedrop" ? 3 : MIN_FINDS);
+export const FORMATS = ["finds", "guess", "pricedrop", "steal"];
+export const minFor = (format) => (format === "guess" || format === "pricedrop" || format === "steal" ? 3 : MIN_FINDS);
 
 export function candidatesFor(format, types, cap) {
   if (format === "pricedrop") return priceDrops().filter((c) => c.price <= cap).slice(0, 25);
+  if (format === "steal") {
+    // a few options per category; each piece must leave room for the others
+    const all = findsCandidates("any", Math.min(cap * 0.5, 2499));
+    const by = {};
+    for (const c of all) (by[c.category] ||= []).length < 8 && by[c.category].push(c);
+    return ["top", "bottom", "footwear", "outerwear"].flatMap((k) => by[k] || []);
+  }
   return findsCandidates(types, cap).slice(0, 25);
 }
 
@@ -142,7 +158,7 @@ export async function planFinds(topic, types, cap, format = "finds") {
   const cands = candidatesFor(format, types, cap);
   if (cands.length < need) throw new Error(`only ${cands.length} usable products for ${format} "${types}" under ${inr(cap)} right now`);
   const byId = new Map(cands.map((c) => [c.id, c]));
-  const list = cands.map((c) => `${c.id} | ${c.title} | ${inr(c.price)}${c.wasPrice ? ` (was ${inr(c.wasPrice)}, -${c.dropPct}%)` : ""} | ${c.sizesInStock ?? "?"} sizes | used ${c.timesUsed || 0}x`).join("\n");
+  const list = cands.map((c) => `${c.id} | ${format === "steal" ? `[${c.category}] ` : ""}${c.title} | ${inr(c.price)}${c.wasPrice ? ` (was ${inr(c.wasPrice)}, -${c.dropPct}%)` : ""} | ${c.sizesInStock ?? "?"} sizes | used ${c.timesUsed || 0}x`).join("\n");
 
   const hookStyle = pickVariant("hook");
   const hashtagStyle = pickVariant("hashtags");
@@ -150,9 +166,9 @@ export async function planFinds(topic, types, cap, format = "finds") {
   let ai, problem = null;
   for (let attempt = 0; attempt < 3; attempt++) {
     ai = process.env.MOCK_AI === "1"
-      ? { hook: `${topic}.`, subhook: "sab budget mein", caption: "Save karo, baad mein kaam aayega.", hashtags: ["mensfashion", "budgetfashion", "indianmen", "winterfashion", "outfitideas"], picks: cands.slice(0, format === "guess" ? 4 : 5).map((c) => ({ id: c.id, label: c.name, why: "Layer it over a tee" })) }
+      ? { hook: `${topic}.`, subhook: "sab budget mein", caption: "Save karo, baad mein kaam aayega.", hashtags: ["mensfashion", "budgetfashion", "indianmen", "winterfashion", "outfitideas"], picks: (format === "steal" ? ["top", "bottom", "footwear"].map((k) => cands.find((c) => c.category === k)).filter(Boolean) : cands.slice(0, format === "guess" ? 4 : 5)).map((c) => ({ id: c.id, label: c.name, why: "Layer it over a tee" })) }
       : await generateJson(prompt(topic, cap, list, problem, format, hookStyle), schema, { temperature: 0.7 });
-    problem = validate(ai, byId, cap, need);
+    problem = validate(ai, byId, cap, need, format);
     if (!problem) break;
     console.log(`  finds retry: ${problem}`);
   }
@@ -165,6 +181,7 @@ export async function planFinds(topic, types, cap, format = "finds") {
       const image = await ensureImage(c);
       items.push({
         catalogId: c.id, name: safeLabel(p.label, c.title), why: p.why, store: c.store, price: c.price, image, url: c.url, productTitle: c.title, type: c.type,
+        category: c.category, sizesInStock: c.sizesInStock, ...(c.mrp && c.mrp > c.price ? { mrp: c.mrp } : {}),
         ...(c.wasPrice ? { wasPrice: c.wasPrice, wasDate: c.wasDate, dropPct: c.dropPct } : {}),
       });
     } catch (e) {

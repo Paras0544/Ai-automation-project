@@ -78,7 +78,8 @@ function recentTypes(days) {
   return out;
 }
 
-const fill = (tpl, type, cap) => {
+const fill = (tpl, type, cap, raw = false) => {
+  if (raw) return tpl.replace("{Type}", type).replace("{type}", type).replace("{cap}", inr(cap));
   const name = { "oversized-tee": "oversized tees", "overshirt-linen": "linen shirts", "co-ord": "co-ord sets", flannel: "flannel shirts", oxford: "oxford shirts" }[type] || (type.endsWith("s") ? type : `${type}s`);
   const T = name.charAt(0).toUpperCase() + name.slice(1);
   return tpl.replace("{Type}", T).replace("{type}", name).replace("{cap}", inr(cap));
@@ -98,6 +99,16 @@ export function nextIdeas(count = 1) {
       // same format twice in one batch only if nothing else is possible
       const fw = ideas.some((i) => i.format === format) ? fw0 * 0.15 : fw0;
       const fScore = sample(arms.formats[format]);
+      if (format === "steal") {
+        const f = st.formats.steal;
+        const n = candidatesFor("steal", "any", f.cap || 3999).length;
+        if (n >= 6)
+          for (const a of f.aesthetics || []) {
+            if (ideas.some((i) => i.type === a) || avoid.has(a)) continue;
+            options.push({ format, type: a, cap: f.cap || 3999, score: fScore * fw * sample(arms.types[a]) * (st.typeBoost?.[a] ?? 1) });
+          }
+        continue;
+      }
       if (format === "pricedrop") {
         const n = candidatesFor("pricedrop", "any", 99999).length;
         if (n >= minFor("pricedrop")) options.push({ format, type: "any", cap: 99999, score: fScore * fw * 1.2 });
@@ -115,7 +126,7 @@ export function nextIdeas(count = 1) {
     }
     if (!options.length) break;
     const best = options.sort((a, b) => b.score - a.score)[0];
-    const topic = fill(st.formats[best.format]?.topic || "{Type} under {cap}", best.type, best.cap);
+    const topic = fill(st.formats[best.format]?.topic || "{Type} under {cap}", best.type, best.cap, best.format === "steal");
     ideas.push({ ...best, line: `${topic} | ${best.type} | ${best.cap} | ${best.format}` });
   }
   return ideas.map((i) => i.line);
