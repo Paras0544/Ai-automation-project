@@ -35,6 +35,8 @@ jobs:
           if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions"; exit 1; fi
       - name: Plan and render new reels
         run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '3' }}"
+        env:
+          CATALOG_ONLY: "1"
         continue-on-error: true
       - name: Publish reels (render any missing, upload, link on the site)
         run: node scripts/cloud-publish.mjs
@@ -45,5 +47,6 @@ jobs:
           git add data public/catalog
           git diff --cached --quiet && exit 0
           git commit -m "daily run $(date -u +%F)"
-          git pull --rebase --autostash
+          # if another run saved first, keep this run's data files
+          git pull --rebase --autostash -X theirs || (git rebase --abort; git pull --no-rebase -X ours --no-edit)
           git push

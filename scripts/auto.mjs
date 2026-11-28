@@ -34,6 +34,10 @@ if (ideas.length === 0) {
     await refreshCatalog();
     const n2 = usableProducts().length;
     console.log(n2 >= MIN_CATALOG ? `Catalog: ${n2} usable products.` : `Catalog has only ${n2} usable products (need ${MIN_CATALOG}); falling back to web search, which needs paid Gemini.`);
+    if (n2 < MIN_CATALOG && process.env.CATALOG_ONLY === "1") {
+      console.log("Cloud mode: not using paid web search. Stopping; the weekly review will refill the catalog.");
+      process.exit(0);
+    }
   }
   const results = [];
   let used = 0;

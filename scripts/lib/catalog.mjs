@@ -138,8 +138,15 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
         c.image = rel;
         c.imageUrl = p.image; // the store's own photo URL, used by the shop website
       }
+      // no photo on the page this time: reuse the photo link we saw before
+      const rel = `catalog/${id}.jpg`;
+      if (!fs.existsSync(path.join(paths.public, rel)) && c.imageUrl) {
+        await download(c.imageUrl, path.join(paths.public, rel)).catch(() => {});
+        if (fs.existsSync(path.join(paths.public, rel))) c.image = rel;
+      }
       c.error = undefined;
-      console.log(`₹${c.price ?? "?"}${c.inStock ? "" : " OUT OF STOCK"}`);
+      const noPhoto = !c.image || !fs.existsSync(path.join(paths.public, c.image));
+      console.log(`₹${c.price ?? "?"}${c.inStock ? "" : " OUT OF STOCK"}${noPhoto ? " (no photo)" : ""}`);
     } catch (e) {
       // store blocked us: keep any earlier data, fall back to your manual price/photo
       c.error = e.message;
