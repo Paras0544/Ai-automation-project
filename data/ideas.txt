@@ -1,15 +1,6 @@
-Clean streetwear | 3500
-Smart casual for office | 4000
-Winter layering in Delhi | 6000
-Wedding guest ethnic look | 5000
-Date night | 4500
-Gym to cafe athleisure | 3500
-5 basics every guy needs | 5000
-One white shirt, styled for weekend | 3000
-Shoes that go with everything | 4000
-Delhi December layering | 6000
-New Year's Eve party | 5000
-Monsoon-proof office look | 4000
-Sunday family lunch | 3000
-Road trip to the hills | 4500
-First salary celebration dinner | 5000
+# Optional: reels you want made next (they go before the auto-picked ones). One per line:
+#   topic | product type | price cap | format
+# formats: finds (list of picks), guess (guess the price), pricedrop (real drops from our price history)
+# types: see "caps" in data/strategy.json. Example:
+#   Winter jackets under ₹1,999 | jacket | 1999 | finds
+# Leave this empty and the learning loop picks what to make (data/strategy.json + how past reels performed).

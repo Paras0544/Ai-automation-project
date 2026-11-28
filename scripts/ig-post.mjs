@@ -5,6 +5,21 @@ import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
 import { paths } from "./lib/env.mjs";
+import { liveProduct } from "./lib/shopify.mjs";
+
+// Right before posting: every product must still be in stock at exactly the price the reel shows.
+async function stillAccurate(look) {
+  for (const it of look.items) {
+    try {
+      const live = await liveProduct(it.url);
+      if (!live.inStock) return `${it.name} is sold out in most sizes`;
+      if (live.price !== it.price) return `${it.name} now costs ₹${live.price} (reel says ₹${it.price})`;
+    } catch (e) {
+      return `couldn't re-check ${it.name} (${e.message})`;
+    }
+  }
+  return null;
+}
 
 const token = (process.env.IG_ACCESS_TOKEN || "").trim();
 // Instagram-login tokens start with "IG" and use graph.instagram.com + /me.
@@ -59,14 +74,26 @@ export async function postNext() {
     .filter((f) => f.endsWith(".json"))
     .map((f) => JSON.parse(fs.readFileSync(path.join(paths.looks, f), "utf8")))
     // only the single-category "finds" reels go to Instagram; old full-outfit looks stay on the site only
-    .filter((l) => l.videoUrl && l.kind === "finds" && !l.retired && !posted[l.id]?.instagram)
-    .sort((a, b) => String(a.publishedAt || "").localeCompare(String(b.publishedAt || "")))
-    .slice(0, perRun);
+    .filter((l) => l.videoUrl && l.kind && l.kind !== "outfit" && !l.retired && !posted[l.id]?.instagram)
+    // newest first: fresher prices
+    .sort((a, b) => String(b.publishedAt || "").localeCompare(String(a.publishedAt || "")));
   if (!queue.length) return console.log("Instagram: nothing new to post.");
   let user;
   try { user = await resolveUser(); } catch (e) { console.log(`✗ Instagram: ${e.message}`); process.exitCode = 1; return; }
 
+  let done = 0;
   for (const look of queue) {
+    if (done >= perRun) break;
+    const problem = await stillAccurate(look);
+    if (problem) {
+      // never post a reel with a wrong price or a sold-out product; retire it
+      console.log(`- skipping ${look.id}: ${problem}`);
+      const f = path.join(paths.looks, `${look.id}.json`);
+      const fresh = JSON.parse(fs.readFileSync(f, "utf8"));
+      fresh.retired = `inaccurate ${new Date().toISOString().slice(0, 10)}: ${problem}`;
+      fs.writeFileSync(f, JSON.stringify(fresh, null, 2));
+      continue;
+    }
     try {
       // 1) download the video (hosted on the GitHub release)
       const res = await fetch(look.videoUrl);
@@ -94,6 +121,7 @@ export async function postNext() {
       fs.mkdirSync(path.dirname(postedFile), { recursive: true });
       fs.writeFileSync(postedFile, JSON.stringify(posted, null, 2));
       console.log(`✓ Instagram: posted ${look.id} (${pub.id})`);
+      done++;
     } catch (e) {
       console.log(`✗ Instagram: ${look.id}: ${e.message}`);
       process.exitCode = 1;

@@ -25,6 +25,9 @@ export const timing = {
   board: 3.0, // outfit board scene when there are no AI fit images
   perItem: 1.6,
   grid: 4.5,
+  perFind: 2.1, // finds reels: each product card
+  findsGrid: 3.6,
+  perGuess: 2.9, // guess-the-price: question, then reveal
 };
 
 export const inr = (n: number) => "₹" + n.toLocaleString("en-IN");

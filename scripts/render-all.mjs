@@ -48,11 +48,13 @@ function check(look, file) {
 function writeCaption(look) {
   const tags = (look.hashtags || []).map((h) => "#" + h).join(" ");
   const total = look.items.reduce((s, i) => s + i.price, 0);
+  const finds = look.kind && look.kind !== "outfit";
+  const checked = new Date(look.pricesCheckedAt || Date.now()).toLocaleDateString("en-IN", { day: "numeric", month: "short", timeZone: "Asia/Kolkata" });
   const lines = [
     look.caption || look.hook,
     "",
-    ...look.items.map((i) => `• ${i.name} – ₹${i.price.toLocaleString("en-IN")} (${i.store})`),
-    `Total: ₹${total.toLocaleString("en-IN")}`,
+    ...look.items.map((i, n) => `${finds ? `${n + 1}.` : "•"} ${i.name} – ₹${i.price.toLocaleString("en-IN")}${i.wasPrice ? ` (was ₹${i.wasPrice.toLocaleString("en-IN")} on ${i.wasDate})` : ""} (${i.store})`),
+    finds ? `Prices checked ${checked}; they can change.` : `Total: ₹${total.toLocaleString("en-IN")}`,
     "",
     look.cta,
     "",

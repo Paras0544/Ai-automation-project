@@ -1,0 +1,40 @@
+{
+  "_help": "What the autopilot makes next. Edited by the weekly review (and by you). Each day the planner picks a format and a product type using these weights plus how past reels performed (data/learning/arms.json): mostly the best performers, sometimes something new (explore). caps = the price limit shown on the reel for each product type.",
+  "reelsPerDay": 1,
+  "explore": 0.3,
+  "formats": {
+    "finds": { "weight": 1.0, "topic": "{Type} under {cap}" },
+    "guess": { "weight": 0.8, "topic": "Guess the price: {type}" },
+    "pricedrop": { "weight": 1.2, "topic": "Price drops this week" }
+  },
+  "caps": {
+    "jacket": 1999,
+    "hoodie": 1499,
+    "sweatshirt": 1299,
+    "sweater": 1499,
+    "shacket": 1799,
+    "flannel": 1299,
+    "overshirt-linen": 1299,
+    "oxford": 1299,
+    "polo": 1299,
+    "oversized-tee": 799,
+    "cargo": 1499,
+    "jeans": 1499,
+    "trouser": 1299,
+    "sneaker": 2499,
+    "loafer": 2499,
+    "co-ord": 1999
+  },
+  "typeBoost": {
+    "_note": "Seasonal nudges (multiplies the chance of a type). December-February in north India: winter layers.",
+    "jacket": 1.6,
+    "hoodie": 1.5,
+    "sweatshirt": 1.4,
+    "sweater": 1.4,
+    "shacket": 1.3,
+    "flannel": 1.2,
+    "overshirt-linen": 0.4,
+    "co-ord": 0.6
+  },
+  "noRepeatDays": 3
+}

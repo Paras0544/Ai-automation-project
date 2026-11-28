@@ -40,6 +40,9 @@ const looks = fs
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const inr = (n) => "₹" + Number(n || 0).toLocaleString("en-IN");
 const total = (l) => l.items.reduce((s, i) => s + (i.price || 0), 0);
+const isProduct = (l) => l.kind && l.kind !== "outfit";
+// "each under ₹1,499" for product reels, "₹4,200 total" for old outfit looks
+const priceTag = (l) => (isProduct(l) ? (l.kind === "pricedrop" ? "price drops" : `each under ${inr(l.budget)}`) : inr(total(l)));
 const imgOf = (i) => (i.catalogId && cache[i.catalogId]?.imageUrl) || (/^https?:/.test(i.image || "") ? i.image : "");
 
 const css = `
@@ -72,7 +75,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const list = looks.length
   ? looks
-      .map((l) => `<a class="card" href="/l/${l.id}/"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${l.items.length} pieces · <span class="accent">${inr(total(l))}</span></div></a>`)
+      .map((l) => `<a class="card" href="/l/${l.id}/"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${l.items.length} ${isProduct(l) ? "picks" : "pieces"} · <span class="accent">${priceTag(l)}</span></div></a>`)
       .join("\n")
   : `<p class="meta" style="text-align:center">New looks are added every week. Follow <a href="https://www.instagram.com/wellpriced.fit/">@wellpriced.fit</a> on Instagram to see them first.</p>`;
 fs.writeFileSync(
@@ -98,7 +101,7 @@ for (const l of looks) {
     path.join(dir, "index.html"),
     page(
       `${l.hook} — Well Priced`,
-      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${l.videoUrl ? `<video src="${esc(l.videoUrl)}" ${l.coverUrl ? `poster="${esc(l.coverUrl)}"` : ""} controls playsinline preload="none" style="width:100%;border-radius:14px;margin-bottom:14px;background:#ebe3d6"></video>` : ""}${items}<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`,
+      `<a class="back" href="/">← All looks</a><h1>${esc(l.hook)}</h1><p class="sub">${esc(l.subhook || l.occasion)}</p>${l.videoUrl ? `<video src="${esc(l.videoUrl)}" ${l.coverUrl ? `poster="${esc(l.coverUrl)}"` : ""} controls playsinline preload="none" style="width:100%;border-radius:14px;margin-bottom:14px;background:#ebe3d6"></video>` : ""}${items}${isProduct(l) ? `<p class="meta" style="margin-top:10px">Prices checked ${esc(new Date(l.pricesCheckedAt || l.publishedAt || Date.now()).toISOString().slice(0, 10))}; they can change.</p>` : `<div class="total"><span>Total</span><span class="accent">${inr(total(l))}</span></div>`}`,
       `${l.occasion}: ${l.items.map((i) => i.name).join(", ")}`,
     ),
   );
@@ -115,13 +118,13 @@ for (const l of looks) {
   const queue = looks.filter((l) => l.videoUrl);
   const rows = queue
     .map(
-      (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${inr(total(l))}${postedLog[l.id]?.instagram ? ' · <span class="accent">✓ auto-posted to Instagram</span>' : ""}</div>
+      (l) => `<div class="card" data-id="${esc(l.id)}"><h2>${esc(l.hook)}</h2><div class="meta">${esc(l.occasion)} · ${priceTag(l)}${postedLog[l.id]?.instagram ? ' · <span class="accent">✓ auto-posted to Instagram</span>' : ""}</div>
 <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
 <a class="buy" href="${esc(l.videoUrl)}" download>Download video</a>
 <button class="buy" onclick="copyCap(this)">Copy Instagram caption</button>
 <button class="buy" onclick="copyYt(this)">Copy YouTube title</button>
 <button class="buy" style="background:#B5603A" onclick="done(this)">Mark posted</button></div>
-<input class="yt" readonly style="position:absolute;left:-9999px" value="${esc((l.hook + " | Full look " + inr(total(l)) + " #shorts").slice(0, 100))}">
+<input class="yt" readonly style="position:absolute;left:-9999px" value="${esc((l.hook + (isProduct(l) ? "" : " | Full look " + inr(total(l))) + " #shorts").slice(0, 100))}">
 <textarea readonly style="position:absolute;left:-9999px">${esc(l.postCaption || `${l.hook}\n\nShop every piece: link in bio.\n#affiliate`)}</textarea></div>`,
     )
     .join("\n");

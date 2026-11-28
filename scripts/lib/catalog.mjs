@@ -186,7 +186,7 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
   }
   // forget products you deleted from the CSV
   const live = new Set(rows.map((r) => idOf(r.url)));
-  for (const id of Object.keys(cache)) if (!live.has(id)) delete cache[id];
+  for (const id of Object.keys(cache)) if (!live.has(id) && cache[id].source !== "shopify") delete cache[id];
   writeCache(cache);
   if (csvChanged) writeCsv(rows);
 }
@@ -194,7 +194,7 @@ export async function refreshCatalog({ force = false, only = null } = {}) {
 // Products the planner may use right now.
 export function usableProducts() {
   return Object.values(readCache()).filter(
-    (c) => c.inStock !== false && c.price && c.image && c.category && fs.existsSync(path.join(paths.public, c.image)),
+    (c) => c.source !== "shopify" && c.inStock !== false && c.price && c.image && c.category && fs.existsSync(path.join(paths.public, c.image)),
   );
 }
 
@@ -213,7 +213,7 @@ export function readHistory() {
     return {};
   }
 }
-function recordPrice(id, c) {
+export function recordPrice(id, c) {
   if (!c.price) return;
   const h = readHistory();
   const day = new Date().toISOString().slice(0, 10);

@@ -8,9 +8,13 @@ export type Item = {
   url?: string; // product page link (you paste it; "npm run products" reads it)
   searchUrl?: string; // store search link the planner suggests
   productTitle?: string; // real title read from the product page
+  wasPrice?: number; // price drops: highest price we recorded in the last 30 days
+  wasDate?: string;
+  dropPct?: number;
 };
 
 export type Look = {
+  kind?: "outfit" | "finds" | "guess" | "pricedrop"; // non-outfit kinds: product-type reels, every item under `budget`
   id: string; // "office-day1" — also the output file name
   hook: string; // first 2 seconds, max ~8 words
   subhook?: string; // small line under the hook, e.g. "kitne ka fit?"

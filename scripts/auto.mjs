@@ -14,6 +14,9 @@ import { missing } from "./lib/next-steps.mjs";
 import { refreshCatalog, usableProducts, MIN_CATALOG, readCsv, readCache } from "./lib/catalog.mjs";
 import { logRun, syncPush } from "./lib/learning.mjs";
 import { pinPending } from "./pin.mjs";
+import { importShopify } from "./lib/shopify.mjs";
+import { planFinds, minFor } from "./lib/finds.mjs";
+import { nextIdeas } from "./lib/strategy.mjs";
 
 const n = Number(process.argv[2] || 7);
 const MIN_ITEMS = 3;
@@ -21,20 +24,35 @@ const PRICE_DRIFT = 0.4; // an item may cost up to 40% more or less than planned
 const BUDGET_OVER = 0.3; // the whole look may go up to 30% over budget
 
 const lines = fs.existsSync(paths.ideas) ? fs.readFileSync(paths.ideas, "utf8").split(/\r?\n/) : [];
-const ideas = lines.map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
-if (ideas.length === 0) {
-  console.log("No ideas left in data/ideas.txt. Add lines like: Delhi winter date | 5000");
-  process.exitCode = 1;
-} else {
+const header = lines.filter((l) => l.trim().startsWith("#"));
+const manual = lines.map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
+const ideas = [...manual];
+{
   const doneFile = path.join(path.dirname(paths.ideas), "ideas-done.txt");
 
+  const isFinds = (line) => line.split("|").length >= 3;
+  // Live prices + stock straight from the stores' own feeds (for product reels)
+  console.log("Importing live products from store feeds…");
+  try {
+    const r = await importShopify();
+    console.log(`Store feeds: ${r.live} products in stock (${r.added} new).`);
+  } catch (e) {
+    console.log(`(store feeds skipped: ${e.message})`);
+  }
+  // Your own lines in data/ideas.txt go first; the rest is chosen by the learning loop (data/strategy.json)
+  if (ideas.length < n) {
+    const auto = nextIdeas(n - ideas.length);
+    if (auto.length) console.log(`Auto-picked: ${auto.join("  ||  ")}`);
+    ideas.push(...auto);
+  }
+  if (!ideas.length) console.log("Nothing to make: store feeds gave too few products. Check data/sources.json.");
   // Keep catalog prices and stock current before building looks from it
-  if (readCsv().length) {
+  if (readCsv().length && !ideas.every(isFinds)) {
     console.log("Checking catalog prices and stock…");
     await refreshCatalog();
     const n2 = usableProducts().length;
     console.log(n2 >= MIN_CATALOG ? `Catalog: ${n2} usable products.` : `Catalog has only ${n2} usable products (need ${MIN_CATALOG}); falling back to web search, which needs paid Gemini.`);
-    if (n2 < MIN_CATALOG && process.env.CATALOG_ONLY === "1") {
+    if (n2 < MIN_CATALOG && process.env.CATALOG_ONLY === "1" && !ideas.some(isFinds)) {
       console.log("Cloud mode: not using paid web search. Stopping; the weekly review will refill the catalog.");
       process.exit(0);
     }
@@ -44,7 +62,7 @@ if (ideas.length === 0) {
 
   // 1) Finish looks that were planned before but not completed (e.g. a run stopped on an API error)
   // (web-search looks need paid Gemini; skip resuming them while the catalog is in use)
-  const catalogActive = usableProducts().length >= MIN_CATALOG;
+  const catalogActive = usableProducts().length >= MIN_CATALOG || ideas.some(isFinds);
   const unfinished = catalogActive ? [] : fs
     .readdirSync(paths.looks)
     .filter((f) => f.endsWith(".json"))
@@ -68,12 +86,14 @@ if (ideas.length === 0) {
 
   // 2) Then new ideas, up to N looks in total
   for (const line of stopped ? [] : ideas.slice(0, Math.max(0, n - unfinished.length))) {
-    const [occasion, budgetRaw = "4000"] = line.split("|").map((s) => s.trim());
+    const parts = line.split("|").map((s) => s.trim());
+    const finds = parts.length >= 3;
+    const [occasion, budgetRaw = "4000"] = finds ? [parts[0], parts[2]] : parts;
     const budget = Number(budgetRaw.replace(/[^\d]/g, "")) || 4000;
-    console.log(`\n=== ${occasion} (₹${budget}) ===`);
+    console.log(`\n=== ${occasion} (${finds ? "each under " : ""}₹${budget}) ===`);
     let id;
     try {
-      const look = await planLook(occasion, budget);
+      const look = finds ? await planFinds(occasion, parts[1], budget, parts[3] || "finds") : await planLook(occasion, budget);
       id = look.id;
       used++;
       fs.appendFileSync(doneFile, `${line}  ->  ${id}\n`);
@@ -89,9 +109,9 @@ if (ideas.length === 0) {
     }
   }
 
-  // remove used ideas from the queue
-  const remaining = ideas.slice(used);
-  fs.writeFileSync(paths.ideas, remaining.join("\n") + (remaining.length ? "\n" : ""));
+  // remove used ideas from the queue (only your own lines live in the file)
+  const remaining = manual.slice(Math.min(used, manual.length));
+  fs.writeFileSync(paths.ideas, [...header, ...remaining].join("\n") + "\n");
 
   // render every look that passed and has no video yet
   const passed = results.filter((r) => r.ok).map((r) => r.id);
@@ -167,13 +187,23 @@ function qualityCheck(id) {
     }
   }
   const total = look.items.reduce((s, i) => s + (i.price || 0), 0);
-  const overBudget = total > look.budget * (1 + BUDGET_OVER);
-  if (overBudget) flags.push(`total ₹${total} is over budget ₹${look.budget}`);
+  let overBudget;
+  const product = look.kind && look.kind !== "outfit";
+  if (product) {
+    // every single item must be under the cap shown on screen
+    const over = look.items.filter((i) => i.price > look.budget);
+    overBudget = over.length > 0;
+    if (overBudget) flags.push(`over ₹${look.budget}: ${over.map((i) => `${i.name} ₹${i.price}`).join(", ")}`);
+  } else {
+    overBudget = total > look.budget * (1 + BUDGET_OVER);
+    if (overBudget) flags.push(`total ₹${total} is over budget ₹${look.budget}`);
+  }
+  const minItems = product ? minFor(look.kind) : MIN_ITEMS;
 
   const stillMissing = missing(look);
-  const ok = look.items.length >= MIN_ITEMS && stillMissing.length === 0 && !overBudget;
+  const ok = look.items.length >= minItems && stillMissing.length === 0 && !overBudget;
   if (!ok && stillMissing.length) flags.push(`missing ${stillMissing.length} product photo(s)`);
-  if (look.items.length < MIN_ITEMS) flags.push(`only ${look.items.length} items`);
+  if (look.items.length < minItems) flags.push(`only ${look.items.length} items`);
 
   look.status = ok ? "ready" : "needs-attention";
   look.flags = flags;

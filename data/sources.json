@@ -1,0 +1,30 @@
+{
+  "_help": "Stores imported automatically every day from their own live product feeds (Shopify stores publish /collections/<handle>/products.json). Only add stores whose affiliate links pay (see affiliate.json). 'collections' maps our finds type -> the store's collection handle. maxPrice drops anything pricier. minSizes = how many sizes must be in stock.",
+  "shopify": [
+    {
+      "store": "The Bear House",
+      "domain": "thebearhouse.com",
+      "maxPrice": 2499,
+      "perCollection": 30,
+      "minSizes": 3,
+      "collections": {
+        "jacket": "jacket",
+        "hoodie": "hoodies",
+        "sweatshirt": "sweatshirts",
+        "sweater": "sweaters",
+        "shacket": "shackets",
+        "flannel": "flannel-shirts",
+        "overshirt-linen": "linen-shirts",
+        "oxford": "oxford-shirts",
+        "polo": "knitted-polo",
+        "oversized-tee": "oversized-t-shirt",
+        "cargo": "cargo",
+        "jeans": "relaxed-fit-jeans",
+        "trouser": "trousers",
+        "sneaker": "sneakers",
+        "loafer": "loafers",
+        "co-ord": "co-ords"
+      }
+    }
+  ]
+}

@@ -8,7 +8,7 @@ on:
     inputs:
       reels:
         description: "How many new reels"
-        default: "3"
+        default: "2"
 permissions:
   contents: write
 concurrency:
@@ -35,7 +35,7 @@ jobs:
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then echo "::error::Add GEMINI_API_KEY under Settings → Secrets and variables → Actions"; exit 1; fi
       - name: Plan and render new reels
-        run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '3' }}"
+        run: node scripts/auto.mjs "${{ github.event.inputs.reels || vars.REELS_PER_DAY || '2' }}"
         env:
           CATALOG_ONLY: "1"
           CATALOG_STALE_DAYS: "1"
@@ -49,6 +49,11 @@ jobs:
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID || '17841461989685675' }}
           IG_POSTS_PER_RUN: ${{ vars.IG_POSTS_PER_RUN || '1' }}
+      - name: Learn from Instagram numbers (views, watch time, shares, saves)
+        run: node scripts/metrics.mjs
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
       - name: Keep the Instagram login alive
         if: ${{ env.HAS_PAT == 'true' }}
         continue-on-error: true

@@ -250,10 +250,175 @@ const Grid: React.FC<{ items: Item[]; cta: string }> = ({ items, cta }) => {
   );
 };
 
+// ---------- "finds" reels: one product type, every item under a price cap ----------
+
+const CapBadge: React.FC<{ cap: number; text?: string; style?: React.CSSProperties }> = ({ cap, text, style }) => (
+  <div
+    style={{
+      display: "inline-block",
+      padding: "14px 30px",
+      borderRadius: 50,
+      background: colors.accent,
+      color: "#fff",
+      fontFamily: fonts.sans,
+      fontWeight: 700,
+      fontSize: 44,
+      letterSpacing: 1,
+      ...style,
+    }}
+  >
+    {text || `each under ${inr(cap)}`}
+  </div>
+);
+
+const badgeText = (kind: Look["kind"], cap: number) =>
+  kind === "guess" ? "guess the price" : kind === "pricedrop" ? "price drops · tracked daily" : `each under ${inr(cap)}`;
+
+const FindsHook: React.FC<{ hook: string; subhook?: string; cap: number; kind?: Look["kind"] }> = ({ hook, subhook, cap, kind }) => {
+  const a = useEnter(0);
+  const b = useEnter(8);
+  const c = useEnter(14);
+  return (
+    <AbsoluteFill style={{ background: colors.bg, justifyContent: "center", padding: 90 }}>
+      <div style={{ ...a, fontFamily: fonts.serif, fontSize: 96, lineHeight: 1.1, color: colors.ink }}>{hook}</div>
+      <div style={{ ...b, marginTop: 44 }}>
+        <CapBadge cap={cap} text={badgeText(kind, cap)} />
+      </div>
+      {subhook ? <div style={{ ...c, marginTop: 34, fontFamily: fonts.sans, fontSize: 48, color: colors.muted }}>{subhook}</div> : null}
+      <Wordmark />
+    </AbsoluteFill>
+  );
+};
+
+const FindCard: React.FC<{ item: Item; index: number; total: number; kind?: Look["kind"] }> = ({ item, index, total, kind }) => {
+  const frame = useCurrentFrame();
+  const { durationInFrames, fps } = useVideoConfig();
+  const guess = kind === "guess";
+  const revealAt = Math.round(durationInFrames * 0.5);
+  const reveal = spring({ frame: frame - revealAt, fps, config: { damping: 12 } });
+  const img = useEnter(0);
+  const text = useEnter(5);
+  const price = useEnter(9);
+  const zoom = interpolate(frame, [0, durationInFrames], [1.0, 1.04]);
+  return (
+    <AbsoluteFill style={{ background: colors.bg, alignItems: "center", padding: "120px 70px" }}>
+      <div style={{ display: "flex", width: "100%", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ fontFamily: fonts.serif, fontSize: 84, color: colors.accent }}>#{index + 1}</div>
+        <div style={{ fontFamily: fonts.sans, fontSize: 30, color: colors.muted, letterSpacing: 4 }}>
+          {index + 1} / {total}
+        </div>
+      </div>
+      <div
+        style={{
+          ...img,
+          marginTop: 24,
+          width: 940,
+          height: 1080,
+          background: colors.card,
+          borderRadius: 28,
+          overflow: "hidden",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Img src={staticFile(item.image)} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", transform: `scale(${zoom})` }} />
+      </div>
+      <div style={{ ...text, marginTop: 40, fontFamily: fonts.serif, fontSize: 60, lineHeight: 1.15, color: colors.ink, textAlign: "center" }}>
+        {item.name}
+      </div>
+      {guess ? (
+        <div style={{ position: "relative", marginTop: 22, height: 96, width: "100%", display: "flex", justifyContent: "center" }}>
+          <div style={{ position: "absolute", opacity: 1 - Math.min(1, reveal), fontFamily: fonts.sans, fontSize: 64, fontWeight: 700, color: colors.ink }}>
+            Guess the price?
+          </div>
+          <div style={{ position: "absolute", opacity: Math.min(1, reveal), transform: `scale(${interpolate(reveal, [0, 1], [1.6, 1])})`, fontFamily: fonts.sans, fontSize: 84, fontWeight: 700, color: colors.accent }}>
+            {inr(item.price)}
+          </div>
+        </div>
+      ) : (
+        <div style={{ ...price, marginTop: 22, fontFamily: fonts.sans, fontSize: 76, fontWeight: 700, color: colors.accent }}>
+          {kind === "pricedrop" && item.wasPrice ? (
+            <span style={{ fontSize: 46, fontWeight: 400, color: colors.muted, textDecoration: "line-through", marginRight: 18 }}>{inr(item.wasPrice)}</span>
+          ) : null}
+          {inr(item.price)} <span style={{ fontSize: 36, fontWeight: 400, color: colors.muted }}>· {kind === "pricedrop" && item.dropPct ? `-${item.dropPct}%` : item.store}</span>
+        </div>
+      )}
+      {kind === "pricedrop" && item.wasDate ? (
+        <div style={{ ...price, marginTop: 10, fontFamily: fonts.sans, fontSize: 28, color: colors.muted }}>
+          vs highest price we recorded in the last 30 days · {item.store}
+        </div>
+      ) : item.why ? (
+        <div style={{ ...price, marginTop: 14, fontFamily: fonts.sans, fontSize: 36, color: colors.muted, textAlign: "center" }}>{item.why}</div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
+const FindsGrid: React.FC<{ items: Item[]; cta: string; cap: number; kind?: Look["kind"] }> = ({ items, cta, cap, kind }) => {
+  const { fps } = useVideoConfig();
+  const head = useEnter(0);
+  const ctaIn = useEnter(Math.round(0.8 * fps));
+  const cols = items.length <= 4 ? 2 : 3;
+  return (
+    <AbsoluteFill style={{ background: colors.bg, padding: "140px 60px", alignItems: "center" }}>
+      <div style={head}>
+        <CapBadge cap={cap} text={kind === "guess" ? "the real prices" : kind === "pricedrop" ? "dropped this week" : undefined} />
+      </div>
+      <div style={{ marginTop: 44, display: "grid", gridTemplateColumns: `repeat(${cols}, 1fr)`, gap: 22, width: "100%" }}>
+        {items.map((it, i) => (
+          <div key={i} style={{ background: colors.card, borderRadius: 18, padding: 14, textAlign: "center" }}>
+            <Img src={staticFile(it.image)} style={{ width: "100%", height: cols === 2 ? 470 : 360, objectFit: "contain" }} />
+            <div style={{ fontFamily: fonts.sans, fontSize: 26, color: colors.ink, marginTop: 8, lineHeight: 1.2 }}>
+              #{i + 1} {it.name}
+            </div>
+            <div style={{ fontFamily: fonts.sans, fontSize: 34, fontWeight: 700, color: colors.accent }}>{inr(it.price)}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{ ...ctaIn, marginTop: 46, fontFamily: fonts.serif, fontSize: 58, color: colors.ink, textAlign: "center" }}>{cta}</div>
+      {kind === "guess" ? <div style={{ marginTop: 12, fontFamily: fonts.sans, fontSize: 34, color: colors.accent }}>Links in bio</div> : null}
+      <div style={{ marginTop: 16, fontFamily: fonts.sans, fontSize: 28, color: colors.muted }}>
+        {brand.disclosure} · links earn a small commission
+      </div>
+      <Wordmark />
+    </AbsoluteFill>
+  );
+};
+
+const FindsReel: React.FC<Look> = (look) => {
+  const f = (sec: number) => Math.round(sec * timing.fps);
+  const cap = look.budget || Math.max(...look.items.map((i) => i.price));
+  let t = 0;
+  const seq: React.ReactNode[] = [
+    <Sequence key="hook" from={0} durationInFrames={f(timing.hook)}>
+      <FindsHook hook={look.hook} subhook={look.subhook} cap={cap} kind={look.kind} />
+    </Sequence>,
+  ];
+  t += timing.hook;
+  const per = look.kind === "guess" ? timing.perGuess : timing.perFind;
+  look.items.forEach((item, i) => {
+    seq.push(
+      <Sequence key={`find${i}`} from={f(t)} durationInFrames={f(per)}>
+        <FindCard item={item} index={i} total={look.items.length} kind={look.kind} />
+      </Sequence>,
+    );
+    t += per;
+  });
+  seq.push(
+    <Sequence key="grid" from={f(t)} durationInFrames={f(timing.findsGrid)}>
+      <FindsGrid items={look.items} cta={look.cta} cap={cap} kind={look.kind} />
+    </Sequence>,
+  );
+  return <AbsoluteFill style={{ background: colors.bg }}>{seq}</AbsoluteFill>;
+};
+
 // ---------- the reel ----------
 
 export const reelDurationInFrames = (look: Look) => {
   const s = timing;
+  if (look.kind && look.kind !== "outfit")
+    return Math.round((s.hook + look.items.length * (look.kind === "guess" ? s.perGuess : s.perFind) + s.findsGrid) * s.fps);
   const fits = look.fitImages?.length || 0;
   const visual = fits > 0 ? fits * s.perFitImage : s.board;
   const seconds = s.hook + visual + look.items.length * s.perItem + s.grid;
@@ -261,6 +426,7 @@ export const reelDurationInFrames = (look: Look) => {
 };
 
 export const Reel: React.FC<Look> = (look) => {
+  if (look.kind && look.kind !== "outfit") return <FindsReel {...look} />;
   const f = (sec: number) => Math.round(sec * timing.fps);
   let t = 0;
   const seq: React.ReactNode[] = [];

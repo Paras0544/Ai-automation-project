@@ -1,0 +1,44 @@
+# Makes reels exactly like the daily run but does NOT post, publish or save anything.
+# Download the result from the run page (Artifacts) to review new formats before they go live.
+name: Preview reels
+on:
+  workflow_dispatch:
+    inputs:
+      reels:
+        description: "How many reels"
+        default: "2"
+      ideas:
+        description: "Optional idea lines separated by ;; (topic | type | cap | format)"
+        default: ""
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      SYNC: "0"
+      CATALOG_ONLY: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Optional ideas
+        if: ${{ github.event.inputs.ideas != '' }}
+        run: printf '%s\n' "${{ github.event.inputs.ideas }}" | sed 's/;;/\n/g' >> data/ideas.txt
+      - run: node scripts/auto.mjs "${{ github.event.inputs.reels }}"
+      - name: Collect
+        run: |
+          mkdir -p preview
+          cp out/*.mp4 out/*.cover.jpg out/*.caption.txt out/report-*.md preview/ 2>/dev/null || true
+          git status --porcelain data/looks | awk '{print $2}' | xargs -r -I{} cp {} preview/
+          node -e 'const c=require("./data/catalog.json");const v=Object.values(c).filter(x=>x.source==="shopify");const by={};for(const x of v){if(x.inStock===false)continue;by[x.type]=(by[x.type]||0)+1}console.log(JSON.stringify(by))' > preview/feed-counts.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview
+          path: preview/
